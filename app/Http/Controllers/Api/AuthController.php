@@ -153,7 +153,12 @@ class AuthController extends Controller
                 if ($code->phone == $request->phone){
                     $generatePassword = rand(100000, 999999);
 
-                    $business = $this->createBusiness($request->all());
+                    $business = new Business();
+                    $business->email = $request->phone;
+                    $business->name = $request->business_name;
+                    $business->owner = $request->name;
+                    $business->package_id = 1;
+                    $business->save();
 
                     $this->addPermission($business->id);
 
@@ -204,16 +209,6 @@ class AuthController extends Controller
         $business->admin_id = $user->id;
         $business->save();
     }*/
-
-    function createBusiness($request){
-        $business = new Business();
-        $business->name = $request->business_name;
-        $business->owner = $request->name;
-        $business->package_id = 1;
-        $business->save();
-
-        return $business;
-    }
 
     function createVerifyCode($phone){
         $generateCode = rand(100000, 999999);
