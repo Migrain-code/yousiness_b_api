@@ -121,9 +121,10 @@ class SetupController extends Controller
      * POST api/business/categories/add
      *
      *<ul>
+     *     <li>Berarer token | required | longtext</li>
      *     <li>categories |required | array| kategori id leri</li>
      *</ul>
-     * Tüm kategoriler apisi
+     * İşletme kategori güncelleme apisi
      *
      *
      */
