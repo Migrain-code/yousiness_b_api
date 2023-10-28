@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\BusinessCategoryResource;
 use App\Http\Resources\BusinessPackageResource;
 use App\Http\Resources\BusinessResource;
+use App\Http\Resources\CategoryResource;
 use App\Http\Resources\OfficialCardResource;
 use App\Models\BusinessCategory;
 use App\Models\BusinnessType;
@@ -97,6 +98,21 @@ class SetupController extends Controller
         return response()->json([
             'status' => "success",
             'message' => "Bilgiler Kayıt Edildi",
+        ]);
+    }
+    /**
+     * POST api/business/categories
+     *
+     *
+     * Tüm kategoriler apisi
+     *
+     *
+     */
+    public function categories()
+    {
+        $categories = BusinessCategory::all();
+        return response()->json([
+           'categories' => CategoryResource::collection($categories)
         ]);
     }
 }

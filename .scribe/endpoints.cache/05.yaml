@@ -28,387 +28,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Auth driver [passport] for guard [business] is not defined.",
-              "exception": "InvalidArgumentException",
-              "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
-              "line": 99,
-              "trace": [
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
-                      "line": 70,
-                      "function": "resolve",
-                      "class": "Illuminate\\Auth\\AuthManager",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php",
-                      "line": 76,
-                      "function": "guard",
-                      "class": "Illuminate\\Auth\\AuthManager",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php",
-                      "line": 55,
-                      "function": "authenticate",
-                      "class": "Illuminate\\Auth\\Middleware\\Authenticate",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Auth\\Middleware\\Authenticate",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 800,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 777,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 741,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-                      "line": 730,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 200,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
-                      "line": 40,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
-                      "line": 99,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
-                      "line": 39,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 175,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-                      "line": 144,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 299,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 287,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 92,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 45,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 209,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 166,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 124,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 71,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
-                      "line": 49,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-                      "line": 51,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
-                      "line": 41,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-                      "line": 37,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
-                      "line": 662,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-                      "line": 211,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\symfony\\console\\Command\\Command.php",
-                      "line": 326,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-                      "line": 181,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\symfony\\console\\Application.php",
-                      "line": 1081,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\symfony\\console\\Application.php",
-                      "line": 320,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\symfony\\console\\Application.php",
-                      "line": 174,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
-                      "line": 201,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "C:\\Users\\Migrain\\Desktop\\buberka\\yousiness_new_api\\artisan",
-                      "line": 37,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  }
-              ]
-          }
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -466,7 +87,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bvocywkntqhosdrroqajupyvp
+        example: dmseschdwepojglmvcuvczkfr
         type: string
         enumValues: []
         custom: []
@@ -474,7 +95,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: uicendnvweixqwzualosp
+        example: rs
         type: string
         enumValues: []
         custom: []
@@ -482,7 +103,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 16.12584
+        example: 3797222.37
         type: number
         enumValues: []
         custom: []
@@ -490,7 +111,7 @@ endpoints:
         name: businessType
         description: ''
         required: true
-        example: 135391.0636
+        example: 2.36592
         type: number
         enumValues: []
         custom: []
@@ -498,7 +119,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: kusrwtoeaodgkitaxoamiuwcoturmuwxsmnkvbarlzdmzdaszlhethexlanktjubdmvxqfejaxkqkaeif
+        example: ososasuzngyatmskdeyvomhjyugbmdiaiszuesfwvi
         type: string
         enumValues: []
         custom: []
@@ -506,7 +127,7 @@ endpoints:
         name: startTime
         description: ''
         required: true
-        example: consequatur
+        example: ut
         type: string
         enumValues: []
         custom: []
@@ -514,7 +135,7 @@ endpoints:
         name: endTime
         description: ''
         required: true
-        example: excepturi
+        example: suscipit
         type: string
         enumValues: []
         custom: []
@@ -522,7 +143,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: willms.jeanne@example.net
+        example: margaret00@example.net
         type: string
         enumValues: []
         custom: []
@@ -530,7 +151,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-10-28T19:35:41'
+        example: '2023-10-28T22:26:28'
         type: string
         enumValues: []
         custom: []
@@ -538,7 +159,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: esse
+        example: sunt
         type: string
         enumValues: []
         custom: []
@@ -546,7 +167,7 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: 587.2
+        example: 37243855.1386
         type: number
         enumValues: []
         custom: []
@@ -554,7 +175,7 @@ endpoints:
         name: districtId
         description: ''
         required: true
-        example: 234.831
+        example: 536226.55626959
         type: number
         enumValues: []
         custom: []
@@ -562,7 +183,7 @@ endpoints:
         name: commission
         description: ''
         required: true
-        example: 2.6519187
+        example: 0.7188
         type: number
         enumValues: []
         custom: []
@@ -570,7 +191,7 @@ endpoints:
         name: personalCount
         description: ''
         required: true
-        example: 28967423.54966
+        example: 136.5
         type: number
         enumValues: []
         custom: []
@@ -578,7 +199,7 @@ endpoints:
         name: offDay
         description: ''
         required: true
-        example: 353769858.40262
+        example: 5.957
         type: number
         enumValues: []
         custom: []
@@ -586,27 +207,27 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: similique
+        example: minima
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: bvocywkntqhosdrroqajupyvp
-      businessName: uicendnvweixqwzualosp
-      appointmentRange: 16.12584
-      businessType: 135391.0636
-      phone: kusrwtoeaodgkitaxoamiuwcoturmuwxsmnkvbarlzdmzdaszlhethexlanktjubdmvxqfejaxkqkaeif
-      startTime: consequatur
-      endTime: excepturi
-      email: willms.jeanne@example.net
-      year: '2023-10-28T19:35:41'
-      address: esse
-      cityId: 587.2
-      districtId: 234.831
-      commission: 2.6519187
-      personalCount: 28967423.54966
-      offDay: 353769858.40262
-      aboutText: similique
+      officialName: dmseschdwepojglmvcuvczkfr
+      businessName: rs
+      appointmentRange: 3797222.37
+      businessType: 2.36592
+      phone: ososasuzngyatmskdeyvomhjyugbmdiaiszuesfwvi
+      startTime: ut
+      endTime: suscipit
+      email: margaret00@example.net
+      year: '2023-10-28T22:26:28'
+      address: sunt
+      cityId: 37243855.1386
+      districtId: 536226.55626959
+      commission: 0.7188
+      personalCount: 136.5
+      offDay: 5.957
+      aboutText: minima
     fileParameters: []
     responses: []
     responseFields: []

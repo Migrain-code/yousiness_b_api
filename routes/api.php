@@ -46,6 +46,7 @@ Route::prefix('business')->group(function () {
         Route::post('check-phone', [AuthController::class, 'register']);
         Route::post('verify', [AuthController::class, 'verify']);
     });
+    Route::get('/categories', [SetupController::class, 'categories']);
 
     Route::middleware('auth:business')->group(function () {
 
