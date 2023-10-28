@@ -157,6 +157,7 @@ class AuthController extends Controller
                     $business->email = $request->phone;
                     $business->name = $request->business_name;
                     $business->owner = $request->name;
+                    $business->password = Hash::make($generatePassword);
                     $business->package_id = 1;
                     $business->save();
 
