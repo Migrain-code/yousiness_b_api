@@ -87,7 +87,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: dmseschdwepojglmvcuvczkfr
+        example: ncu
         type: string
         enumValues: []
         custom: []
@@ -95,7 +95,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rs
+        example: axvxiddkvmjjpomqsl
         type: string
         enumValues: []
         custom: []
@@ -103,7 +103,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 3797222.37
+        example: 1190506.6459372
         type: number
         enumValues: []
         custom: []
@@ -111,7 +111,7 @@ endpoints:
         name: businessType
         description: ''
         required: true
-        example: 2.36592
+        example: 321335.2267717
         type: number
         enumValues: []
         custom: []
@@ -119,7 +119,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: ososasuzngyatmskdeyvomhjyugbmdiaiszuesfwvi
+        example: ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh
         type: string
         enumValues: []
         custom: []
@@ -135,7 +135,7 @@ endpoints:
         name: endTime
         description: ''
         required: true
-        example: suscipit
+        example: sit
         type: string
         enumValues: []
         custom: []
@@ -143,7 +143,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: margaret00@example.net
+        example: welch.zella@example.net
         type: string
         enumValues: []
         custom: []
@@ -151,7 +151,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-10-28T22:26:28'
+        example: '2023-10-28T22:42:56'
         type: string
         enumValues: []
         custom: []
@@ -159,7 +159,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: sunt
+        example: occaecati
         type: string
         enumValues: []
         custom: []
@@ -167,7 +167,7 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: 37243855.1386
+        example: 4853.499937711
         type: number
         enumValues: []
         custom: []
@@ -175,7 +175,7 @@ endpoints:
         name: districtId
         description: ''
         required: true
-        example: 536226.55626959
+        example: 1.297625243
         type: number
         enumValues: []
         custom: []
@@ -183,7 +183,7 @@ endpoints:
         name: commission
         description: ''
         required: true
-        example: 0.7188
+        example: 483870.558
         type: number
         enumValues: []
         custom: []
@@ -191,7 +191,7 @@ endpoints:
         name: personalCount
         description: ''
         required: true
-        example: 136.5
+        example: 55.15
         type: number
         enumValues: []
         custom: []
@@ -199,7 +199,7 @@ endpoints:
         name: offDay
         description: ''
         required: true
-        example: 5.957
+        example: 23259.15016
         type: number
         enumValues: []
         custom: []
@@ -207,27 +207,27 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: minima
+        example: cum
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: dmseschdwepojglmvcuvczkfr
-      businessName: rs
-      appointmentRange: 3797222.37
-      businessType: 2.36592
-      phone: ososasuzngyatmskdeyvomhjyugbmdiaiszuesfwvi
+      officialName: ncu
+      businessName: axvxiddkvmjjpomqsl
+      appointmentRange: 1190506.6459372
+      businessType: 321335.2267717
+      phone: ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh
       startTime: ut
-      endTime: suscipit
-      email: margaret00@example.net
-      year: '2023-10-28T22:26:28'
-      address: sunt
-      cityId: 37243855.1386
-      districtId: 536226.55626959
-      commission: 0.7188
-      personalCount: 136.5
-      offDay: 5.957
-      aboutText: minima
+      endTime: sit
+      email: welch.zella@example.net
+      year: '2023-10-28T22:42:56'
+      address: occaecati
+      cityId: 4853.499937711
+      districtId: 1.297625243
+      commission: 483870.558
+      personalCount: 55.15
+      offDay: 23259.15016
+      aboutText: cum
     fileParameters: []
     responses: []
     responseFields: []

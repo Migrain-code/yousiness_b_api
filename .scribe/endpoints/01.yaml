@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: voluptatem
+        example: ducimus
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'vONxi(u{]'
+        example: '=YGKOMXRHh'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: voluptatem
-      password: 'vONxi(u{]'
+      phone: ducimus
+      password: '=YGKOMXRHh'
     fileParameters: []
     responses: []
     responseFields: []

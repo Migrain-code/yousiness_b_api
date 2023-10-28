@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: ducimus
                 password:
                   type: string
                   description: ''
-                  example: 'vONxi(u{]'
+                  example: '=YGKOMXRHh'
               required:
                 - phone
                 - password
@@ -455,23 +455,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: bwwqitgsrgnmew
+                  example: cukydvmbjiuqfszdhorieenfndoftss
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: kjgyaadysrwzpdufvnojprpnpehktvuzzmjtkxjlvvyoxqezspnaqmxf
+                  example: lovplhmrifhtkpgqwidngylgszpantgggzsdumfxhbowzyehedytaqvnqzcnlvioiwilhorvravluztvabwxud
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: hane.zechariah@example.com
+                  example: kuhn.frieda@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'e!=\^T0fgl"Z'
+                  example: "/3'5mg:,FCizuc+ft"
                 gender:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: non
               required:
                 - name
                 - phone
@@ -550,23 +550,23 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dmseschdwepojglmvcuvczkfr
+                  example: ncu
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rs
+                  example: axvxiddkvmjjpomqsl
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 3797222.37
+                  example: 1190506.6459372
                 businessType:
                   type: number
                   description: ''
-                  example: 2.36592
+                  example: 321335.2267717
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: ososasuzngyatmskdeyvomhjyugbmdiaiszuesfwvi
+                  example: ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh
                 startTime:
                   type: string
                   description: ''
@@ -574,43 +574,43 @@ paths:
                 endTime:
                   type: string
                   description: ''
-                  example: suscipit
+                  example: sit
                 email:
                   type: string
                   description: ''
-                  example: margaret00@example.net
+                  example: welch.zella@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-10-28T22:26:28'
+                  example: '2023-10-28T22:42:56'
                 address:
                   type: string
                   description: ''
-                  example: sunt
+                  example: occaecati
                 cityId:
                   type: number
                   description: ''
-                  example: 37243855.1386
+                  example: 4853.499937711
                 districtId:
                   type: number
                   description: ''
-                  example: 536226.55626959
+                  example: 1.297625243
                 commission:
                   type: number
                   description: ''
-                  example: 0.7188
+                  example: 483870.558
                 personalCount:
                   type: number
                   description: ''
-                  example: 136.5
+                  example: 55.15
                 offDay:
                   type: number
                   description: ''
-                  example: 5.957
+                  example: 23259.15016
                 aboutText:
                   type: string
                   description: ''
-                  example: minima
+                  example: cum
               required:
                 - officialName
                 - businessName
@@ -712,31 +712,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: odit
+                  example: cumque
                 service_id:
                   type: string
                   description: ''
-                  example: voluptatum
+                  example: repudiandae
                 amount:
                   type: string
                   description: ''
-                  example: et
+                  example: porro
                 total:
                   type: string
                   description: ''
-                  example: eos
+                  example: asperiores
                 personel_id:
                   type: string
                   description: ''
-                  example: sint
+                  example: quasi
                 package_type:
                   type: string
                   description: ''
-                  example: qui
+                  example: atque
                 seller_date:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: sint
               required:
                 - customer_id
                 - service_id
@@ -765,15 +765,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: quis
+                  example: id
                 price:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: quibusdam
                 amount:
                   type: string
                   description: ''
-                  example: minus
+                  example: amet
               required:
                 - package_id
                 - price
@@ -798,19 +798,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: voluptatibus
+                  example: officia
                 personel_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: praesentium
                 amount:
                   type: string
                   description: ''
-                  example: id
+                  example: quo
                 operation_date:
                   type: string
                   description: ''
-                  example: sequi
+                  example: consectetur
               required:
                 - package_id
                 - personel_id
@@ -880,7 +880,7 @@ paths:
                 cart_id:
                   type: string
                   description: 'Must be at least 1 character.'
-                  example: zojuhgwrumqawvdrgkbsbypneqfceviukrhpiqmeekktjouqbqkrgdnmkiahhphcpnsrmkbbgwd
+                  example: vjedkbaqecnouqgawzxxonvpbrfuaaehe
               required:
                 - cart_id
       security: []
@@ -1000,11 +1000,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: repudiandae
+                  example: aliquid
                 password:
                   type: string
                   description: ''
-                  example: mrsyaOgox
+                  example: '_Yg>Jn}%EIQ$"'
               required:
                 - phone
                 - password
@@ -1057,23 +1057,102 @@ paths:
       security: []
   /api/business/categories:
     get:
-      summary: 'POST api/business/categories'
-      operationId: pOSTApibusinesscategories
+      summary: 'GET api/business/categories'
+      operationId: gETApibusinesscategories
       description: 'Tüm kategoriler apisi'
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  categories:
+                    -
+                      id: 2
+                      name: Friseure
+                    -
+                      id: 3
+                      name: 'Schönheits und Ästhetikzentren'
+                    -
+                      id: 4
+                      name: Spas
+                    -
+                      id: 5
+                      name: Solariumzentren
+                    -
+                      id: 6
+                      name: Wellness-Zentren
+                    -
+                      id: 7
+                      name: 'Tattoo und Tattoo-Zentren'
+                    -
+                      id: 8
+                      name: Hijab-Friseure
+                    -
+                      id: 10
+                      name: Muhammet
+                    -
+                      id: 11
+                      name: 'Muhammet Türkmen'
+                    -
+                      id: 12
+                      name: Muhammet
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  categories:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        name: Friseure
+                      -
+                        id: 3
+                        name: 'Schönheits und Ästhetikzentren'
+                      -
+                        id: 4
+                        name: Spas
+                      -
+                        id: 5
+                        name: Solariumzentren
+                      -
+                        id: 6
+                        name: Wellness-Zentren
+                      -
+                        id: 7
+                        name: 'Tattoo und Tattoo-Zentren'
+                      -
+                        id: 8
+                        name: Hijab-Friseure
+                      -
+                        id: 10
+                        name: Muhammet
+                      -
+                        id: 11
+                        name: 'Muhammet Türkmen'
+                      -
+                        id: 12
+                        name: Muhammet
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 2
+                        name:
+                          type: string
+                          example: Friseure
+      tags:
+        - Setup
+      security: []
+  /api/business/categories/add:
+    post:
+      summary: 'POST api/business/categories/add'
+      operationId: pOSTApibusinesscategoriesadd
+      description: "<ul>\n    <li>Berarer token | required | longtext</li>\n    <li>categories |required | array| kategori id leri</li>\n</ul>\nİşletme kategori güncelleme apisi"
+      parameters: []
+      responses: {  }
       tags:
         - Setup
       security: []
