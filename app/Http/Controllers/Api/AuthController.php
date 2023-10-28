@@ -234,4 +234,11 @@ class AuthController extends Controller
 
         return $generateCode;
     }
+
+    function clearPhone($phoneNumber){
+        $newPhoneNumber = str_replace([' ', '(', ')', '-'], '', $phoneNumber);
+
+        return $newPhoneNumber;
+
+    }
 }
