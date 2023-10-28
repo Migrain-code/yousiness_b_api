@@ -34,7 +34,6 @@ class SetupController extends Controller
      */
     public function get(Request $request)
     {
-        $businessCategories = BusinessCategory::select('id', 'name')->get();
         $business_types = BusinnessType::select('id', 'name')->get();
         $dayList = DayList::orderBy('id', 'asc')->select('id', 'name')->get();
         $monthlyPackages = BussinessPackage::where('type', 0)->get();
@@ -44,7 +43,6 @@ class SetupController extends Controller
         return response()->json([
             'dayList' => $dayList,
             'businessTypes' => $business_types,
-            'businessCategories' => BusinessCategoryResource::collection($businessCategories),
             'monthlyPackages' => BusinessPackageResource::collection($monthlyPackages),
             'yearlyPackages' => BusinessPackageResource::collection($yearlyPackages),
             'business' => BusinessResource::make($business),
