@@ -9,6 +9,7 @@ use App\Http\Resources\BusinessResource;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\OfficialCardResource;
 use App\Models\BusinessCategory;
+use App\Models\BusinessTypeCategory;
 use App\Models\BusinnessType;
 use App\Models\BussinessPackage;
 use App\Models\DayList;
@@ -101,7 +102,7 @@ class SetupController extends Controller
         ]);
     }
     /**
-     * POST api/business/categories
+     * GET api/business/categories
      *
      *
      * Tüm kategoriler apisi
@@ -113,6 +114,36 @@ class SetupController extends Controller
         $categories = BusinessCategory::all();
         return response()->json([
            'categories' => CategoryResource::collection($categories)
+        ]);
+    }
+
+    /**
+     * POST api/business/categories/add
+     *
+     *<ul>
+     *     <li>categories |required | array| kategori id leri</li>
+     *</ul>
+     * Tüm kategoriler apisi
+     *
+     *
+     */
+    public function addCategories(Request $request)
+    {
+        $business = $request->user();
+        if ($business->categories->count() > 0){
+            foreach ( $business->categories as $category) {
+                $category->delete();
+            }
+        }
+        foreach ($request->input('categories') as $category){
+            $businessCategory = new BusinessTypeCategory();
+            $businessCategory->category_id = $category;
+            $businessCategory->business_id = $business->id;
+            $businessCategory->save();
+        }
+        return response()->json([
+            'status' => "success",
+            'message' => "Kategoriler Kaydedildi",
         ]);
     }
 }
