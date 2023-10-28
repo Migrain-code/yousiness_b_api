@@ -85,7 +85,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ncu
+        example: aiklln
         type: string
         enumValues: []
         custom: []
@@ -93,7 +93,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: axvxiddkvmjjpomqsl
+        example: lezmejaeqavhoftouwvnf
         type: string
         enumValues: []
         custom: []
@@ -101,7 +101,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 1190506.6459372
+        example: 61051.83516
         type: number
         enumValues: []
         custom: []
@@ -109,7 +109,7 @@ endpoints:
         name: businessType
         description: ''
         required: true
-        example: 321335.2267717
+        example: 279664517.2
         type: number
         enumValues: []
         custom: []
@@ -117,7 +117,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh
+        example: bormozrlmrtojasvurolzflyaulqynkzejxsbaeytckbrdwknyfhbxfxnbjqtbgohk
         type: string
         enumValues: []
         custom: []
@@ -125,7 +125,7 @@ endpoints:
         name: startTime
         description: ''
         required: true
-        example: ut
+        example: tempora
         type: string
         enumValues: []
         custom: []
@@ -141,7 +141,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: welch.zella@example.net
+        example: nienow.jarrell@example.com
         type: string
         enumValues: []
         custom: []
@@ -149,7 +149,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-10-28T22:42:56'
+        example: '2023-10-28T23:56:18'
         type: string
         enumValues: []
         custom: []
@@ -157,7 +157,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: occaecati
+        example: quia
         type: string
         enumValues: []
         custom: []
@@ -165,7 +165,7 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: 4853.499937711
+        example: 2175645.559989
         type: number
         enumValues: []
         custom: []
@@ -173,7 +173,7 @@ endpoints:
         name: districtId
         description: ''
         required: true
-        example: 1.297625243
+        example: 10139909.47564
         type: number
         enumValues: []
         custom: []
@@ -181,7 +181,7 @@ endpoints:
         name: commission
         description: ''
         required: true
-        example: 483870.558
+        example: 18.2517869
         type: number
         enumValues: []
         custom: []
@@ -189,7 +189,7 @@ endpoints:
         name: personalCount
         description: ''
         required: true
-        example: 55.15
+        example: 315067034.39552
         type: number
         enumValues: []
         custom: []
@@ -197,7 +197,7 @@ endpoints:
         name: offDay
         description: ''
         required: true
-        example: 23259.15016
+        example: 297529.35986156
         type: number
         enumValues: []
         custom: []
@@ -205,27 +205,27 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: cum
+        example: molestiae
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: ncu
-      businessName: axvxiddkvmjjpomqsl
-      appointmentRange: 1190506.6459372
-      businessType: 321335.2267717
-      phone: ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh
-      startTime: ut
+      officialName: aiklln
+      businessName: lezmejaeqavhoftouwvnf
+      appointmentRange: 61051.83516
+      businessType: 279664517.2
+      phone: bormozrlmrtojasvurolzflyaulqynkzejxsbaeytckbrdwknyfhbxfxnbjqtbgohk
+      startTime: tempora
       endTime: sit
-      email: welch.zella@example.net
-      year: '2023-10-28T22:42:56'
-      address: occaecati
-      cityId: 4853.499937711
-      districtId: 1.297625243
-      commission: 483870.558
-      personalCount: 55.15
-      offDay: 23259.15016
-      aboutText: cum
+      email: nienow.jarrell@example.com
+      year: '2023-10-28T23:56:18'
+      address: quia
+      cityId: 2175645.559989
+      districtId: 10139909.47564
+      commission: 18.2517869
+      personalCount: 315067034.39552
+      offDay: 297529.35986156
+      aboutText: molestiae
     fileParameters: []
     responses: []
     responseFields: []

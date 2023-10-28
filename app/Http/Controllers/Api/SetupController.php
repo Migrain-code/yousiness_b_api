@@ -7,11 +7,13 @@ use App\Http\Resources\BusinessCategoryResource;
 use App\Http\Resources\BusinessPackageResource;
 use App\Http\Resources\BusinessResource;
 use App\Http\Resources\CategoryResource;
+use App\Http\Resources\CityResource;
 use App\Http\Resources\OfficialCardResource;
 use App\Models\BusinessCategory;
 use App\Models\BusinessTypeCategory;
 use App\Models\BusinnessType;
 use App\Models\BussinessPackage;
+use App\Models\City;
 use App\Models\DayList;
 use Illuminate\Http\Request;
 
@@ -41,6 +43,7 @@ class SetupController extends Controller
         $business = $request->user();
 
         return response()->json([
+            'cities' => CityResource::collection(City::take(20)->get()),
             'dayList' => $dayList,
             'businessTypes' => $business_types,
             'monthlyPackages' => BusinessPackageResource::collection($monthlyPackages),
@@ -89,8 +92,6 @@ class SetupController extends Controller
         $business->start_time = $request->input('start_time');
         $business->end_time = $request->input('end_time');
         $business->address = $request->input('address');
-        $business->lat = $request->input('latitude');
-        $business->longitude = $request->input('longitude');
         $business->package_id = $request->input('package_id');
         $business->save();
 
@@ -143,6 +144,30 @@ class SetupController extends Controller
         return response()->json([
             'status' => "success",
             'message' => "Kategoriler Kaydedildi",
+        ]);
+    }
+    /**
+     * POST api/business/setup/step/map
+     *
+     *<ul>
+     *     <li>Berarer token | required | longtext</li>
+     *     <li>latitude |required | array| lat</li>
+     *     <li>longitude |required | array| lat</li>
+     *</ul>
+     * İşletme kategori güncelleme apisi
+     *
+     *
+     */
+    public function mapUpdate(Request $request)
+    {
+        $business = $request->user();
+        $business->lat = $request->input('latitude');
+        $business->longitude = $request->input('longitude');
+
+        $business->save();
+        return response()->json([
+            'status' => "success",
+            'message' => "Konum Bilgisi Kayıt Edildi",
         ]);
     }
 }

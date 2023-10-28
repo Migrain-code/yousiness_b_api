@@ -168,3 +168,39 @@ endpoints:
     method: null
     route: null
     custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/setup/step/map
+    metadata:
+      groupName: Setup
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/setup/step/map'
+      description: |-
+        <ul>
+            <li>Berarer token | required | longtext</li>
+            <li>latitude |required | array| lat</li>
+            <li>longitude |required | array| lat</li>
+        </ul>
+        İşletme kategori güncelleme apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

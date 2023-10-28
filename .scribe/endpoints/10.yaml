@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: aliquid
+        example: rerum
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '_Yg>Jn}%EIQ$"'
+        example: 'm,N`FFs6)7X(4`|9p<'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: aliquid
-      password: '_Yg>Jn}%EIQ$"'
+      phone: rerum
+      password: 'm,N`FFs6)7X(4`|9p<'
     fileParameters: []
     responses: []
     responseFields: []

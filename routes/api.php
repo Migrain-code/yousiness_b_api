@@ -57,6 +57,7 @@ Route::prefix('business')->group(function () {
         Route::controller(SetupController::class)->prefix('setup')->group(function () {
             Route::get('/get', 'get');
             Route::post('/update', 'update');
+            Route::post('/step/map', 'mapUpdate');
         });
         /*Route::controller(OfficialCreditCardController::class)->prefix('cart')->group(function (){
             Route::get('/', 'index');

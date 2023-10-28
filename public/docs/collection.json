@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "0001081a-d6ec-4ceb-aa6c-27d04d7a9f92",
+        "_postman_id": "cfeb52c3-16e7-48bc-9961-9b48d8e9259e",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"ducimus\",\"password\":\"=YGKOMXRHh\"}"
+                            "raw": "{\"phone\":\"eaque\",\"password\":\"42sFv$@r8xx[7lkLh3\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -542,7 +542,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"cukydvmbjiuqfszdhorieenfndoftss\",\"phone\":\"lovplhmrifhtkpgqwidngylgszpantgggzsdumfxhbowzyehedytaqvnqzcnlvioiwilhorvravluztvabwxud\",\"email\":\"kuhn.frieda@example.com\",\"password\":\"\\\/3'5mg:,FCizuc+ft\",\"gender\":\"non\"}"
+                            "raw": "{\"name\":\"dmqrljfaywqrcrvnjlzfwpqnweqkmqgpqmtdbtcuybwoixgrshpxo\",\"phone\":\"rnrhvklxqosoejpbnloiqyi\",\"email\":\"ugreen@example.org\",\"password\":\"@^U_{~eu}5MEfvm{,;\",\"gender\":\"sed\"}"
                         },
                         "description": "",
                         "auth": {
@@ -711,7 +711,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"ncu\",\"businessName\":\"axvxiddkvmjjpomqsl\",\"appointmentRange\":1190506.6459372,\"businessType\":321335.2267717,\"phone\":\"ulxfnvqwvklxmyysoqqmyytslsndgstkypbtcbaflvhvxeqtuydzyzanhhojvmllccvqnyfbqyhh\",\"startTime\":\"ut\",\"endTime\":\"sit\",\"email\":\"welch.zella@example.net\",\"year\":\"2023-10-28T22:42:56\",\"address\":\"occaecati\",\"cityId\":4853.499937711,\"districtId\":1.297625243,\"commission\":483870.558,\"personalCount\":55.15,\"offDay\":23259.15016,\"aboutText\":\"cum\"}"
+                            "raw": "{\"officialName\":\"aiklln\",\"businessName\":\"lezmejaeqavhoftouwvnf\",\"appointmentRange\":61051.83516,\"businessType\":279664517.2,\"phone\":\"bormozrlmrtojasvurolzflyaulqynkzejxsbaeytckbrdwknyfhbxfxnbjqtbgohk\",\"startTime\":\"tempora\",\"endTime\":\"sit\",\"email\":\"nienow.jarrell@example.com\",\"year\":\"2023-10-28T23:56:18\",\"address\":\"quia\",\"cityId\":2175645.559989,\"districtId\":10139909.47564,\"commission\":18.2517869,\"personalCount\":315067034.395518,\"offDay\":297529.35986156,\"aboutText\":\"molestiae\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>offDay | numeric | required | kapal\u0131 oldu\u011fu g\u00fcn\u00fcn id si <\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>cityId  | string | required | \u015eehir<\/li>\n<li>districtId  | string | required | \u0130l\u00e7e<\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>commission | string | required | P. Kredi kart\u0131 kesintisi | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>personalCount | string | required | Personel Say\u0131s\u0131 | \u00f6rne\u011fin (1, 3, 5,10)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
@@ -900,7 +900,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"cumque\",\"service_id\":\"repudiandae\",\"amount\":\"porro\",\"total\":\"asperiores\",\"personel_id\":\"quasi\",\"package_type\":\"atque\",\"seller_date\":\"sint\"}"
+                            "raw": "{\"customer_id\":\"hic\",\"service_id\":\"aspernatur\",\"amount\":\"voluptatum\",\"total\":\"aliquam\",\"personel_id\":\"asperiores\",\"package_type\":\"repellendus\",\"seller_date\":\"molestiae\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -931,7 +931,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"id\",\"price\":\"quibusdam\",\"amount\":\"amet\"}"
+                            "raw": "{\"package_id\":\"laudantium\",\"price\":\"eaque\",\"amount\":\"inventore\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -962,7 +962,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"officia\",\"personel_id\":\"praesentium\",\"amount\":\"quo\",\"operation_date\":\"consectetur\"}"
+                            "raw": "{\"package_id\":\"dolor\",\"personel_id\":\"inventore\",\"amount\":\"ea\",\"operation_date\":\"natus\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1101,7 +1101,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"cart_id\":\"vjedkbaqecnouqgawzxxonvpbrfuaaehe\"}"
+                            "raw": "{\"cart_id\":\"axpczsgvnifq\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>cart_id | numeric | required | Se\u00e7ilen Kart Bilgisi<\/li>\n<\/ul>\nKullan\u0131c\u0131n\u0131 i\u015fletmesinin packet bilgisi ve kullan\u0131c\u0131n\u0131n cartlar\u0131",
                         "auth": {
@@ -1324,7 +1324,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"aliquid\",\"password\":\"_Yg>Jn}%EIQ$\\\"\"}"
+                            "raw": "{\"phone\":\"rerum\",\"password\":\"m,N`FFs6)7X(4`|9p<\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -1577,6 +1577,34 @@
                         ],
                         "body": null,
                         "description": "<ul>\n<li>Bearer Token | required | \u0130\u015fletme Kategorisi<\/li>\n<li>category_id | string | required | \u0130\u015fletme Kategorisi<\/li>\n<li>name | string | required | \u0130\u015fletme Ad\u0131<\/li>\n<li>type_id | string | required | Hizmet T\u00fcr\u00fc businessTypes de\u011fi\u015fkeninden alabilirsiniz <\/li>\n<li>city_id  | string | required | \u015eehir<\/li>\n<li>district_id  | string | required | \u0130l\u00e7e<\/li>\n<li>off_day_id  | string | required | Kapal\u0131 Oldu\u011fu G\u00fcn<\/li>\n<li>phone | string | required | Kullan\u0131c\u0131 Telefon Numaras\u0131<\/li>\n<li>about_content | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>start_time | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>end_time | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>latitude | string | required| Haritadan se\u00e7ilen lat bilgisi<\/li>\n<li>longitude | string | required| Haritadan se\u00e7ilen long bilgisi<\/li>\n<li>address | text | required| Address Metni<\/li>\n<li>package_id | integer or string | required| Se\u00e7ili Paket idsi<\/li>\n<\/ul>\nKay\u0131t Ekran\u0131 T\u00fcm Bilgiler g\u00fcncelleme Apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/setup\/step\/map",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/setup\/step\/map",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/setup\/step\/map"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n    <li>Berarer token | required | longtext<\/li>\n    <li>latitude |required | array| lat<\/li>\n    <li>longitude |required | array| lat<\/li>\n<\/ul>\n\u0130\u015fletme kategori g\u00fcncelleme apisi",
                         "auth": {
                             "type": "noauth"
                         }
