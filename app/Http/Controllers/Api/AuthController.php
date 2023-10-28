@@ -3,19 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CustomerCreateRequest;
-use App\Http\Resources\BusinessOfficialResource;
 use App\Http\Resources\BusinessResource;
 use App\Models\Business;
 use App\Models\BusinessNotificationPermission;
-use App\Models\BusinessOfficial;
-use App\Models\CustomerNotificationPermission;
 use App\Models\SmsConfirmation;
 use App\Services\Sms;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Laravel\Passport\Passport;
 
 /**
  * @group Authentication
