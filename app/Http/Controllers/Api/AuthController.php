@@ -109,7 +109,7 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        if ($this->existPhone(clearPhone($request->phone))) {
+        if ($this->existPhone($this->clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
                 'message' => "Bu telefon numarası ile kayıtlı kullanıcı bulunmakta."
@@ -163,7 +163,7 @@ class AuthController extends Controller
 
                     $this->addPermission($business->id);
 
-                    Sms::send(clearPhone($request->input('phone')), config('settings.appy_site_title') . "Sistemine giriş için şifreniz " . $generatePassword);
+                    Sms::send($this->clearPhone($request->input('phone')), config('settings.appy_site_title') . "Sistemine giriş için şifreniz " . $generatePassword);
 
                     return response()->json([
                         'status' => "success",
@@ -230,7 +230,7 @@ class AuthController extends Controller
         $smsConfirmation->expire_at = now()->addMinute(3);
         $smsConfirmation->save();
 
-        Sms::send(clearPhone($phone), setting('appy_site_title') . "Sistemine kayıt için, telefon numarası doğrulama kodunuz " . $generateCode);
+        Sms::send($this->clearPhone($phone), setting('appy_site_title') . "Sistemine kayıt için, telefon numarası doğrulama kodunuz " . $generateCode);
 
         return $generateCode;
     }
