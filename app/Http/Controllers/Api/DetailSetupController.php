@@ -49,13 +49,9 @@ class DetailSetupController extends Controller
      * <li>Bearer Token</li>
      * <li>officialName | string | required | Salon Sahibinin adı</li>
      * <li>businessName | string | required | Salon Adı</li>
-     * <li>offDay | numeric | required | kapalı olduğu günün id si </li>
      * <li>businessType | numeric | required | işletme türü id'si </li>
-     * <li>cityId  | string | required | Şehir</li>
-     * <li>districtId  | string | required | İlçe</li>
      * <li>phone | string | required | İşletme Telefon Numarası</li>
      * <li>email | string | required | İşletme E-posta Adresi</li>
-     * <li>commission | string | required | P. Kredi kartı kesintisi | örneğin (10, 20, 30,40)</li>
      * <li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>
      * <li>personalCount | string | required | Personel Sayısı | örneğin (1, 3, 5,10)</li>
      * <li>aboutText | string | required| İşletme Hakkında Yazısı</li>
@@ -70,24 +66,23 @@ class DetailSetupController extends Controller
      */
     public function step1(DetailSetupRequestStep1 $request)
     {
-
         $business = $request->user();
         $business->owner = $request->input('officialName'); //Yetkili Ad Soyad
         $business->name = $request->input('businessName');// Salon Adı
-        $business->off_day = $request->input('offDay');
+        //$business->off_day = $request->input('offDay');
         $business->appointment_range = $request->input('appointmentRange');
-        $business->type_id = $request->input('businessType');
+        //$business->type_id = $request->input('businessType');
         $business->phone = $request->input('phone');
-        $business->start_time = $request->input('startTime');
-        $business->end_time = $request->input('endTime');
+        //$business->start_time = $request->input('startTime');
+        //$business->end_time = $request->input('endTime');
         $business->business_email = $request->input('email');
         $business->year = $request->input('year'); //2023-04-01
         $business->personal_count = $request->input('personalCount');
         $business->address = $request->input('address');
         $business->about = $request->input('aboutText');
-        $business->city = $request->input('cityId');
-        $business->district = $request->input('districtId');
-        $business->commission = $request->input('commission');
+        //$business->city = $request->input('cityId');
+        //$business->district = $request->input('districtId');
+        //$business->commission = $request->input('commission');
         $business->save();
 
         return response()->json([
