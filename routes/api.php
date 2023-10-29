@@ -66,8 +66,8 @@ Route::prefix('business')->group(function () {
             Route::post('/update', 'update');
         });*/
         Route::controller(PaymentController::class)->prefix('payment')->group(function () {
-            Route::get('/', 'index');
-            Route::post('/pay', 'pay');
+            Route::post('/create-payment-intent','createPaymentIntent');
+            Route::post('/process-payment', 'processPayment');
         });
 
         Route::controller(DetailSetupController::class)->prefix('detail-setup')->group(function () {
