@@ -59,20 +59,14 @@ class SetupController extends Controller
      *
      * <ul>
      * <li>Bearer Token | required | İşletme Kategorisi</li>
-     * <li>category_id | string | required | İşletme Kategorisi</li>
      * <li>name | string | required | İşletme Adı</li>
      * <li>type_id | string | required | Hizmet Türü businessTypes değişkeninden alabilirsiniz </li>
      * <li>city_id  | string | required | Şehir</li>
-     * <li>district_id  | string | required | İlçe</li>
      * <li>off_day_id  | string | required | Kapalı Olduğu Gün</li>
      * <li>phone | string | required | Kullanıcı Telefon Numarası</li>
      * <li>about_content | string | required| İşletme Hakkında Yazısı</li>
      * <li>start_time | string | required| İşletme Açılış Saati Örneğin (12:08)</li>
      * <li>end_time | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>
-     * <li>latitude | string | required| Haritadan seçilen lat bilgisi</li>
-     * <li>longitude | string | required| Haritadan seçilen long bilgisi</li>
-     * <li>address | text | required| Address Metni</li>
-     * <li>package_id | integer or string | required| Seçili Paket idsi</li>
      * </ul>
      * Kayıt Ekranı Tüm Bilgiler güncelleme Apisi
      *
@@ -81,18 +75,14 @@ class SetupController extends Controller
     public function update(Request $request)
     {
         $business = $request->user();
-        $business->category_id = $request->input('category_id');
         $business->name = $request->input('name');
         $business->type_id = $request->input('business_type');
         $business->phone = $request->input('phone');
         $business->city = $request->input('city_id');
-        $business->district = $request->input('district_id');
         $business->off_day = $request->input('off_day_id');
         $business->about = $request->input('about_content');
         $business->start_time = $request->input('start_time');
         $business->end_time = $request->input('end_time');
-        $business->address = $request->input('address');
-        $business->package_id = $request->input('package_id');
         $business->save();
 
         return response()->json([
