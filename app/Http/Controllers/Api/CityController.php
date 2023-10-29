@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CityResource;
 use App\Models\City;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,7 @@ class CityController extends Controller
             ->get();
 
         return response()->json([
-            'cities' => $cities,
+            'cities' => CityResource::collection($cities),
         ]);
     }
 
@@ -41,7 +42,7 @@ class CityController extends Controller
     public function list()
     {
         return response()->json([
-           'cities' => City::take(10)->get(),
+            'cities' => CityResource::collection(City::take(20)->get()),
         ]);
     }
 }
