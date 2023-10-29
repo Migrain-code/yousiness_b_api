@@ -16,7 +16,8 @@ class BusinessPackageController extends Controller
     public function index()
     {
         return response()->json([
-            'packages' => BusinessPackageResource::collection(BussinessPackage::all())
+            'monthly_packages' => BusinessPackageResource::collection(BussinessPackage::where('type', 0)->get()),
+            'yearly_packages' => BusinessPackageResource::collection(BussinessPackage::where('type', 1)->get())
         ]);
     }
 }
