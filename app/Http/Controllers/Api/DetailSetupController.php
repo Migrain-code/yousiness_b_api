@@ -29,11 +29,15 @@ class DetailSetupController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-
+        $appointmentRanges =[];
+        for ($i = 5; $i <= 60; $i+= 5){
+            $appointmentRanges[]=$i;
+        }
         return response()->json([
             'business' => BusinessResource::make($user),
             'dayList' => DayList::all(),
-            'businessTypeList' => BusinnessType::all()
+            'businessTypeList' => BusinnessType::all(),
+            'appointmentRange' => $appointmentRanges
         ]);
     }
 
