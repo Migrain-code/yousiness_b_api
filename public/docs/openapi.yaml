@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: eaque
+                  example: cumque
                 password:
                   type: string
                   description: ''
-                  example: '42sFv$@r8xx[7lkLh3'
+                  example: 'g$I+N`i,:i`jO*G&j='
               required:
                 - phone
                 - password
@@ -215,192 +215,223 @@ paths:
                   cities:
                     -
                       id: 1
-                      name: Bedburg-Hau
                       slug: bedburg-hau
+                      name: Bedburg-Hau
                       post_code: '47551'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 2
-                      name: Alsdorf
                       slug: alsdorf
+                      name: Alsdorf
                       post_code: '52477'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 3
-                      name: Roetgen
                       slug: roetgen
+                      name: Roetgen
                       post_code: '52159'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 4
-                      name: Monschau
                       slug: monschau
+                      name: Monschau
                       post_code: '52156'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 5
-                      name: Simmerath
                       slug: simmerath
+                      name: Simmerath
                       post_code: '52152'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 6
-                      name: Niederzier
                       slug: niederzier
+                      name: Niederzier
                       post_code: '52382'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 7
-                      name: 'Welschbillig, Igel, Aach'
                       slug: welschbillig-igel-aach
+                      name: 'Welschbillig, Igel, Aach'
                       post_code: '54298'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 8
-                      name: Neukirchen-Vluyn
                       slug: neukirchen-vluyn
+                      name: Neukirchen-Vluyn
                       post_code: '47506'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 9
-                      name: Dudeldorf
                       slug: dudeldorf
+                      name: Dudeldorf
                       post_code: '54647'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
                     -
                       id: 10
-                      name: Pluwig
                       slug: pluwig
+                      name: Pluwig
                       post_code: '54316'
-                      country_id: 1
-                      created_at: '2023-08-19T16:51:19.000000Z'
-                      updated_at: '2023-08-19T16:51:19.000000Z'
+                    -
+                      id: 11
+                      slug: duisburg
+                      name: Duisburg
+                      post_code: '47139'
+                    -
+                      id: 12
+                      slug: pulheim
+                      name: Pulheim
+                      post_code: '50259'
+                    -
+                      id: 13
+                      slug: dusseldorf
+                      name: Düsseldorf
+                      post_code: '40468'
+                    -
+                      id: 14
+                      slug: mehren-ua
+                      name: 'Mehren u.a.'
+                      post_code: '54552'
+                    -
+                      id: 15
+                      slug: dusseldorf
+                      name: Düsseldorf
+                      post_code: '40470'
+                    -
+                      id: 16
+                      slug: dusseldorf
+                      name: Düsseldorf
+                      post_code: '40599'
+                    -
+                      id: 17
+                      slug: gusenburg
+                      name: Gusenburg
+                      post_code: '54413'
+                    -
+                      id: 18
+                      slug: mulheim-an-der-ruhr
+                      name: 'Mülheim an der Ruhr'
+                      post_code: '45475'
+                    -
+                      id: 19
+                      slug: koln
+                      name: Köln
+                      post_code: '50739'
+                    -
+                      id: 20
+                      slug: tholey
+                      name: Tholey
+                      post_code: '66636'
                 properties:
                   cities:
                     type: array
                     example:
                       -
                         id: 1
-                        name: Bedburg-Hau
                         slug: bedburg-hau
+                        name: Bedburg-Hau
                         post_code: '47551'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 2
-                        name: Alsdorf
                         slug: alsdorf
+                        name: Alsdorf
                         post_code: '52477'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 3
-                        name: Roetgen
                         slug: roetgen
+                        name: Roetgen
                         post_code: '52159'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 4
-                        name: Monschau
                         slug: monschau
+                        name: Monschau
                         post_code: '52156'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 5
-                        name: Simmerath
                         slug: simmerath
+                        name: Simmerath
                         post_code: '52152'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 6
-                        name: Niederzier
                         slug: niederzier
+                        name: Niederzier
                         post_code: '52382'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 7
-                        name: 'Welschbillig, Igel, Aach'
                         slug: welschbillig-igel-aach
+                        name: 'Welschbillig, Igel, Aach'
                         post_code: '54298'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 8
-                        name: Neukirchen-Vluyn
                         slug: neukirchen-vluyn
+                        name: Neukirchen-Vluyn
                         post_code: '47506'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 9
-                        name: Dudeldorf
                         slug: dudeldorf
+                        name: Dudeldorf
                         post_code: '54647'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
                       -
                         id: 10
-                        name: Pluwig
                         slug: pluwig
+                        name: Pluwig
                         post_code: '54316'
-                        country_id: 1
-                        created_at: '2023-08-19T16:51:19.000000Z'
-                        updated_at: '2023-08-19T16:51:19.000000Z'
+                      -
+                        id: 11
+                        slug: duisburg
+                        name: Duisburg
+                        post_code: '47139'
+                      -
+                        id: 12
+                        slug: pulheim
+                        name: Pulheim
+                        post_code: '50259'
+                      -
+                        id: 13
+                        slug: dusseldorf
+                        name: Düsseldorf
+                        post_code: '40468'
+                      -
+                        id: 14
+                        slug: mehren-ua
+                        name: 'Mehren u.a.'
+                        post_code: '54552'
+                      -
+                        id: 15
+                        slug: dusseldorf
+                        name: Düsseldorf
+                        post_code: '40470'
+                      -
+                        id: 16
+                        slug: dusseldorf
+                        name: Düsseldorf
+                        post_code: '40599'
+                      -
+                        id: 17
+                        slug: gusenburg
+                        name: Gusenburg
+                        post_code: '54413'
+                      -
+                        id: 18
+                        slug: mulheim-an-der-ruhr
+                        name: 'Mülheim an der Ruhr'
+                        post_code: '45475'
+                      -
+                        id: 19
+                        slug: koln
+                        name: Köln
+                        post_code: '50739'
+                      -
+                        id: 20
+                        slug: tholey
+                        name: Tholey
+                        post_code: '66636'
                     items:
                       type: object
                       properties:
                         id:
                           type: integer
                           example: 1
-                        name:
-                          type: string
-                          example: Bedburg-Hau
                         slug:
                           type: string
                           example: bedburg-hau
+                        name:
+                          type: string
+                          example: Bedburg-Hau
                         post_code:
                           type: string
                           example: '47551'
-                        country_id:
-                          type: integer
-                          example: 1
-                        created_at:
-                          type: string
-                          example: '2023-08-19T16:51:19.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2023-08-19T16:51:19.000000Z'
       tags:
         - City
       security: []
@@ -455,23 +486,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: dmqrljfaywqrcrvnjlzfwpqnweqkmqgpqmtdbtcuybwoixgrshpxo
+                  example: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: rnrhvklxqosoejpbnloiqyi
+                  example: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ugreen@example.org
+                  example: barton.abbie@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '@^U_{~eu}5MEfvm{,;'
+                  example: "#iCO`55JK@)G:,d'fEJK"
                 gender:
                   type: string
                   description: ''
-                  example: sed
+                  example: ad
               required:
                 - name
                 - phone
@@ -550,67 +581,67 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: aiklln
+                  example: ftsylkmzzfidrbfadyal
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lezmejaeqavhoftouwvnf
+                  example: jrcatfjbzqapnqvv
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 61051.83516
+                  example: 282521.0
                 businessType:
                   type: number
                   description: ''
-                  example: 279664517.2
+                  example: 50.4742
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: bormozrlmrtojasvurolzflyaulqynkzejxsbaeytckbrdwknyfhbxfxnbjqtbgohk
+                  example: zhzasrsldajfsviuvgsrfyrgfrznpmbe
                 startTime:
                   type: string
                   description: ''
-                  example: tempora
+                  example: qui
                 endTime:
                   type: string
                   description: ''
-                  example: sit
+                  example: sapiente
                 email:
                   type: string
                   description: ''
-                  example: nienow.jarrell@example.com
+                  example: ciara98@example.org
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-10-28T23:56:18'
+                  example: '2023-10-29T20:50:04'
                 address:
                   type: string
                   description: ''
-                  example: quia
+                  example: reiciendis
                 cityId:
                   type: number
                   description: ''
-                  example: 2175645.559989
+                  example: 215.8198
                 districtId:
                   type: number
                   description: ''
-                  example: 10139909.47564
+                  example: 36569802.544042
                 commission:
                   type: number
                   description: ''
-                  example: 18.2517869
+                  example: 2685958.9171368
                 personalCount:
                   type: number
                   description: ''
-                  example: 315067034.39552
+                  example: 893.3967518
                 offDay:
                   type: number
                   description: ''
-                  example: 297529.35986156
+                  example: 1736.61612
                 aboutText:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: error
               required:
                 - officialName
                 - businessName
@@ -712,31 +743,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: hic
+                  example: blanditiis
                 service_id:
                   type: string
                   description: ''
-                  example: aspernatur
+                  example: deleniti
                 amount:
                   type: string
                   description: ''
-                  example: voluptatum
+                  example: vel
                 total:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: ut
                 personel_id:
                   type: string
                   description: ''
-                  example: asperiores
+                  example: dolores
                 package_type:
                   type: string
                   description: ''
-                  example: repellendus
+                  example: aperiam
                 seller_date:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: ut
               required:
                 - customer_id
                 - service_id
@@ -765,15 +796,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: laudantium
+                  example: corrupti
                 price:
                   type: string
                   description: ''
-                  example: eaque
+                  example: optio
                 amount:
                   type: string
                   description: ''
-                  example: inventore
+                  example: rem
               required:
                 - package_id
                 - price
@@ -798,19 +829,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: dolor
+                  example: repellat
                 personel_id:
                   type: string
                   description: ''
-                  example: inventore
+                  example: repellendus
                 amount:
                   type: string
                   description: ''
-                  example: ea
+                  example: fuga
                 operation_date:
                   type: string
                   description: ''
-                  example: natus
+                  example: impedit
               required:
                 - package_id
                 - personel_id
@@ -880,7 +911,7 @@ paths:
                 cart_id:
                   type: string
                   description: 'Must be at least 1 character.'
-                  example: axpczsgvnifq
+                  example: ykyxyaelhiihuxvk
               required:
                 - cart_id
       security: []
@@ -1000,11 +1031,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: rerum
+                  example: dignissimos
                 password:
                   type: string
                   description: ''
-                  example: 'm,N`FFs6)7X(4`|9p<'
+                  example: 'aKRNKCu<`aJJ]}zR'
               required:
                 - phone
                 - password
@@ -1182,7 +1213,7 @@ paths:
     post:
       summary: 'POST api/setup/update'
       operationId: pOSTApisetupupdate
-      description: "<ul>\n<li>Bearer Token | required | İşletme Kategorisi</li>\n<li>category_id | string | required | İşletme Kategorisi</li>\n<li>name | string | required | İşletme Adı</li>\n<li>type_id | string | required | Hizmet Türü businessTypes değişkeninden alabilirsiniz </li>\n<li>city_id  | string | required | Şehir</li>\n<li>district_id  | string | required | İlçe</li>\n<li>off_day_id  | string | required | Kapalı Olduğu Gün</li>\n<li>phone | string | required | Kullanıcı Telefon Numarası</li>\n<li>about_content | string | required| İşletme Hakkında Yazısı</li>\n<li>start_time | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>end_time | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n<li>latitude | string | required| Haritadan seçilen lat bilgisi</li>\n<li>longitude | string | required| Haritadan seçilen long bilgisi</li>\n<li>address | text | required| Address Metni</li>\n<li>package_id | integer or string | required| Seçili Paket idsi</li>\n</ul>\nKayıt Ekranı Tüm Bilgiler güncelleme Apisi"
+      description: "<ul>\n<li>Bearer Token | required | İşletme Kategorisi</li>\n<li>name | string | required | İşletme Adı</li>\n<li>type_id | string | required | Hizmet Türü businessTypes değişkeninden alabilirsiniz </li>\n<li>city_id  | string | required | Şehir</li>\n<li>off_day_id  | string | required | Kapalı Olduğu Gün</li>\n<li>phone | string | required | Kullanıcı Telefon Numarası</li>\n<li>about_content | string | required| İşletme Hakkında Yazısı</li>\n<li>start_time | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>end_time | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n</ul>\nKayıt Ekranı Tüm Bilgiler güncelleme Apisi"
       parameters: []
       responses: {  }
       tags:

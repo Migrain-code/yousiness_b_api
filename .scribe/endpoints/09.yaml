@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: dmqrljfaywqrcrvnjlzfwpqnweqkmqgpqmtdbtcuybwoixgrshpxo
+        example: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
         type: string
         enumValues: []
         custom: []
@@ -73,7 +73,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: rnrhvklxqosoejpbnloiqyi
+        example: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
         type: string
         enumValues: []
         custom: []
@@ -81,7 +81,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: ugreen@example.org
+        example: barton.abbie@example.org
         type: string
         enumValues: []
         custom: []
@@ -89,7 +89,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: '@^U_{~eu}5MEfvm{,;'
+        example: "#iCO`55JK@)G:,d'fEJK"
         type: string
         enumValues: []
         custom: []
@@ -97,16 +97,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: sed
+        example: ad
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: dmqrljfaywqrcrvnjlzfwpqnweqkmqgpqmtdbtcuybwoixgrshpxo
-      phone: rnrhvklxqosoejpbnloiqyi
-      email: ugreen@example.org
-      password: '@^U_{~eu}5MEfvm{,;'
-      gender: sed
+      name: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
+      phone: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
+      email: barton.abbie@example.org
+      password: "#iCO`55JK@)G:,d'fEJK"
+      gender: ad
     fileParameters: []
     responses: []
     responseFields: []

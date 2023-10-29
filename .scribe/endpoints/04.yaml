@@ -74,12 +74,12 @@ endpoints:
         name: cart_id
         description: 'Must be at least 1 character.'
         required: true
-        example: axpczsgvnifq
+        example: ykyxyaelhiihuxvk
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      cart_id: axpczsgvnifq
+      cart_id: ykyxyaelhiihuxvk
     fileParameters: []
     responses: []
     responseFields: []
