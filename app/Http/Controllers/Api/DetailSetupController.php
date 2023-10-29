@@ -53,7 +53,6 @@ class DetailSetupController extends Controller
      * <li>phone | string | required | İşletme Telefon Numarası</li>
      * <li>email | string | required | İşletme E-posta Adresi</li>
      * <li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>
-     * <li>personalCount | string | required | Personel Sayısı | örneğin (1, 3, 5,10)</li>
      * <li>aboutText | string | required| İşletme Hakkında Yazısı</li>
      * <li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>
      * <li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>
