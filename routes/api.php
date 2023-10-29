@@ -47,12 +47,11 @@ Route::prefix('business')->group(function () {
         Route::post('verify', [AuthController::class, 'verify']);
     });
     Route::get('/categories', [SetupController::class, 'categories']);
-
+    Route::get('/packages', [BusinessPackageController::class, 'index']);
     Route::middleware('auth:business')->group(function () {
 
         Route::get('user', [AuthController::class, 'user']);
         Route::post('logout', [AuthController::class, 'logout']);
-        Route::get('/packages', [BusinessPackageController::class, 'index']);
         Route::post('/categories/add', [SetupController::class, 'addCategories']);
         Route::controller(SetupController::class)->prefix('setup')->group(function () {
             Route::get('/get', 'get');
