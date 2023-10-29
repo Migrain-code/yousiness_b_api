@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: cumque
+                  example: modi
                 password:
                   type: string
                   description: ''
-                  example: 'g$I+N`i,:i`jO*G&j='
+                  example: '&)#e-6}6RPNx]N*pU'
               required:
                 - phone
                 - password
@@ -486,23 +486,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
+                  example: hufnzpzzvilexotprwbjzgbjirppaaufp
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
+                  example: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: barton.abbie@example.org
+                  example: angus.ebert@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: "#iCO`55JK@)G:,d'fEJK"
+                  example: 'cF&Qia$tre_f.F\k)&'
                 gender:
                   type: string
                   description: ''
-                  example: ad
+                  example: aspernatur
               required:
                 - name
                 - phone
@@ -566,7 +566,7 @@ paths:
     post:
       summary: 'POST api/detail-setup/step-1/update'
       operationId: pOSTApidetailSetupstep1update
-      description: "<ul>\n<li>Bearer Token</li>\n<li>officialName | string | required | Salon Sahibinin adı</li>\n<li>businessName | string | required | Salon Adı</li>\n<li>offDay | numeric | required | kapalı olduğu günün id si </li>\n<li>businessType | numeric | required | işletme türü id'si </li>\n<li>cityId  | string | required | Şehir</li>\n<li>districtId  | string | required | İlçe</li>\n<li>phone | string | required | İşletme Telefon Numarası</li>\n<li>email | string | required | İşletme E-posta Adresi</li>\n<li>commission | string | required | P. Kredi kartı kesintisi | örneğin (10, 20, 30,40)</li>\n<li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>\n<li>personalCount | string | required | Personel Sayısı | örneğin (1, 3, 5,10)</li>\n<li>aboutText | string | required| İşletme Hakkında Yazısı</li>\n<li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n<li>year | date | required| Kuruluş Tarihi örneğin (2023-04-01)</li>\n<li>address | text | required| Address Metni</li>\n</ul>\nDetaylı Kurulum Ekranı İşletme Bilgileri güncelleme Apisi"
+      description: "<ul>\n<li>Bearer Token</li>\n<li>officialName | string | required | Salon Sahibinin adı</li>\n<li>businessName | string | required | Salon Adı</li>\n<li>businessType | numeric | required | işletme türü id'si </li>\n<li>phone | string | required | İşletme Telefon Numarası</li>\n<li>email | string | required | İşletme E-posta Adresi</li>\n<li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>\n<li>personalCount | string | required | Personel Sayısı | örneğin (1, 3, 5,10)</li>\n<li>aboutText | string | required| İşletme Hakkında Yazısı</li>\n<li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n<li>year | date | required| Kuruluş Tarihi örneğin (2023-04-01)</li>\n<li>address | text | required| Address Metni</li>\n</ul>\nDetaylı Kurulum Ekranı İşletme Bilgileri güncelleme Apisi"
       parameters: []
       responses: {  }
       tags:
@@ -581,83 +581,58 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ftsylkmzzfidrbfadyal
+                  example: kfkbbborbuvdvhnlqonupwc
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jrcatfjbzqapnqvv
+                  example: ibosdeclkfuykddxgeuh
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 282521.0
-                businessType:
-                  type: number
-                  description: ''
-                  example: 50.4742
+                  example: 1134869.1621
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: zhzasrsldajfsviuvgsrfyrgfrznpmbe
+                  example: zbspsplrwqvftogxflyikhdrwtzhsdjtaxlguyztckxbytkbuletulweoqbeucworlbhy
                 startTime:
                   type: string
                   description: ''
-                  example: qui
+                  example: voluptatem
                 endTime:
                   type: string
                   description: ''
-                  example: sapiente
+                  example: quo
                 email:
                   type: string
                   description: ''
-                  example: ciara98@example.org
+                  example: luettgen.joel@example.com
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-10-29T20:50:04'
+                  example: '2023-10-29T23:30:15'
                 address:
                   type: string
                   description: ''
-                  example: reiciendis
-                cityId:
-                  type: number
-                  description: ''
-                  example: 215.8198
-                districtId:
-                  type: number
-                  description: ''
-                  example: 36569802.544042
-                commission:
-                  type: number
-                  description: ''
-                  example: 2685958.9171368
+                  example: est
                 personalCount:
                   type: number
                   description: ''
-                  example: 893.3967518
-                offDay:
-                  type: number
-                  description: ''
-                  example: 1736.61612
+                  example: 6590034.5224
                 aboutText:
                   type: string
                   description: ''
-                  example: error
+                  example: ab
               required:
                 - officialName
                 - businessName
                 - appointmentRange
-                - businessType
                 - phone
                 - startTime
                 - endTime
                 - email
                 - year
                 - address
-                - cityId
-                - districtId
-                - commission
                 - personalCount
-                - offDay
                 - aboutText
       security: []
   /api/business/package-sale:
@@ -743,31 +718,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: vel
                 service_id:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: quia
                 amount:
                   type: string
                   description: ''
-                  example: vel
+                  example: cupiditate
                 total:
                   type: string
                   description: ''
-                  example: ut
+                  example: qui
                 personel_id:
                   type: string
                   description: ''
-                  example: dolores
+                  example: dicta
                 package_type:
                   type: string
                   description: ''
-                  example: aperiam
+                  example: est
                 seller_date:
                   type: string
                   description: ''
-                  example: ut
+                  example: accusantium
               required:
                 - customer_id
                 - service_id
@@ -796,15 +771,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: corrupti
+                  example: quo
                 price:
                   type: string
                   description: ''
-                  example: optio
+                  example: voluptas
                 amount:
                   type: string
                   description: ''
-                  example: rem
+                  example: dolorum
               required:
                 - package_id
                 - price
@@ -829,19 +804,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: repellat
+                  example: et
                 personel_id:
                   type: string
                   description: ''
-                  example: repellendus
+                  example: commodi
                 amount:
                   type: string
                   description: ''
-                  example: fuga
+                  example: tempora
                 operation_date:
                   type: string
                   description: ''
-                  example: impedit
+                  example: nihil
               required:
                 - package_id
                 - personel_id
@@ -855,65 +830,425 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  monthly_packages:
+                    -
+                      id: 1
+                      name: 'Test Tarif'
+                      price: 0
+                      color: '#003a61'
+                      proparties:
+                        -
+                          id: 1
+                          name: 'Sınırsız randevu'
+                        -
+                          id: 2
+                          name: 'Sms Bildirimler'
+                        -
+                          id: 3
+                          name: 'Mail Bildirimler'
+                        -
+                          id: 4
+                          name: 'Mobil Bildirimler'
+                        -
+                          id: 5
+                          name: 'Digital takvim'
+                        -
+                          id: 6
+                          name: 'Google Takvim Bağlantısı'
+                        -
+                          id: 7
+                          name: 'İşletmeye Özel Web Sitesi'
+                        -
+                          id: 8
+                          name: 'İşletmeye Özel Reklamlar'
+                        -
+                          id: 9
+                          name: 'Müsteri hizmetleri'
+                        -
+                          id: 10
+                          name: 'Personel Çalışma Raporları'
+                        -
+                          id: 11
+                          name: 'Personel İşlemleri'
+                        -
+                          id: 12
+                          name: 'Randevu Raporları'
+                        -
+                          id: 13
+                          name: 'Ürün Satışı'
+                        -
+                          id: 14
+                          name: 'Paket Satışı'
+                        -
+                          id: 15
+                          name: 'Ürün Satış Raporu'
+                        -
+                          id: 16
+                          name: 'Paket Satış Raporu'
+                        -
+                          id: 17
+                          name: 'Tüm Özellikler'
+                        -
+                          id: 18
+                          name: '1 ay için tüm özellikler'
+                    -
+                      id: 2
+                      name: 'Business Tarif'
+                      price: 150
+                      color: '#003a61'
+                      proparties:
+                        -
+                          id: 1
+                          name: 'Sınırsız randevu'
+                        -
+                          id: 2
+                          name: 'Sms Bildirimler'
+                        -
+                          id: 3
+                          name: 'Mail Bildirimler'
+                        -
+                          id: 8
+                          name: 'İşletmeye Özel Reklamlar'
+                        -
+                          id: 9
+                          name: 'Müsteri hizmetleri'
+                        -
+                          id: 10
+                          name: 'Personel Çalışma Raporları'
+                        -
+                          id: 11
+                          name: 'Personel İşlemleri'
+                        -
+                          id: 12
+                          name: 'Randevu Raporları'
+                    -
+                      id: 3
+                      name: 'Business Plus'
+                      price: 300
+                      color: '#003a61'
+                      proparties:
+                        -
+                          id: 1
+                          name: 'Sınırsız randevu'
+                        -
+                          id: 2
+                          name: 'Sms Bildirimler'
+                        -
+                          id: 3
+                          name: 'Mail Bildirimler'
+                        -
+                          id: 4
+                          name: 'Mobil Bildirimler'
+                        -
+                          id: 5
+                          name: 'Digital takvim'
+                        -
+                          id: 6
+                          name: 'Google Takvim Bağlantısı'
+                        -
+                          id: 7
+                          name: 'İşletmeye Özel Web Sitesi'
+                        -
+                          id: 8
+                          name: 'İşletmeye Özel Reklamlar'
+                        -
+                          id: 9
+                          name: 'Müsteri hizmetleri'
+                        -
+                          id: 10
+                          name: 'Personel Çalışma Raporları'
+                        -
+                          id: 11
+                          name: 'Personel İşlemleri'
+                        -
+                          id: 12
+                          name: 'Randevu Raporları'
+                        -
+                          id: 13
+                          name: 'Ürün Satışı'
+                        -
+                          id: 14
+                          name: 'Paket Satışı'
+                        -
+                          id: 15
+                          name: 'Ürün Satış Raporu'
+                        -
+                          id: 16
+                          name: 'Paket Satış Raporu'
+                        -
+                          id: 17
+                          name: 'Tüm Özellikler'
+                        -
+                          id: 18
+                          name: '1 ay için tüm özellikler'
+                  yearly_packages: []
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  monthly_packages:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Test Tarif'
+                        price: 0
+                        color: '#003a61'
+                        proparties:
+                          -
+                            id: 1
+                            name: 'Sınırsız randevu'
+                          -
+                            id: 2
+                            name: 'Sms Bildirimler'
+                          -
+                            id: 3
+                            name: 'Mail Bildirimler'
+                          -
+                            id: 4
+                            name: 'Mobil Bildirimler'
+                          -
+                            id: 5
+                            name: 'Digital takvim'
+                          -
+                            id: 6
+                            name: 'Google Takvim Bağlantısı'
+                          -
+                            id: 7
+                            name: 'İşletmeye Özel Web Sitesi'
+                          -
+                            id: 8
+                            name: 'İşletmeye Özel Reklamlar'
+                          -
+                            id: 9
+                            name: 'Müsteri hizmetleri'
+                          -
+                            id: 10
+                            name: 'Personel Çalışma Raporları'
+                          -
+                            id: 11
+                            name: 'Personel İşlemleri'
+                          -
+                            id: 12
+                            name: 'Randevu Raporları'
+                          -
+                            id: 13
+                            name: 'Ürün Satışı'
+                          -
+                            id: 14
+                            name: 'Paket Satışı'
+                          -
+                            id: 15
+                            name: 'Ürün Satış Raporu'
+                          -
+                            id: 16
+                            name: 'Paket Satış Raporu'
+                          -
+                            id: 17
+                            name: 'Tüm Özellikler'
+                          -
+                            id: 18
+                            name: '1 ay için tüm özellikler'
+                      -
+                        id: 2
+                        name: 'Business Tarif'
+                        price: 150
+                        color: '#003a61'
+                        proparties:
+                          -
+                            id: 1
+                            name: 'Sınırsız randevu'
+                          -
+                            id: 2
+                            name: 'Sms Bildirimler'
+                          -
+                            id: 3
+                            name: 'Mail Bildirimler'
+                          -
+                            id: 8
+                            name: 'İşletmeye Özel Reklamlar'
+                          -
+                            id: 9
+                            name: 'Müsteri hizmetleri'
+                          -
+                            id: 10
+                            name: 'Personel Çalışma Raporları'
+                          -
+                            id: 11
+                            name: 'Personel İşlemleri'
+                          -
+                            id: 12
+                            name: 'Randevu Raporları'
+                      -
+                        id: 3
+                        name: 'Business Plus'
+                        price: 300
+                        color: '#003a61'
+                        proparties:
+                          -
+                            id: 1
+                            name: 'Sınırsız randevu'
+                          -
+                            id: 2
+                            name: 'Sms Bildirimler'
+                          -
+                            id: 3
+                            name: 'Mail Bildirimler'
+                          -
+                            id: 4
+                            name: 'Mobil Bildirimler'
+                          -
+                            id: 5
+                            name: 'Digital takvim'
+                          -
+                            id: 6
+                            name: 'Google Takvim Bağlantısı'
+                          -
+                            id: 7
+                            name: 'İşletmeye Özel Web Sitesi'
+                          -
+                            id: 8
+                            name: 'İşletmeye Özel Reklamlar'
+                          -
+                            id: 9
+                            name: 'Müsteri hizmetleri'
+                          -
+                            id: 10
+                            name: 'Personel Çalışma Raporları'
+                          -
+                            id: 11
+                            name: 'Personel İşlemleri'
+                          -
+                            id: 12
+                            name: 'Randevu Raporları'
+                          -
+                            id: 13
+                            name: 'Ürün Satışı'
+                          -
+                            id: 14
+                            name: 'Paket Satışı'
+                          -
+                            id: 15
+                            name: 'Ürün Satış Raporu'
+                          -
+                            id: 16
+                            name: 'Paket Satış Raporu'
+                          -
+                            id: 17
+                            name: 'Tüm Özellikler'
+                          -
+                            id: 18
+                            name: '1 ay için tüm özellikler'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Test Tarif'
+                        price:
+                          type: integer
+                          example: 0
+                        color:
+                          type: string
+                          example: '#003a61'
+                        proparties:
+                          type: array
+                          example:
+                            -
+                              id: 1
+                              name: 'Sınırsız randevu'
+                            -
+                              id: 2
+                              name: 'Sms Bildirimler'
+                            -
+                              id: 3
+                              name: 'Mail Bildirimler'
+                            -
+                              id: 4
+                              name: 'Mobil Bildirimler'
+                            -
+                              id: 5
+                              name: 'Digital takvim'
+                            -
+                              id: 6
+                              name: 'Google Takvim Bağlantısı'
+                            -
+                              id: 7
+                              name: 'İşletmeye Özel Web Sitesi'
+                            -
+                              id: 8
+                              name: 'İşletmeye Özel Reklamlar'
+                            -
+                              id: 9
+                              name: 'Müsteri hizmetleri'
+                            -
+                              id: 10
+                              name: 'Personel Çalışma Raporları'
+                            -
+                              id: 11
+                              name: 'Personel İşlemleri'
+                            -
+                              id: 12
+                              name: 'Randevu Raporları'
+                            -
+                              id: 13
+                              name: 'Ürün Satışı'
+                            -
+                              id: 14
+                              name: 'Paket Satışı'
+                            -
+                              id: 15
+                              name: 'Ürün Satış Raporu'
+                            -
+                              id: 16
+                              name: 'Paket Satış Raporu'
+                            -
+                              id: 17
+                              name: 'Tüm Özellikler'
+                            -
+                              id: 18
+                              name: '1 ay için tüm özellikler'
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 1
+                              name:
+                                type: string
+                                example: 'Sınırsız randevu'
+                  yearly_packages:
+                    type: array
+                    example: []
       tags:
         - Packages
       security: []
-  /api/business/payment:
-    get:
-      summary: 'GET api/payment'
-      operationId: gETApipayment
-      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>\nKullanıcını işletmesinin packet bilgisi ve kullanıcının cartları"
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Payment
-      security: []
-  /api/business/payment/pay:
+  /api/business/payment/create-payment-intent:
     post:
-      summary: 'POST api/payment/pay'
-      operationId: pOSTApipaymentpay
-      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>cart_id | numeric | required | Seçilen Kart Bilgisi</li>\n</ul>\nKullanıcını işletmesinin packet bilgisi ve kullanıcının cartları"
+      summary: 'POST /create-payment-intent'
+      operationId: pOSTcreatePaymentIntent
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>"
       parameters: []
       responses: {  }
       tags:
         - Payment
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                cart_id:
-                  type: string
-                  description: 'Must be at least 1 character.'
-                  example: ykyxyaelhiihuxvk
-              required:
-                - cart_id
+      security: []
+  /api/business/payment/process-payment:
+    post:
+      summary: 'POST /process-payment'
+      operationId: pOSTprocessPayment
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>"
+      parameters: []
+      responses: {  }
+      tags:
+        - Payment
       security: []
   /api/business/personal:
     get:
@@ -1031,11 +1366,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: dignissimos
+                  example: magni
                 password:
                   type: string
                   description: ''
-                  example: 'aKRNKCu<`aJJ]}zR'
+                  example: "/R#M]ocG((@*E'pFL~"
               required:
                 - phone
                 - password

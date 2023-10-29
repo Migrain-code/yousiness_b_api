@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "28b59753-4909-4840-a6a1-7a99616ede0b",
+        "_postman_id": "1e059def-d509-4828-8ed7-9da1a0d98d99",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"cumque\",\"password\":\"g$I+N`i,:i`jO*G&j=\"}"
+                            "raw": "{\"phone\":\"modi\",\"password\":\"&)#e-6}6RPNx]N*pU\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -542,7 +542,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav\",\"phone\":\"xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh\",\"email\":\"barton.abbie@example.org\",\"password\":\"#iCO`55JK@)G:,d'fEJK\",\"gender\":\"ad\"}"
+                            "raw": "{\"name\":\"hufnzpzzvilexotprwbjzgbjirppaaufp\",\"phone\":\"xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez\",\"email\":\"angus.ebert@example.net\",\"password\":\"cF&Qia$tre_f.F\\\\k)&\",\"gender\":\"aspernatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -711,9 +711,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"ftsylkmzzfidrbfadyal\",\"businessName\":\"jrcatfjbzqapnqvv\",\"appointmentRange\":282521,\"businessType\":50.4742,\"phone\":\"zhzasrsldajfsviuvgsrfyrgfrznpmbe\",\"startTime\":\"qui\",\"endTime\":\"sapiente\",\"email\":\"ciara98@example.org\",\"year\":\"2023-10-29T20:50:04\",\"address\":\"reiciendis\",\"cityId\":215.8198,\"districtId\":36569802.5440424,\"commission\":2685958.91713675,\"personalCount\":893.3967518,\"offDay\":1736.61612,\"aboutText\":\"error\"}"
+                            "raw": "{\"officialName\":\"kfkbbborbuvdvhnlqonupwc\",\"businessName\":\"ibosdeclkfuykddxgeuh\",\"appointmentRange\":1134869.1621,\"phone\":\"zbspsplrwqvftogxflyikhdrwtzhsdjtaxlguyztckxbytkbuletulweoqbeucworlbhy\",\"startTime\":\"voluptatem\",\"endTime\":\"quo\",\"email\":\"luettgen.joel@example.com\",\"year\":\"2023-10-29T23:30:15\",\"address\":\"est\",\"personalCount\":6590034.5224,\"aboutText\":\"ab\"}"
                         },
-                        "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>offDay | numeric | required | kapal\u0131 oldu\u011fu g\u00fcn\u00fcn id si <\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>cityId  | string | required | \u015eehir<\/li>\n<li>districtId  | string | required | \u0130l\u00e7e<\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>commission | string | required | P. Kredi kart\u0131 kesintisi | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>personalCount | string | required | Personel Say\u0131s\u0131 | \u00f6rne\u011fin (1, 3, 5,10)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
+                        "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>personalCount | string | required | Personel Say\u0131s\u0131 | \u00f6rne\u011fin (1, 3, 5,10)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
                             "type": "noauth"
                         }
@@ -900,7 +900,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"blanditiis\",\"service_id\":\"deleniti\",\"amount\":\"vel\",\"total\":\"ut\",\"personel_id\":\"dolores\",\"package_type\":\"aperiam\",\"seller_date\":\"ut\"}"
+                            "raw": "{\"customer_id\":\"vel\",\"service_id\":\"quia\",\"amount\":\"cupiditate\",\"total\":\"qui\",\"personel_id\":\"dicta\",\"package_type\":\"est\",\"seller_date\":\"accusantium\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -931,7 +931,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"corrupti\",\"price\":\"optio\",\"amount\":\"rem\"}"
+                            "raw": "{\"package_id\":\"quo\",\"price\":\"voluptas\",\"amount\":\"dolorum\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -962,7 +962,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"repellat\",\"personel_id\":\"repellendus\",\"amount\":\"fuga\",\"operation_date\":\"impedit\"}"
+                            "raw": "{\"package_id\":\"et\",\"personel_id\":\"commodi\",\"amount\":\"tempora\",\"operation_date\":\"nihil\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1015,12 +1015,20 @@
                                     "value": "application\/json"
                                 },
                                 {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "code": 200,
+                            "body": "{\"monthly_packages\":[{\"id\":1,\"name\":\"Test Tarif\",\"price\":0,\"color\":\"#003a61\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"},{\"id\":18,\"name\":\"1 ay i\\u00e7in t\\u00fcm \\u00f6zellikler\"}]},{\"id\":2,\"name\":\"Business Tarif\",\"price\":150,\"color\":\"#003a61\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"}]},{\"id\":3,\"name\":\"Business Plus\",\"price\":300,\"color\":\"#003a61\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"},{\"id\":18,\"name\":\"1 ay i\\u00e7in t\\u00fcm \\u00f6zellikler\"}]}],\"yearly_packages\":[]}",
                             "name": ""
                         }
                     ]
@@ -1032,61 +1040,13 @@
             "description": "",
             "item": [
                 {
-                    "name": "GET api\/payment",
+                    "name": "POST \/create-payment-intent",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/business\/payment",
+                            "path": "api\/business\/payment\/create-payment-intent",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/business\/payment"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<\/ul>\nKullan\u0131c\u0131n\u0131 i\u015fletmesinin packet bilgisi ve kullan\u0131c\u0131n\u0131n cartlar\u0131",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/payment\/pay",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/business\/payment\/pay",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/business\/payment\/pay"
+                            "raw": "{{baseUrl}}\/api\/business\/payment\/create-payment-intent"
                         },
                         "method": "POST",
                         "header": [
@@ -1099,11 +1059,36 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"cart_id\":\"ykyxyaelhiihuxvk\"}"
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<\/ul>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST \/process-payment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/payment\/process-payment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/payment\/process-payment"
                         },
-                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>cart_id | numeric | required | Se\u00e7ilen Kart Bilgisi<\/li>\n<\/ul>\nKullan\u0131c\u0131n\u0131 i\u015fletmesinin packet bilgisi ve kullan\u0131c\u0131n\u0131n cartlar\u0131",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<\/ul>",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1324,7 +1309,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"dignissimos\",\"password\":\"aKRNKCu<`aJJ]}zR\"}"
+                            "raw": "{\"phone\":\"magni\",\"password\":\"\\\/R#M]ocG((@*E'pFL~\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {

@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
+        example: hufnzpzzvilexotprwbjzgbjirppaaufp
         type: string
         enumValues: []
         custom: []
@@ -75,7 +75,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
+        example: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
         type: string
         enumValues: []
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: barton.abbie@example.org
+        example: angus.ebert@example.net
         type: string
         enumValues: []
         custom: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: "#iCO`55JK@)G:,d'fEJK"
+        example: 'cF&Qia$tre_f.F\k)&'
         type: string
         enumValues: []
         custom: []
@@ -99,16 +99,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: ad
+        example: aspernatur
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: vfsbuubutszaavpebsyjeuzwzypcdpworadjhzwcwgvzpzmoxluspvrinmhqqybwmav
-      phone: xmjrexxshdmeexflsggkxxhxqjaluzpwvyvenqupawqzvzasmhjxqcgmdeaiiyvh
-      email: barton.abbie@example.org
-      password: "#iCO`55JK@)G:,d'fEJK"
-      gender: ad
+      name: hufnzpzzvilexotprwbjzgbjirppaaufp
+      phone: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
+      email: angus.ebert@example.net
+      password: 'cF&Qia$tre_f.F\k)&'
+      gender: aspernatur
     fileParameters: []
     responses: []
     responseFields: []

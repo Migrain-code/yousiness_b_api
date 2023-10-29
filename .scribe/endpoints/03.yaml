@@ -26,11 +26,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"monthly_packages":[{"id":1,"name":"Test Tarif","price":0,"color":"#003a61","proparties":[{"id":1,"name":"S\u0131n\u0131rs\u0131z randevu"},{"id":2,"name":"Sms Bildirimler"},{"id":3,"name":"Mail Bildirimler"},{"id":4,"name":"Mobil Bildirimler"},{"id":5,"name":"Digital takvim"},{"id":6,"name":"Google Takvim Ba\u011flant\u0131s\u0131"},{"id":7,"name":"\u0130\u015fletmeye \u00d6zel Web Sitesi"},{"id":8,"name":"\u0130\u015fletmeye \u00d6zel Reklamlar"},{"id":9,"name":"M\u00fcsteri hizmetleri"},{"id":10,"name":"Personel \u00c7al\u0131\u015fma Raporlar\u0131"},{"id":11,"name":"Personel \u0130\u015flemleri"},{"id":12,"name":"Randevu Raporlar\u0131"},{"id":13,"name":"\u00dcr\u00fcn Sat\u0131\u015f\u0131"},{"id":14,"name":"Paket Sat\u0131\u015f\u0131"},{"id":15,"name":"\u00dcr\u00fcn Sat\u0131\u015f Raporu"},{"id":16,"name":"Paket Sat\u0131\u015f Raporu"},{"id":17,"name":"T\u00fcm \u00d6zellikler"},{"id":18,"name":"1 ay i\u00e7in t\u00fcm \u00f6zellikler"}]},{"id":2,"name":"Business Tarif","price":150,"color":"#003a61","proparties":[{"id":1,"name":"S\u0131n\u0131rs\u0131z randevu"},{"id":2,"name":"Sms Bildirimler"},{"id":3,"name":"Mail Bildirimler"},{"id":8,"name":"\u0130\u015fletmeye \u00d6zel Reklamlar"},{"id":9,"name":"M\u00fcsteri hizmetleri"},{"id":10,"name":"Personel \u00c7al\u0131\u015fma Raporlar\u0131"},{"id":11,"name":"Personel \u0130\u015flemleri"},{"id":12,"name":"Randevu Raporlar\u0131"}]},{"id":3,"name":"Business Plus","price":300,"color":"#003a61","proparties":[{"id":1,"name":"S\u0131n\u0131rs\u0131z randevu"},{"id":2,"name":"Sms Bildirimler"},{"id":3,"name":"Mail Bildirimler"},{"id":4,"name":"Mobil Bildirimler"},{"id":5,"name":"Digital takvim"},{"id":6,"name":"Google Takvim Ba\u011flant\u0131s\u0131"},{"id":7,"name":"\u0130\u015fletmeye \u00d6zel Web Sitesi"},{"id":8,"name":"\u0130\u015fletmeye \u00d6zel Reklamlar"},{"id":9,"name":"M\u00fcsteri hizmetleri"},{"id":10,"name":"Personel \u00c7al\u0131\u015fma Raporlar\u0131"},{"id":11,"name":"Personel \u0130\u015flemleri"},{"id":12,"name":"Randevu Raporlar\u0131"},{"id":13,"name":"\u00dcr\u00fcn Sat\u0131\u015f\u0131"},{"id":14,"name":"Paket Sat\u0131\u015f\u0131"},{"id":15,"name":"\u00dcr\u00fcn Sat\u0131\u015f Raporu"},{"id":16,"name":"Paket Sat\u0131\u015f Raporu"},{"id":17,"name":"T\u00fcm \u00d6zellikler"},{"id":18,"name":"1 ay i\u00e7in t\u00fcm \u00f6zellikler"}]}],"yearly_packages":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
         custom: []
