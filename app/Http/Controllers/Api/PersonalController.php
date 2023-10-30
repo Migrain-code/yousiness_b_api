@@ -277,8 +277,25 @@ class PersonalController extends Controller
         for ($i = 5; $i <= 60; $i+= 5){
             $appointmentRanges[]=$i;
         }
+        $acceptedType = [
+            [
+                'id' => 0,
+                'name' => "Hayır"
+            ],
+            [
+                'id' => 1,
+                'name' => "Evet"
+            ]
+
+        ];
+        $rates = [
+            0,
+            10,
+            20
+        ];
         return response()->json([
-            'cities' => CityResource::collection(City::take(20)->get()),
+            'acceptType' =>$acceptedType,
+            'rates' => $rates,
             'dayList' => $dayList,
             'businessTypes' => $business_types,
             'business' => BusinessResource::make($business),
