@@ -150,7 +150,7 @@ class PersonalController extends Controller
     {
         $business = $request->user();
 
-        $personel= Personel::find($request->personel_id);
+        $personel= Personel::find($request->personal_id);
         if ($personel){
             $personel->business_id=$business->id;
             $personel->name= $request->input('name');
