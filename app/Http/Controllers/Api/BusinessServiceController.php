@@ -91,7 +91,7 @@ class BusinessServiceController extends Controller
             return response()->json([
                 'status' => "success",
                 'message' => "Yeni Hizmet Eklendi",
-                'businessServices' => BusinessServiceResource::make($services),
+                'businessServices' => $services,
             ]);
 
         }
