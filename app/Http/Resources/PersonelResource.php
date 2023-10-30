@@ -29,6 +29,7 @@ class PersonelResource extends JsonResource
           'gender' => $this->type->name ?? "",
           'rate' => $this->rate,
           'appointment_range' => $this->range,
+          'accept' => $this->accept == 1 ? "Evet" : "Hayır",
           'description' => $this->description,
         ];
     }
