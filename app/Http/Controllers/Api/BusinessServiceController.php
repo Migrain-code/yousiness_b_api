@@ -59,7 +59,7 @@ class BusinessServiceController extends Controller
     {
         $business = $request->user();
 
-        if ($request->gender == "all"){
+        if ($request->type_id == "all"){
             $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
             $businessService = new BusinessService();
             $businessService->business_id = $business->id;
@@ -88,10 +88,12 @@ class BusinessServiceController extends Controller
 
         }
         else{
+            $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
+
             $businessService = new BusinessService();
             $businessService->business_id = $business->id;
             $businessService->type = $request->input('gender');
-            $businessService->category = $request->input('category');
+            $businessService->category = $serviceSubCategory->category_id;
             $businessService->sub_category = $request->input('sub_category');
             $businessService->time = $request->input('time');
             $businessService->price = $this->sayiDuzenle($request->input('price'));
