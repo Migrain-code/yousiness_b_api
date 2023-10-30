@@ -48,7 +48,6 @@ class BusinessServiceController extends Controller
      * <ul>
      * <li> token </li>
      * <li> type_id |required | cinsiyet id si gelecek buradan  </li>
-     * <li> category |required | hizmetin category id si gelecek buradan  </li>
      * <li> sub_category |required | hizmetin sub_category id si gelecek buradan  </li>
      * <li> time |required | hizmetin süresi gelecek buradan  </li>
      * <li> price |required | hizmetin fiyatı gelecek buradan  </li>
