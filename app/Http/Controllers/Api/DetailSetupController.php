@@ -29,6 +29,7 @@ class DetailSetupController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
+        $business_types = BusinnessType::select('id', 'name')->get();
         $appointmentRanges =[];
         for ($i = 5; $i <= 60; $i+= 5){
             $appointmentRanges[]=$i;
@@ -37,7 +38,8 @@ class DetailSetupController extends Controller
             'business' => BusinessResource::make($user),
             'dayList' => DayList::all(),
             'businessTypeList' => BusinnessType::all(),
-            'appointmentRange' => $appointmentRanges
+            'appointmentRange' => $appointmentRanges,
+            'businessTypes' => $business_types,
         ]);
     }
 

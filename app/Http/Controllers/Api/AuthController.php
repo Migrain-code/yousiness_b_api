@@ -10,6 +10,7 @@ use App\Models\SmsConfirmation;
 use App\Services\Sms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 /**
  * @group Authentication
@@ -156,6 +157,7 @@ class AuthController extends Controller
                     $business = new Business();
                     $business->email = $request->phone;
                     $business->name = $request->business_name;
+                    $business->slug = Str::slug($request->business_name);
                     $business->owner = $request->name;
                     $business->password = Hash::make($generatePassword);
                     $business->package_id = 1;
