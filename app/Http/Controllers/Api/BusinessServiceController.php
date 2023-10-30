@@ -58,7 +58,7 @@ class BusinessServiceController extends Controller
     public function step2AddService(Request $request)
     {
         $business = $request->user();
-
+        $services = [];
         if ($request->type_id == "all"){
             $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
             $businessService = new BusinessService();
@@ -69,7 +69,7 @@ class BusinessServiceController extends Controller
             $businessService->time = $request->input('time');
             $businessService->price = $this->sayiDuzenle($request->input('price'));
             $businessService->save();
-
+            $services[]= $businessService;
             $serviceSubCategorys2 = ServiceSubCategory::where('slug', $serviceSubCategory->slug."-m")->first();
             $businessService = new BusinessService();
             $businessService->business_id = $business->id;
@@ -79,11 +79,13 @@ class BusinessServiceController extends Controller
             $businessService->time = $request->input('time');
             $businessService->price = $this->sayiDuzenle($request->input('price'));
             $businessService->save();
+            $services[]= $businessService;
+
 
             return response()->json([
                 'status' => "success",
                 'message' => "Yeni Hizmet Eklendi",
-                'businessServices' => BusinessServiceResource::collection($business->services),
+                'businessServices' => BusinessServiceResource::make($services),
             ]);
 
         }
@@ -97,11 +99,12 @@ class BusinessServiceController extends Controller
             $businessService->sub_category = $request->input('sub_category');
             $businessService->time = $request->input('time');
             $businessService->price = $this->sayiDuzenle($request->input('price'));
+            $services[]= $businessService;
             if ($businessService->save()) {
                 return response()->json([
                     'status' => "success",
                     'message' => "Yeni Hizmet Eklendi",
-                    'businessServices' => BusinessServiceResource::collection($business->services),
+                    'businessServices' => BusinessServiceResource::collection($services),
                 ]);
             }
         }
