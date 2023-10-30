@@ -3,9 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\BusinessPackageResource;
+use App\Http\Resources\BusinessResource;
 use App\Http\Resources\BusinessServiceResource;
+use App\Http\Resources\CityResource;
 use App\Http\Resources\PersonelResource;
 use App\Models\BusinessService;
+use App\Models\BusinnessType;
+use App\Models\BussinessPackage;
+use App\Models\City;
+use App\Models\DayList;
 use App\Models\Personel;
 use App\Models\PersonelService;
 use Illuminate\Http\Request;
@@ -247,5 +254,36 @@ class PersonalController extends Controller
                 'message' => "Personel Bulunamadı",
             ]);
         }
+    }
+    /**
+     * POST api/business/personal/add/get
+     *
+     * id si gönderilen personeli silecek
+     * <br> Gerekli alanlar
+     * <ul>
+     * <li> token </li>
+     * <li>personalId | required | silinecek personel id si</li>
+     *</ul>
+     * @header Bearer {token}
+     *
+     */
+    public function step3AddGetPersonal(Request $request)
+    {
+        $business_types = BusinnessType::select('id', 'name')->get();
+        $dayList = DayList::orderBy('id', 'asc')->select('id', 'name')->get();
+
+        $business = $request->user();
+        $appointmentRanges =[];
+        for ($i = 5; $i <= 60; $i+= 5){
+            $appointmentRanges[]=$i;
+        }
+        return response()->json([
+            'cities' => CityResource::collection(City::take(20)->get()),
+            'dayList' => $dayList,
+            'businessTypes' => $business_types,
+            'business' => BusinessResource::make($business),
+            'appointmentRange' => $appointmentRanges,
+            'services' => BusinessServiceResource::collection($business->services)
+        ]);
     }
 }

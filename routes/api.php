@@ -87,6 +87,7 @@ Route::prefix('business')->group(function () {
         Route::controller(PersonalController::class)->prefix('personal')->group(function () {
             Route::get('/', 'step3Get');
             Route::post('/get', 'step3GetPersonal');
+            Route::get('/add/get', 'step3AddGetPersonal');
             Route::post('/add', 'step3AddPersonal');
             Route::post('/update', 'step3UpdatePersonal');
             Route::post('/delete', 'step3DeletePersonal');
