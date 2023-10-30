@@ -92,7 +92,7 @@ class BusinessServiceController extends Controller
 
             $businessService = new BusinessService();
             $businessService->business_id = $business->id;
-            $businessService->type = $request->input('gender');
+            $businessService->type = $serviceSubCategory->category->type_id;
             $businessService->category = $serviceSubCategory->category_id;
             $businessService->sub_category = $request->input('sub_category');
             $businessService->time = $request->input('time');
