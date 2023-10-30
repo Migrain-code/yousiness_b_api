@@ -80,7 +80,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: jvcicicfx
+        example: cs
         type: string
         enumValues: []
         custom: []
@@ -88,7 +88,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: sgbrmghpfaaedojv
+        example: yhzn
         type: string
         enumValues: []
         custom: []
@@ -96,7 +96,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 256.721426
+        example: 126124524.97426
         type: number
         enumValues: []
         custom: []
@@ -104,7 +104,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: ehukgzhpvedcorcebprlyvcsosnvcoazblyokblemyohqydouduyapsnbwb
+        example: clljigbrwppwhjppfvibopsihifaiwgjt
         type: string
         enumValues: []
         custom: []
@@ -112,7 +112,7 @@ endpoints:
         name: startTime
         description: ''
         required: true
-        example: omnis
+        example: debitis
         type: string
         enumValues: []
         custom: []
@@ -120,7 +120,7 @@ endpoints:
         name: endTime
         description: ''
         required: true
-        example: laudantium
+        example: officiis
         type: string
         enumValues: []
         custom: []
@@ -128,7 +128,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: wilber98@example.net
+        example: rosenbaum.bart@example.org
         type: string
         enumValues: []
         custom: []
@@ -136,7 +136,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-10-30T14:46:10'
+        example: '2023-10-30T17:14:11'
         type: string
         enumValues: []
         custom: []
@@ -144,7 +144,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: ut
+        example: aut
         type: string
         enumValues: []
         custom: []
@@ -152,21 +152,21 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: quia
+        example: modi
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: jvcicicfx
-      businessName: sgbrmghpfaaedojv
-      appointmentRange: 256.721426
-      phone: ehukgzhpvedcorcebprlyvcsosnvcoazblyokblemyohqydouduyapsnbwb
-      startTime: omnis
-      endTime: laudantium
-      email: wilber98@example.net
-      year: '2023-10-30T14:46:10'
-      address: ut
-      aboutText: quia
+      officialName: cs
+      businessName: yhzn
+      appointmentRange: 126124524.97426
+      phone: clljigbrwppwhjppfvibopsihifaiwgjt
+      startTime: debitis
+      endTime: officiis
+      email: rosenbaum.bart@example.org
+      year: '2023-10-30T17:14:11'
+      address: aut
+      aboutText: modi
     fileParameters: []
     responses: []
     responseFields: []

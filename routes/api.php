@@ -81,6 +81,8 @@ Route::prefix('business')->group(function () {
             Route::post('/add', 'step2AddService');
             Route::post('/update', 'step2UpdateService');
             Route::post('/delete', 'step2DeleteService');
+            Route::post('/gender/get', 'gender');
+            Route::post('/category/get', 'category');
             /*Route::post('/update/logo', 'updateLogo');*/
         });
 

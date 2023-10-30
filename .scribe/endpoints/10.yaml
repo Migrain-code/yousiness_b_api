@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: aut
+        example: enim
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'K,LIXJ{[I+|"7K$|'
+        example: '^?%P![ILj~3y'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: aut
-      password: 'K,LIXJ{[I+|"7K$|'
+      phone: enim
+      password: '^?%P![ILj~3y'
     fileParameters: []
     responses: []
     responseFields: []

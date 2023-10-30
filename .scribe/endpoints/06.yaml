@@ -98,9 +98,9 @@ endpoints:
         <br> Gerekli alanlar
         <ul>
         <li> token </li>
-        <li> typeId |required | cinsiyet id si gelecek buradan  </li>
-        <li> categoryId |required | hizmetin category id si gelecek buradan  </li>
-        <li> subCategoryId |required | hizmetin sub_category id si gelecek buradan  </li>
+        <li> type_id |required | cinsiyet id si gelecek buradan  </li>
+        <li> category |required | hizmetin category id si gelecek buradan  </li>
+        <li> sub_category |required | hizmetin sub_category id si gelecek buradan  </li>
         <li> time |required | hizmetin süresi gelecek buradan  </li>
         <li> price |required | hizmetin fiyatı gelecek buradan  </li>
         </ul>
@@ -182,6 +182,80 @@ endpoints:
         <ul>
         <li> token </li>
         <li>businessServiceId | required | güncellenecek hizmetin idsi</li>
+        </ul>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/business-service/gender/get
+    metadata:
+      groupName: BusinessService
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/business-service/gender/get'
+      description: |-
+        id si gönderilen işletme hizmetinin bilgilerini getirecek
+        <br> Gerekli alanlar
+        <ul>
+        <li> token </li>
+        <li>gender | required | getirilecek cinsiyet türü id si</li>
+        </ul>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/business-service/category/get
+    metadata:
+      groupName: BusinessService
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/business-service/category/get'
+      description: |-
+        id si gönderilen işletme hizmetinin bilgilerini getirecek
+        <br> Gerekli alanlar
+        <ul>
+        <li> token </li>
+        <li>category_id | required | getirilecek cinsiyet türü id si</li>
         </ul>
       authenticated: false
       custom: []

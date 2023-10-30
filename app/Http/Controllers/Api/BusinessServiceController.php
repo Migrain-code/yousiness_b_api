@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BusinessServiceResource;
+use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ServiceCategoryResource;
+use App\Http\Resources\ServiceSubCategoryResource;
 use App\Models\BusinessService;
 use App\Models\ServiceCategory;
+use App\Models\ServiceSubCategory;
 use Illuminate\Http\Request;
 
 /**
@@ -44,9 +47,9 @@ class BusinessServiceController extends Controller
      * <br> Gerekli alanlar
      * <ul>
      * <li> token </li>
-     * <li> typeId |required | cinsiyet id si gelecek buradan  </li>
-     * <li> categoryId |required | hizmetin category id si gelecek buradan  </li>
-     * <li> subCategoryId |required | hizmetin sub_category id si gelecek buradan  </li>
+     * <li> type_id |required | cinsiyet id si gelecek buradan  </li>
+     * <li> category |required | hizmetin category id si gelecek buradan  </li>
+     * <li> sub_category |required | hizmetin sub_category id si gelecek buradan  </li>
      * <li> time |required | hizmetin süresi gelecek buradan  </li>
      * <li> price |required | hizmetin fiyatı gelecek buradan  </li>
      *</ul>
@@ -56,20 +59,53 @@ class BusinessServiceController extends Controller
     public function step2AddService(Request $request)
     {
         $business = $request->user();
-        $newBusinessService = new BusinessService();
-        $newBusinessService->business_id = $business->id;
-        $newBusinessService->type = $request->typeId;
-        $newBusinessService->category = $request->input('categoryId');
-        $newBusinessService->sub_category = $request->input('subCategoryId');
-        $newBusinessService->time = $request->input('time');
-        $newBusinessService->price = $request->input('price');
-        $newBusinessService->save();
 
-        return response()->json([
-            'status' => "success",
-            'message' => "Yeni Hizmet Eklendi",
-            'businessServices' => BusinessServiceResource::collection($business->services),
-        ]);
+        if ($request->gender == "all"){
+            $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
+            $businessService = new BusinessService();
+            $businessService->business_id = $business->id;
+            $businessService->type = $serviceSubCategory->category->type_id;
+            $businessService->category = $serviceSubCategory->category_id;
+            $businessService->sub_category = $serviceSubCategory->id;
+            $businessService->time = $request->input('time');
+            $businessService->price = $this->sayiDuzenle($request->input('price'));
+            $businessService->save();
+
+            $serviceSubCategorys2 = ServiceSubCategory::where('slug', $serviceSubCategory->slug."-m")->first();
+            $businessService = new BusinessService();
+            $businessService->business_id = $business->id;
+            $businessService->type = $serviceSubCategorys2->category->type_id;
+            $businessService->category = $serviceSubCategorys2->category_id;
+            $businessService->sub_category = $serviceSubCategorys2->id;
+            $businessService->time = $request->input('time');
+            $businessService->price = $this->sayiDuzenle($request->input('price'));
+            $businessService->save();
+
+            return response()->json([
+                'status' => "success",
+                'message' => "Yeni Hizmet Eklendi",
+                'businessServices' => BusinessServiceResource::collection($business->services),
+            ]);
+
+        }
+        else{
+            $businessService = new BusinessService();
+            $businessService->business_id = $business->id;
+            $businessService->type = $request->input('gender');
+            $businessService->category = $request->input('category');
+            $businessService->sub_category = $request->input('sub_category');
+            $businessService->time = $request->input('time');
+            $businessService->price = $this->sayiDuzenle($request->input('price'));
+            if ($businessService->save()) {
+                return response()->json([
+                    'status' => "success",
+                    'message' => "Yeni Hizmet Eklendi",
+                    'businessServices' => BusinessServiceResource::collection($business->services),
+                ]);
+            }
+        }
+
+
     }
 
     /**
@@ -173,4 +209,55 @@ class BusinessServiceController extends Controller
             ]);
         }
     }
+    /**
+     * POST api/business/business-service/category/get
+     *
+     * id si gönderilen işletme hizmetinin bilgilerini getirecek
+     * <br> Gerekli alanlar
+     * <ul>
+     * <li> token </li>
+     * <li>category_id | required | getirilecek cinsiyet türü id si</li>
+     *</ul>
+     * @header Bearer {token}
+     *
+     */
+    public function category(Request $request)
+    {
+        $sub_category = ServiceSubCategory::where('category_id', $request->category_id)->get();
+        return response()->json([
+           'sub_categories' => ServiceSubCategoryResource::collection($sub_category)
+        ]);
+    }
+    /**
+     * POST api/business/business-service/gender/get
+     *
+     * id si gönderilen işletme hizmetinin bilgilerini getirecek
+     * <br> Gerekli alanlar
+     * <ul>
+     * <li> token </li>
+     * <li>gender | required | getirilecek cinsiyet türü id si</li>
+     *</ul>
+     * @header Bearer {token}
+     *
+     */
+    public function gender(Request $request)
+    {
+        if ($request->gender == "all") {
+            $category = ServiceCategory::with('type')->where('type_id', 1)->get();
+        } else {
+            $category = ServiceCategory::where('type_id', $request->gender)->get();
+        }
+        //dd($category);
+        return response()->json([
+            'category' => CategoryResource::collection($category)
+        ]);
+    }
+
+    function sayiDuzenle($sayi){
+        $sayi = str_replace('.','',$sayi);
+        $sayi = str_replace(',','.',$sayi);
+        $sonuc = floatval($sayi);
+        return $sonuc;
+    }
+
 }
