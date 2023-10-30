@@ -140,20 +140,25 @@ class BusinessServiceController extends Controller
         $business = $request->user();
 
         $businessService = BusinessService::find($request->input('businessServiceId'));
-        if ($businessService) {
-            $businessService->business_id = $business->id;
-            $businessService->type = $request->typeId;
-            $businessService->category = $request->input('categoryId');
-            $businessService->sub_category = $request->input('subCategoryId');
-            $businessService->time = $request->input('time');
-            $businessService->price = $request->input('price');
-            $businessService->save();
 
-            return response()->json([
-                'status' => "success",
-                'message' => "Hizmet Bilgisi Güncellendi",
-                'businessServices' => BusinessServiceResource::collection($business->services),
-            ]);
+        if ($businessService) {
+            $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
+
+            $businessService = new BusinessService();
+            $businessService->business_id = $business->id;
+            $businessService->type = $serviceSubCategory->category->type_id;
+            $businessService->category = $serviceSubCategory->category_id;
+            $businessService->sub_category = $request->input('sub_category');
+            $businessService->time = $request->input('time');
+            $businessService->price = $this->sayiDuzenle($request->input('price'));
+
+            if ($businessService->save()) {
+                return response()->json([
+                    'status' => "success",
+                    'message' => "Hizmet Güncellendi",
+                    'businessServices' => BusinessServiceResource::make($businessService),
+                ]);
+            }
         } else {
             return response()->json([
                 'status' => "error",
