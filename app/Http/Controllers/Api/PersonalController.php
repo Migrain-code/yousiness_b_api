@@ -151,49 +151,53 @@ class PersonalController extends Controller
         $business = $request->user();
 
         $personel= Personel::find($request->personel_id);
-        $personel->business_id=$business->id;
-        $personel->name= $request->input('name');
-        $personel->image="business/team.png";
-        $personel->email=$request->email;
-        $personel->password=Hash::make($request->password);
-        $personel->phone=$request->approveType;
-        $personel->accept=$request->accept;
-        $personel->rest_day=$request->restDay;
-        $personel->start_time=$request->startTime;
-        $personel->end_time=$request->endTime;
-        $personel->food_start=$request->foodStart;
-        $personel->food_end=$request->foodEnd;
-        $personel->gender=$request->gender;
-        $personel->rate=$request->rate;
-        $personel->range=$request->appointmentRange;
-        $personel->description=$request->description;
-        if ($personel->save()){
-            if (in_array('all', $request->services)){
-                foreach ($business->services as $service){
-                    $personelService=new PersonelService();
-                    $personelService->service_id=$service->id;
-                    $personelService->personel_id=$personel->id;
-                    $personelService->save();
+        if ($personel){
+            $personel->business_id=$business->id;
+            $personel->name= $request->input('name');
+            $personel->image="business/team.png";
+            $personel->email=$request->email;
+            $personel->password=Hash::make($request->password);
+            $personel->phone=$request->approveType;
+            $personel->accept=$request->accept;
+            $personel->rest_day=$request->restDay;
+            $personel->start_time=$request->startTime;
+            $personel->end_time=$request->endTime;
+            $personel->food_start=$request->foodStart;
+            $personel->food_end=$request->foodEnd;
+            $personel->gender=$request->gender;
+            $personel->rate=$request->rate;
+            $personel->range=$request->appointmentRange;
+            $personel->description=$request->description;
+            if ($personel->save()){
+                if (in_array('all', $request->services)){
+                    foreach ($business->services as $service){
+                        $personelService=new PersonelService();
+                        $personelService->service_id=$service->id;
+                        $personelService->personel_id=$personel->id;
+                        $personelService->save();
+                    }
                 }
-            }
-            else{
-                foreach ($request->services as $service){
-                    $personelService=new PersonelService();
-                    $personelService->service_id=$service;
-                    $personelService->personel_id=$personel->id;
-                    $personelService->save();
+                else{
+                    foreach ($request->services as $service){
+                        $personelService=new PersonelService();
+                        $personelService->service_id=$service;
+                        $personelService->personel_id=$personel->id;
+                        $personelService->save();
+                    }
                 }
+                return response()->json([
+                    'status'=>"success",
+                    'message'=>"Personel Güncellendi",
+                ]);
             }
+        }
+        else{
             return response()->json([
-                'status'=>"success",
-                'message'=>"Personel Güncellendi",
+                'status'=>"danger",
+                'message'=>"Personel Bulunamadı",
             ]);
         }
 
-        return response()->json([
-            'status' => "error",
-            'message' => "Personel Eklenirken Bir Hata Oluştu Lütfen Tekrar Deneyin",
-        ]);
 
     }
 
