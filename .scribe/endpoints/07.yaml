@@ -85,6 +85,52 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - GET
+    uri: api/business/personal/add/get
+    metadata:
+      groupName: Personal
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/personal/add/get'
+      description: |-
+        id si gönderilen personeli silecek
+        <br> Gerekli alanlar
+        <ul>
+        <li> token </li>
+        <li>personalId | required | silinecek personel id si</li>
+        </ul>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - POST
     uri: api/business/personal/add
     metadata:

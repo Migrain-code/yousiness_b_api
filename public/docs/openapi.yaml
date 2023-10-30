@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: modi
+                  example: aspernatur
                 password:
                   type: string
                   description: ''
-                  example: '&)#e-6}6RPNx]N*pU'
+                  example: "l%(q:eD%zAKk`_'#"
               required:
                 - phone
                 - password
@@ -486,23 +486,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: hufnzpzzvilexotprwbjzgbjirppaaufp
+                  example: olekemwjpownparsmvweusbcbcugulkszlkpnjsqrt
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
+                  example: ffluxcufdufihhpjzmahipbnpjkffpzyqcrhwzuqllsdtybnhbrbesxxgkvmtdbocsezqpm
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: angus.ebert@example.net
+                  example: cwolf@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'cF&Qia$tre_f.F\k)&'
+                  example: "MXeYc%'];mJm%5f}2zt["
                 gender:
                   type: string
                   description: ''
-                  example: aspernatur
+                  example: saepe
               required:
                 - name
                 - phone
@@ -566,7 +566,7 @@ paths:
     post:
       summary: 'POST api/detail-setup/step-1/update'
       operationId: pOSTApidetailSetupstep1update
-      description: "<ul>\n<li>Bearer Token</li>\n<li>officialName | string | required | Salon Sahibinin adı</li>\n<li>businessName | string | required | Salon Adı</li>\n<li>businessType | numeric | required | işletme türü id'si </li>\n<li>phone | string | required | İşletme Telefon Numarası</li>\n<li>email | string | required | İşletme E-posta Adresi</li>\n<li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>\n<li>personalCount | string | required | Personel Sayısı | örneğin (1, 3, 5,10)</li>\n<li>aboutText | string | required| İşletme Hakkında Yazısı</li>\n<li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n<li>year | date | required| Kuruluş Tarihi örneğin (2023-04-01)</li>\n<li>address | text | required| Address Metni</li>\n</ul>\nDetaylı Kurulum Ekranı İşletme Bilgileri güncelleme Apisi"
+      description: "<ul>\n<li>Bearer Token</li>\n<li>officialName | string | required | Salon Sahibinin adı</li>\n<li>businessName | string | required | Salon Adı</li>\n<li>businessType | numeric | required | işletme türü id'si </li>\n<li>phone | string | required | İşletme Telefon Numarası</li>\n<li>email | string | required | İşletme E-posta Adresi</li>\n<li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>\n<li>aboutText | string | required| İşletme Hakkında Yazısı</li>\n<li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>\n<li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>\n<li>year | date | required| Kuruluş Tarihi örneğin (2023-04-01)</li>\n<li>address | text | required| Address Metni</li>\n</ul>\nDetaylı Kurulum Ekranı İşletme Bilgileri güncelleme Apisi"
       parameters: []
       responses: {  }
       tags:
@@ -581,47 +581,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kfkbbborbuvdvhnlqonupwc
+                  example: jvcicicfx
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ibosdeclkfuykddxgeuh
+                  example: sgbrmghpfaaedojv
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 1134869.1621
+                  example: 256.721426
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: zbspsplrwqvftogxflyikhdrwtzhsdjtaxlguyztckxbytkbuletulweoqbeucworlbhy
+                  example: ehukgzhpvedcorcebprlyvcsosnvcoazblyokblemyohqydouduyapsnbwb
                 startTime:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: omnis
                 endTime:
                   type: string
                   description: ''
-                  example: quo
+                  example: laudantium
                 email:
                   type: string
                   description: ''
-                  example: luettgen.joel@example.com
+                  example: wilber98@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-10-29T23:30:15'
+                  example: '2023-10-30T14:46:10'
                 address:
                   type: string
                   description: ''
-                  example: est
-                personalCount:
-                  type: number
-                  description: ''
-                  example: 6590034.5224
+                  example: ut
                 aboutText:
                   type: string
                   description: ''
-                  example: ab
+                  example: quia
               required:
                 - officialName
                 - businessName
@@ -632,7 +628,6 @@ paths:
                 - email
                 - year
                 - address
-                - personalCount
                 - aboutText
       security: []
   /api/business/package-sale:
@@ -718,31 +713,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: vel
+                  example: dicta
                 service_id:
                   type: string
                   description: ''
-                  example: quia
+                  example: animi
                 amount:
                   type: string
                   description: ''
-                  example: cupiditate
+                  example: sint
                 total:
                   type: string
                   description: ''
-                  example: qui
+                  example: ut
                 personel_id:
                   type: string
                   description: ''
-                  example: dicta
+                  example: libero
                 package_type:
                   type: string
                   description: ''
-                  example: est
+                  example: amet
                 seller_date:
                   type: string
                   description: ''
-                  example: accusantium
+                  example: quisquam
               required:
                 - customer_id
                 - service_id
@@ -771,15 +766,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: quo
+                  example: in
                 price:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: amet
                 amount:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: et
               required:
                 - package_id
                 - price
@@ -804,19 +799,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: et
+                  example: quas
                 personel_id:
                   type: string
                   description: ''
-                  example: commodi
+                  example: neque
                 amount:
                   type: string
                   description: ''
-                  example: tempora
+                  example: eum
                 operation_date:
                   type: string
                   description: ''
-                  example: nihil
+                  example: vel
               required:
                 - package_id
                 - personel_id
@@ -1296,6 +1291,35 @@ paths:
       tags:
         - Personal
       security: []
+  /api/business/personal/add/get:
+    get:
+      summary: 'POST api/business/personal/add/get'
+      operationId: pOSTApibusinesspersonaladdget
+      description: "id si gönderilen personeli silecek\n<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li>personalId | required | silinecek personel id si</li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Personal
+      security: []
   /api/business/personal/add:
     post:
       summary: 'POST api/personal/add'
@@ -1366,11 +1390,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: magni
+                  example: aut
                 password:
                   type: string
                   description: ''
-                  example: "/R#M]ocG((@*E'pFL~"
+                  example: 'K,LIXJ{[I+|"7K$|'
               required:
                 - phone
                 - password

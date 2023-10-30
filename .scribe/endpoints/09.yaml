@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: hufnzpzzvilexotprwbjzgbjirppaaufp
+        example: olekemwjpownparsmvweusbcbcugulkszlkpnjsqrt
         type: string
         enumValues: []
         custom: []
@@ -73,7 +73,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
+        example: ffluxcufdufihhpjzmahipbnpjkffpzyqcrhwzuqllsdtybnhbrbesxxgkvmtdbocsezqpm
         type: string
         enumValues: []
         custom: []
@@ -81,7 +81,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: angus.ebert@example.net
+        example: cwolf@example.net
         type: string
         enumValues: []
         custom: []
@@ -89,7 +89,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'cF&Qia$tre_f.F\k)&'
+        example: "MXeYc%'];mJm%5f}2zt["
         type: string
         enumValues: []
         custom: []
@@ -97,16 +97,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: aspernatur
+        example: saepe
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: hufnzpzzvilexotprwbjzgbjirppaaufp
-      phone: xtvnultibehszmmolgzduigfqbcnzrprvkplidhkckpqupjziclihfglstlxxttfcexytvureqifdez
-      email: angus.ebert@example.net
-      password: 'cF&Qia$tre_f.F\k)&'
-      gender: aspernatur
+      name: olekemwjpownparsmvweusbcbcugulkszlkpnjsqrt
+      phone: ffluxcufdufihhpjzmahipbnpjkffpzyqcrhwzuqllsdtybnhbrbesxxgkvmtdbocsezqpm
+      email: cwolf@example.net
+      password: "MXeYc%'];mJm%5f}2zt["
+      gender: saepe
     fileParameters: []
     responses: []
     responseFields: []

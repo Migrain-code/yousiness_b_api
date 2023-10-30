@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: magni
+        example: aut
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: "/R#M]ocG((@*E'pFL~"
+        example: 'K,LIXJ{[I+|"7K$|'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: magni
-      password: "/R#M]ocG((@*E'pFL~"
+      phone: aut
+      password: 'K,LIXJ{[I+|"7K$|'
     fileParameters: []
     responses: []
     responseFields: []
