@@ -85,7 +85,7 @@ class PersonalController extends Controller
         $personel->end_time=$request->endTime;
         $personel->food_start=$request->foodStart;
         $personel->food_end=$request->foodEnd;
-        $personel->gender=$business->type->id==3 ? $request->gender : $business->type->id;
+        $personel->gender=$request->gender;
         $personel->rate=$request->rate;
         $personel->range=$request->appointmentRange;
         $personel->description=$request->description;
