@@ -20,6 +20,7 @@ class BusinessServiceResource extends JsonResource
             "category"=> $this->categorys->name,
             "sub_category"=> $this->subCategory->name,
             "price"=> $this->price,
+            'time' => $this->time,
         ];
     }
 }
