@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: enim
+        example: aut
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '^?%P![ILj~3y'
+        example: 'xww6F:u'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: enim
-      password: '^?%P![ILj~3y'
+      phone: aut
+      password: 'xww6F:u'
     fileParameters: []
     responses: []
     responseFields: []

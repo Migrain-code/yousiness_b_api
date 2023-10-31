@@ -39,7 +39,25 @@ class BusinessServiceController extends Controller
             'businessServices' => BusinessServiceResource::collection($user->service),
         ]);
     }
+    /**
+     * GET api/business/business-service/list
+     *
+     * Hizmetlerin listesini döndürecek size buradaki hizmet listesinden seçilen hizmetlerden seçilen hizmet eklenecek
+     * <br> Gerekli alanlar
+     * <ul>
+     * <li> token </li>
+     *</ul>
+     * @header Bearer {token}
+     *
+     */
+    public function serviceList(Request $request)
+    {
+        $user = $request->user();
 
+        return response()->json([
+            'businessServices' => BusinessServiceResource::collection($user->service),
+        ]);
+    }
     /**
      * POST api/business-service/add
      *

@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: in
+        example: deserunt
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'Apl1mW\)%pYS]^lr(#)'
+        example: '<OK:*n[VR^S'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: in
-      password: 'Apl1mW\)%pYS]^lr(#)'
+      phone: deserunt
+      password: '<OK:*n[VR^S'
     fileParameters: []
     responses: []
     responseFields: []

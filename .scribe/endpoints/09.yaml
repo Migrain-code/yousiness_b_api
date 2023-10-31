@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: miianxexgituasftclcglj
+        example: iowbje
         type: string
         enumValues: []
         custom: []
@@ -73,7 +73,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: sgmmwdytkzlhkcpaxmltrxarvndyuqlvs
+        example: fdksplxsdxxknbvodwmyhmupadqvitoieubjdauuxetizaxgq
         type: string
         enumValues: []
         custom: []
@@ -81,7 +81,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: wschamberger@example.org
+        example: casandra.schroeder@example.com
         type: string
         enumValues: []
         custom: []
@@ -89,7 +89,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'vViK!^v*$!Iz[nxq11R'
+        example: '~>cb;iZ{Q!A%aY$NA'
         type: string
         enumValues: []
         custom: []
@@ -97,16 +97,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: debitis
+        example: omnis
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: miianxexgituasftclcglj
-      phone: sgmmwdytkzlhkcpaxmltrxarvndyuqlvs
-      email: wschamberger@example.org
-      password: 'vViK!^v*$!Iz[nxq11R'
-      gender: debitis
+      name: iowbje
+      phone: fdksplxsdxxknbvodwmyhmupadqvitoieubjdauuxetizaxgq
+      email: casandra.schroeder@example.com
+      password: '~>cb;iZ{Q!A%aY$NA'
+      gender: omnis
     fileParameters: []
     responses: []
     responseFields: []

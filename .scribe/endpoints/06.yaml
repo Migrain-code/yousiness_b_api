@@ -48,6 +48,51 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - GET
+    uri: api/business/business-service/list
+    metadata:
+      groupName: BusinessService
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET api/business/business-service/list'
+      description: |-
+        Hizmetlerin listesini döndürecek size buradaki hizmet listesinden seçilen hizmetlerden seçilen hizmet eklenecek
+        <br> Gerekli alanlar
+        <ul>
+        <li> token </li>
+        </ul>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - POST
     uri: api/business/business-service/get
     metadata:
@@ -99,7 +144,6 @@ endpoints:
         <ul>
         <li> token </li>
         <li> type_id |required | cinsiyet id si gelecek buradan  </li>
-        <li> category |required | hizmetin category id si gelecek buradan  </li>
         <li> sub_category |required | hizmetin sub_category id si gelecek buradan  </li>
         <li> time |required | hizmetin süresi gelecek buradan  </li>
         <li> price |required | hizmetin fiyatı gelecek buradan  </li>

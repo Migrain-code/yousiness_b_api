@@ -77,6 +77,7 @@ Route::prefix('business')->group(function () {
 
         Route::controller(BusinessServiceController::class)->prefix('business-service')->group(function () {
             Route::get('/', 'step2Get');
+            Route::get('/list', 'serviceList');
             Route::post('/get', 'step2GetService');
             Route::post('/add', 'step2AddService');
             Route::post('/update', 'step2UpdateService');
