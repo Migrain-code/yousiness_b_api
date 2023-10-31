@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OfficialPaymentRequest;
 use App\Http\Resources\BusinessPackageResource;
 //use App\Http\Resources\OfficialCardResource;
+use App\Models\Business;
 use Stripe\Customer;
 use Stripe\EphemeralKey;
 use Stripe\Stripe;
@@ -32,7 +33,7 @@ class PaymentController extends Controller
      */
     public function createPaymentIntent(Request $request)
     {
-        $business = $request->user();
+        $business =Business::find(21);
         try {
             Stripe::setApiKey('sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx');
 

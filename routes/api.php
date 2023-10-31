@@ -49,7 +49,7 @@ Route::prefix('business')->group(function () {
     Route::get('/categories', [SetupController::class, 'categories']);
     Route::get('/packages', [BusinessPackageController::class, 'index']);
 
-    Route::get('/create-payment-intent','createPaymentIntent');
+    Route::get('/create-payment-intent',[PaymentController::class, 'createPaymentIntent']);
 
     Route::middleware('auth:business')->group(function () {
 
