@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OfficialPaymentRequest;
 use App\Http\Resources\BusinessPackageResource;
 //use App\Http\Resources\OfficialCardResource;
+use Stripe\EphemeralKey;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 use Illuminate\Http\Request;
@@ -30,19 +31,26 @@ class PaymentController extends Controller
      */
     public function createPaymentIntent(Request $request)
     {
+        $business = $request->user();
         try {
             Stripe::setApiKey('sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx');
-
+            $ephemeralKey = EphemeralKey::create(
+                ['customer' => $business->id],
+                ['stripe_version' => '2023-10-16']
+            );
             $amount = 1000; // Ödeme miktarını ayarlayın (örnekte 10.00 dolar)
             $currency = 'EUR';
 
             $paymentIntent = PaymentIntent::create([
                 'amount' => $amount,
                 'currency' => $currency,
+                'description' => "Yeni Paket Alım Ödemesi"
             ]);
 
             return response()->json([
-                'clientSecret' => $paymentIntent->client_secret,
+                'paymentIntent' => $paymentIntent->client_secret,
+                'ephemeralKey' => $ephemeralKey, // Ephemeral Key'i burada ayarlayın
+                'customer' => $business->id,
             ]);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
