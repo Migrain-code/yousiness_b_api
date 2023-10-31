@@ -42,7 +42,7 @@ class PaymentController extends Controller
             ]);
 
             return response()->json([
-                'clientSecret' => $paymentIntent->client_secret,
+                'clientSecret' => "sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx" //$paymentIntent->client_secret,
             ]);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
