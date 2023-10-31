@@ -49,7 +49,6 @@ Route::prefix('business')->group(function () {
     Route::get('/categories', [SetupController::class, 'categories']);
     Route::get('/packages', [BusinessPackageController::class, 'index']);
 
-    Route::get('/create-payment-intent',[PaymentController::class, 'createPaymentIntent']);
 
     Route::middleware('auth:business')->group(function () {
 
@@ -69,6 +68,7 @@ Route::prefix('business')->group(function () {
             Route::post('/update', 'update');
         });*/
         Route::controller(PaymentController::class)->prefix('payment')->group(function () {
+            Route::get('/create-payment-intent',[PaymentController::class, 'createPaymentIntent']);
             Route::post('/process-payment', 'processPayment');
         });
 

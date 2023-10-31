@@ -6,9 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OfficialPaymentRequest;
 use App\Http\Resources\BusinessPackageResource;
 //use App\Http\Resources\OfficialCardResource;
-use App\Models\Business;
-use Stripe\Customer;
-use Stripe\EphemeralKey;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 use Illuminate\Http\Request;
@@ -33,43 +30,19 @@ class PaymentController extends Controller
      */
     public function createPaymentIntent(Request $request)
     {
-        $business =Business::find(21);
         try {
             Stripe::setApiKey('sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx');
-
-            // Stripe Müşteri oluşturun ve kullanıcı kimliğini (ID) ekleyin
-            $customer = Customer::create([
-                'metadata' => [
-                    'user_id' => $business->id,
-                ],
-            ]);
-
-            // Stripe Müşteri kimliği
-            $stripeCustomerId = $customer->id;
-
-            // Ephemeral Key'i oluşturun
-            $ephemeralKey = EphemeralKey::create(
-                ['customer' => $stripeCustomerId],
-                ['stripe_version' => '2023-10-16'] // Stripe API sürümünü güncelleyin
-            );
 
             $amount = 1000; // Ödeme miktarını ayarlayın (örnekte 10.00 dolar)
             $currency = 'EUR';
 
-            // PaymentIntent oluşturun ve metadata eklemeyi unutmayın
             $paymentIntent = PaymentIntent::create([
                 'amount' => $amount,
                 'currency' => $currency,
-                'description' => "Yeni Paket Alım Ödemesi",
-                'metadata' => [
-                    'user_id' => $business->id,
-                ],
             ]);
 
             return response()->json([
-                'paymentIntent' => $paymentIntent->client_secret,
-                'ephemeralKey' => $ephemeralKey->secret,
-                'customer' => $stripeCustomerId,
+                'clientSecret' => $paymentIntent->client_secret,
             ]);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
