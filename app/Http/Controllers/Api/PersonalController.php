@@ -157,7 +157,7 @@ class PersonalController extends Controller
             $personel->image="business/team.png";
             $personel->email=$request->email;
             $personel->password=Hash::make($request->password);
-            $personel->phone=$request->approveType;
+            $personel->phone=$request->phone;
             $personel->accept=$request->accept;
             $personel->rest_day=$request->restDay;
             $personel->start_time=$request->startTime;
