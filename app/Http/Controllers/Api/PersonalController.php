@@ -157,7 +157,18 @@ class PersonalController extends Controller
             $personel->image="business/team.png";
             $personel->email=$request->email;
             $personel->password=Hash::make($request->password);
-            $personel->phone=$request->phone;
+            if ($personel->phone != $request->phone){
+                $personelFind = Personel::where('phone', $request->phone)->first();
+                if ($personelFind){
+                    return response()->json([
+                       'status' => "warning",
+                       'message' => "Bu telefon numarası ile kayıtlı personel bulunmakta"
+                    ]);
+                }
+                else{
+                    $personel->phone=$request->phone;
+                }
+            }
             $personel->accept=$request->accept;
             $personel->rest_day=$request->restDay;
             $personel->start_time=$request->startTime;
