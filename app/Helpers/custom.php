@@ -16,5 +16,13 @@ function clearPhone($phoneNumber){
     return $newPhoneNumber;
 
 }
+function calculateTotal($services)
+{
+    $total=0;
+    foreach ($services as $service){
+        $total+=$service->service->price;
+    }
+    return $total;
+}
 
 

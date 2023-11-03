@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OfficialPaymentRequest;
 use App\Http\Resources\BusinessPackageResource;
 //use App\Http\Resources\OfficialCardResource;
+use App\Models\BussinessPackage;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 use Illuminate\Http\Request;
@@ -30,22 +31,20 @@ class PaymentController extends Controller
      */
     public function createPaymentIntent(Request $request)
     {
-        try {
-            Stripe::setApiKey('sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx');
-
-            $amount = 1000; // Ödeme miktarını ayarlayın (örnekte 10.00 dolar)
-            $currency = 'EUR';
-
-            $paymentIntent = PaymentIntent::create([
-                'amount' => $amount,
-                'currency' => $currency,
-            ]);
-
+        $package = BussinessPackage::find($request->package_id);
+        $business = $request->user();
+        if ($package->price == 0){
+            $business->is_setup = 1;
+            $business->save();
             return response()->json([
-                'clientSecret' => $paymentIntent->client_secret,
+               'status' => "success",
             ]);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
+        }
+        else{
+            return response()->json([
+                'status' => "warning",
+                'message' => "Ödeme Yapmanız gerekiyor"
+            ]);
         }
     }
 

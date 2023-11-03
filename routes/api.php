@@ -25,7 +25,7 @@ use \App\Http\Controllers\Api\PackageSaleController;
 use \App\Http\Controllers\Api\CustomerController;
 use \App\Http\Controllers\Api\BusinessPackageController;
 use \App\Http\Controllers\Api\PersonalAuthController;
-
+use \App\Http\Controllers\Api\BusinessHomeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -55,6 +55,7 @@ Route::prefix('business')->group(function () {
         Route::get('user', [AuthController::class, 'user']);
         Route::post('logout', [AuthController::class, 'logout']);
         Route::post('/categories/add', [SetupController::class, 'addCategories']);
+        Route::get('home', [BusinessHomeController::class, 'index']);
         Route::controller(SetupController::class)->prefix('setup')->group(function () {
             Route::get('/get', 'get');
             Route::post('/update', 'update');
