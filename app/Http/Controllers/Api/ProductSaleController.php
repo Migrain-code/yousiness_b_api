@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\BusinessCustomerResource;
 use App\Http\Resources\PersonelResource;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductSaleResource;
 use App\Models\Product;
 use App\Models\ProductSales;
 use Illuminate\Http\Request;
@@ -33,12 +34,12 @@ class ProductSaleController extends Controller
     {
         $business = $request->user();
         return response()->json([
-            'product_sales' => $business->sales,
+            'product_sales' => ProductSaleResource::collection($business->sales),
         ]);
     }
 
     /**
-     * GET api/business/product/get-info
+     * GET api/business/product-sale/get-info
      *
      *
      * <ul>
@@ -86,7 +87,7 @@ class ProductSaleController extends Controller
     }
 
     /**
-     * POST api/business/product/create
+     * POST api/business/product-sale/create
      *
      *
      * <ul>
@@ -127,7 +128,7 @@ class ProductSaleController extends Controller
     }
 
     /**
-     * POST api/business/product/update
+     * POST api/business/product-sale/update
      *
      *
      * <ul>
@@ -168,7 +169,7 @@ class ProductSaleController extends Controller
     }
 
     /**
-     * POST api/business/product/delete
+     * POST api/business/product-sale/delete
      *
      *
      * <ul>
