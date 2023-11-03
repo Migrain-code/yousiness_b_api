@@ -37,7 +37,7 @@ class BusinessResource extends JsonResource
            'about' => $this->about,
            'embed' => $this->embed,
            'address' => $this->address,
-           'setup' => $this->is_setup,
+           'setup' => $this->is_setup == 1 ? true : false,
         ];
     }
 }
