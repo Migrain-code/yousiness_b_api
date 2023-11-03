@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Carbon;
 
 class PackageSalesResource extends JsonResource
 {
@@ -17,7 +18,7 @@ class PackageSalesResource extends JsonResource
         return[
           'id'=> $this->id,
           'customer_name' => $this->customer->name,
-          'seller_date' => $this->seller_date->format('d.m.y H:i:s'),
+          'seller_date' => Carbon::parse($this->seller_date)->format('d.m.y'),
           'personal' => $this->personel->name,
           'type' => $this->type == 0 ? "Seans" : "Dakika",
           'amount' => $this->amount,
