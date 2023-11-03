@@ -36,13 +36,47 @@ class BusinessHomeController extends Controller
         foreach ($appointments as $row) {
             $earning += calculateTotal($row->services);
         }
+        $businessDetailData = [
+            [
+                'id' => 0,
+                'name' => 'Randevu Sayısı',
+                'count' => $appointments->count(),
+                'iconName' => 'calendar-outline',
+            ],
+            [
+                'id' => 1,
+                'name' => 'Randevular Tutarı',
+                'count' => $earning,
+                'iconName' => 'newspaper-outline',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Müşteri Sayısı',
+                'count' =>  $business->customers->count(),
+                'iconName' => 'person-outline',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Ürün Satışı Sayısı',
+                'count' => $business->sales->count(),
+                'iconName' => 'cube-outline',
+            ],
+            [
+                'id' => 4,
+                'name' => 'Toplam Kasa Tutarı',
+                'count' => $earning + $business->packages->sum('total') + $business->sales->sum('price'),
+                'iconName' => 'analytics',
+            ],
+            [
+                'id' => 5,
+                'name' => 'Toplam personel Sayısı',
+                'count' => $business->personel->count(),
+                'iconName' => 'person-outline',
+            ],
+        ];
+
         return response()->json([
-            'appointments_count' => $appointments->count(),
-            'customer_count' => $business->customers->count(),
-            'personel_count' => $business->personel->count(),
-            'appointment_total_price' => $earning,
-            'product_sale_count' => $business->sales->count(),
-            'total_case_price' => $earning + $business->packages->sum('total') + $business->sales->sum('price'),
+            'businessDetailData' => $businessDetailData,
             'today_appointments' => AppointmentResource::collection($todayAppointments),
         ]);
     }

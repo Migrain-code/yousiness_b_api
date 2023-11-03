@@ -56,8 +56,11 @@ Route::prefix('business')->group(function () {
 
         Route::get('user', [AuthController::class, 'user']);
         Route::post('logout', [AuthController::class, 'logout']);
+
         Route::post('/categories/add', [SetupController::class, 'addCategories']);
+
         Route::get('home', [BusinessHomeController::class, 'index']);
+
         Route::controller(SetupController::class)->prefix('setup')->group(function () {
             Route::get('/get', 'get');
             Route::post('/update', 'update');
@@ -103,6 +106,7 @@ Route::prefix('business')->group(function () {
             Route::post('/add-packet', 'addPacket');
             Route::post('/add-payment', 'addPayment');
             Route::post('/add-usage', 'addUsage');
+            Route::post('/delete', 'destroy');
         });
 
         Route::controller(CustomerController::class)->prefix('customer')->group(function () {

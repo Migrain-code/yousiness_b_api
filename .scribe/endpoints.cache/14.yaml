@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: quae
+        example: aut
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '/FGV4J;}TmiHQHA?N^@k'
+        example: "^+Y[aH'AcHz`)%nA3"
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: quae
-      password: '/FGV4J;}TmiHQHA?N^@k'
+      phone: aut
+      password: "^+Y[aH'AcHz`)%nA3"
     fileParameters: []
     responses: []
     responseFields: []

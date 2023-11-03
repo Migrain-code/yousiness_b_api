@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "96dd71fb-986d-4508-b4c9-30bf37d72696",
+        "_postman_id": "ec69da4d-1de8-4eff-bf10-6fdc88da9fa4",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"et\",\"password\":\"Pn@:1\\\/+a\\\\:vC'>9\"}"
+                            "raw": "{\"phone\":\"id\",\"password\":\"LN+ySJ\\\\\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -818,7 +818,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn\",\"phone\":\"oplacxbbtqdguvwbvcmhzxnpdxbgud\",\"email\":\"ferry.electa@example.com\",\"password\":\"m)!G8fjYYe)+^xNo7##\",\"gender\":\"incidunt\"}"
+                            "raw": "{\"name\":\"oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi\",\"phone\":\"xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn\",\"email\":\"rhea.pfeffer@example.com\",\"password\":\"lFDW<47\",\"gender\":\"doloremque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -987,7 +987,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"vrqzc\",\"businessName\":\"n\",\"appointmentRange\":227419.69599,\"phone\":\"johehuxbixgbzezukywuwqwhunvhidajzvxxwhwttzcqoobxolyanyhjjdpzcxetisdoushhlrqlovxnefqm\",\"startTime\":\"fuga\",\"endTime\":\"et\",\"email\":\"delia.walsh@example.net\",\"year\":\"2023-11-03T19:34:42\",\"address\":\"voluptas\",\"aboutText\":\"eaque\"}"
+                            "raw": "{\"officialName\":\"otaot\",\"businessName\":\"vhkrps\",\"appointmentRange\":10.707186233,\"phone\":\"lkpvabnlqwgbnzvfvidsftubafivop\",\"startTime\":\"perspiciatis\",\"endTime\":\"enim\",\"email\":\"gtorp@example.net\",\"year\":\"2023-11-03T21:57:51\",\"address\":\"quaerat\",\"aboutText\":\"reprehenderit\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
@@ -1176,7 +1176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"dolorem\",\"service_id\":\"dolorum\",\"amount\":\"placeat\",\"total\":\"culpa\",\"personel_id\":\"quia\",\"package_type\":\"illo\",\"seller_date\":\"ullam\"}"
+                            "raw": "{\"customer_id\":\"modi\",\"service_id\":\"ea\",\"amount\":\"voluptas\",\"total\":\"nihil\",\"personel_id\":\"at\",\"package_type\":\"dolores\",\"seller_date\":\"officiis\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1207,7 +1207,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"est\",\"price\":\"magnam\",\"amount\":\"quod\"}"
+                            "raw": "{\"package_id\":\"et\",\"price\":\"repellat\",\"amount\":\"fugit\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1238,9 +1238,37 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"repellat\",\"personel_id\":\"voluptates\",\"amount\":\"voluptas\",\"operation_date\":\"omnis\"}"
+                            "raw": "{\"package_id\":\"facilis\",\"personel_id\":\"a\",\"amount\":\"nostrum\",\"operation_date\":\"voluptatem\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/package-sale\/delete",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/package-sale\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/package-sale\/delete"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1637,7 +1665,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"quae\",\"password\":\"\\\/FGV4J;}TmiHQHA?N^@k\"}"
+                            "raw": "{\"phone\":\"aut\",\"password\":\"^+Y[aH'AcHz`)%nA3\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {

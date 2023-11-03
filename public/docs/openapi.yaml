@@ -77,11 +77,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: et
+                  example: id
                 password:
                   type: string
                   description: ''
-                  example: 'Pn@:1/+a\:vC''>9'
+                  example: LN+ySJ\
               required:
                 - phone
                 - password
@@ -629,23 +629,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
+                  example: oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: oplacxbbtqdguvwbvcmhzxnpdxbgud
+                  example: xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ferry.electa@example.com
+                  example: rhea.pfeffer@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'm)!G8fjYYe)+^xNo7##'
+                  example: lFDW<47
                 gender:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: doloremque
               required:
                 - name
                 - phone
@@ -724,43 +724,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vrqzc
+                  example: otaot
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: 'n'
+                  example: vhkrps
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 227419.69599
+                  example: 10.707186233
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: johehuxbixgbzezukywuwqwhunvhidajzvxxwhwttzcqoobxolyanyhjjdpzcxetisdoushhlrqlovxnefqm
+                  example: lkpvabnlqwgbnzvfvidsftubafivop
                 startTime:
                   type: string
                   description: ''
-                  example: fuga
+                  example: perspiciatis
                 endTime:
                   type: string
                   description: ''
-                  example: et
+                  example: enim
                 email:
                   type: string
                   description: ''
-                  example: delia.walsh@example.net
+                  example: gtorp@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-03T19:34:42'
+                  example: '2023-11-03T21:57:51'
                 address:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: quaerat
                 aboutText:
                   type: string
                   description: ''
-                  example: eaque
+                  example: reprehenderit
               required:
                 - officialName
                 - businessName
@@ -856,31 +856,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: modi
                 service_id:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: ea
                 amount:
                   type: string
                   description: ''
-                  example: placeat
+                  example: voluptas
                 total:
                   type: string
                   description: ''
-                  example: culpa
+                  example: nihil
                 personel_id:
                   type: string
                   description: ''
-                  example: quia
+                  example: at
                 package_type:
                   type: string
                   description: ''
-                  example: illo
+                  example: dolores
                 seller_date:
                   type: string
                   description: ''
-                  example: ullam
+                  example: officiis
               required:
                 - customer_id
                 - service_id
@@ -909,15 +909,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: est
+                  example: et
                 price:
                   type: string
                   description: ''
-                  example: magnam
+                  example: repellat
                 amount:
                   type: string
                   description: ''
-                  example: quod
+                  example: fugit
               required:
                 - package_id
                 - price
@@ -942,24 +942,34 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: repellat
+                  example: facilis
                 personel_id:
                   type: string
                   description: ''
-                  example: voluptates
+                  example: a
                 amount:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: nostrum
                 operation_date:
                   type: string
                   description: ''
-                  example: omnis
+                  example: voluptatem
               required:
                 - package_id
                 - personel_id
                 - amount
                 - operation_date
+      security: []
+  /api/business/package-sale/delete:
+    post:
+      summary: 'POST api/business/package-sale/delete'
+      operationId: pOSTApibusinesspackageSaledelete
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | string | required | Paket Id'si</li>\n</ul>\nBu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz"
+      parameters: []
+      responses: {  }
+      tags:
+        - PackageSale
       security: []
   /api/business/packages:
     get:
@@ -1533,11 +1543,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: quae
+                  example: aut
                 password:
                   type: string
                   description: ''
-                  example: '/FGV4J;}TmiHQHA?N^@k'
+                  example: "^+Y[aH'AcHz`)%nA3"
               required:
                 - phone
                 - password

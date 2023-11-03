@@ -246,7 +246,31 @@ class PackageSaleController extends Controller
 
 
     }
-
+    /**
+     * POST api/business/package-sale/delete
+     *
+     *
+     * <ul>
+     * <li>Bearer Token | string | required | Kullanıcı Token</li>
+     * <li>package_id | string | required | Paket Id'si</li>
+     * </ul>
+     * Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
+     *
+     *
+     *
+     */
+    public function destroy(Request $request)
+    {
+        $findPackage=PackageSale::find($request->package_id);
+        if ($findPackage){
+            PackagePayment::where('package_id', $findPackage->id)->delete();
+            PackageUsage::where('package_id', $findPackage->id)->delete();
+            return response()->json([
+                'status'=>"success",
+                'message'=>'Paket Satışı Silindi'
+            ]);
+        }
+    }
     function sayiDuzenle($sayi)
     {
         $sayi = str_replace('.', '', $sayi);

@@ -193,7 +193,7 @@ endpoints:
         name: customer_id
         description: ''
         required: true
-        example: dolorem
+        example: modi
         type: string
         enumValues: []
         custom: []
@@ -201,7 +201,7 @@ endpoints:
         name: service_id
         description: ''
         required: true
-        example: dolorum
+        example: ea
         type: string
         enumValues: []
         custom: []
@@ -209,7 +209,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: placeat
+        example: voluptas
         type: string
         enumValues: []
         custom: []
@@ -217,7 +217,7 @@ endpoints:
         name: total
         description: ''
         required: true
-        example: culpa
+        example: nihil
         type: string
         enumValues: []
         custom: []
@@ -225,7 +225,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: quia
+        example: at
         type: string
         enumValues: []
         custom: []
@@ -233,7 +233,7 @@ endpoints:
         name: package_type
         description: ''
         required: true
-        example: illo
+        example: dolores
         type: string
         enumValues: []
         custom: []
@@ -241,18 +241,18 @@ endpoints:
         name: seller_date
         description: ''
         required: true
-        example: ullam
+        example: officiis
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      customer_id: dolorem
-      service_id: dolorum
-      amount: placeat
-      total: culpa
-      personel_id: quia
-      package_type: illo
-      seller_date: ullam
+      customer_id: modi
+      service_id: ea
+      amount: voluptas
+      total: nihil
+      personel_id: at
+      package_type: dolores
+      seller_date: officiis
     fileParameters: []
     responses: []
     responseFields: []
@@ -293,7 +293,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: est
+        example: et
         type: string
         enumValues: []
         custom: []
@@ -301,7 +301,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: magnam
+        example: repellat
         type: string
         enumValues: []
         custom: []
@@ -309,14 +309,14 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: quod
+        example: fugit
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: est
-      price: magnam
-      amount: quod
+      package_id: et
+      price: repellat
+      amount: fugit
     fileParameters: []
     responses: []
     responseFields: []
@@ -358,7 +358,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: repellat
+        example: facilis
         type: string
         enumValues: []
         custom: []
@@ -366,7 +366,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: voluptates
+        example: a
         type: string
         enumValues: []
         custom: []
@@ -374,7 +374,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: voluptas
+        example: nostrum
         type: string
         enumValues: []
         custom: []
@@ -382,15 +382,50 @@ endpoints:
         name: operation_date
         description: ''
         required: true
-        example: omnis
+        example: voluptatem
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: repellat
-      personel_id: voluptates
-      amount: voluptas
-      operation_date: omnis
+      package_id: facilis
+      personel_id: a
+      amount: nostrum
+      operation_date: voluptatem
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/package-sale/delete
+    metadata:
+      groupName: PackageSale
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/package-sale/delete'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | string | required | Paket Id'si</li>
+        </ul>
+        Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []

@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
+        example: oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi
         type: string
         enumValues: []
         custom: []
@@ -75,7 +75,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: oplacxbbtqdguvwbvcmhzxnpdxbgud
+        example: xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn
         type: string
         enumValues: []
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: ferry.electa@example.com
+        example: rhea.pfeffer@example.com
         type: string
         enumValues: []
         custom: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'm)!G8fjYYe)+^xNo7##'
+        example: lFDW<47
         type: string
         enumValues: []
         custom: []
@@ -99,16 +99,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: incidunt
+        example: doloremque
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
-      phone: oplacxbbtqdguvwbvcmhzxnpdxbgud
-      email: ferry.electa@example.com
-      password: 'm)!G8fjYYe)+^xNo7##'
-      gender: incidunt
+      name: oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi
+      phone: xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn
+      email: rhea.pfeffer@example.com
+      password: lFDW<47
+      gender: doloremque
     fileParameters: []
     responses: []
     responseFields: []
