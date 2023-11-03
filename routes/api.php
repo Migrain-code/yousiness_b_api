@@ -59,7 +59,7 @@ Route::prefix('business')->group(function () {
 
         Route::post('/categories/add', [SetupController::class, 'addCategories']);
 
-        Route::get('home', [BusinessHomeController::class, 'index']);
+        Route::post('home', [BusinessHomeController::class, 'index']);
 
         Route::controller(SetupController::class)->prefix('setup')->group(function () {
             Route::get('/get', 'get');

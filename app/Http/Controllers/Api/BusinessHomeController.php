@@ -31,6 +31,7 @@ class BusinessHomeController extends Controller
             ->where('status', 1)
             ->where('date', $request->input('date'))
             ->get();
+
         $earning = 0;
         $appointments = $business->appointments()->get();
         foreach ($appointments as $row) {
