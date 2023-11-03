@@ -7,6 +7,40 @@ servers:
   -
     url: 'http://localhost'
 paths:
+  /api/business/appointment:
+    post:
+      summary: 'POST api/business/appointment'
+      operationId: pOSTApibusinessappointment
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> date | required | date | tarih örnek veri 2023-11-03 </li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Appointment
+      security: []
+  /api/business/appointment/detail:
+    post:
+      summary: 'POST api/business/appointment/detail'
+      operationId: pOSTApibusinessappointmentdetail
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> appointment_id | numeric | randevu id si</li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Appointment
+      security: []
   /api/business/auth/login:
     post:
       summary: 'POST api/auth/login'
@@ -26,11 +60,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: iusto
                 password:
                   type: string
                   description: ''
-                  example: '>fd@JHwFnV'
+                  example: 'mje9^#iA>HjN@K'
               required:
                 - phone
                 - password
@@ -578,23 +612,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: moqylvbqlkzblvvtxqyumotgzkxriunhebftahiaafxrz
+                  example: zuuiosjvswwukgqbcfzqzswxkposgeqqhcjeqwchvkwtv
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: kowfhazeppdw
+                  example: iogyqkbcftzmlebnobndswrfrkunigmunkxmnokdfnqpskuzectpdwpq
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: loraine44@example.com
+                  example: nschimmel@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 2xwAeUq
+                  example: "pGkd,Wv'0AUU6Oavi(m"
                 gender:
                   type: string
                   description: ''
-                  example: a
+                  example: odit
               required:
                 - name
                 - phone
@@ -673,43 +707,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wybzzyduik
+                  example: sqaieicamyfqpwu
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lk
+                  example: irue
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 45956971.654114
+                  example: 7.038364931
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: atpgwagurtqyglznzduubequsssnmd
+                  example: mvuqpdfuapmnytq
                 startTime:
                   type: string
                   description: ''
-                  example: possimus
+                  example: magnam
                 endTime:
                   type: string
                   description: ''
-                  example: totam
+                  example: quisquam
                 email:
                   type: string
                   description: ''
-                  example: ebashirian@example.com
+                  example: rmorar@example.org
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-03T16:54:16'
+                  example: '2023-11-03T17:27:13'
                 address:
                   type: string
                   description: ''
-                  example: numquam
+                  example: in
                 aboutText:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: veniam
               required:
                 - officialName
                 - businessName
@@ -805,31 +839,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: velit
+                  example: enim
                 service_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: veniam
                 amount:
                   type: string
                   description: ''
-                  example: expedita
+                  example: aut
                 total:
                   type: string
                   description: ''
-                  example: officiis
+                  example: quae
                 personel_id:
                   type: string
                   description: ''
-                  example: libero
+                  example: dolor
                 package_type:
                   type: string
                   description: ''
-                  example: veniam
+                  example: nulla
                 seller_date:
                   type: string
                   description: ''
-                  example: libero
+                  example: voluptas
               required:
                 - customer_id
                 - service_id
@@ -858,15 +892,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: est
+                  example: id
                 price:
                   type: string
                   description: ''
-                  example: sed
+                  example: nihil
                 amount:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: voluptatibus
               required:
                 - package_id
                 - price
@@ -891,19 +925,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: voluptatem
                 personel_id:
                   type: string
                   description: ''
-                  example: nemo
+                  example: consequuntur
                 amount:
                   type: string
                   description: ''
-                  example: nihil
+                  example: magnam
                 operation_date:
                   type: string
                   description: ''
-                  example: laborum
+                  example: cupiditate
               required:
                 - package_id
                 - personel_id
@@ -1482,11 +1516,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: ea
+                  example: placeat
                 password:
                   type: string
                   description: ''
-                  example: '}j"AyaAnK4]?\5lTp'
+                  example: 'tAa"#m)DE,.|41n88C'
               required:
                 - phone
                 - password
@@ -1807,6 +1841,9 @@ paths:
         - Setup
       security: []
 tags:
+  -
+    name: Appointment
+    description: ''
   -
     name: Authentication
     description: ''
