@@ -27,6 +27,7 @@ use \App\Http\Controllers\Api\BusinessPackageController;
 use \App\Http\Controllers\Api\PersonalAuthController;
 use \App\Http\Controllers\Api\BusinessHomeController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\ProductSaleController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -118,6 +119,13 @@ Route::prefix('business')->group(function () {
             Route::post('/delete', 'destroy');
         });
 
+        Route::controller(ProductSaleController::class)->prefix('product-sale')->group(function () {
+            Route::get('/', 'index');
+            Route::get('/get-info', 'createProduct');
+            Route::post('/create', 'store');
+            Route::post('/update', 'update');
+            Route::post('/delete', 'destroy');
+        });
     });
 
 });
