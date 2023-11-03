@@ -36,6 +36,7 @@ class ProductSaleController extends Controller
             'product_sales' => $business->sales,
         ]);
     }
+
     /**
      * GET api/business/product/get-info
      *
@@ -43,7 +44,7 @@ class ProductSaleController extends Controller
      * <ul>
      * <li>Bearer Token | string | required | Kullanıcı Token</li>
      * </ul>
-     * İşletmenin ürün satışı ekleyeceği yerde .
+     * İşletmenin ürün satışı ekleyeceği yerde kullanacağı bilgiler.
      *
      *
      *
@@ -84,6 +85,25 @@ class ProductSaleController extends Controller
         ]);
     }
 
+    /**
+     * POST api/business/product/create
+     *
+     *
+     * <ul>
+     * <li>Bearer Token | string | required | Kullanıcı Token</li>
+     * <li>customer_id | string | required | müşteri id</li>
+     * <li>product_id | string | required | ürün id</li>
+     * <li>personel_id | string | required | personel id</li>
+     * <li>payment_type | string | required | ödeme türü</li>
+     * <li>amount | string | required | adet</li>
+     * <li>price | string | required | fiyat</li>
+     *
+     * </ul>
+     * İşletmenin ürün satışı ekleyeceği yerde .
+     *
+     *
+     *
+     */
     public function store(Request $request)
     {
         $business = $request->user();
@@ -106,14 +126,26 @@ class ProductSaleController extends Controller
         }
     }
 
-    function sayiDuzenle($sayi)
-    {
-        $sayi = str_replace('.', '', $sayi);
-        $sayi = str_replace(',', '.', $sayi);
-        $sonuc = floatval($sayi);
-        return $sonuc;
-    }
-
+    /**
+     * POST api/business/product/update
+     *
+     *
+     * <ul>
+     * <li>Bearer Token | string | required | Kullanıcı Token</li>
+     * <li>product_sale_id | numeric | required | ürün satışı id is</li>
+     * <li>customer_id | string | required | müşteri id</li>
+     * <li>product_id | string | required | ürün id</li>
+     * <li>personel_id | string | required | personel id</li>
+     * <li>payment_type | string | required | ödeme türü</li>
+     * <li>amount | string | required | adet</li>
+     * <li>price | string | required | fiyat</li>
+     *
+     * </ul>
+     * İşletmenin ürün satışı ekleyeceği yerde .
+     *
+     *
+     *
+     */
     public function update(Request $request)
     {
         $productSale = ProductSales::find($request->product_sale_id);
@@ -122,8 +154,12 @@ class ProductSaleController extends Controller
         $productSale->personel_id = $request->input('personel_id');
         $productSale->payment_type = $request->input('payment_type');
         $productSale->piece = $request->input('amount');
-        $productSale->total = $request->input('price') * $request->input('amount');
+        $productSale->total = $this->sayiDuzenle($request->input('price') * $request->input('amount'));
         if ($productSale->save()) {
+            $productFind = Product::find($request->input('product_id'));
+            $oldPrice = $productSale->piece + $productFind->piece;
+            $productFind->piece = $oldPrice - $productSale->piece;
+            $productFind->save();
             return response()->json([
                 'status' => "success",
                 'message' => "Satış Yapma İşlemi Güncellendi"
@@ -131,6 +167,19 @@ class ProductSaleController extends Controller
         }
     }
 
+    /**
+     * POST api/business/product/delete
+     *
+     *
+     * <ul>
+     * <li>Bearer Token | string | required | Kullanıcı Token</li>
+     * <li>product_sale_id | numeric | required | ürün satışı id is</li>
+     * </ul>
+     * İşletmenin ürün satışı ekleyeceği yerde .
+     *
+     *
+     *
+     */
     public function destroy(ProductSales $productSale)
     {
         if ($productSale->delete()) {
@@ -141,5 +190,12 @@ class ProductSaleController extends Controller
         }
     }
 
+    function sayiDuzenle($sayi)
+    {
+        $sayi = str_replace('.', '', $sayi);
+        $sayi = str_replace(',', '.', $sayi);
+        $sonuc = floatval($sayi);
+        return $sonuc;
+    }
 
 }

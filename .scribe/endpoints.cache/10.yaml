@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: wuak
+        example: moqylvbqlkzblvvtxqyumotgzkxriunhebftahiaafxrz
         type: string
         enumValues: []
         custom: []
@@ -75,7 +75,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: qwsqqtlwlqdzwfoqiqpifczhnkyrptkdwzlcdsgvrqt
+        example: kowfhazeppdw
         type: string
         enumValues: []
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: king.gabriella@example.net
+        example: loraine44@example.com
         type: string
         enumValues: []
         custom: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: (gy!JW
+        example: 2xwAeUq
         type: string
         enumValues: []
         custom: []
@@ -99,16 +99,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: ea
+        example: a
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: wuak
-      phone: qwsqqtlwlqdzwfoqiqpifczhnkyrptkdwzlcdsgvrqt
-      email: king.gabriella@example.net
-      password: (gy!JW
-      gender: ea
+      name: moqylvbqlkzblvvtxqyumotgzkxriunhebftahiaafxrz
+      phone: kowfhazeppdw
+      email: loraine44@example.com
+      password: 2xwAeUq
+      gender: a
     fileParameters: []
     responses: []
     responseFields: []
