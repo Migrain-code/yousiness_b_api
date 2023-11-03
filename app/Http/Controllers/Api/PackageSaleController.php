@@ -263,6 +263,7 @@ class PackageSaleController extends Controller
     {
         $findPackage=PackageSale::find($request->package_id);
         if ($findPackage){
+            $findPackage->delete();
             PackagePayment::where('package_id', $findPackage->id)->delete();
             PackageUsage::where('package_id', $findPackage->id)->delete();
             return response()->json([
