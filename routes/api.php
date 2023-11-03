@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,6 +27,8 @@ use \App\Http\Controllers\Api\PersonalAuthController;
 use \App\Http\Controllers\Api\BusinessHomeController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProductSaleController;
+use App\Http\Controllers\Api\AppointmentController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -125,6 +126,11 @@ Route::prefix('business')->group(function () {
             Route::post('/create', 'store');
             Route::post('/update', 'update');
             Route::post('/delete', 'destroy');
+        });
+
+        Route::controller(AppointmentController::class)->prefix('appointment')->group(function () {
+            Route::post('/', 'index');
+            Route::post('/detail', 'detail');
         });
     });
 
