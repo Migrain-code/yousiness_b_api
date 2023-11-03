@@ -29,7 +29,7 @@ class BusinessHomeController extends Controller
         $business = $request->user();
         $todayAppointments = Appointment::where('business_id', auth('business')->id())
             ->where('status', 1)
-            ->where('date', date('Y-m-d'))
+            ->where('date', $request->input('date'))
             ->get();
         $earning = 0;
         $appointments = $business->appointments()->get();
