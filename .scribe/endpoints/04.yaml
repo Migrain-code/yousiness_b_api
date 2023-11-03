@@ -1,25 +1,28 @@
-name: Payment
+name: BusinessHome
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/business/payment/create-payment-intent
+      - GET
+    uri: api/business/home
     metadata:
-      groupName: Payment
+      groupName: BusinessHome
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST /create-payment-intent'
+      title: 'POST api/business-service/update'
       description: |-
+        bu apiden sonra size randevu sayısı, müşteri sayısı, personel sayısı, toplam randevu tutarı, ürün satış sayısı, toplam kasa tutarı ve bugünkü randevular döndürülecek
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li> token </li>
         </ul>
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -27,40 +30,16 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/business/payment/process-payment
-    metadata:
-      groupName: Payment
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'POST /process-payment'
-      description: |-
-        <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        </ul>
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null

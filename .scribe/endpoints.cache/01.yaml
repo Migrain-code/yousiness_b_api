@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: deserunt
+        example: repellat
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '<OK:*n[VR^S'
+        example: 'y30to;N9`#Mf'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: deserunt
-      password: '<OK:*n[VR^S'
+      phone: repellat
+      password: 'y30to;N9`#Mf'
     fileParameters: []
     responses: []
     responseFields: []

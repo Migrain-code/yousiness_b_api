@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: deserunt
+                  example: repellat
                 password:
                   type: string
                   description: ''
-                  example: '<OK:*n[VR^S'
+                  example: 'y30to;N9`#Mf'
               required:
                 - phone
                 - password
@@ -100,6 +100,35 @@ paths:
       responses: {  }
       tags:
         - Authentication
+      security: []
+  /api/business/home:
+    get:
+      summary: 'POST api/business-service/update'
+      operationId: pOSTApibusinessServiceupdate
+      description: "bu apiden sonra size randevu sayısı, müşteri sayısı, personel sayısı, toplam randevu tutarı, ürün satış sayısı, toplam kasa tutarı ve bugünkü randevular döndürülecek\n<br> Gerekli alanlar\n<ul>\n<li> token </li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - BusinessHome
       security: []
   /api/business/business-service:
     get:
@@ -549,23 +578,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: iowbje
+                  example: mlmlqlpyfzjqdjnistgfhnjdltkmlgosczurfjxukciwpiztcwsqcqpsehzwvqhsyypwtkjtumovxxyhvwxp
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: fdksplxsdxxknbvodwmyhmupadqvitoieubjdauuxetizaxgq
+                  example: qubpdtyrycqoavlmezpdrwefjmje
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: casandra.schroeder@example.com
+                  example: lindgren.stacey@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '~>cb;iZ{Q!A%aY$NA'
+                  example: 'C$rEJrKl]2'
                 gender:
                   type: string
                   description: ''
-                  example: omnis
+                  example: cumque
               required:
                 - name
                 - phone
@@ -644,43 +673,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ojgaxaibrwxwpfdpximetghps
+                  example: aqxkrxnixnaxejyowieoso
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nmcy
+                  example: tqzmsjmcrxbogziwyyq
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 40447.6817
+                  example: 3661248.6274
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: kqumjgxykzeahbuygaksmcweypbamokgxdxknudslswtbqxrsrjgjnktbayjcvzskbynjayamebllntrpael
+                  example: mmfsbmaqmafxmvdkbqarwbioaujmvjiatjbtejdzjlcwkaciojeyfulzadlykmqzjfidfsyrvyycbhf
                 startTime:
                   type: string
                   description: ''
-                  example: facere
+                  example: beatae
                 endTime:
                   type: string
                   description: ''
-                  example: placeat
+                  example: id
                 email:
                   type: string
                   description: ''
-                  example: bupton@example.net
+                  example: darrion.oberbrunner@example.com
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-10-31T16:02:13'
+                  example: '2023-11-03T14:19:56'
                 address:
                   type: string
                   description: ''
-                  example: eos
+                  example: neque
                 aboutText:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: rerum
               required:
                 - officialName
                 - businessName
@@ -776,31 +805,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: vel
+                  example: hic
                 service_id:
                   type: string
                   description: ''
-                  example: autem
+                  example: aliquam
                 amount:
                   type: string
                   description: ''
-                  example: aut
+                  example: magni
                 total:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: rerum
                 personel_id:
                   type: string
                   description: ''
-                  example: ut
+                  example: placeat
                 package_type:
                   type: string
                   description: ''
-                  example: delectus
+                  example: et
                 seller_date:
                   type: string
                   description: ''
-                  example: ab
+                  example: et
               required:
                 - customer_id
                 - service_id
@@ -829,15 +858,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: eveniet
                 price:
                   type: string
                   description: ''
-                  example: vero
+                  example: quo
                 amount:
                   type: string
                   description: ''
-                  example: eos
+                  example: cumque
               required:
                 - package_id
                 - price
@@ -862,19 +891,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: similique
+                  example: aliquam
                 personel_id:
                   type: string
                   description: ''
-                  example: quas
+                  example: et
                 amount:
                   type: string
                   description: ''
-                  example: laudantium
+                  example: odio
                 operation_date:
                   type: string
                   description: ''
-                  example: nulla
+                  example: non
               required:
                 - package_id
                 - personel_id
@@ -900,7 +929,7 @@ paths:
                       id: 1
                       name: 'Test Tarif'
                       price: 0
-                      color: '#003a61'
+                      color: null
                       proparties:
                         -
                           id: 1
@@ -960,7 +989,7 @@ paths:
                       id: 2
                       name: 'Business Tarif'
                       price: 150
-                      color: '#003a61'
+                      color: null
                       proparties:
                         -
                           id: 1
@@ -990,7 +1019,7 @@ paths:
                       id: 3
                       name: 'Business Plus'
                       price: 300
-                      color: '#003a61'
+                      color: null
                       proparties:
                         -
                           id: 1
@@ -1055,7 +1084,7 @@ paths:
                         id: 1
                         name: 'Test Tarif'
                         price: 0
-                        color: '#003a61'
+                        color: null
                         proparties:
                           -
                             id: 1
@@ -1115,7 +1144,7 @@ paths:
                         id: 2
                         name: 'Business Tarif'
                         price: 150
-                        color: '#003a61'
+                        color: null
                         proparties:
                           -
                             id: 1
@@ -1145,7 +1174,7 @@ paths:
                         id: 3
                         name: 'Business Plus'
                         price: 300
-                        color: '#003a61'
+                        color: null
                         proparties:
                           -
                             id: 1
@@ -1215,7 +1244,7 @@ paths:
                           example: 0
                         color:
                           type: string
-                          example: '#003a61'
+                          example: null
                         proparties:
                           type: array
                           example:
@@ -1453,11 +1482,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: aut
+                  example: dolor
                 password:
                   type: string
                   description: ''
-                  example: 'xww6F:u'
+                  example: 'pVo-;b@0]]ka&%&AD&'
               required:
                 - phone
                 - password
@@ -1654,6 +1683,9 @@ paths:
 tags:
   -
     name: Authentication
+    description: ''
+  -
+    name: BusinessHome
     description: ''
   -
     name: BusinessService

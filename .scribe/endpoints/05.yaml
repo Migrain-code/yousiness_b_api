@@ -1,17 +1,20 @@
-name: DetailSetup
+name: Payment
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/business/detail-setup/step-1/get
+      - POST
+    uri: api/business/payment/create-payment-intent
     metadata:
-      groupName: DetailSetup
+      groupName: Payment
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'POST /create-payment-intent'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        </ul>
       authenticated: false
       custom: []
     headers:
@@ -24,16 +27,7 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -43,29 +37,17 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/detail-setup/step-1/update
+    uri: api/business/payment/process-payment
     metadata:
-      groupName: DetailSetup
+      groupName: Payment
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/detail-setup/step-1/update'
+      title: 'POST /process-payment'
       description: |-
         <ul>
-        <li>Bearer Token</li>
-        <li>officialName | string | required | Salon Sahibinin adı</li>
-        <li>businessName | string | required | Salon Adı</li>
-        <li>businessType | numeric | required | işletme türü id'si </li>
-        <li>phone | string | required | İşletme Telefon Numarası</li>
-        <li>email | string | required | İşletme E-posta Adresi</li>
-        <li>appointmentRange | string | required | Randevu aralığı | örneğin (10, 20, 30,40)</li>
-        <li>aboutText | string | required| İşletme Hakkında Yazısı</li>
-        <li>startTime | string | required| İşletme Açılış Saati Örneğin (12:08)</li>
-        <li>endTime | string | required| İşletme Kapanış Saati Örneğin (18:08)</li>
-        <li>year | date | required| Kuruluş Tarihi örneğin (2023-04-01)</li>
-        <li>address | text | required| Address Metni</li>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
         </ul>
-        Detaylı Kurulum Ekranı İşletme Bilgileri güncelleme Apisi
       authenticated: false
       custom: []
     headers:
@@ -75,98 +57,8 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      officialName:
-        name: officialName
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: ojgaxaibrwxwpfdpximetghps
-        type: string
-        enumValues: []
-        custom: []
-      businessName:
-        name: businessName
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: nmcy
-        type: string
-        enumValues: []
-        custom: []
-      appointmentRange:
-        name: appointmentRange
-        description: ''
-        required: true
-        example: 40447.6817
-        type: number
-        enumValues: []
-        custom: []
-      phone:
-        name: phone
-        description: 'Must be at least 11 characters.'
-        required: true
-        example: kqumjgxykzeahbuygaksmcweypbamokgxdxknudslswtbqxrsrjgjnktbayjcvzskbynjayamebllntrpael
-        type: string
-        enumValues: []
-        custom: []
-      startTime:
-        name: startTime
-        description: ''
-        required: true
-        example: facere
-        type: string
-        enumValues: []
-        custom: []
-      endTime:
-        name: endTime
-        description: ''
-        required: true
-        example: placeat
-        type: string
-        enumValues: []
-        custom: []
-      email:
-        name: email
-        description: ''
-        required: true
-        example: bupton@example.net
-        type: string
-        enumValues: []
-        custom: []
-      year:
-        name: year
-        description: 'Must be a valid date.'
-        required: true
-        example: '2023-10-31T16:02:13'
-        type: string
-        enumValues: []
-        custom: []
-      address:
-        name: address
-        description: ''
-        required: true
-        example: eos
-        type: string
-        enumValues: []
-        custom: []
-      aboutText:
-        name: aboutText
-        description: ''
-        required: true
-        example: pariatur
-        type: string
-        enumValues: []
-        custom: []
-    cleanBodyParameters:
-      officialName: ojgaxaibrwxwpfdpximetghps
-      businessName: nmcy
-      appointmentRange: 40447.6817
-      phone: kqumjgxykzeahbuygaksmcweypbamokgxdxknudslswtbqxrsrjgjnktbayjcvzskbynjayamebllntrpael
-      startTime: facere
-      endTime: placeat
-      email: bupton@example.net
-      year: '2023-10-31T16:02:13'
-      address: eos
-      aboutText: pariatur
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []

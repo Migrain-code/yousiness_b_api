@@ -1,17 +1,64 @@
-name: Customer
+name: PackageSale
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/business/customer
+    uri: api/business/package-sale
     metadata:
-      groupName: Customer
+      groupName: PackageSale
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'GET api/business/package-sale'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        </ul>
+        İşletmenin paket satışı listesi sadece bu apiden dönen verileri listede göstermeniz yeterlidir.
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/business/package-sale/create-packet
+    metadata:
+      groupName: PackageSale
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET api/business/package-sale/create-packet'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        </ul>
+        Bu point ile paket satışı oluşturma sayfasını açtığınızda ihtiyacınız olan tüm bilgiler size döndürülecek
       authenticated: false
       custom: []
     headers:
@@ -43,14 +90,95 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/customer/create
+    uri: api/business/package-sale/payments
     metadata:
-      groupName: Customer
+      groupName: PackageSale
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'POST api/business/package-sale/payments'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | numeric | required | Paket id</li>
+        </ul>
+        İd si gönderilen paketin ödemelerinin listesini döndürecek
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/package-sale/usages
+    metadata:
+      groupName: PackageSale
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/package-sale/usages'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | numeric | required | Paket id</li>
+        </ul>
+        İd si gönderilen paketin kullanım listesini döndürecek
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/package-sale/add-packet
+    metadata:
+      groupName: PackageSale
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/package-sale/add-packet'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>customer_id | string | required | Müşteri Id'si</li>
+        <li>service_id | string | required | Hizmet ID 'si</li>
+        <li>amount | string | required | Adet, Paket Sayısı</li>
+        <li>total | string | required | Toplam Fiyat, Fiyat</li>
+        <li>personel_id | string | required | Personel ID'si</li>
+        <li>package_type | string | required | Paket Türü seans veya dakika</li>
+        <li>seller_date | date | required | Paket Satış Tarihi örnek (14.10.2023)</li>
+        </ul>
+        Bu point ile paket satışı oluşturma işlemini gerçekleştireceksiniz
       authenticated: false
       custom: []
     headers:
@@ -61,52 +189,70 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must be at least 3 characters.'
-        required: true
-        example: iowbje
-        type: string
-        enumValues: []
-        custom: []
-      phone:
-        name: phone
-        description: 'Must be at least 10 characters.'
-        required: true
-        example: fdksplxsdxxknbvodwmyhmupadqvitoieubjdauuxetizaxgq
-        type: string
-        enumValues: []
-        custom: []
-      email:
-        name: email
-        description: 'Must be at least 8 characters.'
-        required: true
-        example: casandra.schroeder@example.com
-        type: string
-        enumValues: []
-        custom: []
-      password:
-        name: password
-        description: 'Must be at least 8 characters.'
-        required: true
-        example: '~>cb;iZ{Q!A%aY$NA'
-        type: string
-        enumValues: []
-        custom: []
-      gender:
-        name: gender
+      customer_id:
+        name: customer_id
         description: ''
         required: true
-        example: omnis
+        example: hic
+        type: string
+        enumValues: []
+        custom: []
+      service_id:
+        name: service_id
+        description: ''
+        required: true
+        example: aliquam
+        type: string
+        enumValues: []
+        custom: []
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: magni
+        type: string
+        enumValues: []
+        custom: []
+      total:
+        name: total
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        enumValues: []
+        custom: []
+      personel_id:
+        name: personel_id
+        description: ''
+        required: true
+        example: placeat
+        type: string
+        enumValues: []
+        custom: []
+      package_type:
+        name: package_type
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        custom: []
+      seller_date:
+        name: seller_date
+        description: ''
+        required: true
+        example: et
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: iowbje
-      phone: fdksplxsdxxknbvodwmyhmupadqvitoieubjdauuxetizaxgq
-      email: casandra.schroeder@example.com
-      password: '~>cb;iZ{Q!A%aY$NA'
-      gender: omnis
+      customer_id: hic
+      service_id: aliquam
+      amount: magni
+      total: rerum
+      personel_id: placeat
+      package_type: et
+      seller_date: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -118,14 +264,21 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/customer/edit
+    uri: api/business/package-sale/add-payment
     metadata:
-      groupName: Customer
+      groupName: PackageSale
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'POST api/business/package-sale/add-payment'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | string | required | Paket Id'si</li>
+        <li>price | string | required | Ödeme Yapılan Tutar</li>
+        <li>amount | string | required | Ödeme Yapılan adet</li>
+        </ul>
+        Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
       authenticated: false
       custom: []
     headers:
@@ -135,8 +288,35 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      package_id:
+        name: package_id
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: quo
+        type: string
+        enumValues: []
+        custom: []
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: cumque
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      package_id: eveniet
+      price: quo
+      amount: cumque
     fileParameters: []
     responses: []
     responseFields: []
@@ -148,14 +328,22 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/customer/update
+    uri: api/business/package-sale/add-usage
     metadata:
-      groupName: Customer
+      groupName: PackageSale
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'POST api/business/package-sale/add-usage'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | string | required | Paket Id'si</li>
+        <li>personel_id | string | required | Kullanımı yapan personel Id'si</li>
+        <li>amount | string | required | Kullanılan adet</li>
+        <li>operation_date | string | required | İşlemin yapıldığı tarih örn (19.10.2023 19:56:11)</li>
+        </ul>
+        Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
       authenticated: false
       custom: []
     headers:
@@ -165,38 +353,44 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/business/customer/delete
-    metadata:
-      groupName: Customer
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      package_id:
+        name: package_id
+        description: ''
+        required: true
+        example: aliquam
+        type: string
+        enumValues: []
+        custom: []
+      personel_id:
+        name: personel_id
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        custom: []
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: odio
+        type: string
+        enumValues: []
+        custom: []
+      operation_date:
+        name: operation_date
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      package_id: aliquam
+      personel_id: et
+      amount: odio
+      operation_date: non
     fileParameters: []
     responses: []
     responseFields: []

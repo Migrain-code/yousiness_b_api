@@ -1,26 +1,28 @@
-name: PackageSale
+name: Personal
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/business/package-sale
+    uri: api/business/personal
     metadata:
-      groupName: PackageSale
+      groupName: Personal
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'GET api/business/package-sale'
+      title: 'GET api/personal'
       description: |-
+        Personel listesini döndürecek size
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li> token </li>
         </ul>
-        İşletmenin paket satışı listesi sadece bu apiden dönen verileri listede göstermeniz yeterlidir.
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -38,6 +40,43 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/personal/get
+    metadata:
+      groupName: Personal
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/personal/get'
+      description: |-
+        id si gönderilen personelin getirecek
+        <br> Gerekli alanlar
+        <ul>
+        <li> token </li>
+        <li>personalId | required | güncellenecek personel id si</li>
+        </ul>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -47,23 +86,26 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/business/package-sale/create-packet
+    uri: api/business/personal/add/get
     metadata:
-      groupName: PackageSale
+      groupName: Personal
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'GET api/business/package-sale/create-packet'
+      title: 'POST api/business/personal/add/get'
       description: |-
+        id si gönderilen personeli silecek
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li> token </li>
+        <li>personalId | required | silinecek personel id si</li>
         </ul>
-        Bu point ile paket satışı oluşturma sayfasını açtığınızda ihtiyacınız olan tüm bilgiler size döndürülecek
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -90,24 +132,41 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/package-sale/payments
+    uri: api/business/personal/add
     metadata:
-      groupName: PackageSale
+      groupName: Personal
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/package-sale/payments'
+      title: 'POST api/personal/add'
       description: |-
+        Personel Ekleme pointi
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        <li>package_id | numeric | required | Paket id</li>
+        <li> token </li>
+        <li> name |required | string | </li>
+        <li> image |required | string | </li>
+        <li> email |required | string | </li>
+        <li> phone |required | string | </li>
+        <li> password |required | string | </li>
+        <li> approveType |required | numeric | örneğin 1 veya 0</li>
+        <li> restDay |required | numeric | haftanın günlerinden herhangi bir günün id si</li>
+        <li> startTime |required | string | örneğin 10:43 </li>
+        <li> endTime |required | string | örneğin 10:43</li>
+        <li> foodStart |required | string | örneğin 10:43</li>
+        <li> foodEnd |required | string | örneğin 10:43</li>
+        <li> gender |required | numeric | 1 => kadın,2 => erkek,3 => Unisex herhangi biri</li>
+        <li> rate |required | numeric | 10 personel yüzdesi 10 = %10</li>
+        <li> appointmentRange |required | numeric | randevu aralığı örneğin "15" dk bazında</li>
+        <li> description |required | string</li>
+        <li> services | required | array | eğer tümü seçeneği seçilirse "all" olarak gönderebilirsiniz dizi içerisinde</li>
         </ul>
-        İd si gönderilen paketin ödemelerinin listesini döndürecek
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -125,24 +184,42 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/package-sale/usages
+    uri: api/business/personal/update
     metadata:
-      groupName: PackageSale
+      groupName: Personal
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/package-sale/usages'
+      title: 'POST api/personal/update'
       description: |-
+        Personel Güncelleme pointi
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        <li>package_id | numeric | required | Paket id</li>
+        <li> token </li>
+        <li> personal_id | required | numeric</li>
+        <li> name |required | string | personal adı</li>
+        <li> image |required | string | personel görseli</li>
+        <li> email |required | string | mail adresi</li>
+        <li> phone |required | string | telefon numarası</li>
+        <li> password |required | string | şifre</li>
+        <li> approveType |required | numeric | örneğin 1 veya 0</li>
+        <li> restDay |required | numeric | haftanın günlerinden herhangi bir günün id si</li>
+        <li> startTime |required | string | örneğin 10:43 </li>
+        <li> endTime |required | string | örneğin 10:43</li>
+        <li> foodStart |required | string | örneğin 10:43</li>
+        <li> foodEnd |required | string | örneğin 10:43</li>
+        <li> gender |required | numeric | 1 => kadın,2 => erkek,3 => Unisex herhangi biri</li>
+        <li> rate |required | numeric | 10 personel yüzdesi 10 = %10</li>
+        <li> appointmentRange |required | numeric | randevu aralığı örneğin "15" dk bazında</li>
+        <li> description |required | string</li>
+        <li> services | required | array | eğer tümü seçeneği seçilirse "all" olarak gönderebilirsiniz dizi içerisinde</li>
         </ul>
-        İd si gönderilen paketin kullanım listesini döndürecek
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -160,237 +237,32 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/package-sale/add-packet
+    uri: api/business/personal/delete
     metadata:
-      groupName: PackageSale
+      groupName: Personal
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/package-sale/add-packet'
+      title: 'POST api/personal/get'
       description: |-
+        id si gönderilen personeli silecek
+        <br> Gerekli alanlar
         <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        <li>customer_id | string | required | Müşteri Id'si</li>
-        <li>service_id | string | required | Hizmet ID 'si</li>
-        <li>amount | string | required | Adet, Paket Sayısı</li>
-        <li>total | string | required | Toplam Fiyat, Fiyat</li>
-        <li>personel_id | string | required | Personel ID'si</li>
-        <li>package_type | string | required | Paket Türü seans veya dakika</li>
-        <li>seller_date | date | required | Paket Satış Tarihi örnek (14.10.2023)</li>
+        <li> token </li>
+        <li>personalId | required | silinecek personel id si</li>
         </ul>
-        Bu point ile paket satışı oluşturma işlemini gerçekleştireceksiniz
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      customer_id:
-        name: customer_id
-        description: ''
-        required: true
-        example: vel
-        type: string
-        enumValues: []
-        custom: []
-      service_id:
-        name: service_id
-        description: ''
-        required: true
-        example: autem
-        type: string
-        enumValues: []
-        custom: []
-      amount:
-        name: amount
-        description: ''
-        required: true
-        example: aut
-        type: string
-        enumValues: []
-        custom: []
-      total:
-        name: total
-        description: ''
-        required: true
-        example: nostrum
-        type: string
-        enumValues: []
-        custom: []
-      personel_id:
-        name: personel_id
-        description: ''
-        required: true
-        example: ut
-        type: string
-        enumValues: []
-        custom: []
-      package_type:
-        name: package_type
-        description: ''
-        required: true
-        example: delectus
-        type: string
-        enumValues: []
-        custom: []
-      seller_date:
-        name: seller_date
-        description: ''
-        required: true
-        example: ab
-        type: string
-        enumValues: []
-        custom: []
-    cleanBodyParameters:
-      customer_id: vel
-      service_id: autem
-      amount: aut
-      total: nostrum
-      personel_id: ut
-      package_type: delectus
-      seller_date: ab
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/business/package-sale/add-payment
-    metadata:
-      groupName: PackageSale
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'POST api/business/package-sale/add-payment'
-      description: |-
-        <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        <li>package_id | string | required | Paket Id'si</li>
-        <li>price | string | required | Ödeme Yapılan Tutar</li>
-        <li>amount | string | required | Ödeme Yapılan adet</li>
-        </ul>
-        Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      package_id:
-        name: package_id
-        description: ''
-        required: true
-        example: qui
-        type: string
-        enumValues: []
-        custom: []
-      price:
-        name: price
-        description: ''
-        required: true
-        example: vero
-        type: string
-        enumValues: []
-        custom: []
-      amount:
-        name: amount
-        description: ''
-        required: true
-        example: eos
-        type: string
-        enumValues: []
-        custom: []
-    cleanBodyParameters:
-      package_id: qui
-      price: vero
-      amount: eos
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/business/package-sale/add-usage
-    metadata:
-      groupName: PackageSale
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'POST api/business/package-sale/add-usage'
-      description: |-
-        <ul>
-        <li>Bearer Token | string | required | Kullanıcı Token</li>
-        <li>package_id | string | required | Paket Id'si</li>
-        <li>personel_id | string | required | Kullanımı yapan personel Id'si</li>
-        <li>amount | string | required | Kullanılan adet</li>
-        <li>operation_date | string | required | İşlemin yapıldığı tarih örn (19.10.2023 19:56:11)</li>
-        </ul>
-        Bu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      package_id:
-        name: package_id
-        description: ''
-        required: true
-        example: similique
-        type: string
-        enumValues: []
-        custom: []
-      personel_id:
-        name: personel_id
-        description: ''
-        required: true
-        example: quas
-        type: string
-        enumValues: []
-        custom: []
-      amount:
-        name: amount
-        description: ''
-        required: true
-        example: laudantium
-        type: string
-        enumValues: []
-        custom: []
-      operation_date:
-        name: operation_date
-        description: ''
-        required: true
-        example: nulla
-        type: string
-        enumValues: []
-        custom: []
-    cleanBodyParameters:
-      package_id: similique
-      personel_id: quas
-      amount: laudantium
-      operation_date: nulla
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
