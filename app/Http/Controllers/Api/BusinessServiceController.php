@@ -161,9 +161,6 @@ class BusinessServiceController extends Controller
 
         if ($businessService) {
             $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
-
-            $businessService = new BusinessService();
-            $businessService->business_id = $business->id;
             $businessService->type = $serviceSubCategory->category->type_id;
             $businessService->category = $serviceSubCategory->category_id;
             $businessService->sub_category = $request->input('sub_category');
