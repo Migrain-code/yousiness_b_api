@@ -131,6 +131,7 @@ Route::prefix('business')->group(function () {
         Route::controller(AppointmentController::class)->prefix('appointment')->group(function () {
             Route::post('/', 'index');
             Route::post('/detail', 'detail');
+            Route::post('/cancel', 'cancel');
         });
     });
 

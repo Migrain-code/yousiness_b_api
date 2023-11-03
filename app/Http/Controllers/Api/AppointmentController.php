@@ -61,4 +61,33 @@ class AppointmentController extends Controller
             'appointment' => AppointmentDetailResoruce::make($appointment),
         ]);
     }
+    /**
+     * POST api/business/appointment/cancel
+     *
+     *
+     * <br> Gerekli alanlar
+     * <ul>
+     * <li> token </li>
+     * <li> appointment_id | numeric | randevu id si</li>
+     *</ul>
+     * @header Bearer {token}
+     *
+     */
+    public function cancel(Request $request)
+    {
+        $business = $request->user();
+        $appointment = Appointment::where('business_id', $business->id)->where('id', $request->appointment_id)
+            ->first();
+        if ($appointment){
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Randevu İptal Edildi'
+            ]);
+        }
+
+        return response()->json([
+            'status' => 'warning',
+            'message' => 'Randevu Bulunamadı'
+        ]);
+    }
 }
