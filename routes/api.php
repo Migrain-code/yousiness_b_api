@@ -26,6 +26,7 @@ use \App\Http\Controllers\Api\CustomerController;
 use \App\Http\Controllers\Api\BusinessPackageController;
 use \App\Http\Controllers\Api\PersonalAuthController;
 use \App\Http\Controllers\Api\BusinessHomeController;
+use App\Http\Controllers\Api\ProductController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -49,7 +50,6 @@ Route::prefix('business')->group(function () {
     Route::get('/categories', [SetupController::class, 'categories']);
     Route::get('/packages', [BusinessPackageController::class, 'index']);
 
-
     Route::middleware('auth:business')->group(function () {
 
         Route::get('user', [AuthController::class, 'user']);
@@ -61,13 +61,7 @@ Route::prefix('business')->group(function () {
             Route::post('/update', 'update');
             Route::post('/step/map', 'mapUpdate');
         });
-        /*Route::controller(OfficialCreditCardController::class)->prefix('cart')->group(function (){
-            Route::get('/', 'index');
-            Route::post('/get', 'get');
-            Route::post('/delete', 'delete');
-            Route::post('/save', 'store');
-            Route::post('/update', 'update');
-        });*/
+
         Route::controller(PaymentController::class)->prefix('payment')->group(function () {
             Route::post('/create-payment-intent','createPaymentIntent');
             Route::post('/process-payment', 'processPayment');
@@ -117,7 +111,12 @@ Route::prefix('business')->group(function () {
             Route::post('/delete', 'destroy');
         });
 
-
+        Route::controller(ProductController::class)->prefix('product')->group(function () {
+            Route::get('/', 'index');
+            Route::post('/create', 'create');
+            Route::post('/update', 'update');
+            Route::post('/delete', 'destroy');
+        });
 
     });
 

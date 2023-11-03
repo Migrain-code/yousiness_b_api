@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: repellat
+                  example: vel
                 password:
                   type: string
                   description: ''
-                  example: 'y30to;N9`#Mf'
+                  example: 'k2[s7fI'
               required:
                 - phone
                 - password
@@ -578,23 +578,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: mlmlqlpyfzjqdjnistgfhnjdltkmlgosczurfjxukciwpiztcwsqcqpsehzwvqhsyypwtkjtumovxxyhvwxp
+                  example: wuak
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: qubpdtyrycqoavlmezpdrwefjmje
+                  example: qwsqqtlwlqdzwfoqiqpifczhnkyrptkdwzlcdsgvrqt
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: lindgren.stacey@example.org
+                  example: king.gabriella@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'C$rEJrKl]2'
+                  example: (gy!JW
                 gender:
                   type: string
                   description: ''
-                  example: cumque
+                  example: ea
               required:
                 - name
                 - phone
@@ -673,43 +673,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: aqxkrxnixnaxejyowieoso
+                  example: exlumjgkojlynpajnsudbzxam
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tqzmsjmcrxbogziwyyq
+                  example: lquhophlsdlk
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 3661248.6274
+                  example: 17.7332
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: mmfsbmaqmafxmvdkbqarwbioaujmvjiatjbtejdzjlcwkaciojeyfulzadlykmqzjfidfsyrvyycbhf
+                  example: ekushikjjmczsddzkvphiymzwmxvzldlrmbwikmhsdqjmsmiebuaaiughdvsdzhtipzcuoxthyuntzvkj
                 startTime:
                   type: string
                   description: ''
-                  example: beatae
+                  example: fugiat
                 endTime:
                   type: string
                   description: ''
-                  example: id
+                  example: quis
                 email:
                   type: string
                   description: ''
-                  example: darrion.oberbrunner@example.com
+                  example: amaya72@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-03T14:19:56'
+                  example: '2023-11-03T15:00:45'
                 address:
                   type: string
                   description: ''
-                  example: neque
+                  example: nostrum
                 aboutText:
                   type: string
                   description: ''
-                  example: rerum
+                  example: deserunt
               required:
                 - officialName
                 - businessName
@@ -805,31 +805,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: hic
+                  example: delectus
                 service_id:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: quaerat
                 amount:
                   type: string
                   description: ''
-                  example: magni
+                  example: ea
                 total:
                   type: string
                   description: ''
-                  example: rerum
+                  example: ad
                 personel_id:
                   type: string
                   description: ''
-                  example: placeat
+                  example: earum
                 package_type:
                   type: string
                   description: ''
-                  example: et
+                  example: voluptas
                 seller_date:
                   type: string
                   description: ''
-                  example: et
+                  example: doloribus
               required:
                 - customer_id
                 - service_id
@@ -858,15 +858,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: eveniet
+                  example: sit
                 price:
                   type: string
                   description: ''
-                  example: quo
+                  example: possimus
                 amount:
                   type: string
                   description: ''
-                  example: cumque
+                  example: molestias
               required:
                 - package_id
                 - price
@@ -891,19 +891,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: placeat
                 personel_id:
                   type: string
                   description: ''
-                  example: et
+                  example: numquam
                 amount:
                   type: string
                   description: ''
-                  example: odio
+                  example: atque
                 operation_date:
                   type: string
                   description: ''
-                  example: non
+                  example: quia
               required:
                 - package_id
                 - personel_id
@@ -1482,11 +1482,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: dolor
+                  example: qui
                 password:
                   type: string
                   description: ''
-                  example: 'pVo-;b@0]]ka&%&AD&'
+                  example: CgMDsI
               required:
                 - phone
                 - password
@@ -1536,6 +1536,58 @@ paths:
       responses: {  }
       tags:
         - PersonalAuth
+      security: []
+  /api/business/product:
+    get:
+      summary: 'GET api/business/product'
+      operationId: gETApibusinessproduct
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>\nİşletmenin ürün listesi sadece bu apiden dönen verileri listede göstermeniz yeterlidir."
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Product
+      security: []
+  /api/business/product/create:
+    post:
+      summary: 'POST api/business/product/create'
+      operationId: pOSTApibusinessproductcreate
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>name | string | required | Ürün adı</li>\n<li>amount | numeric | required | Ürün sayısı</li>\n<li>price | numeric | required | tek bir ürünün fiyatı</li>\n\n</ul>\nürün ekleme apisi"
+      parameters: []
+      responses: {  }
+      tags:
+        - Product
+      security: []
+  /api/business/product/update:
+    post:
+      summary: 'POST api/business/product/update'
+      operationId: pOSTApibusinessproductupdate
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>product_id | numeric | required | Ürün id si</li>\n<li>name | string | required | Ürün adı</li>\n<li>amount | numeric | required | Ürün sayısı</li>\n<li>price | numeric | required | tek bir ürünün fiyatı</li>\n\n</ul>\nürün ekleme apisi"
+      parameters: []
+      responses: {  }
+      tags:
+        - Product
+      security: []
+  /api/business/product/delete:
+    post:
+      summary: 'POST api/business/product/delete'
+      operationId: pOSTApibusinessproductdelete
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>product_id | numeric | required | Ürün id si</li>\n\n</ul>\nürün silme apisi"
+      parameters: []
+      responses: {  }
+      tags:
+        - Product
       security: []
   /api/business/categories:
     get:
@@ -1713,6 +1765,9 @@ tags:
     description: ''
   -
     name: PersonalAuth
+    description: ''
+  -
+    name: Product
     description: ''
   -
     name: Setup

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "93f4f414-496b-4ae8-967c-65e7cbd83581",
+        "_postman_id": "c9119b8c-1dcd-40fd-9dc1-a0401ca1b704",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"repellat\",\"password\":\"y30to;N9`#Mf\"}"
+                            "raw": "{\"phone\":\"vel\",\"password\":\"k2[s7fI\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -716,7 +716,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"mlmlqlpyfzjqdjnistgfhnjdltkmlgosczurfjxukciwpiztcwsqcqpsehzwvqhsyypwtkjtumovxxyhvwxp\",\"phone\":\"qubpdtyrycqoavlmezpdrwefjmje\",\"email\":\"lindgren.stacey@example.org\",\"password\":\"C$rEJrKl]2\",\"gender\":\"cumque\"}"
+                            "raw": "{\"name\":\"wuak\",\"phone\":\"qwsqqtlwlqdzwfoqiqpifczhnkyrptkdwzlcdsgvrqt\",\"email\":\"king.gabriella@example.net\",\"password\":\"(gy!JW\",\"gender\":\"ea\"}"
                         },
                         "description": "",
                         "auth": {
@@ -885,7 +885,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"aqxkrxnixnaxejyowieoso\",\"businessName\":\"tqzmsjmcrxbogziwyyq\",\"appointmentRange\":3661248.6274,\"phone\":\"mmfsbmaqmafxmvdkbqarwbioaujmvjiatjbtejdzjlcwkaciojeyfulzadlykmqzjfidfsyrvyycbhf\",\"startTime\":\"beatae\",\"endTime\":\"id\",\"email\":\"darrion.oberbrunner@example.com\",\"year\":\"2023-11-03T14:19:56\",\"address\":\"neque\",\"aboutText\":\"rerum\"}"
+                            "raw": "{\"officialName\":\"exlumjgkojlynpajnsudbzxam\",\"businessName\":\"lquhophlsdlk\",\"appointmentRange\":17.7332,\"phone\":\"ekushikjjmczsddzkvphiymzwmxvzldlrmbwikmhsdqjmsmiebuaaiughdvsdzhtipzcuoxthyuntzvkj\",\"startTime\":\"fugiat\",\"endTime\":\"quis\",\"email\":\"amaya72@example.net\",\"year\":\"2023-11-03T15:00:45\",\"address\":\"nostrum\",\"aboutText\":\"deserunt\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
@@ -1074,7 +1074,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"hic\",\"service_id\":\"aliquam\",\"amount\":\"magni\",\"total\":\"rerum\",\"personel_id\":\"placeat\",\"package_type\":\"et\",\"seller_date\":\"et\"}"
+                            "raw": "{\"customer_id\":\"delectus\",\"service_id\":\"quaerat\",\"amount\":\"ea\",\"total\":\"ad\",\"personel_id\":\"earum\",\"package_type\":\"voluptas\",\"seller_date\":\"doloribus\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1105,7 +1105,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"eveniet\",\"price\":\"quo\",\"amount\":\"cumque\"}"
+                            "raw": "{\"package_id\":\"sit\",\"price\":\"possimus\",\"amount\":\"molestias\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1136,7 +1136,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"aliquam\",\"personel_id\":\"et\",\"amount\":\"odio\",\"operation_date\":\"non\"}"
+                            "raw": "{\"package_id\":\"placeat\",\"personel_id\":\"numquam\",\"amount\":\"atque\",\"operation_date\":\"quia\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1535,7 +1535,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"dolor\",\"password\":\"pVo-;b@0]]ka&%&AD&\"}"
+                            "raw": "{\"phone\":\"qui\",\"password\":\"CgMDsI\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -1622,6 +1622,144 @@
                         ],
                         "body": null,
                         "description": "<ul>\n<li>Token G\u00f6ndermeniz Yeterli<\/li>\n<\/ul>\nLogout apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/business\/product",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/product",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/product"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<\/ul>\n\u0130\u015fletmenin \u00fcr\u00fcn listesi sadece bu apiden d\u00f6nen verileri listede g\u00f6stermeniz yeterlidir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/business\/product\/create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/product\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/product\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>name | string | required | \u00dcr\u00fcn ad\u0131<\/li>\n<li>amount | numeric | required | \u00dcr\u00fcn say\u0131s\u0131<\/li>\n<li>price | numeric | required | tek bir \u00fcr\u00fcn\u00fcn fiyat\u0131<\/li>\n\n<\/ul>\n\u00fcr\u00fcn ekleme apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/product\/update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/product\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/product\/update"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>product_id | numeric | required | \u00dcr\u00fcn id si<\/li>\n<li>name | string | required | \u00dcr\u00fcn ad\u0131<\/li>\n<li>amount | numeric | required | \u00dcr\u00fcn say\u0131s\u0131<\/li>\n<li>price | numeric | required | tek bir \u00fcr\u00fcn\u00fcn fiyat\u0131<\/li>\n\n<\/ul>\n\u00fcr\u00fcn ekleme apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/product\/delete",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/product\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/product\/delete"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>product_id | numeric | required | \u00dcr\u00fcn id si<\/li>\n\n<\/ul>\n\u00fcr\u00fcn silme apisi",
                         "auth": {
                             "type": "noauth"
                         }

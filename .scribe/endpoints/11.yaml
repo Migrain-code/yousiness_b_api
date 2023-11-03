@@ -1,82 +1,26 @@
-name: PersonalAuth
+name: Product
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/personal/auth/login
-    metadata:
-      groupName: PersonalAuth
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'POST api/personal/auth/login'
-      description: |-
-        Status Codes
-        <ul>
-        <li>phone</li>
-        <li>password</li>
-        <li> 401 Unauthorized Hatası </li>
-        </ul>
-        Login apisi
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      phone:
-        name: phone
-        description: ''
-        required: true
-        example: dolor
-        type: string
-        enumValues: []
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: 'pVo-;b@0]]ka&%&AD&'
-        type: string
-        enumValues: []
-        custom: []
-    cleanBodyParameters:
-      phone: dolor
-      password: 'pVo-;b@0]]ka&%&AD&'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - GET
-    uri: api/personal/user
+    uri: api/business/product
     metadata:
-      groupName: PersonalAuth
+      groupName: Product
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'GET api/personal/auth/user'
+      title: 'GET api/business/product'
       description: |-
         <ul>
-        <li>Token Göndermeniz Yeterli</li>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
         </ul>
-        Use Info apisi
+        İşletmenin ürün listesi sadece bu apiden dönen verileri listede göstermeniz yeterlidir.
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-      Bearer: '{token}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -103,24 +47,102 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/personal/logout
+    uri: api/business/product/create
     metadata:
-      groupName: PersonalAuth
+      groupName: Product
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/personal/auth/logout'
+      title: 'POST api/business/product/create'
       description: |-
         <ul>
-        <li>Token Göndermeniz Yeterli</li>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>name | string | required | Ürün adı</li>
+        <li>amount | numeric | required | Ürün sayısı</li>
+        <li>price | numeric | required | tek bir ürünün fiyatı</li>
+
         </ul>
-        Logout apisi
+        ürün ekleme apisi
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/product/update
+    metadata:
+      groupName: Product
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/product/update'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>product_id | numeric | required | Ürün id si</li>
+        <li>name | string | required | Ürün adı</li>
+        <li>amount | numeric | required | Ürün sayısı</li>
+        <li>price | numeric | required | tek bir ürünün fiyatı</li>
+
+        </ul>
+        ürün ekleme apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/product/delete
+    metadata:
+      groupName: Product
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/business/product/delete'
+      description: |-
+        <ul>
+        <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>product_id | numeric | required | Ürün id si</li>
+
+        </ul>
+        ürün silme apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
