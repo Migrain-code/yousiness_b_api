@@ -1,0 +1,137 @@
+name: PersonalAuth
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/personal/auth/login
+    metadata:
+      groupName: PersonalAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/personal/auth/login'
+      description: |-
+        Status Codes
+        <ul>
+        <li>phone</li>
+        <li>password</li>
+        <li> 401 Unauthorized Hatası </li>
+        </ul>
+        Login apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: CgMDsI
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      phone: qui
+      password: CgMDsI
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/personal/user
+    metadata:
+      groupName: PersonalAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET api/personal/auth/user'
+      description: |-
+        <ul>
+        <li>Token Göndermeniz Yeterli</li>
+        </ul>
+        Use Info apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/personal/logout
+    metadata:
+      groupName: PersonalAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST api/personal/auth/logout'
+      description: |-
+        <ul>
+        <li>Token Göndermeniz Yeterli</li>
+        </ul>
+        Logout apisi
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Bearer: '{token}'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
