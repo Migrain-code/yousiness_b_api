@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "35bc28f7-f47b-4389-9815-0cdc9722d0c3",
+        "_postman_id": "96dd71fb-986d-4508-b4c9-30bf37d72696",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -82,6 +82,38 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "POST api\/business\/appointment\/cancel",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/appointment\/cancel",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/appointment\/cancel"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Bearer",
+                                "value": "{token}"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<br> Gerekli alanlar\n<ul>\n<li> token <\/li>\n<li> appointment_id | numeric | randevu id si<\/li>\n<\/ul>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         },
@@ -111,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"iusto\",\"password\":\"mje9^#iA>HjN@K\"}"
+                            "raw": "{\"phone\":\"et\",\"password\":\"Pn@:1\\\/+a\\\\:vC'>9\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -786,7 +818,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"zuuiosjvswwukgqbcfzqzswxkposgeqqhcjeqwchvkwtv\",\"phone\":\"iogyqkbcftzmlebnobndswrfrkunigmunkxmnokdfnqpskuzectpdwpq\",\"email\":\"nschimmel@example.com\",\"password\":\"pGkd,Wv'0AUU6Oavi(m\",\"gender\":\"odit\"}"
+                            "raw": "{\"name\":\"lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn\",\"phone\":\"oplacxbbtqdguvwbvcmhzxnpdxbgud\",\"email\":\"ferry.electa@example.com\",\"password\":\"m)!G8fjYYe)+^xNo7##\",\"gender\":\"incidunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -955,7 +987,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"sqaieicamyfqpwu\",\"businessName\":\"irue\",\"appointmentRange\":7.038364931,\"phone\":\"mvuqpdfuapmnytq\",\"startTime\":\"magnam\",\"endTime\":\"quisquam\",\"email\":\"rmorar@example.org\",\"year\":\"2023-11-03T17:27:13\",\"address\":\"in\",\"aboutText\":\"veniam\"}"
+                            "raw": "{\"officialName\":\"vrqzc\",\"businessName\":\"n\",\"appointmentRange\":227419.69599,\"phone\":\"johehuxbixgbzezukywuwqwhunvhidajzvxxwhwttzcqoobxolyanyhjjdpzcxetisdoushhlrqlovxnefqm\",\"startTime\":\"fuga\",\"endTime\":\"et\",\"email\":\"delia.walsh@example.net\",\"year\":\"2023-11-03T19:34:42\",\"address\":\"voluptas\",\"aboutText\":\"eaque\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
@@ -1144,7 +1176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"enim\",\"service_id\":\"veniam\",\"amount\":\"aut\",\"total\":\"quae\",\"personel_id\":\"dolor\",\"package_type\":\"nulla\",\"seller_date\":\"voluptas\"}"
+                            "raw": "{\"customer_id\":\"dolorem\",\"service_id\":\"dolorum\",\"amount\":\"placeat\",\"total\":\"culpa\",\"personel_id\":\"quia\",\"package_type\":\"illo\",\"seller_date\":\"ullam\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1175,7 +1207,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"id\",\"price\":\"nihil\",\"amount\":\"voluptatibus\"}"
+                            "raw": "{\"package_id\":\"est\",\"price\":\"magnam\",\"amount\":\"quod\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1206,7 +1238,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"voluptatem\",\"personel_id\":\"consequuntur\",\"amount\":\"magnam\",\"operation_date\":\"cupiditate\"}"
+                            "raw": "{\"package_id\":\"repellat\",\"personel_id\":\"voluptates\",\"amount\":\"voluptas\",\"operation_date\":\"omnis\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1304,7 +1336,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<\/ul>",
+                        "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | numeric |required | t\u0131klanan paketin id si<\/li>\n<\/ul>",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1605,7 +1637,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"placeat\",\"password\":\"tAa\\\"#m)DE,.|41n88C\"}"
+                            "raw": "{\"phone\":\"quae\",\"password\":\"\\\/FGV4J;}TmiHQHA?N^@k\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -1891,7 +1923,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/business\/product\/get-info",
+                    "name": "GET api\/business\/product-sale\/get-info",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1939,7 +1971,7 @@
                     ]
                 },
                 {
-                    "name": "POST api\/business\/product\/create",
+                    "name": "POST api\/business\/product-sale\/create",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1967,7 +1999,7 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/business\/product\/update",
+                    "name": "POST api\/business\/product-sale\/update",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1995,7 +2027,7 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/business\/product\/delete",
+                    "name": "POST api\/business\/product-sale\/delete",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",

@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: placeat
+        example: quae
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'tAa"#m)DE,.|41n88C'
+        example: '/FGV4J;}TmiHQHA?N^@k'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: placeat
-      password: 'tAa"#m)DE,.|41n88C'
+      phone: quae
+      password: '/FGV4J;}TmiHQHA?N^@k'
     fileParameters: []
     responses: []
     responseFields: []

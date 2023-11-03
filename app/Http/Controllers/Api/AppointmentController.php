@@ -79,6 +79,8 @@ class AppointmentController extends Controller
         $appointment = Appointment::where('business_id', $business->id)->where('id', $request->appointment_id)
             ->first();
         if ($appointment){
+            $appointment->status = 8;
+            $appointment->save();
             return response()->json([
                 'status' => 'success',
                 'message' => 'Randevu İptal Edildi'

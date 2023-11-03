@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: zuuiosjvswwukgqbcfzqzswxkposgeqqhcjeqwchvkwtv
+        example: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
         type: string
         enumValues: []
         custom: []
@@ -75,7 +75,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: iogyqkbcftzmlebnobndswrfrkunigmunkxmnokdfnqpskuzectpdwpq
+        example: oplacxbbtqdguvwbvcmhzxnpdxbgud
         type: string
         enumValues: []
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: nschimmel@example.com
+        example: ferry.electa@example.com
         type: string
         enumValues: []
         custom: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: "pGkd,Wv'0AUU6Oavi(m"
+        example: 'm)!G8fjYYe)+^xNo7##'
         type: string
         enumValues: []
         custom: []
@@ -99,16 +99,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: odit
+        example: incidunt
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: zuuiosjvswwukgqbcfzqzswxkposgeqqhcjeqwchvkwtv
-      phone: iogyqkbcftzmlebnobndswrfrkunigmunkxmnokdfnqpskuzectpdwpq
-      email: nschimmel@example.com
-      password: "pGkd,Wv'0AUU6Oavi(m"
-      gender: odit
+      name: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
+      phone: oplacxbbtqdguvwbvcmhzxnpdxbgud
+      email: ferry.electa@example.com
+      password: 'm)!G8fjYYe)+^xNo7##'
+      gender: incidunt
     fileParameters: []
     responses: []
     responseFields: []

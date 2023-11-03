@@ -195,7 +195,7 @@ endpoints:
         name: customer_id
         description: ''
         required: true
-        example: enim
+        example: dolorem
         type: string
         enumValues: []
         custom: []
@@ -203,7 +203,7 @@ endpoints:
         name: service_id
         description: ''
         required: true
-        example: veniam
+        example: dolorum
         type: string
         enumValues: []
         custom: []
@@ -211,7 +211,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: aut
+        example: placeat
         type: string
         enumValues: []
         custom: []
@@ -219,7 +219,7 @@ endpoints:
         name: total
         description: ''
         required: true
-        example: quae
+        example: culpa
         type: string
         enumValues: []
         custom: []
@@ -227,7 +227,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: dolor
+        example: quia
         type: string
         enumValues: []
         custom: []
@@ -235,7 +235,7 @@ endpoints:
         name: package_type
         description: ''
         required: true
-        example: nulla
+        example: illo
         type: string
         enumValues: []
         custom: []
@@ -243,18 +243,18 @@ endpoints:
         name: seller_date
         description: ''
         required: true
-        example: voluptas
+        example: ullam
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      customer_id: enim
-      service_id: veniam
-      amount: aut
-      total: quae
-      personel_id: dolor
-      package_type: nulla
-      seller_date: voluptas
+      customer_id: dolorem
+      service_id: dolorum
+      amount: placeat
+      total: culpa
+      personel_id: quia
+      package_type: illo
+      seller_date: ullam
     fileParameters: []
     responses: []
     responseFields: []
@@ -295,7 +295,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: id
+        example: est
         type: string
         enumValues: []
         custom: []
@@ -303,7 +303,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: nihil
+        example: magnam
         type: string
         enumValues: []
         custom: []
@@ -311,14 +311,14 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: voluptatibus
+        example: quod
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: id
-      price: nihil
-      amount: voluptatibus
+      package_id: est
+      price: magnam
+      amount: quod
     fileParameters: []
     responses: []
     responseFields: []
@@ -360,7 +360,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: voluptatem
+        example: repellat
         type: string
         enumValues: []
         custom: []
@@ -368,7 +368,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: consequuntur
+        example: voluptates
         type: string
         enumValues: []
         custom: []
@@ -376,7 +376,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: magnam
+        example: voluptas
         type: string
         enumValues: []
         custom: []
@@ -384,15 +384,15 @@ endpoints:
         name: operation_date
         description: ''
         required: true
-        example: cupiditate
+        example: omnis
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: voluptatem
-      personel_id: consequuntur
-      amount: magnam
-      operation_date: cupiditate
+      package_id: repellat
+      personel_id: voluptates
+      amount: voluptas
+      operation_date: omnis
     fileParameters: []
     responses: []
     responseFields: []

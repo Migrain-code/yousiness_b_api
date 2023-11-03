@@ -41,6 +41,23 @@ paths:
       tags:
         - Appointment
       security: []
+  /api/business/appointment/cancel:
+    post:
+      summary: 'POST api/business/appointment/cancel'
+      operationId: pOSTApibusinessappointmentcancel
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> appointment_id | numeric | randevu id si</li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Appointment
+      security: []
   /api/business/auth/login:
     post:
       summary: 'POST api/auth/login'
@@ -60,11 +77,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: iusto
+                  example: et
                 password:
                   type: string
                   description: ''
-                  example: 'mje9^#iA>HjN@K'
+                  example: 'Pn@:1/+a\:vC''>9'
               required:
                 - phone
                 - password
@@ -612,23 +629,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: zuuiosjvswwukgqbcfzqzswxkposgeqqhcjeqwchvkwtv
+                  example: lxmdnyvyyxpatnfugnrjavfetzudkpuoxveliguocvfsoftzrtkxwn
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: iogyqkbcftzmlebnobndswrfrkunigmunkxmnokdfnqpskuzectpdwpq
+                  example: oplacxbbtqdguvwbvcmhzxnpdxbgud
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: nschimmel@example.com
+                  example: ferry.electa@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: "pGkd,Wv'0AUU6Oavi(m"
+                  example: 'm)!G8fjYYe)+^xNo7##'
                 gender:
                   type: string
                   description: ''
-                  example: odit
+                  example: incidunt
               required:
                 - name
                 - phone
@@ -707,43 +724,43 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: sqaieicamyfqpwu
+                  example: vrqzc
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: irue
+                  example: 'n'
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 7.038364931
+                  example: 227419.69599
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: mvuqpdfuapmnytq
+                  example: johehuxbixgbzezukywuwqwhunvhidajzvxxwhwttzcqoobxolyanyhjjdpzcxetisdoushhlrqlovxnefqm
                 startTime:
                   type: string
                   description: ''
-                  example: magnam
+                  example: fuga
                 endTime:
                   type: string
                   description: ''
-                  example: quisquam
+                  example: et
                 email:
                   type: string
                   description: ''
-                  example: rmorar@example.org
+                  example: delia.walsh@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-03T17:27:13'
+                  example: '2023-11-03T19:34:42'
                 address:
                   type: string
                   description: ''
-                  example: in
+                  example: voluptas
                 aboutText:
                   type: string
                   description: ''
-                  example: veniam
+                  example: eaque
               required:
                 - officialName
                 - businessName
@@ -839,31 +856,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: enim
+                  example: dolorem
                 service_id:
                   type: string
                   description: ''
-                  example: veniam
+                  example: dolorum
                 amount:
                   type: string
                   description: ''
-                  example: aut
+                  example: placeat
                 total:
                   type: string
                   description: ''
-                  example: quae
+                  example: culpa
                 personel_id:
                   type: string
                   description: ''
-                  example: dolor
+                  example: quia
                 package_type:
                   type: string
                   description: ''
-                  example: nulla
+                  example: illo
                 seller_date:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: ullam
               required:
                 - customer_id
                 - service_id
@@ -892,15 +909,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: id
+                  example: est
                 price:
                   type: string
                   description: ''
-                  example: nihil
+                  example: magnam
                 amount:
                   type: string
                   description: ''
-                  example: voluptatibus
+                  example: quod
               required:
                 - package_id
                 - price
@@ -925,19 +942,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: repellat
                 personel_id:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: voluptates
                 amount:
                   type: string
                   description: ''
-                  example: magnam
+                  example: voluptas
                 operation_date:
                   type: string
                   description: ''
-                  example: cupiditate
+                  example: omnis
               required:
                 - package_id
                 - personel_id
@@ -1355,7 +1372,7 @@ paths:
     post:
       summary: 'POST /create-payment-intent'
       operationId: pOSTcreatePaymentIntent
-      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>"
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | numeric |required | tıklanan paketin id si</li>\n</ul>"
       parameters: []
       responses: {  }
       tags:
@@ -1516,11 +1533,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: placeat
+                  example: quae
                 password:
                   type: string
                   description: ''
-                  example: 'tAa"#m)DE,.|41n88C'
+                  example: '/FGV4J;}TmiHQHA?N^@k'
               required:
                 - phone
                 - password
@@ -1647,8 +1664,8 @@ paths:
       security: []
   /api/business/product-sale/get-info:
     get:
-      summary: 'GET api/business/product/get-info'
-      operationId: gETApibusinessproductgetInfo
+      summary: 'GET api/business/product-sale/get-info'
+      operationId: gETApibusinessproductSalegetInfo
       description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>\nİşletmenin ürün satışı ekleyeceği yerde kullanacağı bilgiler."
       parameters: []
       responses:
@@ -1669,8 +1686,8 @@ paths:
       security: []
   /api/business/product-sale/create:
     post:
-      summary: 'POST api/business/product/create'
-      operationId: pOSTApibusinessproductcreate
+      summary: 'POST api/business/product-sale/create'
+      operationId: pOSTApibusinessproductSalecreate
       description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>customer_id | string | required | müşteri id</li>\n<li>product_id | string | required | ürün id</li>\n<li>personel_id | string | required | personel id</li>\n<li>payment_type | string | required | ödeme türü</li>\n<li>amount | string | required | adet</li>\n<li>price | string | required | fiyat</li>\n\n</ul>\nİşletmenin ürün satışı ekleyeceği yerde ."
       parameters: []
       responses: {  }
@@ -1679,8 +1696,8 @@ paths:
       security: []
   /api/business/product-sale/update:
     post:
-      summary: 'POST api/business/product/update'
-      operationId: pOSTApibusinessproductupdate
+      summary: 'POST api/business/product-sale/update'
+      operationId: pOSTApibusinessproductSaleupdate
       description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>product_sale_id | numeric | required | ürün satışı id is</li>\n<li>customer_id | string | required | müşteri id</li>\n<li>product_id | string | required | ürün id</li>\n<li>personel_id | string | required | personel id</li>\n<li>payment_type | string | required | ödeme türü</li>\n<li>amount | string | required | adet</li>\n<li>price | string | required | fiyat</li>\n\n</ul>\nİşletmenin ürün satışı ekleyeceği yerde ."
       parameters: []
       responses: {  }
@@ -1689,8 +1706,8 @@ paths:
       security: []
   /api/business/product-sale/delete:
     post:
-      summary: 'POST api/business/product/delete'
-      operationId: pOSTApibusinessproductdelete
+      summary: 'POST api/business/product-sale/delete'
+      operationId: pOSTApibusinessproductSaledelete
       description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>product_sale_id | numeric | required | ürün satışı id is</li>\n</ul>\nİşletmenin ürün satışı ekleyeceği yerde ."
       parameters: []
       responses: {  }

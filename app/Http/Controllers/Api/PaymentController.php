@@ -23,6 +23,7 @@ class PaymentController extends Controller
      *
      * <ul>
      * <li>Bearer Token | string | required | Kullanıcı Token</li>
+     * <li>package_id | numeric |required | tıklanan paketin id si</li>
      * </ul>
      *
      *

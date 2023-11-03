@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'GET api/business/product/get-info'
+      title: 'GET api/business/product-sale/get-info'
       description: |-
         <ul>
         <li>Bearer Token | string | required | Kullanıcı Token</li>
@@ -96,7 +96,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/product/create'
+      title: 'POST api/business/product-sale/create'
       description: |-
         <ul>
         <li>Bearer Token | string | required | Kullanıcı Token</li>
@@ -137,7 +137,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/product/update'
+      title: 'POST api/business/product-sale/update'
       description: |-
         <ul>
         <li>Bearer Token | string | required | Kullanıcı Token</li>
@@ -179,7 +179,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'POST api/business/product/delete'
+      title: 'POST api/business/product-sale/delete'
       description: |-
         <ul>
         <li>Bearer Token | string | required | Kullanıcı Token</li>

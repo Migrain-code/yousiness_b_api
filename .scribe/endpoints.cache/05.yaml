@@ -16,6 +16,7 @@ endpoints:
       description: |-
         <ul>
         <li>Bearer Token | string | required | Kullanıcı Token</li>
+        <li>package_id | numeric |required | tıklanan paketin id si</li>
         </ul>
       authenticated: false
       custom: []
