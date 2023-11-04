@@ -16,7 +16,7 @@ class AppointmentDetailResoruce extends JsonResource
     {
         return [
             'id' => $this->id,
-            'date' => $this->start_time,
+            'date' => $this->date->format('d.m.Y'),
             'status' => $this->status("text"),
             'comment_status' => $this->comment_status,
             'services' => AppointmentServiceResource::collection($this->services),
