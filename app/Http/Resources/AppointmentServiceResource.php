@@ -15,10 +15,12 @@ class AppointmentServiceResource extends JsonResource
     public function toArray($request)
     {
         return [
+          'customer' => BusinessCustomerResource::make($this->customer),
           'personel' => PersonelResource::make($this->personel),
           'name' => $this->service->subCategory->name,
           'start_time' => $this->start_time,
           'end_time' => $this->end_time,
+          'price' => $this->service->price
         ];
     }
 }
