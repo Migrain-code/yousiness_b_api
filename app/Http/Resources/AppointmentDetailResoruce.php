@@ -20,6 +20,7 @@ class AppointmentDetailResoruce extends JsonResource
             'status' => $this->status("text"),
             'comment_status' => $this->comment_status,
             'services' => AppointmentServiceResource::collection($this->services),
+            'customer' => BusinessCustomerResource::make($this->customer),
         ];
     }
 }
