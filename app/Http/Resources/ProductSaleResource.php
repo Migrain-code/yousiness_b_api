@@ -15,6 +15,7 @@ class ProductSaleResource extends JsonResource
     public function toArray($request)
     {
         return [
+          'id' => $this->id,
           'customer' => $this->customer->name,
           'payment_type' => $this->paymentType(),
           'piece' => $this->piece,
