@@ -181,14 +181,20 @@ class ProductSaleController extends Controller
      *
      *
      */
-    public function destroy(ProductSales $productSale)
+    public function destroy(Request $request)
     {
-        if ($productSale->delete()) {
+        $productSale = ProductSales::find($request->product_sale_id);
+        if ($productSale) {
+            $productSale->delete();
             return response()->json([
                 'status' => "success",
                 'message' => "Satış İşlemi Silindi"
             ]);
         }
+        return response()->json([
+            'status' => "warning",
+            'message' => "Satış İşlemi Bulunamadı"
+        ]);
     }
 
     function sayiDuzenle($sayi)
