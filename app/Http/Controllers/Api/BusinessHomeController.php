@@ -31,7 +31,7 @@ class BusinessHomeController extends Controller
             ->where('status', 1)
             ->where('date', $request->input('date'))
             ->get();
-
+        dd($todayAppointments);
         $earning = 0;
         $appointments = $business->appointments()->get();
         foreach ($appointments as $row) {
@@ -44,7 +44,36 @@ class BusinessHomeController extends Controller
                 'count' => $appointments->count(),
                 'iconName' => 'calendar-outline',
             ],
-
+            [
+                'id' => 1,
+                'name' => 'Randevular Tutarı',
+                'count' => $earning,
+                'iconName' => 'newspaper-outline',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Müşteri Sayısı',
+                'count' =>  $business->customers->count(),
+                'iconName' => 'person-outline',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Ürün Satışı Sayısı',
+                'count' => $business->sales->count(),
+                'iconName' => 'cube-outline',
+            ],
+            [
+                'id' => 4,
+                'name' => 'Toplam Kasa Tutarı',
+                'count' => $earning + $business->packages->sum('total') + $business->sales->sum('price'),
+                'iconName' => 'analytics',
+            ],
+            [
+                'id' => 5,
+                'name' => 'Toplam personel Sayısı',
+                'count' => $business->personel->count(),
+                'iconName' => 'person-outline',
+            ],
         ];
 
         return response()->json([
