@@ -20,7 +20,9 @@ function calculateTotal($services)
 {
     $total=0;
     foreach ($services as $service){
-        $total+=$service->service->price;
+        if ($service->service){
+            $total+=$service->service->price;
+        }
     }
     return $total;
 }
