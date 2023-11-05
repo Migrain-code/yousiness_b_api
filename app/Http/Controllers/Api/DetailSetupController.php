@@ -70,7 +70,7 @@ class DetailSetupController extends Controller
         $business = $request->user();
         $business->owner = $request->input('officialName'); //Yetkili Ad Soyad
         $business->name = $request->input('businessName');// Salon Adı
-        $business->appointment_range = $request->input('appointmentRange');
+        $business->appoinment_range = $request->input('appointmentRange');
         $business->phone = $request->input('phone');
         $business->business_email = $request->input('email');
         $business->year = $request->input('year'); //2023-04-01
