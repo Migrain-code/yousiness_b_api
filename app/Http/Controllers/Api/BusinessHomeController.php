@@ -41,39 +41,10 @@ class BusinessHomeController extends Controller
             [
                 'id' => 0,
                 'name' => 'Randevu Sayısı',
-                'count' => 5,
+                'count' => $appointments->count(),
                 'iconName' => 'calendar-outline',
             ],
-            [
-                'id' => 1,
-                'name' => 'Randevular Tutarı',
-                'count' => $earning,
-                'iconName' => 'newspaper-outline',
-            ],
-            [
-                'id' => 2,
-                'name' => 'Müşteri Sayısı',
-                'count' =>  $business->customers->count(),
-                'iconName' => 'person-outline',
-            ],
-            [
-                'id' => 3,
-                'name' => 'Ürün Satışı Sayısı',
-                'count' => $business->sales->count(),
-                'iconName' => 'cube-outline',
-            ],
-            [
-                'id' => 4,
-                'name' => 'Toplam Kasa Tutarı',
-                'count' => $earning + $business->packages->sum('total') + $business->sales->sum('price'),
-                'iconName' => 'analytics',
-            ],
-            [
-                'id' => 5,
-                'name' => 'Toplam personel Sayısı',
-                'count' => $business->personel->count(),
-                'iconName' => 'person-outline',
-            ],
+
         ];
 
         return response()->json([
