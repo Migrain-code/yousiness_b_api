@@ -8,6 +8,7 @@ use App\Http\Resources\BusinessCustomerResource;
 use App\Models\BusinessCustomer;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 
 /**
@@ -39,6 +40,8 @@ class CustomerController extends Controller
         $customer->custom_email = $request->input('email');
         $customer->password = Hash::make($request->input('password'));
         $customer->gender = $request->input('gender');
+        $customer->birthday = Carbon::parse($request->input('date'))->format('d.m.Y');
+        $customer->note = $request->input('note');
         $customer->status = 1;
         if ($customer->save()) {
             $businessCustomer = new BusinessCustomer();
