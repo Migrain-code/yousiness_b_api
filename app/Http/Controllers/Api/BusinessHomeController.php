@@ -36,7 +36,7 @@ class BusinessHomeController extends Controller
         foreach ($appointments as $row) {
             $earning += calculateTotal($row->services);
         }
-        $appointments->count();
+        dd($appointments->count());
         $businessDetailData = [
             [
                 'id' => 0,
