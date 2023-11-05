@@ -74,7 +74,6 @@ class DetailSetupController extends Controller
         $business->phone = $request->input('phone');
         $business->business_email = $request->input('email');
         $business->year = $request->input('year'); //2023-04-01
-        $business->personal_count = $request->input('personalCount');
         $business->address = $request->input('address');
         $business->about = $request->input('aboutText');
         //$business->type_id = $request->input('businessType');
