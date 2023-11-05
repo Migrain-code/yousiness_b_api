@@ -53,7 +53,7 @@ class BusinessHomeController extends Controller
             [
                 'id' => 2,
                 'name' => 'Müşteri Sayısı',
-                'count' =>  $business->customers->count(),
+                'count' =>  5,
                 'iconName' => 'person-outline',
             ],
             [
