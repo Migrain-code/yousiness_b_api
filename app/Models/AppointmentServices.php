@@ -10,7 +10,9 @@ class AppointmentServices extends Model
     use HasFactory;
     public function service()
     {
-        return $this->hasOne(BusinessService::class, 'id', 'service_id');
+        return $this->hasOne(BusinessService::class, 'id', 'service_id')->withDefault([
+            'price' => 1,
+        ]);
     }
 
     public function personel()
