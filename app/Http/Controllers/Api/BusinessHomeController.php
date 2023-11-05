@@ -33,8 +33,8 @@ class BusinessHomeController extends Controller
             ->get();
         $earning = 0;
         $appointments = $business->appointments()->get();
-        dd($appointments);
         foreach ($appointments as $row) {
+            dd($row->services);
             $earning += calculateTotal($row->services);
         }
         $businessDetailData = [
