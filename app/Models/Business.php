@@ -43,7 +43,14 @@ class Business extends Authenticatable
 
     public function personel()
     {
-        return $this->hasMany(Personel::class, 'business_id', 'id');
+        return $this->hasMany(Personel::class, 'business_id', 'id')->withDefault([
+            'name' => "Silinmiş Personel",
+            'image' => "Silinmiş Personel",
+            'email' => "Silinmiş Personel",
+            'phone' => "Silinmiş Personel",
+            'start_time' => "Silinmiş Personel",
+            'end_time' => "Silinmiş Personel",
+        ]);
     }
 
     public function service()

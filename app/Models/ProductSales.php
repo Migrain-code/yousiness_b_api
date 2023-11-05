@@ -32,7 +32,14 @@ class ProductSales extends Model
 
     public function personel()
     {
-        return $this->hasOne(Personel::class,'id', 'personel_id');
+        return $this->hasOne(Personel::class,'id', 'personel_id')->withDefault([
+            'name' => "Silinmiş Personel",
+            'image' => "Silinmiş Personel",
+            'email' => "Silinmiş Personel",
+            'phone' => "Silinmiş Personel",
+            'start_time' => "Silinmiş Personel",
+            'end_time' => "Silinmiş Personel",
+        ]);
     }
     public function product()
     {
