@@ -30,8 +30,6 @@ class DetailSetupRequestStep1 extends FormRequest
             'businessName' => 'required|string|max:255',
             'appointmentRange' => 'required|numeric',
             'phone' => 'required|string|min:11',
-            'startTime' => 'required|string',
-            'endTime' => 'required|string',
             'email' => 'required|string',
             'year' => 'required|date',
             'address' => 'required|string',
@@ -42,6 +40,8 @@ class DetailSetupRequestStep1 extends FormRequest
             //'districtId' => 'required|numeric',
             //'commission' => 'required|numeric',
             //'offDay' => 'required|numeric',
+            //'startTime' => 'required|string',
+            //'endTime' => 'required|string',
         ];
     }
 
@@ -53,8 +53,6 @@ class DetailSetupRequestStep1 extends FormRequest
             'businessName' => "Salon Adı",
             'appointmentRange' => "Randevu aralığı",
             'phone' => "İşletme Telefon Numarası",
-            'startTime' => "İşletme Açılış Saati",
-            'endTime' => "İşletme Kapanış Saati",
             'email' => "İşletme E-posta Adresi",
             'year' => "İşletme Kuruluş Tarihi",
             'address' => "İşletme Address Metni",
@@ -65,7 +63,8 @@ class DetailSetupRequestStep1 extends FormRequest
             //'commission' => "Personel Komisyonu",
             //'offDay' => "Kapalı Olduğu Gün",
             //'businessType' => "İşletme türü",
-
+            //'startTime' => "İşletme Açılış Saati",
+            //'endTime' => "İşletme Kapanış Saati",
         ];
     }
 
