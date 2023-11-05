@@ -14,7 +14,6 @@ function clearPhone($phoneNumber){
     $newPhoneNumber = str_replace([' ', '(', ')', '-'], '', $phoneNumber);
 
     return $newPhoneNumber;
-
 }
 function calculateTotal($services)
 {
