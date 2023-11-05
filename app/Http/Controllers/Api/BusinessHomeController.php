@@ -41,7 +41,7 @@ class BusinessHomeController extends Controller
             [
                 'id' => 0,
                 'name' => 'Randevu Sayısı',
-                'count' => $appointments->count(),
+                'count' => 5,
                 'iconName' => 'calendar-outline',
             ],
             [
@@ -53,7 +53,7 @@ class BusinessHomeController extends Controller
             [
                 'id' => 2,
                 'name' => 'Müşteri Sayısı',
-                'count' =>  5,
+                'count' =>  $business->customers->count(),
                 'iconName' => 'person-outline',
             ],
             [
