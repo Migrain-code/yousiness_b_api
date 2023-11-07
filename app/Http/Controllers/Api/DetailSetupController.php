@@ -168,6 +168,7 @@ class DetailSetupController extends Controller
         foreach ($request->file('images') as $file) {
             $path = image('storage/' . $file->store('businessGallery'));
             $gallery = new BusinessGallery();
+            $gallery->business_id = $user->id;
             $gallery->way = $path;
             $gallery->byte = 45;
             $gallery->name = "businessGallery";
