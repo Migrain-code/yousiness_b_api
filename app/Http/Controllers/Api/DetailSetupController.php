@@ -165,7 +165,7 @@ class DetailSetupController extends Controller
 
         BusinessGallery::where('business_id', $user->id)->delete();
 
-        foreach ($request->file('logos') as $file) {
+        foreach ($request->file('images') as $file) {
             $path = image('storage/' . $file->store('businessGallery'));
             $gallery = new BusinessGallery();
             $gallery->way = $path;
