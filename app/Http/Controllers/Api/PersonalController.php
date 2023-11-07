@@ -89,6 +89,9 @@ class PersonalController extends Controller
         $personel->rate=$request->rate;
         $personel->range=$request->appointmentRange;
         $personel->description=$request->description;
+        if ($request->hasFile('logo')){
+            $personel->image = image($request->file('logo')->store('personalImage'));
+        }
         if ($personel->save()){
             if (in_array('all', $request->services)){
                 foreach ($business->services as $service){
