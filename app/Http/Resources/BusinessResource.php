@@ -23,7 +23,7 @@ class BusinessResource extends JsonResource
            'phone' => $this->phone,
            'email' => $this->business_email,
            'year' => $this->year,
-           'logo' => asset($this->logo),
+           'logo' => $this->logo,
            'wallpaper' => asset($this->wallpaper),
            'city' => new CityResource($this->cities),
            'category' => BusinessCategoryResource::collection($this->categories),
