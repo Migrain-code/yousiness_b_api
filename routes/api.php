@@ -28,7 +28,7 @@ use \App\Http\Controllers\Api\BusinessHomeController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProductSaleController;
 use App\Http\Controllers\Api\AppointmentController;
-
+use App\Http\Controllers\Api\GalleryController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -140,6 +140,12 @@ Route::prefix('business')->group(function () {
             Route::post('/detail', 'detail');
             Route::post('/cancel', 'cancel');
         });
+
+        Route::controller(GalleryController::class)->prefix('gallery')->group(function () {
+            Route::post('/', 'index');
+            Route::post('/upload', 'uploadLogo');
+        });
+
     });
 
 });
