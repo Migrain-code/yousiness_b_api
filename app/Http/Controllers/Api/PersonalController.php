@@ -92,8 +92,9 @@ class PersonalController extends Controller
         if ($request->hasFile('logo')){
             $personel->image = image($request->file('logo')->store('personalImage'));
         }
+        $services = explode(',', $request->services);
         if ($personel->save()){
-            if (in_array('all', $request->services)){
+            if (in_array('all', $services)){
                 foreach ($business->services as $service){
                     $personelService=new PersonelService();
                     $personelService->service_id=$service->id;
@@ -102,7 +103,7 @@ class PersonalController extends Controller
                 }
             }
             else{
-                foreach ($request->services as $service){
+                foreach ($services as $service){
                     $personelService=new PersonelService();
                     $personelService->service_id=$service;
                     $personelService->personel_id=$personel->id;
