@@ -5,7 +5,7 @@ function storage($path): string
     return asset('storage/' . $path);
 }
 function image($path){
-    return env('APP_URL').$path;
+    return env('APP_URL')."/".$path;
 }
 function setting($key){
     return config('settings.'.$key);
