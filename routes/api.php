@@ -75,6 +75,7 @@ Route::prefix('business')->group(function () {
         Route::controller(DetailSetupController::class)->prefix('detail-setup')->group(function () {
             Route::get('/step-1/get', 'index');
             Route::post('/step-1/update', 'step1');
+            Route::post('/step-1/upload/logo', 'uploadLogo');
         });
 
         Route::controller(BusinessServiceController::class)->prefix('business-service')->group(function () {

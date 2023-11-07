@@ -145,4 +145,16 @@ class DetailSetupController extends Controller
 
     }
 
+    public function uploadLogo(Request $request)
+    {
+        $user = $request->user();
+        $user->logo = image('storage/'.$request->file('logo')->store('business_logo'));
+        $user->save();
+
+        return response()->json([
+            'status' => "success",
+            'message' => "Logo Güncellendi"
+        ]);
+    }
+
 }
