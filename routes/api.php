@@ -142,7 +142,7 @@ Route::prefix('business')->group(function () {
         });
 
         Route::controller(GalleryController::class)->prefix('gallery')->group(function () {
-            Route::post('/', 'index');
+            Route::get('/', 'index');
             Route::post('/upload', 'uploadLogo');
         });
 
