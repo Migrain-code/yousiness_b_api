@@ -153,7 +153,8 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Logo Güncellendi"
+            'message' => "Logo Güncellendi",
+            'link' => $user->logo,
         ]);
     }
 
