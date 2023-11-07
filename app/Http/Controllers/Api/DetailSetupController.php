@@ -9,6 +9,7 @@ use App\Http\Resources\BusinessResource;
 use App\Http\Resources\BusinessServiceResource;
 use App\Http\Resources\PersonelResource;
 use App\Http\Resources\ServiceCategoryResource;
+use App\Models\BusinessGallery;
 use App\Models\BusinessService;
 use App\Models\BusinnessType;
 use App\Models\DayList;
@@ -31,9 +32,9 @@ class DetailSetupController extends Controller
     {
         $user = $request->user();
         $business_types = BusinnessType::select('id', 'name')->get();
-        $appointmentRanges =[];
-        for ($i = 5; $i <= 60; $i+= 5){
-            $appointmentRanges[]=$i;
+        $appointmentRanges = [];
+        for ($i = 5; $i <= 60; $i += 5) {
+            $appointmentRanges[] = $i;
         }
         return response()->json([
             'business' => BusinessResource::make($user),
@@ -148,7 +149,7 @@ class DetailSetupController extends Controller
     public function uploadLogo(Request $request)
     {
         $user = $request->user();
-        $user->logo = image('storage/'.$request->file('logo')->store('business_logo'));
+        $user->logo = image('storage/' . $request->file('logo')->store('business_logo'));
         $user->save();
 
         return response()->json([
@@ -158,4 +159,24 @@ class DetailSetupController extends Controller
         ]);
     }
 
+    public function uploadGallery(Request $request)
+    {
+        $user = $request->user();
+
+        BusinessGallery::where('business_id', $user->id)->delete();
+
+        foreach ($request->file('logos') as $file) {
+            $path = image('storage/' . $file->store('businessGallery'));
+            $gallery = new BusinessGallery();
+            $gallery->way = $path;
+            $gallery->byte = 45;
+            $gallery->name = "businessGallery";
+            $gallery->save();
+        }
+
+        return response()->json([
+            'status' => "success",
+            'message' => "Görseller Yüklendi",
+        ]);
+    }
 }

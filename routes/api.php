@@ -76,6 +76,8 @@ Route::prefix('business')->group(function () {
             Route::get('/step-1/get', 'index');
             Route::post('/step-1/update', 'step1');
             Route::post('/step-1/upload/logo', 'uploadLogo');
+            Route::post('/step-1/upload/gallery', 'uploadGallery');
+
         });
 
         Route::controller(BusinessServiceController::class)->prefix('business-service')->group(function () {
