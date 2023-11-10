@@ -77,11 +77,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: id
+                  example: aut
                 password:
                   type: string
                   description: ''
-                  example: LN+ySJ\
+                  example: 'o]a[\,m'
               required:
                 - phone
                 - password
@@ -153,7 +153,7 @@ paths:
         - Authentication
       security: []
   /api/business/home:
-    get:
+    post:
       summary: 'POST api/business-service/update'
       operationId: pOSTApibusinessServiceupdate
       description: "bu apiden sonra size randevu sayısı, müşteri sayısı, personel sayısı, toplam randevu tutarı, ürün satış sayısı, toplam kasa tutarı ve bugünkü randevular döndürülecek\n<br> Gerekli alanlar\n<ul>\n<li> token </li>\n</ul>"
@@ -165,19 +165,7 @@ paths:
           example: '{token}'
           schema:
             type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+      responses: {  }
       tags:
         - BusinessHome
       security: []
@@ -588,6 +576,38 @@ paths:
       tags:
         - City
       security: []
+  /api/business/comment:
+    get:
+      summary: ''
+      operationId: getApiBusinessComment
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Comment
+      security: []
+  /api/business/comment/detail:
+    post:
+      summary: ''
+      operationId: postApiBusinessCommentDetail
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Comment
+      security: []
   /api/business/customer:
     get:
       summary: ''
@@ -629,23 +649,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi
+                  example: ksgmfbhhucqfhwypqwmbzacrcbmqbsvazyzmjvhozdtswgptdioueaj
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn
+                  example: ckdptudcltsjwzoezzerskevxwju
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: rhea.pfeffer@example.com
+                  example: jenkins.clinton@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: lFDW<47
+                  example: '.j!+_h['
                 gender:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: unde
               required:
                 - name
                 - phone
@@ -724,54 +744,96 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: otaot
+                  example: j
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vhkrps
+                  example: rtkzjjcawpshsaxzw
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 10.707186233
+                  example: 3089.9037909
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: lkpvabnlqwgbnzvfvidsftubafivop
-                startTime:
-                  type: string
-                  description: ''
-                  example: perspiciatis
-                endTime:
-                  type: string
-                  description: ''
-                  example: enim
+                  example: vcwmunjzrbbelps
                 email:
                   type: string
                   description: ''
-                  example: gtorp@example.net
+                  example: fparker@example.org
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-03T21:57:51'
+                  example: '2023-11-10T17:23:37'
                 address:
                   type: string
                   description: ''
-                  example: quaerat
+                  example: ut
                 aboutText:
                   type: string
                   description: ''
-                  example: reprehenderit
+                  example: rerum
               required:
                 - officialName
                 - businessName
                 - appointmentRange
                 - phone
-                - startTime
-                - endTime
                 - email
                 - year
                 - address
                 - aboutText
+      security: []
+  /api/business/detail-setup/step-1/upload/logo:
+    post:
+      summary: ''
+      operationId: postApiBusinessDetailSetupStep1UploadLogo
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DetailSetup
+      security: []
+  /api/business/detail-setup/step-1/upload/gallery:
+    post:
+      summary: ''
+      operationId: postApiBusinessDetailSetupStep1UploadGallery
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DetailSetup
+      security: []
+  /api/business/gallery:
+    get:
+      summary: ''
+      operationId: getApiBusinessGallery
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Gallery
+      security: []
+  /api/business/gallery/upload:
+    post:
+      summary: ''
+      operationId: postApiBusinessGalleryUpload
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Gallery
       security: []
   /api/business/package-sale:
     get:
@@ -856,31 +918,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: modi
+                  example: voluptate
                 service_id:
                   type: string
                   description: ''
-                  example: ea
+                  example: libero
                 amount:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: unde
                 total:
                   type: string
                   description: ''
-                  example: nihil
+                  example: sit
                 personel_id:
                   type: string
                   description: ''
-                  example: at
+                  example: repellat
                 package_type:
                   type: string
                   description: ''
-                  example: dolores
+                  example: odio
                 seller_date:
                   type: string
                   description: ''
-                  example: officiis
+                  example: ea
               required:
                 - customer_id
                 - service_id
@@ -909,15 +971,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: et
+                  example: deleniti
                 price:
                   type: string
                   description: ''
-                  example: repellat
+                  example: consequatur
                 amount:
                   type: string
                   description: ''
-                  example: fugit
+                  example: quibusdam
               required:
                 - package_id
                 - price
@@ -942,15 +1004,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: facilis
+                  example: ducimus
                 personel_id:
                   type: string
                   description: ''
-                  example: a
+                  example: necessitatibus
                 amount:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: dolor
                 operation_date:
                   type: string
                   description: ''
@@ -990,7 +1052,7 @@ paths:
                       id: 1
                       name: 'Test Tarif'
                       price: 0
-                      color: null
+                      color: '#2DACF4'
                       proparties:
                         -
                           id: 1
@@ -1043,14 +1105,11 @@ paths:
                         -
                           id: 17
                           name: 'Tüm Özellikler'
-                        -
-                          id: 18
-                          name: '1 ay için tüm özellikler'
                     -
                       id: 2
                       name: 'Business Tarif'
                       price: 150
-                      color: null
+                      color: '#F4A42D'
                       proparties:
                         -
                           id: 1
@@ -1080,7 +1139,7 @@ paths:
                       id: 3
                       name: 'Business Plus'
                       price: 300
-                      color: null
+                      color: '#D63A31'
                       proparties:
                         -
                           id: 1
@@ -1133,10 +1192,64 @@ paths:
                         -
                           id: 17
                           name: 'Tüm Özellikler'
+                  yearly_packages:
+                    -
+                      id: 5
+                      name: 'Test Tarif'
+                      price: 1700
+                      color: '#2DACF4'
+                      proparties:
                         -
-                          id: 18
-                          name: '1 ay için tüm özellikler'
-                  yearly_packages: []
+                          id: 2
+                          name: 'Sms Bildirimler'
+                        -
+                          id: 1
+                          name: 'Sınırsız randevu'
+                        -
+                          id: 3
+                          name: 'Mail Bildirimler'
+                        -
+                          id: 4
+                          name: 'Mobil Bildirimler'
+                        -
+                          id: 5
+                          name: 'Digital takvim'
+                        -
+                          id: 6
+                          name: 'Google Takvim Bağlantısı'
+                        -
+                          id: 7
+                          name: 'İşletmeye Özel Web Sitesi'
+                        -
+                          id: 8
+                          name: 'İşletmeye Özel Reklamlar'
+                        -
+                          id: 9
+                          name: 'Müsteri hizmetleri'
+                        -
+                          id: 10
+                          name: 'Personel Çalışma Raporları'
+                        -
+                          id: 11
+                          name: 'Personel İşlemleri'
+                        -
+                          id: 12
+                          name: 'Randevu Raporları'
+                        -
+                          id: 13
+                          name: 'Ürün Satışı'
+                        -
+                          id: 14
+                          name: 'Paket Satışı'
+                        -
+                          id: 15
+                          name: 'Ürün Satış Raporu'
+                        -
+                          id: 16
+                          name: 'Paket Satış Raporu'
+                        -
+                          id: 17
+                          name: 'Tüm Özellikler'
                 properties:
                   monthly_packages:
                     type: array
@@ -1145,7 +1258,7 @@ paths:
                         id: 1
                         name: 'Test Tarif'
                         price: 0
-                        color: null
+                        color: '#2DACF4'
                         proparties:
                           -
                             id: 1
@@ -1198,14 +1311,11 @@ paths:
                           -
                             id: 17
                             name: 'Tüm Özellikler'
-                          -
-                            id: 18
-                            name: '1 ay için tüm özellikler'
                       -
                         id: 2
                         name: 'Business Tarif'
                         price: 150
-                        color: null
+                        color: '#F4A42D'
                         proparties:
                           -
                             id: 1
@@ -1235,7 +1345,7 @@ paths:
                         id: 3
                         name: 'Business Plus'
                         price: 300
-                        color: null
+                        color: '#D63A31'
                         proparties:
                           -
                             id: 1
@@ -1288,9 +1398,6 @@ paths:
                           -
                             id: 17
                             name: 'Tüm Özellikler'
-                          -
-                            id: 18
-                            name: '1 ay için tüm özellikler'
                     items:
                       type: object
                       properties:
@@ -1305,7 +1412,7 @@ paths:
                           example: 0
                         color:
                           type: string
-                          example: null
+                          example: '#2DACF4'
                         proparties:
                           type: array
                           example:
@@ -1360,9 +1467,6 @@ paths:
                             -
                               id: 17
                               name: 'Tüm Özellikler'
-                            -
-                              id: 18
-                              name: '1 ay için tüm özellikler'
                           items:
                             type: object
                             properties:
@@ -1374,7 +1478,142 @@ paths:
                                 example: 'Sınırsız randevu'
                   yearly_packages:
                     type: array
-                    example: []
+                    example:
+                      -
+                        id: 5
+                        name: 'Test Tarif'
+                        price: 1700
+                        color: '#2DACF4'
+                        proparties:
+                          -
+                            id: 2
+                            name: 'Sms Bildirimler'
+                          -
+                            id: 1
+                            name: 'Sınırsız randevu'
+                          -
+                            id: 3
+                            name: 'Mail Bildirimler'
+                          -
+                            id: 4
+                            name: 'Mobil Bildirimler'
+                          -
+                            id: 5
+                            name: 'Digital takvim'
+                          -
+                            id: 6
+                            name: 'Google Takvim Bağlantısı'
+                          -
+                            id: 7
+                            name: 'İşletmeye Özel Web Sitesi'
+                          -
+                            id: 8
+                            name: 'İşletmeye Özel Reklamlar'
+                          -
+                            id: 9
+                            name: 'Müsteri hizmetleri'
+                          -
+                            id: 10
+                            name: 'Personel Çalışma Raporları'
+                          -
+                            id: 11
+                            name: 'Personel İşlemleri'
+                          -
+                            id: 12
+                            name: 'Randevu Raporları'
+                          -
+                            id: 13
+                            name: 'Ürün Satışı'
+                          -
+                            id: 14
+                            name: 'Paket Satışı'
+                          -
+                            id: 15
+                            name: 'Ürün Satış Raporu'
+                          -
+                            id: 16
+                            name: 'Paket Satış Raporu'
+                          -
+                            id: 17
+                            name: 'Tüm Özellikler'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 5
+                        name:
+                          type: string
+                          example: 'Test Tarif'
+                        price:
+                          type: integer
+                          example: 1700
+                        color:
+                          type: string
+                          example: '#2DACF4'
+                        proparties:
+                          type: array
+                          example:
+                            -
+                              id: 2
+                              name: 'Sms Bildirimler'
+                            -
+                              id: 1
+                              name: 'Sınırsız randevu'
+                            -
+                              id: 3
+                              name: 'Mail Bildirimler'
+                            -
+                              id: 4
+                              name: 'Mobil Bildirimler'
+                            -
+                              id: 5
+                              name: 'Digital takvim'
+                            -
+                              id: 6
+                              name: 'Google Takvim Bağlantısı'
+                            -
+                              id: 7
+                              name: 'İşletmeye Özel Web Sitesi'
+                            -
+                              id: 8
+                              name: 'İşletmeye Özel Reklamlar'
+                            -
+                              id: 9
+                              name: 'Müsteri hizmetleri'
+                            -
+                              id: 10
+                              name: 'Personel Çalışma Raporları'
+                            -
+                              id: 11
+                              name: 'Personel İşlemleri'
+                            -
+                              id: 12
+                              name: 'Randevu Raporları'
+                            -
+                              id: 13
+                              name: 'Ürün Satışı'
+                            -
+                              id: 14
+                              name: 'Paket Satışı'
+                            -
+                              id: 15
+                              name: 'Ürün Satış Raporu'
+                            -
+                              id: 16
+                              name: 'Paket Satış Raporu'
+                            -
+                              id: 17
+                              name: 'Tüm Özellikler'
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 2
+                              name:
+                                type: string
+                                example: 'Sms Bildirimler'
       tags:
         - Packages
       security: []
@@ -1543,11 +1782,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: aut
+                  example: adipisci
                 password:
                   type: string
                   description: ''
-                  example: "^+Y[aH'AcHz`)%nA3"
+                  example: '#%q;}FT@fC\RZ;N"GW'
               required:
                 - phone
                 - password
@@ -1740,78 +1979,138 @@ paths:
                 example:
                   categories:
                     -
+                      id: 1
+                      name: 'Herren Friseure'
+                    -
                       id: 2
-                      name: Friseure
+                      name: 'Damen Friseure'
                     -
                       id: 3
-                      name: 'Schönheits und Ästhetikzentren'
+                      name: Haarentfernung
                     -
                       id: 4
-                      name: Spas
+                      name: 'Nagel Hand & Fußpflege'
                     -
                       id: 5
-                      name: Solariumzentren
+                      name: 'Tatoo & Piercing'
                     -
                       id: 6
-                      name: Wellness-Zentren
+                      name: Körperpflege
                     -
                       id: 7
-                      name: 'Tattoo und Tattoo-Zentren'
+                      name: Gesichtsbehandlung
                     -
                       id: 8
-                      name: Hijab-Friseure
+                      name: Make-Up
+                    -
+                      id: 9
+                      name: SPA
                     -
                       id: 10
-                      name: Muhammet
+                      name: 'Braut Friseure & Make-Up'
                     -
                       id: 11
-                      name: 'Muhammet Türkmen'
+                      name: Haartransplantation
                     -
                       id: 12
-                      name: Muhammet
+                      name: 'Schönheit Kliniken'
+                    -
+                      id: 13
+                      name: Fettabsaugen
+                    -
+                      id: 14
+                      name: 'Zahn Ästhetik'
+                    -
+                      id: 15
+                      name: 'Ernährung & Beratung'
+                    -
+                      id: 16
+                      name: 'Hamam & Sauna'
+                    -
+                      id: 17
+                      name: Solarium
+                    -
+                      id: 18
+                      name: 'Fitness & Yoga'
+                    -
+                      id: 19
+                      name: 'Hijab Friseure'
+                    -
+                      id: 20
+                      name: Sonstiges
                 properties:
                   categories:
                     type: array
                     example:
                       -
+                        id: 1
+                        name: 'Herren Friseure'
+                      -
                         id: 2
-                        name: Friseure
+                        name: 'Damen Friseure'
                       -
                         id: 3
-                        name: 'Schönheits und Ästhetikzentren'
+                        name: Haarentfernung
                       -
                         id: 4
-                        name: Spas
+                        name: 'Nagel Hand & Fußpflege'
                       -
                         id: 5
-                        name: Solariumzentren
+                        name: 'Tatoo & Piercing'
                       -
                         id: 6
-                        name: Wellness-Zentren
+                        name: Körperpflege
                       -
                         id: 7
-                        name: 'Tattoo und Tattoo-Zentren'
+                        name: Gesichtsbehandlung
                       -
                         id: 8
-                        name: Hijab-Friseure
+                        name: Make-Up
+                      -
+                        id: 9
+                        name: SPA
                       -
                         id: 10
-                        name: Muhammet
+                        name: 'Braut Friseure & Make-Up'
                       -
                         id: 11
-                        name: 'Muhammet Türkmen'
+                        name: Haartransplantation
                       -
                         id: 12
-                        name: Muhammet
+                        name: 'Schönheit Kliniken'
+                      -
+                        id: 13
+                        name: Fettabsaugen
+                      -
+                        id: 14
+                        name: 'Zahn Ästhetik'
+                      -
+                        id: 15
+                        name: 'Ernährung & Beratung'
+                      -
+                        id: 16
+                        name: 'Hamam & Sauna'
+                      -
+                        id: 17
+                        name: Solarium
+                      -
+                        id: 18
+                        name: 'Fitness & Yoga'
+                      -
+                        id: 19
+                        name: 'Hijab Friseure'
+                      -
+                        id: 20
+                        name: Sonstiges
                     items:
                       type: object
                       properties:
                         id:
                           type: integer
-                          example: 2
+                          example: 1
                         name:
                           type: string
-                          example: Friseure
+                          example: 'Herren Friseure'
       tags:
         - Setup
       security: []
@@ -1867,6 +2166,66 @@ paths:
       tags:
         - Setup
       security: []
+  /api/business/support:
+    get:
+      summary: ''
+      operationId: getApiBusinessSupport
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Support
+      security: []
+  /api/business/support/create:
+    post:
+      summary: ''
+      operationId: postApiBusinessSupportCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Support
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                subject:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
+                content:
+                  type: string
+                  description: 'Must be at least 10 characters.'
+                  example: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+              required:
+                - subject
+                - content
+      security: []
+  /api/business/support/detail:
+    post:
+      summary: ''
+      operationId: postApiBusinessSupportDetail
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Support
+      security: []
 tags:
   -
     name: Appointment
@@ -1884,10 +2243,16 @@ tags:
     name: City
     description: ''
   -
+    name: Comment
+    description: ''
+  -
     name: Customer
     description: ''
   -
     name: DetailSetup
+    description: ''
+  -
+    name: Gallery
     description: ''
   -
     name: PackageSale
@@ -1912,4 +2277,7 @@ tags:
     description: ''
   -
     name: Setup
+    description: ''
+  -
+    name: Support
     description: ''

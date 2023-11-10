@@ -1,0 +1,120 @@
+name: Support
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/business/support
+    metadata:
+      groupName: Support
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/support/create
+    metadata:
+      groupName: Support
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      subject:
+        name: subject
+        description: 'Must be at least 3 characters.'
+        required: true
+        example: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
+        type: string
+        enumValues: []
+        custom: []
+      content:
+        name: content
+        description: 'Must be at least 10 characters.'
+        required: true
+        example: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      subject: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
+      content: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/support/detail
+    metadata:
+      groupName: Support
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

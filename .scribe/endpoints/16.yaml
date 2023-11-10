@@ -1,12 +1,12 @@
-name: Gallery
+name: Comment
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/business/gallery
+    uri: api/business/comment
     metadata:
-      groupName: Gallery
+      groupName: Comment
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/business/gallery/upload
+    uri: api/business/comment/detail
     metadata:
-      groupName: Gallery
+      groupName: Comment
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''

@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"categories":[{"id":2,"name":"Friseure"},{"id":3,"name":"Sch\u00f6nheits und \u00c4sthetikzentren"},{"id":4,"name":"Spas"},{"id":5,"name":"Solariumzentren"},{"id":6,"name":"Wellness-Zentren"},{"id":7,"name":"Tattoo und Tattoo-Zentren"},{"id":8,"name":"Hijab-Friseure"},{"id":10,"name":"Muhammet"},{"id":11,"name":"Muhammet T\u00fcrkmen"},{"id":12,"name":"Muhammet"}]}'
+        content: '{"categories":[{"id":1,"name":"Herren Friseure"},{"id":2,"name":"Damen Friseure"},{"id":3,"name":"Haarentfernung"},{"id":4,"name":"Nagel Hand & Fu\u00dfpflege"},{"id":5,"name":"Tatoo & Piercing"},{"id":6,"name":"Ko\u0308rperpflege"},{"id":7,"name":"Gesichtsbehandlung"},{"id":8,"name":"Make-Up"},{"id":9,"name":"SPA"},{"id":10,"name":"Braut Friseure & Make-Up"},{"id":11,"name":"Haartransplantation"},{"id":12,"name":"Scho\u0308nheit Kliniken"},{"id":13,"name":"Fettabsaugen"},{"id":14,"name":"Zahn A\u0308sthetik"},{"id":15,"name":"Erna\u0308hrung & Beratung"},{"id":16,"name":"Hamam & Sauna"},{"id":17,"name":"Solarium"},{"id":18,"name":"Fitness & Yoga"},{"id":19,"name":"Hijab Friseure"},{"id":20,"name":"Sonstiges"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

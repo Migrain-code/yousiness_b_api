@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ec69da4d-1de8-4eff-bf10-6fdc88da9fa4",
+        "_postman_id": "2f9f1883-8ffa-4bc0-8cc1-1c1656b01e57",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"id\",\"password\":\"LN+ySJ\\\\\"}"
+                            "raw": "{\"phone\":\"aut\",\"password\":\"o]a[\\\\,m\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -307,7 +307,7 @@
                             "query": [],
                             "raw": "{{baseUrl}}\/api\/business\/home"
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -328,27 +328,7 @@
                             "type": "noauth"
                         }
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 }
             ]
         },
@@ -745,6 +725,88 @@
             ]
         },
         {
+            "name": "Comment",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/business\/comment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/comment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/comment"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/business\/comment\/detail",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/comment\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/comment\/detail"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
             "name": "Customer",
             "description": "",
             "item": [
@@ -818,7 +880,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"oruhtlpyyarovhkubqbnjlxcijflzqpqernoympogvdi\",\"phone\":\"xuoctyyjoqkrtyaqcpobtzlmqqptlipbajlokn\",\"email\":\"rhea.pfeffer@example.com\",\"password\":\"lFDW<47\",\"gender\":\"doloremque\"}"
+                            "raw": "{\"name\":\"ksgmfbhhucqfhwypqwmbzacrcbmqbsvazyzmjvhozdtswgptdioueaj\",\"phone\":\"ckdptudcltsjwzoezzerskevxwju\",\"email\":\"jenkins.clinton@example.org\",\"password\":\".j!+_h[\",\"gender\":\"unde\"}"
                         },
                         "description": "",
                         "auth": {
@@ -987,9 +1049,147 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"otaot\",\"businessName\":\"vhkrps\",\"appointmentRange\":10.707186233,\"phone\":\"lkpvabnlqwgbnzvfvidsftubafivop\",\"startTime\":\"perspiciatis\",\"endTime\":\"enim\",\"email\":\"gtorp@example.net\",\"year\":\"2023-11-03T21:57:51\",\"address\":\"quaerat\",\"aboutText\":\"reprehenderit\"}"
+                            "raw": "{\"officialName\":\"j\",\"businessName\":\"rtkzjjcawpshsaxzw\",\"appointmentRange\":3089.9037909,\"phone\":\"vcwmunjzrbbelps\",\"email\":\"fparker@example.org\",\"year\":\"2023-11-10T17:23:37\",\"address\":\"ut\",\"aboutText\":\"rerum\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/detail-setup\/step-1\/upload\/logo",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/detail-setup\/step-1\/upload\/logo",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/detail-setup\/step-1\/upload\/logo"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/detail-setup\/step-1\/upload\/gallery",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/detail-setup\/step-1\/upload\/gallery",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/detail-setup\/step-1\/upload\/gallery"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Gallery",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/business\/gallery",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/gallery",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/gallery"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/business\/gallery\/upload",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/gallery\/upload",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/gallery\/upload"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1176,7 +1376,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"modi\",\"service_id\":\"ea\",\"amount\":\"voluptas\",\"total\":\"nihil\",\"personel_id\":\"at\",\"package_type\":\"dolores\",\"seller_date\":\"officiis\"}"
+                            "raw": "{\"customer_id\":\"voluptate\",\"service_id\":\"libero\",\"amount\":\"unde\",\"total\":\"sit\",\"personel_id\":\"repellat\",\"package_type\":\"odio\",\"seller_date\":\"ea\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1207,7 +1407,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"et\",\"price\":\"repellat\",\"amount\":\"fugit\"}"
+                            "raw": "{\"package_id\":\"deleniti\",\"price\":\"consequatur\",\"amount\":\"quibusdam\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1238,7 +1438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"facilis\",\"personel_id\":\"a\",\"amount\":\"nostrum\",\"operation_date\":\"voluptatem\"}"
+                            "raw": "{\"package_id\":\"ducimus\",\"personel_id\":\"necessitatibus\",\"amount\":\"dolor\",\"operation_date\":\"voluptatem\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1332,7 +1532,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"monthly_packages\":[{\"id\":1,\"name\":\"Test Tarif\",\"price\":0,\"color\":null,\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"},{\"id\":18,\"name\":\"1 ay i\\u00e7in t\\u00fcm \\u00f6zellikler\"}]},{\"id\":2,\"name\":\"Business Tarif\",\"price\":150,\"color\":null,\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"}]},{\"id\":3,\"name\":\"Business Plus\",\"price\":300,\"color\":null,\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"},{\"id\":18,\"name\":\"1 ay i\\u00e7in t\\u00fcm \\u00f6zellikler\"}]}],\"yearly_packages\":[]}",
+                            "body": "{\"monthly_packages\":[{\"id\":1,\"name\":\"Test Tarif\",\"price\":0,\"color\":\"#2DACF4\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"}]},{\"id\":2,\"name\":\"Business Tarif\",\"price\":150,\"color\":\"#F4A42D\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"}]},{\"id\":3,\"name\":\"Business Plus\",\"price\":300,\"color\":\"#D63A31\",\"proparties\":[{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"}]}],\"yearly_packages\":[{\"id\":5,\"name\":\"Test Tarif\",\"price\":1700,\"color\":\"#2DACF4\",\"proparties\":[{\"id\":2,\"name\":\"Sms Bildirimler\"},{\"id\":1,\"name\":\"S\\u0131n\\u0131rs\\u0131z randevu\"},{\"id\":3,\"name\":\"Mail Bildirimler\"},{\"id\":4,\"name\":\"Mobil Bildirimler\"},{\"id\":5,\"name\":\"Digital takvim\"},{\"id\":6,\"name\":\"Google Takvim Ba\\u011flant\\u0131s\\u0131\"},{\"id\":7,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Web Sitesi\"},{\"id\":8,\"name\":\"\\u0130\\u015fletmeye \\u00d6zel Reklamlar\"},{\"id\":9,\"name\":\"M\\u00fcsteri hizmetleri\"},{\"id\":10,\"name\":\"Personel \\u00c7al\\u0131\\u015fma Raporlar\\u0131\"},{\"id\":11,\"name\":\"Personel \\u0130\\u015flemleri\"},{\"id\":12,\"name\":\"Randevu Raporlar\\u0131\"},{\"id\":13,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f\\u0131\"},{\"id\":14,\"name\":\"Paket Sat\\u0131\\u015f\\u0131\"},{\"id\":15,\"name\":\"\\u00dcr\\u00fcn Sat\\u0131\\u015f Raporu\"},{\"id\":16,\"name\":\"Paket Sat\\u0131\\u015f Raporu\"},{\"id\":17,\"name\":\"T\\u00fcm \\u00d6zellikler\"}]}]}",
                             "name": ""
                         }
                     ]
@@ -1665,7 +1865,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"aut\",\"password\":\"^+Y[aH'AcHz`)%nA3\"}"
+                            "raw": "{\"phone\":\"adipisci\",\"password\":\"#%q;}FT@fC\\\\RZ;N\\\"GW\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -2139,7 +2339,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"categories\":[{\"id\":2,\"name\":\"Friseure\"},{\"id\":3,\"name\":\"Sch\\u00f6nheits und \\u00c4sthetikzentren\"},{\"id\":4,\"name\":\"Spas\"},{\"id\":5,\"name\":\"Solariumzentren\"},{\"id\":6,\"name\":\"Wellness-Zentren\"},{\"id\":7,\"name\":\"Tattoo und Tattoo-Zentren\"},{\"id\":8,\"name\":\"Hijab-Friseure\"},{\"id\":10,\"name\":\"Muhammet\"},{\"id\":11,\"name\":\"Muhammet T\\u00fcrkmen\"},{\"id\":12,\"name\":\"Muhammet\"}]}",
+                            "body": "{\"categories\":[{\"id\":1,\"name\":\"Herren Friseure\"},{\"id\":2,\"name\":\"Damen Friseure\"},{\"id\":3,\"name\":\"Haarentfernung\"},{\"id\":4,\"name\":\"Nagel Hand & Fu\\u00dfpflege\"},{\"id\":5,\"name\":\"Tatoo & Piercing\"},{\"id\":6,\"name\":\"Ko\\u0308rperpflege\"},{\"id\":7,\"name\":\"Gesichtsbehandlung\"},{\"id\":8,\"name\":\"Make-Up\"},{\"id\":9,\"name\":\"SPA\"},{\"id\":10,\"name\":\"Braut Friseure & Make-Up\"},{\"id\":11,\"name\":\"Haartransplantation\"},{\"id\":12,\"name\":\"Scho\\u0308nheit Kliniken\"},{\"id\":13,\"name\":\"Fettabsaugen\"},{\"id\":14,\"name\":\"Zahn A\\u0308sthetik\"},{\"id\":15,\"name\":\"Erna\\u0308hrung & Beratung\"},{\"id\":16,\"name\":\"Hamam & Sauna\"},{\"id\":17,\"name\":\"Solarium\"},{\"id\":18,\"name\":\"Fitness & Yoga\"},{\"id\":19,\"name\":\"Hijab Friseure\"},{\"id\":20,\"name\":\"Sonstiges\"}]}",
                             "name": ""
                         }
                     ]
@@ -2270,6 +2470,119 @@
                         ],
                         "body": null,
                         "description": "<ul>\n    <li>Berarer token | required | longtext<\/li>\n    <li>latitude |required | array| lat<\/li>\n    <li>longitude |required | array| lat<\/li>\n<\/ul>\n\u0130\u015fletme kategori g\u00fcncelleme apisi",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/business\/support",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/support",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/support"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/business\/support\/create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/support\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/support\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"subject\":\"mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl\",\"content\":\"vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/support\/detail",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/support\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/support\/detail"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
                         "auth": {
                             "type": "noauth"
                         }
