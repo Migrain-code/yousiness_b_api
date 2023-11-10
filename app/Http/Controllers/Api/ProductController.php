@@ -55,6 +55,8 @@ class ProductController extends Controller
         $product->name = $request->input('name');
         $product->price = $request->input('price');
         $product->piece = $request->input('amount');
+        $product->barcode = $request->input('barcode');
+
         if ($product->save()){
             return response()->json([
                 'status' => "success",
