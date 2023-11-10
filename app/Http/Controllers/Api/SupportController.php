@@ -52,4 +52,21 @@ class SupportController extends Controller
             ]);
         }
     }
+    public function destroy(Request $request)
+    {
+        $business = $request->user();
+        $support = Support::find($request->support_id);
+        if ($support){
+            $support->delete();
+            return response()->json([
+                'status' => "warning",
+                'message' => "Destek Talebi Silindi"
+            ]);
+        } else{
+            return response()->json([
+                'status' => "warning",
+                'message' => "Destek Talebi Bulunamadı"
+            ]);
+        }
+    }
 }

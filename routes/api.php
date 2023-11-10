@@ -152,6 +152,7 @@ Route::prefix('business')->group(function () {
             Route::get('/', 'index');
             Route::post('/create', 'store');
             Route::post('/detail', 'detail');
+            Route::post('/delete', 'destroy');
         });
 
         Route::controller(CommentController::class)->prefix('comment')->group(function () {
