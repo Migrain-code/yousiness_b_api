@@ -31,6 +31,7 @@ use App\Http\Controllers\Api\AppointmentController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\SupportController;
 use App\Http\Controllers\Api\CommentController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -173,4 +174,12 @@ Route::prefix('personal')->group(function () {
         Route::get('user', [PersonalAuthController::class, 'user']);
         Route::post('logout', [PersonalAuthController::class, 'logout']);
     });
+
+    Route::controller(\App\Http\Controllers\Api\Personel\AppointmentController::class)->prefix('appointment')->group(function () {
+        Route::post('/', 'index');
+        Route::post('/detail', 'detail');
+        Route::post('/cancel', 'cancel');
+    });
+
+
 });

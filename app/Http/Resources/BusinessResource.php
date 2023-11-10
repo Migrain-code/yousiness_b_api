@@ -38,6 +38,7 @@ class BusinessResource extends JsonResource
            'embed' => $this->embed,
            'address' => $this->address,
            'setup' => $this->is_setup == 1 ? true : false,
+           'user_type' => 1,
         ];
     }
 }

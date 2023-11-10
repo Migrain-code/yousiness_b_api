@@ -1,23 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Personel;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AppointmentDetailResoruce;
 use App\Http\Resources\AppointmentResource;
 use App\Models\Appointment;
+use App\Models\AppointmentServices;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 
 /**
- * @group Appointment
  *
  *
  */
 class AppointmentController extends Controller
 {
     /**
-     * POST api/business/appointment
+     * POST api/personal/appointment
      *
      *
      * <br> Gerekli alanlar
@@ -30,11 +29,7 @@ class AppointmentController extends Controller
      */
     public function index(Request $request)
     {
-        $appointments = Appointment::where('business_id', $request->user()->id)
-            ->where('status', 1)
-            ->where('date', $request->input('date'))
-            ->latest()
-            ->get();
+        $appointments = $request->user()->appointments;
 
         return response()->json([
             'appointments' => AppointmentResource::collection($appointments),
@@ -94,3 +89,4 @@ class AppointmentController extends Controller
         ]);
     }
 }
+

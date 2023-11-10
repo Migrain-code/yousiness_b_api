@@ -31,6 +31,7 @@ class PersonelResource extends JsonResource
           'appointment_range' => $this->range,
           'accept' => $this->accept == 1 ? "Evet" : "Hayır",
           'description' => $this->description,
+            'user_type' => 0,
         ];
     }
 }
