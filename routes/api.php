@@ -29,6 +29,8 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProductSaleController;
 use App\Http\Controllers\Api\AppointmentController;
 use App\Http\Controllers\Api\GalleryController;
+use App\Http\Controllers\Api\SupportController;
+use App\Http\Controllers\Api\CommentController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -144,6 +146,17 @@ Route::prefix('business')->group(function () {
         Route::controller(GalleryController::class)->prefix('gallery')->group(function () {
             Route::get('/', 'index');
             Route::post('/upload', 'uploadLogo');
+        });
+
+        Route::controller(SupportController::class)->prefix('support')->group(function () {
+            Route::get('/', 'index');
+            Route::post('/create', 'store');
+            Route::post('/detail', 'detail');
+        });
+
+        Route::controller(CommentController::class)->prefix('comment')->group(function () {
+            Route::get('/', 'index');
+            Route::post('/detail', 'detail');
         });
 
     });
