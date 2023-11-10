@@ -119,7 +119,7 @@ class PackageSaleController extends Controller
         ];
         return response()->json([
             'customers' => $customers,
-            'services' => BusinessServiceResource::collection($personal->services),
+            'services' => BusinessServiceResource::collection($personal->business->services),
             'types' => $types,
         ]);
     }
