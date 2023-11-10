@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: b<L\zj
+        example: 'jl7]Iig\(J{BQ<YK'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
       phone: quia
-      password: b<L\zj
+      password: 'jl7]Iig\(J{BQ<YK'
     fileParameters: []
     responses: []
     responseFields: []

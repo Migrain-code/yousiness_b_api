@@ -65,7 +65,7 @@ endpoints:
         name: subject
         description: 'Must be at least 3 characters.'
         required: true
-        example: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
+        example: ugutckoxqxf
         type: string
         enumValues: []
         custom: []
@@ -73,13 +73,13 @@ endpoints:
         name: content
         description: 'Must be at least 10 characters.'
         required: true
-        example: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
+        example: dkidflfztolzjjaajaywddrtrrqkirhlxzxbgfvg
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      subject: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
-      content: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
+      subject: ugutckoxqxf
+      content: dkidflfztolzjjaajaywddrtrrqkirhlxzxbgfvg
     fileParameters: []
     responses: []
     responseFields: []

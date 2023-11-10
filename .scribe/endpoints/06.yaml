@@ -80,7 +80,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: xp
+        example: gizlayyrji
         type: string
         enumValues: []
         custom: []
@@ -88,7 +88,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rpnbnorjhybjqkylddycdxy
+        example: veido
         type: string
         enumValues: []
         custom: []
@@ -96,7 +96,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 674999.15365112
+        example: 3211909.772
         type: number
         enumValues: []
         custom: []
@@ -104,7 +104,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: swhgtyqnnqjnlfm
+        example: mxelicdgvdtuoahwessczgfyprnnxaprrynrjlevldzikihnzzq
         type: string
         enumValues: []
         custom: []
@@ -112,7 +112,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: torrey90@example.org
+        example: emiliano.mertz@example.net
         type: string
         enumValues: []
         custom: []
@@ -120,7 +120,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-11-10T20:32:44'
+        example: '2023-11-10T21:29:48'
         type: string
         enumValues: []
         custom: []
@@ -128,7 +128,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: vitae
+        example: et
         type: string
         enumValues: []
         custom: []
@@ -136,19 +136,19 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: voluptas
+        example: debitis
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: xp
-      businessName: rpnbnorjhybjqkylddycdxy
-      appointmentRange: 674999.15365112
-      phone: swhgtyqnnqjnlfm
-      email: torrey90@example.org
-      year: '2023-11-10T20:32:44'
-      address: vitae
-      aboutText: voluptas
+      officialName: gizlayyrji
+      businessName: veido
+      appointmentRange: 3211909.772
+      phone: mxelicdgvdtuoahwessczgfyprnnxaprrynrjlevldzikihnzzq
+      email: emiliano.mertz@example.net
+      year: '2023-11-10T21:29:48'
+      address: et
+      aboutText: debitis
     fileParameters: []
     responses: []
     responseFields: []

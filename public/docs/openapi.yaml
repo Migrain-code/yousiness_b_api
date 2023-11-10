@@ -77,11 +77,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: eos
+                  example: fuga
                 password:
                   type: string
                   description: ''
-                  example: cwp8atN`
+                  example: ',B_M\w$"|xWe[Cs"t('
               required:
                 - phone
                 - password
@@ -649,23 +649,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: hymjgjeknsuaeuxkogemmvzmtvhtsquagxzdbmulrzuzx
+                  example: zaqrbyxhbzlbjneyztgvvvztmtjtaijrfxrjqjqgglufoafirzilamxuxfvcnlcmicktjfcix
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: iszzdrlqkddhhysgzzqqakvw
+                  example: euqujenekiusfynrkbv
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: schmeler.oda@example.com
+                  example: quentin.koch@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '%A=bQ('
+                  example: Es5qzK>);t
                 gender:
                   type: string
                   description: ''
-                  example: itaque
+                  example: similique
               required:
                 - name
                 - phone
@@ -744,35 +744,35 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xp
+                  example: gizlayyrji
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rpnbnorjhybjqkylddycdxy
+                  example: veido
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 674999.15365112
+                  example: 3211909.772
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: swhgtyqnnqjnlfm
+                  example: mxelicdgvdtuoahwessczgfyprnnxaprrynrjlevldzikihnzzq
                 email:
                   type: string
                   description: ''
-                  example: torrey90@example.org
+                  example: emiliano.mertz@example.net
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-10T20:32:44'
+                  example: '2023-11-10T21:29:48'
                 address:
                   type: string
                   description: ''
-                  example: vitae
+                  example: et
                 aboutText:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: debitis
               required:
                 - officialName
                 - businessName
@@ -918,31 +918,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: et
                 service_id:
                   type: string
                   description: ''
-                  example: in
+                  example: ipsum
                 amount:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: enim
                 total:
                   type: string
                   description: ''
-                  example: minus
+                  example: aspernatur
                 personel_id:
                   type: string
                   description: ''
-                  example: illo
+                  example: perspiciatis
                 package_type:
                   type: string
                   description: ''
-                  example: repudiandae
+                  example: hic
                 seller_date:
                   type: string
                   description: ''
-                  example: aut
+                  example: harum
               required:
                 - customer_id
                 - service_id
@@ -971,15 +971,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: tempora
+                  example: nemo
                 price:
                   type: string
                   description: ''
-                  example: ipsa
+                  example: sapiente
                 amount:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: voluptatem
               required:
                 - package_id
                 - price
@@ -1004,19 +1004,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: dicta
+                  example: qui
                 personel_id:
                   type: string
                   description: ''
-                  example: cum
+                  example: nulla
                 amount:
                   type: string
                   description: ''
-                  example: nam
+                  example: possimus
                 operation_date:
                   type: string
                   description: ''
-                  example: est
+                  example: tenetur
               required:
                 - package_id
                 - personel_id
@@ -1837,7 +1837,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: b<L\zj
+                  example: 'jl7]Iig\(J{BQ<YK'
               required:
                 - phone
                 - password
@@ -1887,6 +1887,204 @@ paths:
       responses: {  }
       tags:
         - PersonalAuth
+      security: []
+  /api/personal/package-sale:
+    get:
+      summary: 'GET api/personal/package-sale'
+      operationId: gETApipersonalpackageSale
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>\nİşletmenin paket satışı listesi sadece bu apiden dönen verileri listede göstermeniz yeterlidir."
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PersonalPackageSale
+      security: []
+  /api/personal/package-sale/create-packet:
+    get:
+      summary: 'GET api/personal/package-sale/create-packet'
+      operationId: gETApipersonalpackageSalecreatePacket
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n</ul>\nBu point ile paket satışı oluşturma sayfasını açtığınızda ihtiyacınız olan tüm bilgiler size döndürülecek"
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PersonalPackageSale
+      security: []
+  /api/personal/package-sale/payments:
+    post:
+      summary: 'POST api/personal/package-sale/payments'
+      operationId: pOSTApipersonalpackageSalepayments
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | numeric | required | Paket id</li>\n</ul>\nİd si gönderilen paketin ödemelerinin listesini döndürecek"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
+      security: []
+  /api/personal/package-sale/usages:
+    post:
+      summary: 'POST api/personal/package-sale/usages'
+      operationId: pOSTApipersonalpackageSaleusages
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | numeric | required | Paket id</li>\n</ul>\nİd si gönderilen paketin kullanım listesini döndürecek"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
+      security: []
+  /api/personal/package-sale/add-packet:
+    post:
+      summary: 'POST api/personal/package-sale/add-packet'
+      operationId: pOSTApipersonalpackageSaleaddPacket
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>customer_id | string | required | Müşteri Id'si</li>\n<li>service_id | string | required | Hizmet ID 'si</li>\n<li>amount | string | required | Adet, Paket Sayısı</li>\n<li>total | string | required | Toplam Fiyat, Fiyat</li>\n<li>personel_id | string | required | Personel ID'si</li>\n<li>package_type | string | required | Paket Türü seans veya dakika</li>\n<li>seller_date | date | required | Paket Satış Tarihi örnek (14.10.2023)</li>\n</ul>\nBu point ile paket satışı oluşturma işlemini gerçekleştireceksiniz"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customer_id:
+                  type: string
+                  description: ''
+                  example: doloremque
+                service_id:
+                  type: string
+                  description: ''
+                  example: vel
+                amount:
+                  type: string
+                  description: ''
+                  example: ut
+                total:
+                  type: string
+                  description: ''
+                  example: excepturi
+                personel_id:
+                  type: string
+                  description: ''
+                  example: aut
+                package_type:
+                  type: string
+                  description: ''
+                  example: ut
+                seller_date:
+                  type: string
+                  description: ''
+                  example: sunt
+              required:
+                - customer_id
+                - service_id
+                - amount
+                - total
+                - personel_id
+                - package_type
+                - seller_date
+      security: []
+  /api/personal/package-sale/add-payment:
+    post:
+      summary: 'POST api/personal/package-sale/add-payment'
+      operationId: pOSTApipersonalpackageSaleaddPayment
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | string | required | Paket Id'si</li>\n<li>price | string | required | Ödeme Yapılan Tutar</li>\n<li>amount | string | required | Ödeme Yapılan adet</li>\n</ul>\nBu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                package_id:
+                  type: string
+                  description: ''
+                  example: sapiente
+                price:
+                  type: string
+                  description: ''
+                  example: illo
+                amount:
+                  type: string
+                  description: ''
+                  example: eos
+              required:
+                - package_id
+                - price
+                - amount
+      security: []
+  /api/personal/package-sale/add-usage:
+    post:
+      summary: 'POST api/personal/package-sale/add-usage'
+      operationId: pOSTApipersonalpackageSaleaddUsage
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | string | required | Paket Id'si</li>\n<li>personel_id | string | required | Kullanımı yapan personel Id'si</li>\n<li>amount | string | required | Kullanılan adet</li>\n<li>operation_date | string | required | İşlemin yapıldığı tarih örn (19.10.2023 19:56:11)</li>\n</ul>\nBu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                package_id:
+                  type: string
+                  description: ''
+                  example: saepe
+                personel_id:
+                  type: string
+                  description: ''
+                  example: occaecati
+                amount:
+                  type: string
+                  description: ''
+                  example: exercitationem
+                operation_date:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - package_id
+                - personel_id
+                - amount
+                - operation_date
+      security: []
+  /api/personal/package-sale/delete:
+    post:
+      summary: 'POST api/personal/package-sale/delete'
+      operationId: pOSTApipersonalpackageSaledelete
+      description: "<ul>\n<li>Bearer Token | string | required | Kullanıcı Token</li>\n<li>package_id | string | required | Paket Id'si</li>\n</ul>\nBu point ile pakete ödeme eklemi işlemini gerçekleştireceksiniz"
+      parameters: []
+      responses: {  }
+      tags:
+        - PersonalPackageSale
       security: []
   /api/business/product:
     get:
@@ -2258,11 +2456,11 @@ paths:
                 subject:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
+                  example: ugutckoxqxf
                 content:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
+                  example: dkidflfztolzjjaajaywddrtrrqkirhlxzxbgfvg
               required:
                 - subject
                 - content
@@ -2332,6 +2530,9 @@ tags:
     description: ''
   -
     name: PersonalAuth
+    description: ''
+  -
+    name: PersonalPackageSale
     description: ''
   -
     name: Product

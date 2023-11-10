@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: eos
+        example: fuga
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: cwp8atN`
+        example: ',B_M\w$"|xWe[Cs"t('
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: eos
-      password: cwp8atN`
+      phone: fuga
+      password: ',B_M\w$"|xWe[Cs"t('
     fileParameters: []
     responses: []
     responseFields: []
