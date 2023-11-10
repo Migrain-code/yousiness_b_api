@@ -81,7 +81,7 @@ class ProductSaleController extends Controller
         return response()->json([
             'payment_types' => $payment_types,
             'customers' => BusinessCustomerResource::collection($customers),
-            'products' => ProductResource::collection($personal->products),
+            'products' => ProductResource::collection($personal->business->products),
         ]);
     }
 
@@ -148,10 +148,11 @@ class ProductSaleController extends Controller
      */
     public function update(Request $request)
     {
+        $personal = $request->user();
         $productSale = ProductSales::find($request->product_sale_id);
         $productSale->customer_id = $request->input('customer_id');
         $productSale->product_id = $request->input('product_id');
-        $productSale->personel_id = $request->user()->id;
+        $productSale->personel_id = $personal->id;
         $productSale->payment_type = $request->input('payment_type');
         $productSale->piece = $request->input('amount');
         $productSale->total = $this->sayiDuzenle($request->input('price') * $request->input('amount'));

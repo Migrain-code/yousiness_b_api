@@ -82,7 +82,7 @@ endpoints:
         name: officialName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gizlayyrji
+        example: ljxfatxlh
         type: string
         enumValues: []
         custom: []
@@ -90,7 +90,7 @@ endpoints:
         name: businessName
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: veido
+        example: hyqfhrrrgop
         type: string
         enumValues: []
         custom: []
@@ -98,7 +98,7 @@ endpoints:
         name: appointmentRange
         description: ''
         required: true
-        example: 3211909.772
+        example: 1.093
         type: number
         enumValues: []
         custom: []
@@ -106,7 +106,7 @@ endpoints:
         name: phone
         description: 'Must be at least 11 characters.'
         required: true
-        example: mxelicdgvdtuoahwessczgfyprnnxaprrynrjlevldzikihnzzq
+        example: ichaqffmzhtqkqnvknjimrmyqozvjxgzoosbdzhfwagefytfcvsoxvurkqewteatbgwjiux
         type: string
         enumValues: []
         custom: []
@@ -114,7 +114,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: emiliano.mertz@example.net
+        example: emelie61@example.net
         type: string
         enumValues: []
         custom: []
@@ -122,7 +122,7 @@ endpoints:
         name: year
         description: 'Must be a valid date.'
         required: true
-        example: '2023-11-10T21:29:48'
+        example: '2023-11-10T21:49:01'
         type: string
         enumValues: []
         custom: []
@@ -130,7 +130,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: et
+        example: at
         type: string
         enumValues: []
         custom: []
@@ -138,19 +138,19 @@ endpoints:
         name: aboutText
         description: ''
         required: true
-        example: debitis
+        example: velit
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      officialName: gizlayyrji
-      businessName: veido
-      appointmentRange: 3211909.772
-      phone: mxelicdgvdtuoahwessczgfyprnnxaprrynrjlevldzikihnzzq
-      email: emiliano.mertz@example.net
-      year: '2023-11-10T21:29:48'
-      address: et
-      aboutText: debitis
+      officialName: ljxfatxlh
+      businessName: hyqfhrrrgop
+      appointmentRange: 1.093
+      phone: ichaqffmzhtqkqnvknjimrmyqozvjxgzoosbdzhfwagefytfcvsoxvurkqewteatbgwjiux
+      email: emelie61@example.net
+      year: '2023-11-10T21:49:01'
+      address: at
+      aboutText: velit
     fileParameters: []
     responses: []
     responseFields: []

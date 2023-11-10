@@ -33,7 +33,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: quia
+        example: enim
         type: string
         enumValues: []
         custom: []
@@ -41,13 +41,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'jl7]Iig\(J{BQ<YK'
+        example: PtR0aCc9(V
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: quia
-      password: 'jl7]Iig\(J{BQ<YK'
+      phone: enim
+      password: PtR0aCc9(V
     fileParameters: []
     responses: []
     responseFields: []

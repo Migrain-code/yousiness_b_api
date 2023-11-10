@@ -193,7 +193,7 @@ endpoints:
         name: customer_id
         description: ''
         required: true
-        example: doloremque
+        example: a
         type: string
         enumValues: []
         custom: []
@@ -201,7 +201,7 @@ endpoints:
         name: service_id
         description: ''
         required: true
-        example: vel
+        example: omnis
         type: string
         enumValues: []
         custom: []
@@ -209,7 +209,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: ut
+        example: ratione
         type: string
         enumValues: []
         custom: []
@@ -217,7 +217,7 @@ endpoints:
         name: total
         description: ''
         required: true
-        example: excepturi
+        example: omnis
         type: string
         enumValues: []
         custom: []
@@ -225,7 +225,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: aut
+        example: commodi
         type: string
         enumValues: []
         custom: []
@@ -233,7 +233,7 @@ endpoints:
         name: package_type
         description: ''
         required: true
-        example: ut
+        example: expedita
         type: string
         enumValues: []
         custom: []
@@ -241,18 +241,18 @@ endpoints:
         name: seller_date
         description: ''
         required: true
-        example: sunt
+        example: maiores
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      customer_id: doloremque
-      service_id: vel
-      amount: ut
-      total: excepturi
-      personel_id: aut
-      package_type: ut
-      seller_date: sunt
+      customer_id: a
+      service_id: omnis
+      amount: ratione
+      total: omnis
+      personel_id: commodi
+      package_type: expedita
+      seller_date: maiores
     fileParameters: []
     responses: []
     responseFields: []
@@ -293,7 +293,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: sapiente
+        example: consequatur
         type: string
         enumValues: []
         custom: []
@@ -301,7 +301,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: illo
+        example: voluptas
         type: string
         enumValues: []
         custom: []
@@ -309,14 +309,14 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: eos
+        example: magni
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: sapiente
-      price: illo
-      amount: eos
+      package_id: consequatur
+      price: voluptas
+      amount: magni
     fileParameters: []
     responses: []
     responseFields: []
@@ -358,7 +358,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: saepe
+        example: excepturi
         type: string
         enumValues: []
         custom: []
@@ -366,7 +366,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: occaecati
+        example: non
         type: string
         enumValues: []
         custom: []
@@ -374,7 +374,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: exercitationem
+        example: sed
         type: string
         enumValues: []
         custom: []
@@ -382,15 +382,15 @@ endpoints:
         name: operation_date
         description: ''
         required: true
-        example: et
+        example: necessitatibus
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: saepe
-      personel_id: occaecati
-      amount: exercitationem
-      operation_date: et
+      package_id: excepturi
+      personel_id: non
+      amount: sed
+      operation_date: necessitatibus
     fileParameters: []
     responses: []
     responseFields: []

@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Api\Personel;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AppointmentDetailResoruce;
+use App\Http\Resources\AppointmentPersonalResource;
 use App\Http\Resources\AppointmentResource;
 use App\Models\Appointment;
 use App\Models\AppointmentServices;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 /**
  * @group PersonalAppointment
@@ -29,10 +31,13 @@ class AppointmentController extends Controller
      */
     public function index(Request $request)
     {
-        $appointments = $request->user()->appointments;
+        $personal = $request->user();
+        $tarih = Carbon::parse($request->input('date'))->format('d.m.Y');
+
+        $appointments = $personal->appointments()->where('start_time', 'LIKE', $tarih.'%')->latest()->get();
 
         return response()->json([
-            'appointments' => AppointmentResource::collection($appointments),
+            'appointments' => AppointmentPersonalResource::collection($appointments),
         ]);
     }
     /**
@@ -50,7 +55,7 @@ class AppointmentController extends Controller
     public function detail(Request $request)
     {
         $personel = $request->user();
-        $appointment = $personel->appointments()->where('id', $request->appointment_id)
+        $appointment = $personel->business->appointments()->where('id', $request->appointment_id)
             ->first();
 
         return response()->json([
@@ -72,7 +77,7 @@ class AppointmentController extends Controller
     public function cancel(Request $request)
     {
         $personel = $request->user();
-        $appointment = $personel->appointments()->where('id', $request->appointment_id)
+        $appointment = $personel->business->appointments()->where('id', $request->appointment_id)
             ->first();
         if ($appointment){
             $appointment->status = 8;

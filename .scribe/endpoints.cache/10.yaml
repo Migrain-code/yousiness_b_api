@@ -67,7 +67,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters.'
         required: true
-        example: zaqrbyxhbzlbjneyztgvvvztmtjtaijrfxrjqjqgglufoafirzilamxuxfvcnlcmicktjfcix
+        example: ciuooixkhuvroyohpvtdadbowlwexz
         type: string
         enumValues: []
         custom: []
@@ -75,7 +75,7 @@ endpoints:
         name: phone
         description: 'Must be at least 10 characters.'
         required: true
-        example: euqujenekiusfynrkbv
+        example: eyazsfqvcpbwmjhu
         type: string
         enumValues: []
         custom: []
@@ -83,7 +83,7 @@ endpoints:
         name: email
         description: 'Must be at least 8 characters.'
         required: true
-        example: quentin.koch@example.net
+        example: fbergstrom@example.com
         type: string
         enumValues: []
         custom: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: Es5qzK>);t
+        example: PO(RnJ
         type: string
         enumValues: []
         custom: []
@@ -99,16 +99,16 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: similique
+        example: ea
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: zaqrbyxhbzlbjneyztgvvvztmtjtaijrfxrjqjqgglufoafirzilamxuxfvcnlcmicktjfcix
-      phone: euqujenekiusfynrkbv
-      email: quentin.koch@example.net
-      password: Es5qzK>);t
-      gender: similique
+      name: ciuooixkhuvroyohpvtdadbowlwexz
+      phone: eyazsfqvcpbwmjhu
+      email: fbergstrom@example.com
+      password: PO(RnJ
+      gender: ea
     fileParameters: []
     responses: []
     responseFields: []
