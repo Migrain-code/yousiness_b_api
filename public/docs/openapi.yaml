@@ -77,11 +77,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: aut
+                  example: eos
                 password:
                   type: string
                   description: ''
-                  example: 'o]a[\,m'
+                  example: cwp8atN`
               required:
                 - phone
                 - password
@@ -649,23 +649,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: ksgmfbhhucqfhwypqwmbzacrcbmqbsvazyzmjvhozdtswgptdioueaj
+                  example: hymjgjeknsuaeuxkogemmvzmtvhtsquagxzdbmulrzuzx
                 phone:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: ckdptudcltsjwzoezzerskevxwju
+                  example: iszzdrlqkddhhysgzzqqakvw
                 email:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: jenkins.clinton@example.org
+                  example: schmeler.oda@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '.j!+_h['
+                  example: '%A=bQ('
                 gender:
                   type: string
                   description: ''
-                  example: unde
+                  example: itaque
               required:
                 - name
                 - phone
@@ -744,35 +744,35 @@ paths:
                 officialName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: j
+                  example: xp
                 businessName:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rtkzjjcawpshsaxzw
+                  example: rpnbnorjhybjqkylddycdxy
                 appointmentRange:
                   type: number
                   description: ''
-                  example: 3089.9037909
+                  example: 674999.15365112
                 phone:
                   type: string
                   description: 'Must be at least 11 characters.'
-                  example: vcwmunjzrbbelps
+                  example: swhgtyqnnqjnlfm
                 email:
                   type: string
                   description: ''
-                  example: fparker@example.org
+                  example: torrey90@example.org
                 year:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-11-10T17:23:37'
+                  example: '2023-11-10T20:32:44'
                 address:
                   type: string
                   description: ''
-                  example: ut
+                  example: vitae
                 aboutText:
                   type: string
                   description: ''
-                  example: rerum
+                  example: voluptas
               required:
                 - officialName
                 - businessName
@@ -918,31 +918,31 @@ paths:
                 customer_id:
                   type: string
                   description: ''
-                  example: voluptate
+                  example: consequatur
                 service_id:
                   type: string
                   description: ''
-                  example: libero
+                  example: in
                 amount:
                   type: string
                   description: ''
-                  example: unde
+                  example: aliquam
                 total:
                   type: string
                   description: ''
-                  example: sit
+                  example: minus
                 personel_id:
                   type: string
                   description: ''
-                  example: repellat
+                  example: illo
                 package_type:
                   type: string
                   description: ''
-                  example: odio
+                  example: repudiandae
                 seller_date:
                   type: string
                   description: ''
-                  example: ea
+                  example: aut
               required:
                 - customer_id
                 - service_id
@@ -971,15 +971,15 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: tempora
                 price:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: ipsa
                 amount:
                   type: string
                   description: ''
-                  example: quibusdam
+                  example: consequuntur
               required:
                 - package_id
                 - price
@@ -1004,19 +1004,19 @@ paths:
                 package_id:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: dicta
                 personel_id:
                   type: string
                   description: ''
-                  example: necessitatibus
+                  example: cum
                 amount:
                   type: string
                   description: ''
-                  example: dolor
+                  example: nam
                 operation_date:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: est
               required:
                 - package_id
                 - personel_id
@@ -1763,6 +1763,57 @@ paths:
       tags:
         - Personal
       security: []
+  /api/personal/appointment:
+    post:
+      summary: 'POST api/personal/appointment'
+      operationId: pOSTApipersonalappointment
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> date | required | date | tarih örnek veri 2023-11-03 </li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - PersonalAppointment
+      security: []
+  /api/personal/appointment/detail:
+    post:
+      summary: 'POST api/personal/appointment/detail'
+      operationId: pOSTApipersonalappointmentdetail
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> appointment_id | numeric | randevu id si</li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - PersonalAppointment
+      security: []
+  /api/personal/appointment/cancel:
+    post:
+      summary: 'POST api/personal/appointment/cancel'
+      operationId: pOSTApipersonalappointmentcancel
+      description: "<br> Gerekli alanlar\n<ul>\n<li> token </li>\n<li> appointment_id | numeric | randevu id si</li>\n</ul>"
+      parameters:
+        -
+          in: header
+          name: Bearer
+          description: ''
+          example: '{token}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - PersonalAppointment
+      security: []
   /api/personal/auth/login:
     post:
       summary: 'POST api/personal/auth/login'
@@ -1782,11 +1833,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: adipisci
+                  example: quia
                 password:
                   type: string
                   description: ''
-                  example: '#%q;}FT@fC\RZ;N"GW'
+                  example: b<L\zj
               required:
                 - phone
                 - password
@@ -2207,11 +2258,11 @@ paths:
                 subject:
                   type: string
                   description: 'Must be at least 3 characters.'
-                  example: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
+                  example: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
                 content:
                   type: string
                   description: 'Must be at least 10 characters.'
-                  example: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+                  example: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
               required:
                 - subject
                 - content
@@ -2220,6 +2271,16 @@ paths:
     post:
       summary: ''
       operationId: postApiBusinessSupportDetail
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Support
+      security: []
+  /api/business/support/delete:
+    post:
+      summary: ''
+      operationId: postApiBusinessSupportDelete
       description: ''
       parameters: []
       responses: {  }
@@ -2265,6 +2326,9 @@ tags:
     description: ''
   -
     name: Personal
+    description: ''
+  -
+    name: PersonalAppointment
     description: ''
   -
     name: PersonalAuth

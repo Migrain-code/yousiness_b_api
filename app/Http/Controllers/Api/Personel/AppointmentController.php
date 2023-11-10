@@ -10,7 +10,7 @@ use App\Models\AppointmentServices;
 use Illuminate\Http\Request;
 
 /**
- *
+ * @group PersonalAppointment
  *
  */
 class AppointmentController extends Controller
@@ -36,7 +36,7 @@ class AppointmentController extends Controller
         ]);
     }
     /**
-     * POST api/business/appointment/detail
+     * POST api/personal/appointment/detail
      *
      *
      * <br> Gerekli alanlar
@@ -49,8 +49,8 @@ class AppointmentController extends Controller
      */
     public function detail(Request $request)
     {
-        $business = $request->user();
-        $appointment = Appointment::where('business_id', $business->id)->where('id', $request->appointment_id)
+        $personel = $request->user();
+        $appointment = $personel->appointments()->where('id', $request->appointment_id)
             ->first();
 
         return response()->json([
@@ -58,7 +58,7 @@ class AppointmentController extends Controller
         ]);
     }
     /**
-     * POST api/business/appointment/cancel
+     * POST api/personal/appointment/cancel
      *
      *
      * <br> Gerekli alanlar
@@ -71,8 +71,8 @@ class AppointmentController extends Controller
      */
     public function cancel(Request $request)
     {
-        $business = $request->user();
-        $appointment = Appointment::where('business_id', $business->id)->where('id', $request->appointment_id)
+        $personel = $request->user();
+        $appointment = $personel->appointments()->where('id', $request->appointment_id)
             ->first();
         if ($appointment){
             $appointment->status = 8;

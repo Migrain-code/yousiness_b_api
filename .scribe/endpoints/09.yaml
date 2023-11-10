@@ -193,7 +193,7 @@ endpoints:
         name: customer_id
         description: ''
         required: true
-        example: voluptate
+        example: consequatur
         type: string
         enumValues: []
         custom: []
@@ -201,7 +201,7 @@ endpoints:
         name: service_id
         description: ''
         required: true
-        example: libero
+        example: in
         type: string
         enumValues: []
         custom: []
@@ -209,7 +209,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: unde
+        example: aliquam
         type: string
         enumValues: []
         custom: []
@@ -217,7 +217,7 @@ endpoints:
         name: total
         description: ''
         required: true
-        example: sit
+        example: minus
         type: string
         enumValues: []
         custom: []
@@ -225,7 +225,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: repellat
+        example: illo
         type: string
         enumValues: []
         custom: []
@@ -233,7 +233,7 @@ endpoints:
         name: package_type
         description: ''
         required: true
-        example: odio
+        example: repudiandae
         type: string
         enumValues: []
         custom: []
@@ -241,18 +241,18 @@ endpoints:
         name: seller_date
         description: ''
         required: true
-        example: ea
+        example: aut
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      customer_id: voluptate
-      service_id: libero
-      amount: unde
-      total: sit
-      personel_id: repellat
-      package_type: odio
-      seller_date: ea
+      customer_id: consequatur
+      service_id: in
+      amount: aliquam
+      total: minus
+      personel_id: illo
+      package_type: repudiandae
+      seller_date: aut
     fileParameters: []
     responses: []
     responseFields: []
@@ -293,7 +293,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: deleniti
+        example: tempora
         type: string
         enumValues: []
         custom: []
@@ -301,7 +301,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: consequatur
+        example: ipsa
         type: string
         enumValues: []
         custom: []
@@ -309,14 +309,14 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: quibusdam
+        example: consequuntur
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: deleniti
-      price: consequatur
-      amount: quibusdam
+      package_id: tempora
+      price: ipsa
+      amount: consequuntur
     fileParameters: []
     responses: []
     responseFields: []
@@ -358,7 +358,7 @@ endpoints:
         name: package_id
         description: ''
         required: true
-        example: ducimus
+        example: dicta
         type: string
         enumValues: []
         custom: []
@@ -366,7 +366,7 @@ endpoints:
         name: personel_id
         description: ''
         required: true
-        example: necessitatibus
+        example: cum
         type: string
         enumValues: []
         custom: []
@@ -374,7 +374,7 @@ endpoints:
         name: amount
         description: ''
         required: true
-        example: dolor
+        example: nam
         type: string
         enumValues: []
         custom: []
@@ -382,15 +382,15 @@ endpoints:
         name: operation_date
         description: ''
         required: true
-        example: voluptatem
+        example: est
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      package_id: ducimus
-      personel_id: necessitatibus
-      amount: dolor
-      operation_date: voluptatem
+      package_id: dicta
+      personel_id: cum
+      amount: nam
+      operation_date: est
     fileParameters: []
     responses: []
     responseFields: []

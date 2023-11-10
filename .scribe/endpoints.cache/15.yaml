@@ -67,7 +67,7 @@ endpoints:
         name: subject
         description: 'Must be at least 3 characters.'
         required: true
-        example: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
+        example: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
         type: string
         enumValues: []
         custom: []
@@ -75,13 +75,13 @@ endpoints:
         name: content
         description: 'Must be at least 10 characters.'
         required: true
-        example: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+        example: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      subject: mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl
-      content: vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan
+      subject: mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh
+      content: wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr
     fileParameters: []
     responses: []
     responseFields: []
@@ -94,6 +94,36 @@ endpoints:
     httpMethods:
       - POST
     uri: api/business/support/detail
+    metadata:
+      groupName: Support
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/business/support/delete
     metadata:
       groupName: Support
       groupDescription: ''

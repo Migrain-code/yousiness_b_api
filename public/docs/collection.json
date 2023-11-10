@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "2f9f1883-8ffa-4bc0-8cc1-1c1656b01e57",
+        "_postman_id": "d53c73be-bfba-46cc-887d-72e9c35709b8",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"aut\",\"password\":\"o]a[\\\\,m\"}"
+                            "raw": "{\"phone\":\"eos\",\"password\":\"cwp8atN`\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -880,7 +880,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ksgmfbhhucqfhwypqwmbzacrcbmqbsvazyzmjvhozdtswgptdioueaj\",\"phone\":\"ckdptudcltsjwzoezzerskevxwju\",\"email\":\"jenkins.clinton@example.org\",\"password\":\".j!+_h[\",\"gender\":\"unde\"}"
+                            "raw": "{\"name\":\"hymjgjeknsuaeuxkogemmvzmtvhtsquagxzdbmulrzuzx\",\"phone\":\"iszzdrlqkddhhysgzzqqakvw\",\"email\":\"schmeler.oda@example.com\",\"password\":\"%A=bQ(\",\"gender\":\"itaque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1049,7 +1049,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"officialName\":\"j\",\"businessName\":\"rtkzjjcawpshsaxzw\",\"appointmentRange\":3089.9037909,\"phone\":\"vcwmunjzrbbelps\",\"email\":\"fparker@example.org\",\"year\":\"2023-11-10T17:23:37\",\"address\":\"ut\",\"aboutText\":\"rerum\"}"
+                            "raw": "{\"officialName\":\"xp\",\"businessName\":\"rpnbnorjhybjqkylddycdxy\",\"appointmentRange\":674999.15365112,\"phone\":\"swhgtyqnnqjnlfm\",\"email\":\"torrey90@example.org\",\"year\":\"2023-11-10T20:32:44\",\"address\":\"vitae\",\"aboutText\":\"voluptas\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token<\/li>\n<li>officialName | string | required | Salon Sahibinin ad\u0131<\/li>\n<li>businessName | string | required | Salon Ad\u0131<\/li>\n<li>businessType | numeric | required | i\u015fletme t\u00fcr\u00fc id'si <\/li>\n<li>phone | string | required | \u0130\u015fletme Telefon Numaras\u0131<\/li>\n<li>email | string | required | \u0130\u015fletme E-posta Adresi<\/li>\n<li>appointmentRange | string | required | Randevu aral\u0131\u011f\u0131 | \u00f6rne\u011fin (10, 20, 30,40)<\/li>\n<li>aboutText | string | required| \u0130\u015fletme Hakk\u0131nda Yaz\u0131s\u0131<\/li>\n<li>startTime | string | required| \u0130\u015fletme A\u00e7\u0131l\u0131\u015f Saati \u00d6rne\u011fin (12:08)<\/li>\n<li>endTime | string | required| \u0130\u015fletme Kapan\u0131\u015f Saati \u00d6rne\u011fin (18:08)<\/li>\n<li>year | date | required| Kurulu\u015f Tarihi \u00f6rne\u011fin (2023-04-01)<\/li>\n<li>address | text | required| Address Metni<\/li>\n<\/ul>\nDetayl\u0131 Kurulum Ekran\u0131 \u0130\u015fletme Bilgileri g\u00fcncelleme Apisi",
                         "auth": {
@@ -1376,7 +1376,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"customer_id\":\"voluptate\",\"service_id\":\"libero\",\"amount\":\"unde\",\"total\":\"sit\",\"personel_id\":\"repellat\",\"package_type\":\"odio\",\"seller_date\":\"ea\"}"
+                            "raw": "{\"customer_id\":\"consequatur\",\"service_id\":\"in\",\"amount\":\"aliquam\",\"total\":\"minus\",\"personel_id\":\"illo\",\"package_type\":\"repudiandae\",\"seller_date\":\"aut\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>customer_id | string | required | M\u00fc\u015fteri Id'si<\/li>\n<li>service_id | string | required | Hizmet ID 'si<\/li>\n<li>amount | string | required | Adet, Paket Say\u0131s\u0131<\/li>\n<li>total | string | required | Toplam Fiyat, Fiyat<\/li>\n<li>personel_id | string | required | Personel ID'si<\/li>\n<li>package_type | string | required | Paket T\u00fcr\u00fc seans veya dakika<\/li>\n<li>seller_date | date | required | Paket Sat\u0131\u015f Tarihi \u00f6rnek (14.10.2023)<\/li>\n<\/ul>\nBu point ile paket sat\u0131\u015f\u0131 olu\u015fturma i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1407,7 +1407,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"deleniti\",\"price\":\"consequatur\",\"amount\":\"quibusdam\"}"
+                            "raw": "{\"package_id\":\"tempora\",\"price\":\"ipsa\",\"amount\":\"consequuntur\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>price | string | required | \u00d6deme Yap\u0131lan Tutar<\/li>\n<li>amount | string | required | \u00d6deme Yap\u0131lan adet<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1438,7 +1438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"package_id\":\"ducimus\",\"personel_id\":\"necessitatibus\",\"amount\":\"dolor\",\"operation_date\":\"voluptatem\"}"
+                            "raw": "{\"package_id\":\"dicta\",\"personel_id\":\"cum\",\"amount\":\"nam\",\"operation_date\":\"est\"}"
                         },
                         "description": "<ul>\n<li>Bearer Token | string | required | Kullan\u0131c\u0131 Token<\/li>\n<li>package_id | string | required | Paket Id'si<\/li>\n<li>personel_id | string | required | Kullan\u0131m\u0131 yapan personel Id'si<\/li>\n<li>amount | string | required | Kullan\u0131lan adet<\/li>\n<li>operation_date | string | required | \u0130\u015flemin yap\u0131ld\u0131\u011f\u0131 tarih \u00f6rn (19.10.2023 19:56:11)<\/li>\n<\/ul>\nBu point ile pakete \u00f6deme eklemi i\u015flemini ger\u00e7ekle\u015ftireceksiniz",
                         "auth": {
@@ -1840,6 +1840,108 @@
             ]
         },
         {
+            "name": "PersonalAppointment",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/personal\/appointment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personal\/appointment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/personal\/appointment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Bearer",
+                                "value": "{token}"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<br> Gerekli alanlar\n<ul>\n<li> token <\/li>\n<li> date | required | date | tarih \u00f6rnek veri 2023-11-03 <\/li>\n<\/ul>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/personal\/appointment\/detail",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personal\/appointment\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/personal\/appointment\/detail"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Bearer",
+                                "value": "{token}"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<br> Gerekli alanlar\n<ul>\n<li> token <\/li>\n<li> appointment_id | numeric | randevu id si<\/li>\n<\/ul>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/personal\/appointment\/cancel",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personal\/appointment\/cancel",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/personal\/appointment\/cancel"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Bearer",
+                                "value": "{token}"
+                            }
+                        ],
+                        "body": null,
+                        "description": "<br> Gerekli alanlar\n<ul>\n<li> token <\/li>\n<li> appointment_id | numeric | randevu id si<\/li>\n<\/ul>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
             "name": "PersonalAuth",
             "description": "",
             "item": [
@@ -1865,7 +1967,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"adipisci\",\"password\":\"#%q;}FT@fC\\\\RZ;N\\\"GW\"}"
+                            "raw": "{\"phone\":\"quia\",\"password\":\"b<L\\\\zj\"}"
                         },
                         "description": "Status Codes\n<ul>\n<li>phone<\/li>\n<li>password<\/li>\n<li> 401 Unauthorized Hatas\u0131 <\/li>\n<\/ul>\nLogin apisi",
                         "auth": {
@@ -2552,7 +2654,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"subject\":\"mulrcqswbmwqxbkryztztgbtzhygrzamsgphfowniynqmdnpxvbjnxirpvmjfsdmpcakl\",\"content\":\"vjhwnbnandrjsckivqxsbqfoqqroevdmmrhqmxpvezrcvhhxfrmxojpretcabxqxumclicdnfcan\"}"
+                            "raw": "{\"subject\":\"mngadzijjuwnkingkvdorzpcpdanxankkxjxzyvzehuptzjqdbpjxvsyfgjodqfuokdcxkhibspjfhxruumtrgoh\",\"content\":\"wnbxtutmmxqikmzcqxcatpowkenkprbdfkpkbksibkiosxyhkczixoigdedhr\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2569,6 +2671,34 @@
                             "path": "api\/business\/support\/detail",
                             "query": [],
                             "raw": "{{baseUrl}}\/api\/business\/support\/detail"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/business\/support\/delete",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business\/support\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business\/support\/delete"
                         },
                         "method": "POST",
                         "header": [

@@ -35,7 +35,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: adipisci
+        example: quia
         type: string
         enumValues: []
         custom: []
@@ -43,13 +43,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '#%q;}FT@fC\RZ;N"GW'
+        example: b<L\zj
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      phone: adipisci
-      password: '#%q;}FT@fC\RZ;N"GW'
+      phone: quia
+      password: b<L\zj
     fileParameters: []
     responses: []
     responseFields: []
