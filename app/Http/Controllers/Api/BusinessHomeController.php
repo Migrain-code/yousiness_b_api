@@ -30,6 +30,7 @@ class BusinessHomeController extends Controller
         $todayAppointments = Appointment::where('business_id', auth('business')->id())
             ->where('status', 1)
             ->where('date', $request->input('date'))
+            ->latest()
             ->get();
         $earning = 0;
         $appointments = $business->appointments()->get();
@@ -39,26 +40,26 @@ class BusinessHomeController extends Controller
         $businessDetailData = [
             [
                 'id' => 0,
-                'name' => 'Randevu Sayısı',
-                'count' => $appointments->count(),
+                'name' => 'Bugünkü Randevular',
+                'count' => $todayAppointments->count(),
                 'iconName' => 'calendar-outline',
             ],
             [
                 'id' => 1,
-                'name' => 'Randevular Tutarı',
-                'count' => $earning,
+                'name' => 'Toplam Randevu',
+                'count' => $appointments->count(),
                 'iconName' => 'newspaper-outline',
             ],
             [
                 'id' => 2,
-                'name' => 'Müşteri Sayısı',
+                'name' => 'Müşteri Adedi',
                 'count' =>  $business->customers->count(),
                 'iconName' => 'person-outline',
             ],
             [
                 'id' => 3,
-                'name' => 'Ürün Satışı Sayısı',
-                'count' => $business->sales->count(),
+                'name' => 'Ürün Adedi',
+                'count' => $business->products->count(),
                 'iconName' => 'cube-outline',
             ],
             [

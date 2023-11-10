@@ -33,6 +33,7 @@ class AppointmentController extends Controller
         $appointments = Appointment::where('business_id', auth('business')->id())
             ->where('status', 1)
             ->where('date', $request->input('date'))
+            ->latest()
             ->get();
 
         return response()->json([

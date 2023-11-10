@@ -25,7 +25,10 @@ class CustomerController extends Controller
         foreach ($businessCustomers as $customer) {
             $customers[] = $customer->customer;
         }
-
+        $bCustomers = $business->appointments()->with('customer')->get()->pluck('customer');
+        foreach ($bCustomers as $customer){
+            $customers[] = $customer;
+        }
         return response()->json([
             'customers' => BusinessCustomerResource::collection($customers),
         ]);
