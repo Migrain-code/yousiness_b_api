@@ -173,12 +173,23 @@ Route::prefix('personal')->group(function () {
     Route::middleware('auth:personal')->group(function () {
         Route::get('user', [PersonalAuthController::class, 'user']);
         Route::post('logout', [PersonalAuthController::class, 'logout']);
-    });
 
-    Route::controller(\App\Http\Controllers\Api\Personel\AppointmentController::class)->prefix('appointment')->group(function () {
-        Route::post('/', 'index');
-        Route::post('/detail', 'detail');
-        Route::post('/cancel', 'cancel');
+        Route::controller(\App\Http\Controllers\Api\Personel\AppointmentController::class)->prefix('appointment')->group(function () {
+            Route::post('/', 'index');
+            Route::post('/detail', 'detail');
+            Route::post('/cancel', 'cancel');
+        });
+
+        Route::controller(\App\Http\Controllers\Api\Personel\PackageSaleController::class)->prefix('package-sale')->group(function () {
+            Route::get('/', 'index');
+            Route::get('/create-packet', 'createPacket');
+            Route::post('/payments', 'payments');
+            Route::post('/usages', 'usages');
+            Route::post('/add-packet', 'addPacket');
+            Route::post('/add-payment', 'addPayment');
+            Route::post('/add-usage', 'addUsage');
+            Route::post('/delete', 'destroy');
+        });
     });
 
 

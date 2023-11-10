@@ -12,6 +12,10 @@ class Personel extends Authenticatable
 {
     use HasFactory, HasApiTokens, Notifiable;
 
+    public function business()
+    {
+        return $this->hasOne(Business::class, 'id', 'business_id');
+    }
     public function type()
     {
         return $this->hasOne(BusinnessType::class, 'id', 'gender');
