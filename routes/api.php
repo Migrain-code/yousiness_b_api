@@ -190,6 +190,15 @@ Route::prefix('personal')->group(function () {
             Route::post('/add-usage', 'addUsage');
             Route::post('/delete', 'destroy');
         });
+
+        Route::controller(\App\Http\Controllers\Api\Personel\ProductSaleController::class)->prefix('product-sale')->group(function () {
+            Route::get('/', 'index');
+            Route::get('/get-info', 'createProduct');
+            Route::post('/create', 'store');
+            Route::post('/update', 'update');
+            Route::post('/delete', 'destroy');
+        });
+
     });
 
 

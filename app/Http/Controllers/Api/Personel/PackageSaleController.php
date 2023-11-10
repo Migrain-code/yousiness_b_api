@@ -102,7 +102,7 @@ class PackageSaleController extends Controller
     {
         $personal = $request->user();
         $business = $personal->business;
-        $personalCustomers = $business->customers()->get();
+        $personalCustomers = $business->customers;
         $customers = [];
         foreach ($personalCustomers as $customer) {
             $customers[] = $customer->customer;
