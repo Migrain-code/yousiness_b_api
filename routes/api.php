@@ -174,6 +174,8 @@ Route::prefix('personal')->group(function () {
         Route::get('user', [PersonalAuthController::class, 'user']);
         Route::post('logout', [PersonalAuthController::class, 'logout']);
 
+        Route::post('home', [\App\Http\Controllers\Api\Personel\HomeController::class, 'index']);
+
         Route::controller(\App\Http\Controllers\Api\Personel\AppointmentController::class)->prefix('appointment')->group(function () {
             Route::post('/', 'index');
             Route::post('/detail', 'detail');

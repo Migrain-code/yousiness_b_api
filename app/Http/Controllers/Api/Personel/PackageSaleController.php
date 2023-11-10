@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PackageSaleAddPaymentRequest;
 use App\Http\Requests\PackageSaleAddRequest;
 use App\Http\Requests\PackageSaleAddUsageRequest;
+use App\Http\Requests\PersonalPackageSaleAddRequest;
+use App\Http\Requests\PersonalPackageSaleAddUsageRequest;
 use App\Http\Resources\BusinessServiceResource;
 use App\Http\Resources\PackageSalePaymentResource;
 use App\Http\Resources\PackageSalesResource;
@@ -143,7 +145,7 @@ class PackageSaleController extends Controller
      *
      *
      */
-    public function addPacket(PackageSaleAddRequest $request)
+    public function addPacket(PersonalPackageSaleAddRequest $request)
     {
         $translate_date = Carbon::parse($request->seller_date)->format('Y-m-d');
         $personel = $request->user();
@@ -208,7 +210,7 @@ class PackageSaleController extends Controller
      *
      *
      */
-    public function addUsage(PackageSaleAddUsageRequest $request)
+    public function addUsage(PersonalPackageSaleAddUsageRequest $request)
     {
         $personel = $request->user();
         $findPackage = PackageSale::find($request->package_id);
