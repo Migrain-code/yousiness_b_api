@@ -36,8 +36,8 @@ class StripeController extends Controller
                 ],
             ],
             'mode' => 'payment',
-            'success_url' => 'https://panel.yousiness.com/business/setup/step5',
-            'cancel_url' => 'https://panel.yousiness.com/business/setup/step4',
+            'success_url' => 'https://panel.yousiness.com/business/payment/success',
+            'cancel_url' => 'https://panel.yousiness.com/business/payment/fail',
             'metadata' => [
                 'product_info' => $businessPackage->stripe_key, // Ürün veya hizmeti tanımlayan benzersiz bir kimlik
             ],
