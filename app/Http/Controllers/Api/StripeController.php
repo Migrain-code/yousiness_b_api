@@ -36,8 +36,8 @@ class StripeController extends Controller
                 ],
             ],
             'mode' => 'payment',
-            'success_url' => 'https://panel.yousiness.com/business/payment/success',
-            'cancel_url' => 'https://panel.yousiness.com/business/payment/fail',
+            'success_url' => 'https://api.yousiness.com/payment/success',
+            'cancel_url' => 'https://api.yousiness.com/payment/fail',
             'metadata' => [
                 'product_info' => $businessPackage->stripe_key, // Ürün veya hizmeti tanımlayan benzersiz bir kimlik
             ],
@@ -129,7 +129,7 @@ class StripeController extends Controller
 
     public function success()
     {
-        return "Payment Success";
+        return view('success');
     }
 
     public function fail()
