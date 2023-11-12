@@ -70,8 +70,8 @@ Route::prefix('business')->group(function () {
             Route::post('/step/map', 'mapUpdate');
         });
 
-        Route::controller(PaymentController::class)->prefix('payment')->group(function () {
-            Route::post('/create-payment-intent','createPaymentIntent');
+        Route::controller(\App\Http\Controllers\Api\StripeController::class)->prefix('stripe')->group(function () {
+            Route::post('/create-payment-form','stripeForm');
             Route::post('/process-payment', 'processPayment');
         });
 
