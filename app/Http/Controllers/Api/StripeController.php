@@ -66,9 +66,9 @@ class StripeController extends Controller
                 'phone' => $business->phone, // İşletme telefon numarası
                 'address' => [
                     'line1' => $business->address, // İşletme adresi - Satır 1
-                    'city' => $business->cities->name, // İşletme şehir
-                    'postal_code' => $business->cities->post_code, // İşletme posta kodu
-                    'country' => $business->cities->country->name, // İşletme ülkesi
+                    'city' => $business->cities?->name, // İşletme şehir
+                    'postal_code' => $business->cities?->post_code, // İşletme posta kodu
+                    'country' => $business->cities?->country?->name, // İşletme ülkesi
                 ],
                 // Diğer işletme ile ilgili bilgileri eklemek için gerekli alanları burada kullanabilirsiniz.
             ]);
