@@ -43,7 +43,7 @@ class CustomerController extends Controller
         $customer->custom_email = $request->input('email');
         $customer->password = Hash::make($request->input('password'));
         $customer->gender = $request->input('gender');
-        $customer->birthday = Carbon::parse('date')->format('d.m.Y');
+        $customer->birthday = Carbon::parse('date')->format('Y-m-d');
         $customer->note = $request->input('note');
         $customer->status = 1;
         if ($customer->save()) {
