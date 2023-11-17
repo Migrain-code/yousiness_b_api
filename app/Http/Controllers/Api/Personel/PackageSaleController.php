@@ -221,7 +221,7 @@ class PackageSaleController extends Controller
                 $usage->package_id=$request->package_id;
                 $usage->personel_id= $personel->id;
                 $usage->amount=$request->amount;
-                $usage->created_at=$request->operation_date;
+                $usage->created_at=Carbon::parse(str_replace('/', '-', $request->input('operation_date')))->format('Y-m-d H:i:s');
                 if ($usage->save()){
                     return response()->json([
                         'status'=>"success",
