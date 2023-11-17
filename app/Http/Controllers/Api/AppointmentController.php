@@ -30,10 +30,9 @@ class AppointmentController extends Controller
      */
     public function index(Request $request)
     {
-        dd(Carbon::parse($request->input('date'))->format('Y-m-d H:i:s'));
         $appointments = Appointment::where('business_id', $request->user()->id)
             ->where('status', 1)
-            ->whereDate('date', "d")
+            ->where('date', $request->input('date'))
             ->latest()
             ->get();
 
