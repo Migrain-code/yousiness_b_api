@@ -32,7 +32,7 @@ class AppointmentController extends Controller
     {
         $appointments = Appointment::where('business_id', $request->user()->id)
             ->where('status', 1)
-            ->where('date', $request->input('date'))
+            ->whereDate('date', Carbon::parse($request->input('date'))->format('Y-m-d'))
             ->latest()
             ->get();
 
