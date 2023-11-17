@@ -71,7 +71,13 @@ class PersonalController extends Controller
     public function step3AddPersonal(Request $request)
     {
         $business = $request->user();
-
+        $personel = Personel::where('phone', clearPhone($request->input('phone')))->first();
+        if ($personel){
+            return response()->json([
+                'status'=>"warning",
+                'message'=>"Telefon Numarası sistemde kayıtlı başka bir telefon numarası ile kayıt etmeyi deneyin",
+            ]);
+        }
         $personel= new Personel();
         $personel->business_id=$business->id;
         $personel->name= $request->input('name');

@@ -136,8 +136,8 @@ class StripeController extends Controller
     {
         return "Payment Failed";
     }
-    /*
-        public function handleWebhook(Request $request)
+
+    public function handleWebhook(Request $request)
     {
         $payload = json_decode($request->getContent());
         Stripe::setApiKey('sk_test_51NvSDhIHb2EidFuBWjFrNdghtNgToZOLbvopsjlNHfeiyNqw3hcZVNJo96iLJJXFhnJizZ5UXxVn8gLA7Kj268bI00vqpbTIOx');
@@ -166,5 +166,5 @@ class StripeController extends Controller
         // Webhook işlemini Stripe'a yanıt verin
         return response()->json(['message' => 'Webhook Received']);
     }
-    */
+
 }

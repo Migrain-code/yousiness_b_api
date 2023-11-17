@@ -31,7 +31,7 @@ use App\Http\Controllers\Api\AppointmentController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\SupportController;
 use App\Http\Controllers\Api\CommentController;
-
+use App\Http\Controllers\Api\StripeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -45,7 +45,8 @@ use App\Http\Controllers\Api\CommentController;
 
 Route::get('city/list', [CityController::class, 'list']);
 Route::post('city/search', [CityController::class, 'search']);
-
+Route::post('payment/success', [StripeController::class,'handleWebhook']);
+Route::post('payment/fail', [StripeController::class,'handleWebhook']);
 Route::prefix('business')->group(function () {
     Route::prefix('auth')->group(function () {
         Route::post('login', [AuthController::class, 'login']);

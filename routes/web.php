@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('payment/success', [StripeController::class,'success']);
 Route::get('payment/fail', [StripeController::class,'fail']);
+
