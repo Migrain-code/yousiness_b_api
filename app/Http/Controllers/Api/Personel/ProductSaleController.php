@@ -57,19 +57,19 @@ class ProductSaleController extends Controller
         $payment_types = [
             [
                 'id' => 0,
-                'name' => "Nakit Ödeme",
+                'name' => "Barzahlung",
             ],
             [
                 'id' => 1,
-                'name' => "Banka/Kredi Kartı",
+                'name' => "Lastschrift/Kreditkarte",
             ],
             [
                 'id' => 2,
-                'name' => "EFT/Havale",
+                'name' => "EFT/Geldtransfer",
             ],
             [
                 'id' => 3,
-                'name' => "Diğer",
+                'name' => "Andere",
             ],
         ];
         $personalCustomers = $personal->business->customers()->get();

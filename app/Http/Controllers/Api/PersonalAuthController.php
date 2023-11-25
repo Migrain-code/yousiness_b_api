@@ -39,7 +39,7 @@ class PersonalAuthController extends Controller
         if (!$user || !Hash::check($request->password, $user->password)) {
 
             return response()->json([
-                'message' => 'Telefon Numarası veya şifre yanlış'
+                'message' => 'Ihre Mobilnummer oder Ihr Passwort ist falsch'
             ], 401);
         }
 
@@ -70,7 +70,7 @@ class PersonalAuthController extends Controller
             $token->delete();
         });
 
-        return response()->json(['message' => 'Sistemden Çıkış Yapıldı']);
+        return response()->json(['message' => 'Vom System abgemeldet']);
     }
     /**
      * GET api/personal/auth/user

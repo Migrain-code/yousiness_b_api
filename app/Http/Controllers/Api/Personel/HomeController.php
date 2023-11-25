@@ -46,37 +46,37 @@ class HomeController extends Controller
         $businessDetailData = [
             [
                 'id' => 0,
-                'name' => 'Bugünkü Randevular',
+                'name' => 'Heutige Termine',
                 'count' => $todayAppointments->count(),
                 'iconName' => 'calendar-outline',
             ],
             [
                 'id' => 1,
-                'name' => 'Toplam Randevu',
+                'name' => 'Gesamtzahl der Termine',
                 'count' => $appointments->count(),
                 'iconName' => 'newspaper-outline',
             ],
             [
                 'id' => 2,
-                'name' => 'Paket Satış Adedi',
+                'name' => 'Paketverkaufsmenge',
                 'count' =>  $personal->packageSales->count(),
                 'iconName' => 'analytics',
             ],
             [
                 'id' => 3,
-                'name' => 'Ürün Satış Adedi',
+                'name' => 'Produktverkaufsnummer',
                 'count' => $personal->productSales->count(),
                 'iconName' => 'cube-outline',
             ],
             [
                 'id' => 4,
-                'name' => 'Toplam Kasa Tutarı',
+                'name' => 'Gesamtbarbetrag',
                 'count' => $earning + $personal->packageSales->sum('total') + $personal->productSales->sum('total'),
                 'iconName' => 'analytics',
             ],
             [
                 'id' => 5,
-                'name' => 'Toplam Randevu Süresi',
+                'name' => 'Gesamtdauer des Termins',
                 'count' => $totalTime ." min",
                 'iconName' => 'person-outline',
             ],

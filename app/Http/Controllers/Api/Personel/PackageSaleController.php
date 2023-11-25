@@ -112,11 +112,11 @@ class PackageSaleController extends Controller
         $types = [
             [
                 'id' => 0,
-                'name' => "Seans",
+                'name' => "Sitzung",
             ],
             [
                 'id' => 1,
-                'name' => "Dakika",
+                'name' => "Minute",
             ]
         ];
         return response()->json([
@@ -161,7 +161,7 @@ class PackageSaleController extends Controller
         if ($packageSale->save()) {
             return response()->json([
                 'status' => "success",
-                'message' => "Satış Yapma İşlemi Eklendi"
+                'message' => "Verkaufsprozess hinzugefügt"
             ]);
         }
     }
@@ -189,7 +189,7 @@ class PackageSaleController extends Controller
         if ($payment->save()){
             return response()->json([
                 'status'=>"success",
-                'message'=> "Pakete Ödeme Eklendi",
+                'message'=> "Zahlung zum Paket hinzugefügt",
                 'payment'=>PackageSalePaymentResource::make($payment)
             ]);
         }
@@ -225,13 +225,13 @@ class PackageSaleController extends Controller
                 if ($usage->save()){
                     return response()->json([
                         'status'=>"success",
-                        'message' => "Paket Kullanımı Eklendi",
+                        'message' => "Paketnutzung hinzugefügt",
                         'package'=>PackageSaleUsageResource::make($usage)
                     ]);
                 }
             }
             else{
-                $message="Kullanım Eklerken pakete tanımlı olan kullanım miktarından daha büyük bir değer giremezsiniz. Paketin Maximum Kullanım Miktarı : ".$findPackage->amount;
+                $message="Beim Hinzufügen der Nutzung können Sie keinen Wert eingeben, der größer ist als die im Paket definierte Nutzungsmenge. Die maximale Nutzungsmenge des Pakets beträgt: ".$findPackage->amount;
                 return response()->json([
                     'status'=>"warning",
                     'message'=>$message
@@ -241,7 +241,7 @@ class PackageSaleController extends Controller
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>'Paket Bilgisi Bulunamadı'
+                'message'=>'Paketinformationen nicht gefunden'
             ]);
         }
 
@@ -269,7 +269,7 @@ class PackageSaleController extends Controller
             PackageUsage::where('package_id', $findPackage->id)->delete();
             return response()->json([
                 'status'=>"success",
-                'message'=>'Paket Satışı Silindi'
+                'message'=>'Paketverkauf gelöscht'
             ]);
         }
     }

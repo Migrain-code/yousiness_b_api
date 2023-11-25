@@ -84,13 +84,13 @@ class AppointmentController extends Controller
             $appointment->save();
             return response()->json([
                 'status' => 'success',
-                'message' => 'Randevu İptal Edildi'
+                'message' => 'Ihr Termin wurde abgesagt. '
             ]);
         }
 
         return response()->json([
             'status' => 'warning',
-            'message' => 'Randevu Bulunamadı'
+            'message' => 'Termin nicht gefunden'
         ]);
     }
 }
