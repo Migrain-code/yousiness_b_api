@@ -75,7 +75,7 @@ class PersonalController extends Controller
         if ($personel){
             return response()->json([
                 'status'=>"warning",
-                'message'=>"Telefon Numarası sistemde kayıtlı başka bir telefon numarası ile kayıt etmeyi deneyin",
+                'message'=>"Die von Ihnen eingegebene Mobilnummer ist nicht im System registriert.",
             ]);
         }
         $personel= new Personel();
@@ -118,13 +118,13 @@ class PersonalController extends Controller
             }
             return response()->json([
                 'status'=>"success",
-                'message'=>"Personel Eklendi",
+                'message'=>"Personal hinzugefügt",
             ]);
         }
 
         return response()->json([
             'status' => "error",
-            'message' => "Personel Eklenirken Bir Hata Oluştu Lütfen Tekrar Deneyin",
+            'message' => "Beim Hinzufügen von Personal ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
         ]);
     }
 
@@ -172,7 +172,7 @@ class PersonalController extends Controller
                 if ($personelFind){
                     return response()->json([
                        'status' => "warning",
-                       'message' => "Bu telefon numarası ile kayıtlı personel bulunmakta"
+                       'message' => "Unter dieser Telefonnummer sind Mitarbeiter registriert."
                     ]);
                 }
                 else{
@@ -208,14 +208,14 @@ class PersonalController extends Controller
                 }
                 return response()->json([
                     'status'=>"success",
-                    'message'=>"Personel Güncellendi",
+                    'message'=>"Mitarbeiter aktualisiert",
                 ]);
             }
         }
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>"Personel Bulunamadı",
+                'message'=>"Mitarbeiter nicht gefunden",
             ]);
         }
 
@@ -247,7 +247,7 @@ class PersonalController extends Controller
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Personel Bulunamadı",
+                'message' => "Mitarbeiter nicht gefunden",
             ]);
         }
     }
@@ -271,12 +271,12 @@ class PersonalController extends Controller
             $personel->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Personel Silindi",
+                'message' => "Mitarbeiter gelöscht",
             ]);
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Personel Bulunamadı",
+                'message' => "Mitarbeiter nicht gefunden",
             ]);
         }
     }
@@ -305,11 +305,11 @@ class PersonalController extends Controller
         $acceptedType = [
             [
                 'id' => 0,
-                'name' => "Hayır"
+                'name' => "NEIN"
             ],
             [
                 'id' => 1,
-                'name' => "Evet"
+                'name' => "Ja"
             ]
 
         ];

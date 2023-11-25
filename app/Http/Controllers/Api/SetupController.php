@@ -87,7 +87,7 @@ class SetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Bilgiler Kayıt Edildi",
+            'message' => "Informationen gespeichert",
         ]);
     }
     /**
@@ -133,7 +133,7 @@ class SetupController extends Controller
         }
         return response()->json([
             'status' => "success",
-            'message' => "Kategoriler Kaydedildi",
+            'message' => "Kategorien gespeichert",
         ]);
     }
     /**
@@ -157,7 +157,7 @@ class SetupController extends Controller
         $business->save();
         return response()->json([
             'status' => "success",
-            'message' => "Konum Bilgisi Kayıt Edildi",
+            'message' => "Standortinformationen gespeichert",
         ]);
     }
 }

@@ -57,19 +57,19 @@ class ProductSaleController extends Controller
         $payment_types = [
             [
                 'id' => 0,
-                'name' => "Nakit Ödeme",
+                'name' => "Barzahlung",
             ],
             [
                 'id' => 1,
-                'name' => "Banka/Kredi Kartı",
+                'name' => "Lastschrift / Kreditkarte",
             ],
             [
                 'id' => 2,
-                'name' => "EFT/Havale",
+                'name' => "EFT/Geldtransfer",
             ],
             [
                 'id' => 3,
-                'name' => "Diğer",
+                'name' => "Andere",
             ],
         ];
         $businessCustomers = $business->customers()->get();
@@ -122,7 +122,7 @@ class ProductSaleController extends Controller
             $productFind->save();
             return response()->json([
                 'status' => "success",
-                'message' => "Satış Yapma İşlemi Tamamlandı"
+                'message' => "Verkaufsprozess abgeschlossen"
             ]);
         }
     }
@@ -163,7 +163,7 @@ class ProductSaleController extends Controller
             $productFind->save();
             return response()->json([
                 'status' => "success",
-                'message' => "Satış Yapma İşlemi Güncellendi"
+                'message' => "Verkaufsprozess aktualisiert"
             ]);
         }
     }
@@ -188,12 +188,12 @@ class ProductSaleController extends Controller
             $productSale->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Satış İşlemi Silindi"
+                'message' => "Verkaufstransaktion gelöscht"
             ]);
         }
         return response()->json([
             'status' => "warning",
-            'message' => "Satış İşlemi Bulunamadı"
+            'message' => "Keine Verkaufstransaktion gefunden"
         ]);
     }
 

@@ -43,7 +43,7 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
-                'message' => 'Telefon Numarası veya şifre yanlış'
+                'message' => 'Ihre Mobilnummer oder Ihr Passwort ist falsch. '
             ], 401);
         }
 
@@ -73,7 +73,7 @@ class AuthController extends Controller
             $token->delete();
         });
 
-        return response()->json(['message' => 'Sistemden Çıkış Yapıldı']);
+        return response()->json(['message' => 'Vom System abgemeldet']);
     }
     /**
      * GET api/auth/user
@@ -107,7 +107,7 @@ class AuthController extends Controller
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
-                'message' => "Bu telefon numarası ile kayıtlı kullanıcı bulunmakta."
+                'message' => "Es sind Benutzer mit dieser Telefonnummer registriert.."
             ]);
         } else {
 
@@ -115,7 +115,7 @@ class AuthController extends Controller
 
             return response()->json([
                 'status' => "success",
-                'message' => "Lütfen Telefon Numaranızı Doğrulayınız"
+                'message' => "Bitte überprüfen Sie Ihre Telefonnummer"
             ]);
         }
     }
@@ -145,7 +145,7 @@ class AuthController extends Controller
 
                 return response()->json([
                     'status' => "warning",
-                    'message' => "Doğrulama Kodunun Süresi Dolmuş. Doğrulama Kodu Tekrar Gönderildi"
+                    'message' => "Verifizierungscode ist nicht mehr gültig. "
                 ]);
 
             }
@@ -165,17 +165,16 @@ class AuthController extends Controller
 
                     $this->addPermission($business->id);
 
-                    Sms::send(clearPhone($request->input('phone')), config('settings.appy_site_title') . "Sistemine giriş için şifreniz " . $generatePassword);
-
+                    Sms::send(clearPhone($request->input('phone')), "Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." lautet ".$generatePassword);
                     return response()->json([
                         'status' => "success",
-                        'message' => "Telefon Numaranız doğrulandı. Sisteme giriş için şifreniz gönderildi."
+                        'message' => "Ihre Mobilnummer wurde verifiziert. Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." wurde an Sie gesendet. "
                     ]);
                 }
                 else{
                     return response()->json([
                         'status' => "danger",
-                        'message' => "Doğrulama Kodu Hatalı veya Yanlış Tuşladınız."
+                        'message' => "Verifizierungscode ist fehlerhaft."
                     ]);
                 }
             }
@@ -184,7 +183,7 @@ class AuthController extends Controller
         } else {
             return response()->json([
                 'status' => "danger",
-                'message' => "Doğrulama Kodu Hatalı."
+                'message' => "Verifizierungscode ist fehlerhaft."
             ]);
         }
 
@@ -222,7 +221,7 @@ class AuthController extends Controller
         $smsConfirmation->expire_at = now()->addMinute(3);
         $smsConfirmation->save();
 
-        Sms::send(clearPhone($phone), setting('appy_site_title') . "Sistemine kayıt için, telefon numarası doğrulama kodunuz " . $generateCode);
+        Sms::send(clearPhone($phone), "Für die Registrierung bei ".setting('appy_site_title')." lautet Ihr Prüfcode " . $generateCode);
 
         return $generateCode;
     }

@@ -100,7 +100,7 @@ class BusinessServiceController extends Controller
 
             $services = [
                 "id"=> $businessService->id,
-                "type"=> 'Kadın-Erkek',
+                "type"=> 'Frau-Mann',
                 "category"=> $businessService->categorys->name,
                 "sub_category"=> $businessService->subCategory->name,
                 "price"=> $businessService->price,
@@ -108,7 +108,7 @@ class BusinessServiceController extends Controller
             ];
             return response()->json([
                 'status' => "success",
-                'message' => "Yeni Hizmet Eklendi",
+                'message' => "Neuer Dienst hinzugefügt",
                 'businessServices' => $services,
             ]);
 
@@ -127,7 +127,7 @@ class BusinessServiceController extends Controller
             if ($businessService->save()) {
                 return response()->json([
                     'status' => "success",
-                    'message' => "Yeni Hizmet Eklendi",
+                    'message' => "Neuer Dienst hinzugefügt",
                     'businessServices' => BusinessServiceResource::make($businessService),
                 ]);
             }
@@ -170,14 +170,14 @@ class BusinessServiceController extends Controller
             if ($businessService->save()) {
                 return response()->json([
                     'status' => "success",
-                    'message' => "Hizmet Güncellendi",
+                    'message' => "Dienst aktualisiert",
                     'businessServices' => BusinessServiceResource::make($businessService),
                 ]);
             }
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Hizmet Bulunamadı",
+                'message' => "Service nicht gefunden",
             ]);
         }
 
@@ -206,7 +206,7 @@ class BusinessServiceController extends Controller
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Hizmet Bulunamadı",
+                'message' => "Service nicht gefunden",
             ]);
         }
     }
@@ -230,12 +230,12 @@ class BusinessServiceController extends Controller
             $businessService->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Hizmet Silindi",
+                'message' => "Dienst gelöscht",
             ]);
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Hizmet Bulunamadı",
+                'message' => "Service nicht gefunden",
             ]);
         }
     }

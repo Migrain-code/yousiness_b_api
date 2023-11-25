@@ -60,7 +60,7 @@ class ProductController extends Controller
         if ($product->save()){
             return response()->json([
                 'status' => "success",
-                'message' => "Ürün Eklendi"
+                'message' => "Produkt hinzugefügt"
             ]);
         }
     }
@@ -88,7 +88,7 @@ class ProductController extends Controller
         if ($product->save()){
             return response()->json([
                 'status' => "success",
-                'message' => "Ürün Güncellendi"
+                'message' => "Produkt aktualisiert"
             ]);
         }
     }
@@ -111,7 +111,7 @@ class ProductController extends Controller
         if ($product->save()){
             return response()->json([
                 'status' => "success",
-                'message' => "Ürün Silindi"
+                'message' => "Produkt gelöscht"
             ]);
         }
     }

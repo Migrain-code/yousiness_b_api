@@ -32,7 +32,7 @@ class SupportController extends Controller
         if ($support->save()) {
             return response()->json([
                 'status' => "success",
-                'message' => "Destek Talebi Oluşturuldu"
+                'message' => "Supportanfrage erstellt"
             ]);
         }
     }
@@ -48,7 +48,7 @@ class SupportController extends Controller
         } else{
             return response()->json([
                 'status' => "warning",
-                'message' => "Destek Talebi Bulunamadı"
+                'message' => "Keine Supportanfrage gefunden"
             ]);
         }
     }
@@ -60,12 +60,12 @@ class SupportController extends Controller
             $support->delete();
             return response()->json([
                 'status' => "warning",
-                'message' => "Destek Talebi Silindi"
+                'message' => "Supportanfrage gelöscht"
             ]);
         } else{
             return response()->json([
                 'status' => "warning",
-                'message' => "Destek Talebi Bulunamadı"
+                'message' => "Keine Supportanfrage gefunden"
             ]);
         }
     }

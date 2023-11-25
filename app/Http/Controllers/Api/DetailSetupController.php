@@ -89,7 +89,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "İşletme Bilgileri Kayıt Edildi"
+            'message' => "Geschäftsinformationen registriert"
         ]);
     }
 
@@ -124,19 +124,19 @@ class DetailSetupController extends Controller
                     if ($user->save()) {
                         return response()->json([
                             'status' => "success",
-                            'message' => "Profiliniz Başarılı Bir Şekilde Güncellendi"
+                            'message' => "Ihr Profil wurde erfolgreich aktualisiert. "
                         ]);
                     }
                 } else {
                     return response()->json([
                         'status' => "warning",
-                        'message' => "Profil Fotoğrafı Seçilmedi"
+                        'message' => "Profilfoto nicht ausgewählt"
                     ]);
                 }
             } else {
                 return response()->json([
                     'status' => "warning",
-                    'message' => "Sadece png, jpeg, jpg formatlarına izin veriliyor"
+                    'message' => "Sie können nur Dateien in den Formaten png, jpeg und jpg hochladen."
                 ]);
             }
 
@@ -154,7 +154,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Logo Güncellendi",
+            'message' => "Logo aktualisiert",
             'link' => $user->logo,
         ]);
     }
@@ -177,7 +177,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Görseller Yüklendi",
+            'message' => "Bilder hochgeladen",
         ]);
     }
 }

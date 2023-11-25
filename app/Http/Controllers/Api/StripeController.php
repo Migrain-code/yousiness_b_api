@@ -86,7 +86,7 @@ class StripeController extends Controller
         $validator = Validator::make($request->all(), [
             'package_id' => 'required',
         ], [], [
-            'package_id' => 'Paket Seçimi'
+            'package_id' => 'Paketauswahl'
         ]);
 
         if ($validator->fails()) {
