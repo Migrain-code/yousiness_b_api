@@ -50,8 +50,8 @@ class CityController extends Controller
     public function setting()
     {
         return response()->json([
-            'pages' => Page::whereIn('id', [2, 3])->get(),
-            'menu' =>  Page::whereIn('id', [1, 2, 3])->get(),
+            'pages' => Page::whereIn('id', [2, 7])->get(),
+            'menu' =>  Page::whereIn('id', [1, 2, 7])->get(),
         ]);
     }
 
