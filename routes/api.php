@@ -42,7 +42,7 @@ use App\Http\Controllers\Api\StripeController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('setting', [CityController::class, 'setting']);
+Route::get('page/list', [CityController::class, 'setting']);
 Route::get('city/list', [CityController::class, 'list']);
 Route::post('city/search', [CityController::class, 'search']);
 Route::post('payment/success', [StripeController::class,'handleWebhook']);
