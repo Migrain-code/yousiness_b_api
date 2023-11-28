@@ -161,7 +161,7 @@ class PackageSaleController extends Controller
         if ($packageSale->save()) {
             return response()->json([
                 'status' => "success",
-                'message' => "Verkaufsprozess hinzugefügt"
+                'message' => "Paketverkauf erfasst"
             ]);
         }
     }
@@ -189,7 +189,7 @@ class PackageSaleController extends Controller
         if ($payment->save()){
             return response()->json([
                 'status'=>"success",
-                'message'=> "Zahlung zum Paket hinzugefügt",
+                'message'=> "Zahlung hinzugefügt",
                 'payment'=>PackageSalePaymentResource::make($payment)
             ]);
         }
@@ -225,13 +225,13 @@ class PackageSaleController extends Controller
                 if ($usage->save()){
                     return response()->json([
                         'status'=>"success",
-                        'message' => "Paketnutzung hinzugefügt",
+                        'message' => "Nutzung hinzugefügt",
                         'package'=>PackageSaleUsageResource::make($usage)
                     ]);
                 }
             }
             else{
-                $message="Beim Hinzufügen der Nutzung können Sie keinen Wert eingeben, der größer ist als die im Paket definierte Nutzungsmenge. Die maximale Nutzungsmenge des Pakets beträgt: ".$findPackage->amount;
+                $message="Wenn Sie einen Nutzung hinzufügen, können Sie keinen Wert eingeben, der über die im Paket definierte Verbrauchsmenge hinausgeht. Maximale Nutzungsmenge des Pakets: ".$findPackage->amount;
                 return response()->json([
                     'status'=>"warning",
                     'message'=>$message
@@ -241,7 +241,7 @@ class PackageSaleController extends Controller
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>'Paketinformationen nicht gefunden'
+                'message'=>'Keine Paketinformationen gefunden'
             ]);
         }
 

@@ -84,13 +84,13 @@ class AppointmentController extends Controller
             $appointment->save();
             return response()->json([
                 'status' => 'success',
-                'message' => 'Ihr Termin wurde abgesagt. '
+                'message' => 'Termin storniert '
             ]);
         }
 
         return response()->json([
             'status' => 'warning',
-            'message' => 'Termin nicht gefunden'
+            'message' => 'Kein Termin gefunden'
         ]);
     }
 }

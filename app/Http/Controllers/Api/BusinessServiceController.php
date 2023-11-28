@@ -108,7 +108,7 @@ class BusinessServiceController extends Controller
             ];
             return response()->json([
                 'status' => "success",
-                'message' => "Neuer Dienst hinzugefügt",
+                'message' => "Neue Dienstleistung hinzugefügt",
                 'businessServices' => $services,
             ]);
 
@@ -127,7 +127,7 @@ class BusinessServiceController extends Controller
             if ($businessService->save()) {
                 return response()->json([
                     'status' => "success",
-                    'message' => "Neuer Dienst hinzugefügt",
+                    'message' => "Neue Dienstleistung hinzugefügt",
                     'businessServices' => BusinessServiceResource::make($businessService),
                 ]);
             }
@@ -170,14 +170,14 @@ class BusinessServiceController extends Controller
             if ($businessService->save()) {
                 return response()->json([
                     'status' => "success",
-                    'message' => "Dienst aktualisiert",
+                    'message' => "Dienstleistung aktualisiert",
                     'businessServices' => BusinessServiceResource::make($businessService),
                 ]);
             }
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Service nicht gefunden",
+                'message' => "Dienstleistung nicht gefunden",
             ]);
         }
 
@@ -206,7 +206,7 @@ class BusinessServiceController extends Controller
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Service nicht gefunden",
+                'message' => "Dienstleistung nicht gefunden",
             ]);
         }
     }
@@ -230,12 +230,12 @@ class BusinessServiceController extends Controller
             $businessService->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Hizmet silindi",
+                'message' => "Dienstleistung Gelöscht",
             ]);
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Service nicht gefunden",
+                'message' => "Dienstleistung nicht gefunden",
             ]);
         }
     }

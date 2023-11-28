@@ -161,7 +161,7 @@ class PackageSaleController extends Controller
         if ($packageSale->save()) {
             return response()->json([
                 'status' => "success",
-                'message' => "Paket Satışı Eklendi"
+                'message' => "Paketverkauf erfasst"
             ]);
         }
     }
@@ -189,7 +189,7 @@ class PackageSaleController extends Controller
         if ($payment->save()){
             return response()->json([
                 'status'=>"success",
-                'message'=> "Ödeme Eklendi",
+                'message'=> "Zahlung hinzugefügt",
                 'payment'=>PackageSalePaymentResource::make($payment)
             ]);
         }
@@ -224,13 +224,13 @@ class PackageSaleController extends Controller
                 if ($usage->save()){
                     return response()->json([
                         'status'=>"success",
-                        'message' => "Kullanım Eklendi",
+                        'message' => "Nutzung hinzugefügt",
                         'package'=>PackageSaleUsageResource::make($usage)
                     ]);
                 }
             }
             else{
-                $message="Kullanım eklerken pakette tanımlanan kullanım miktarından fazla bir değer giremezsiniz. Paketin maksimum kullanım miktarı: ".$findPackage->amount;
+                $message="Wenn Sie einen Nutzung hinzufügen, können Sie keinen Wert eingeben, der über die im Paket definierte Verbrauchsmenge hinausgeht. Maximale Nutzungsmenge des Pakets: ".$findPackage->amount;
                 return response()->json([
                     'status'=>"warning",
                     'message'=>$message
@@ -240,7 +240,7 @@ class PackageSaleController extends Controller
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>'Paket bilgisi bulunamadı'
+                'message'=>'Keine Paketinformationen gefunden'
             ]);
         }
 
@@ -268,7 +268,7 @@ class PackageSaleController extends Controller
             PackageUsage::where('package_id', $findPackage->id)->delete();
             return response()->json([
                 'status'=>"success",
-                'message'=>'Paket satışı silindi'
+                'message'=>'Paketverkauf gelöscht'
             ]);
         }
     }

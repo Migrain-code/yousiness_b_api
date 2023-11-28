@@ -118,13 +118,13 @@ class PersonalController extends Controller
             }
             return response()->json([
                 'status'=>"success",
-                'message'=>"Personal hinzugefügt",
+                'message'=>"Mitarbeiter hinzugefügt",
             ]);
         }
 
         return response()->json([
             'status' => "error",
-            'message' => "Personel eklenirken bir hata oluştu. Lütfen tekrar deneyin",
+            'message' => "Beim Hinzufügen von Mitarbeiter ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
         ]);
     }
 
@@ -208,14 +208,14 @@ class PersonalController extends Controller
                 }
                 return response()->json([
                     'status'=>"success",
-                    'message'=>"Personel güncellendi",
+                    'message'=>"Mitarbeiter aktualisiert",
                 ]);
             }
         }
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>"Personel bulunamadı",
+                'message'=>"Keine Mitarbeiter gefunden",
             ]);
         }
 
@@ -247,7 +247,7 @@ class PersonalController extends Controller
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Personel Bulunamadı",
+                'message' => "Keine Mitarbeiter gefunden",
             ]);
         }
     }
@@ -271,12 +271,12 @@ class PersonalController extends Controller
             $personel->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Personel Silindi",
+                'message' => "Mitarbeiter Gelöscht",
             ]);
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Personel bulunamadı",
+                'message' => "Keine Mitarbeiter gefunden",
             ]);
         }
     }
