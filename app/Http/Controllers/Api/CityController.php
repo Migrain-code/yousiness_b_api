@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CityResource;
 use App\Models\City;
+use App\Models\Page;
 use Illuminate\Http\Request;
 
 /**
@@ -43,6 +44,13 @@ class CityController extends Controller
     {
         return response()->json([
             'cities' => CityResource::collection(City::take(20)->get()),
+        ]);
+    }
+
+    public function setting()
+    {
+        return response()->json([
+            'pages' => Page::whereIn('id', [1,2, 3])->get(),
         ]);
     }
 }
