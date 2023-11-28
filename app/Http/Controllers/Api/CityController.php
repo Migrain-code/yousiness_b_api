@@ -58,7 +58,7 @@ class CityController extends Controller
     public function pageDetail(Request $request)
     {
         return response()->json([
-            'page' => Page::whereIn('id', $request->id)->first(),
+            'page' => Page::where('id', $request->id)->first(),
         ]);
     }
 }
