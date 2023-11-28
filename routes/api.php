@@ -43,6 +43,8 @@ use App\Http\Controllers\Api\StripeController;
 |
 */
 Route::get('page/list', [CityController::class, 'setting']);
+Route::post('page/detail', [CityController::class, 'pageDetail']);
+
 Route::get('city/list', [CityController::class, 'list']);
 Route::post('city/search', [CityController::class, 'search']);
 Route::post('payment/success', [StripeController::class,'handleWebhook']);

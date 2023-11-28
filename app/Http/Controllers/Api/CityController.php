@@ -54,4 +54,11 @@ class CityController extends Controller
             'menu' =>  Page::whereIn('id', [1, 2, 3])->get(),
         ]);
     }
+
+    public function pageDetail(Request $request)
+    {
+        return response()->json([
+            'page' => Page::whereIn('id', $request->id)->first(),
+        ]);
+    }
 }
