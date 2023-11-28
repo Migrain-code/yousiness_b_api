@@ -89,7 +89,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Geschäftsinformationen registriert"
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert"
         ]);
     }
 
@@ -154,7 +154,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Logo aktualisiert",
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert",
             'link' => $user->logo,
         ]);
     }
@@ -177,7 +177,7 @@ class DetailSetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Bilder hochgeladen",
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
         ]);
     }
 }

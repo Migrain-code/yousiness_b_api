@@ -36,7 +36,7 @@ class GalleryController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Bild hochgeladen",
+            'message' => "Görsel yüklendi",
         ]);
     }
 }

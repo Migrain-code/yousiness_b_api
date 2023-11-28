@@ -107,7 +107,7 @@ class AuthController extends Controller
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
-                'message' => "Es sind Benutzer mit dieser Telefonnummer registriert.."
+                'message' => "Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
             ]);
         } else {
 
@@ -115,7 +115,7 @@ class AuthController extends Controller
 
             return response()->json([
                 'status' => "success",
-                'message' => "Bitte überprüfen Sie Ihre Telefonnummer"
+                'message' => "Wir haben einen Code an Ihre Mobilnummer gesendet. Bitte überprüfen Sie Ihre Mobilnummer."
             ]);
         }
     }
@@ -168,7 +168,7 @@ class AuthController extends Controller
                     Sms::send(clearPhone($request->input('phone')), "Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." lautet ".$generatePassword);
                     return response()->json([
                         'status' => "success",
-                        'message' => "Ihre Mobilnummer wurde verifiziert. Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." wurde an Sie gesendet. "
+                        'message' => "Ihre Mobilnummer Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
                     ]);
                 }
                 else{
@@ -221,7 +221,7 @@ class AuthController extends Controller
         $smsConfirmation->expire_at = now()->addMinute(3);
         $smsConfirmation->save();
 
-        Sms::send(clearPhone($phone), "Für die Registrierung bei ".setting('appy_site_title')." lautet Ihr Prüfcode " . $generateCode);
+        Sms::send(clearPhone($phone), "Für die Registrierung bei ".setting('appy_site_title')." ist der Verifizierungscode anzugeben " . $generateCode);
 
         return $generateCode;
     }

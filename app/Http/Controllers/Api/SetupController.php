@@ -87,7 +87,7 @@ class SetupController extends Controller
 
         return response()->json([
             'status' => "success",
-            'message' => "Informationen gespeichert",
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
         ]);
     }
     /**
@@ -133,7 +133,7 @@ class SetupController extends Controller
         }
         return response()->json([
             'status' => "success",
-            'message' => "Kategorien gespeichert",
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
         ]);
     }
     /**
@@ -157,7 +157,7 @@ class SetupController extends Controller
         $business->save();
         return response()->json([
             'status' => "success",
-            'message' => "Standortinformationen gespeichert",
+            'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
         ]);
     }
 }

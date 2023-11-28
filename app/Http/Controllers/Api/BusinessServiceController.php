@@ -230,7 +230,7 @@ class BusinessServiceController extends Controller
             $businessService->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Dienst gelöscht",
+                'message' => "Hizmet silindi",
             ]);
         } else {
             return response()->json([

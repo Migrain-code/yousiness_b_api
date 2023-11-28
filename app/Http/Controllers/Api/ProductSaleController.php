@@ -122,7 +122,7 @@ class ProductSaleController extends Controller
             $productFind->save();
             return response()->json([
                 'status' => "success",
-                'message' => "Verkaufsprozess abgeschlossen"
+                'message' => "Ürün satışı eklendi"
             ]);
         }
     }
@@ -163,7 +163,7 @@ class ProductSaleController extends Controller
             $productFind->save();
             return response()->json([
                 'status' => "success",
-                'message' => "Verkaufsprozess aktualisiert"
+                'message' => "Ürün satışı güncellendi"
             ]);
         }
     }
@@ -188,12 +188,12 @@ class ProductSaleController extends Controller
             $productSale->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Verkaufstransaktion gelöscht"
+                'message' => "Ürün Satışı Silindi"
             ]);
         }
         return response()->json([
             'status' => "warning",
-            'message' => "Keine Verkaufstransaktion gefunden"
+            'message' => "Ürün satışı bulunamadı"
         ]);
     }
 

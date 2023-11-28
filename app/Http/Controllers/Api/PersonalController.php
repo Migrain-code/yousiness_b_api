@@ -75,7 +75,7 @@ class PersonalController extends Controller
         if ($personel){
             return response()->json([
                 'status'=>"warning",
-                'message'=>"Die von Ihnen eingegebene Mobilnummer ist nicht im System registriert.",
+                'message'=>"Es ist bereits ein Benutzer mit dieser Mobilnummer registriert.",
             ]);
         }
         $personel= new Personel();
@@ -124,7 +124,7 @@ class PersonalController extends Controller
 
         return response()->json([
             'status' => "error",
-            'message' => "Beim Hinzufügen von Personal ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
+            'message' => "Personel eklenirken bir hata oluştu. Lütfen tekrar deneyin",
         ]);
     }
 
@@ -172,7 +172,7 @@ class PersonalController extends Controller
                 if ($personelFind){
                     return response()->json([
                        'status' => "warning",
-                       'message' => "Unter dieser Telefonnummer sind Mitarbeiter registriert."
+                       'message' => "Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
                     ]);
                 }
                 else{
@@ -208,14 +208,14 @@ class PersonalController extends Controller
                 }
                 return response()->json([
                     'status'=>"success",
-                    'message'=>"Mitarbeiter aktualisiert",
+                    'message'=>"Personel güncellendi",
                 ]);
             }
         }
         else{
             return response()->json([
                 'status'=>"danger",
-                'message'=>"Mitarbeiter nicht gefunden",
+                'message'=>"Personel bulunamadı",
             ]);
         }
 
@@ -247,7 +247,7 @@ class PersonalController extends Controller
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Mitarbeiter nicht gefunden",
+                'message' => "Personel Bulunamadı",
             ]);
         }
     }
@@ -271,12 +271,12 @@ class PersonalController extends Controller
             $personel->delete();
             return response()->json([
                 'status' => "success",
-                'message' => "Mitarbeiter gelöscht",
+                'message' => "Personel Silindi",
             ]);
         } else {
             return response()->json([
                 'status' => "error",
-                'message' => "Mitarbeiter nicht gefunden",
+                'message' => "Personel bulunamadı",
             ]);
         }
     }

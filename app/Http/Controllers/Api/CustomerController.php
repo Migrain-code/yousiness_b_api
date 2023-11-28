@@ -53,7 +53,7 @@ class CustomerController extends Controller
             $businessCustomer->save();
             return response()->json([
                 'status' => "success",
-                'message' => "Kunde hinzugefügt. Sie können nun die Bearbeitung für diesen Kunden durchführen."
+                'message' => "Müşteri eklendi. Artık bu müşteri için işlem gerçekleştirebilirsiniz."
             ]);
         }
     }
@@ -65,7 +65,7 @@ class CustomerController extends Controller
         if (!$customer) {
             return response()->json([
                 'status' => "warning",
-                'message' => "Kundeninformationen nicht gefunden"
+                'message' => "Müşteri bilgisi bulunamadı"
             ]);
         }
         else{
@@ -93,7 +93,7 @@ class CustomerController extends Controller
             if ($customer->save()){
                 return response()->json([
                     'status'=>"success",
-                    'message'=>"Kundeninformationen aktualisiert"
+                    'message'=>"Müşteri bilgileri güncellendi"
                 ]);
             }
         }
@@ -102,7 +102,7 @@ class CustomerController extends Controller
             if ($findCustomer){
                 return response()->json([
                     'status'=>"danger",
-                    'message'=>"Die von Ihnen eingegebene Mobilnummer ist nicht im System registriert."
+                    'message'=>"Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
                 ]);
             }
             else{
@@ -119,7 +119,7 @@ class CustomerController extends Controller
                 if ($customer->save()){
                     return response()->json([
                         'status'=>"success",
-                        'message'=>"Kundeninformationen aktualisiert"
+                        'message'=>"Müşteri bilgileri güncellendi"
                     ]);
                 }
             }
@@ -132,7 +132,7 @@ class CustomerController extends Controller
         if (!$customer){
             return \response()->json([
                 'status' => "warning",
-                'messsage' => "Kunde nicht gefunden"
+                'messsage' => "Müşteri bulunamadı"
             ]);
         }
         BusinessCustomer::where('customer_id', $customer->id)->where('business_id', $request->user()->id)->delete();
