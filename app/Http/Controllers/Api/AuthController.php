@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\BusinessResource;
 use App\Models\Business;
 use App\Models\BusinessNotificationPermission;
+use App\Models\Device;
 use App\Models\SmsConfirmation;
 use App\Services\Sms;
 use Illuminate\Http\Request;
@@ -48,7 +49,15 @@ class AuthController extends Controller
         }
 
         $token = $user->createToken('Access Token')->accessToken;
-
+        if ($request->has('device_token')){
+            $deviceToken = $request->device_token;
+            $this->saveDevice($user, $deviceToken);
+            $deviceToken = $user->device->token;
+            $title = $user->name;
+            $body = 'Herzlich willkommen!';
+            $notification = new \App\Services\Notification();
+            $notification->sendPushNotification($deviceToken, $title, $body);
+        }
         return response()->json([
             'token' => $token,
             'user' => BusinessResource::make($user),
@@ -226,4 +235,19 @@ class AuthController extends Controller
         return $generateCode;
     }
 
+    function saveDevice($user, $deviceToken){
+        $device = Device::where('customer_id', $user->id)->first();
+        if ($device){
+            $device->token = $deviceToken;
+            $device->save();
+        }
+        else{
+            $device = new Device();
+            $device->customer_id = $user->id;
+            $device->token = $deviceToken;
+            $device->type = 1;
+            $device->user_type = 1;
+            $device->save();
+        }
+    }
 }
