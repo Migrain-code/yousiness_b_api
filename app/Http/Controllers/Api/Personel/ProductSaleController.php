@@ -65,7 +65,7 @@ class ProductSaleController extends Controller
             ],
             [
                 'id' => 2,
-                'name' => "EFT/Geldtransfer",
+                'name' => "Überweisung",
             ],
             [
                 'id' => 3,
