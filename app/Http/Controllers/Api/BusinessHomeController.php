@@ -70,7 +70,7 @@ class BusinessHomeController extends Controller
             ],
             [
                 'id' => 5,
-                'name' => 'Persönliche Nummer',
+                'name' => 'Mitarbeiter',
                 'count' => $business->personel->count(),
                 'iconName' => 'person-outline',
             ],
