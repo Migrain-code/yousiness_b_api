@@ -313,11 +313,10 @@ class PersonalController extends Controller
             ]
 
         ];
-        $rates = [
-            0,
-            10,
-            20
-        ];
+        $rates = [];
+        for ($i = 0; $i <= 100; $i+= 5){
+            $rates[]=$i;
+        }
         return response()->json([
             'acceptType' =>$acceptedType,
             'rates' => $rates,
