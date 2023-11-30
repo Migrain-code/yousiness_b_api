@@ -64,8 +64,8 @@ class BusinessHomeController extends Controller
             ],
             [
                 'id' => 4,
-                'name' => 'Gesamtbarbetrag',
-                'count' => $earning + $business->packages->sum('total') + $business->sales->sum('price'),
+                'name' => 'Kommentare',
+                'count' => $business->comments->count(),
                 'iconName' => 'analytics',
             ],
             [
