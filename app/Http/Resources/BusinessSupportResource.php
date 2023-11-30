@@ -19,7 +19,7 @@ class BusinessSupportResource extends JsonResource
           'subject' => $this->subject,
           'content' => $this->content,
           'status' => $this->status,
-          'status_text' => $this->status == 0 ? "Cevaplanmadı" : "Cevaplandı",
+          'status_text' => $this->status == 0 ? "nicht beantwortet" : "Beantwortet",
           'answer' => $this->answer,
           'created_at' => $this->created_at->format('d.m.Y H:i:s'),
         ];
