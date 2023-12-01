@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BusinessGalleryResource;
 use App\Models\BusinessGallery;
+use App\Services\UploadFile;
 use Illuminate\Http\Request;
 
 /**
@@ -26,10 +27,10 @@ class GalleryController extends Controller
     {
         $user = $request->user();
 
-        $path = image('storage/' . $request->file('image')->store('businessGallery'));
         $gallery = new BusinessGallery();
+        $response = UploadFile::uploadFile($request->file('image'), 'businessGallery');
         $gallery->business_id = $user->id;
-        $gallery->way = $path;
+        $gallery->way = $response["image"];
         $gallery->byte = 45;
         $gallery->name = "businessGallery";
         $gallery->save();
