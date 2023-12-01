@@ -16,7 +16,7 @@ class BusinessGalleryResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'image' => $this->way,
+            'image' => image($this->way),
         ];
     }
 }
