@@ -79,24 +79,28 @@ class BusinessServiceController extends Controller
 
         if ($request->type_id == "all"){
             $serviceSubCategory = ServiceSubCategory::find($request->input('sub_category'));
-            $businessService = new BusinessService();
-            $businessService->business_id = $business->id;
-            $businessService->type = $serviceSubCategory->category->type_id;
-            $businessService->category = $serviceSubCategory->category_id;
-            $businessService->sub_category = $serviceSubCategory->id;
-            $businessService->time = $request->input('time');
-            $businessService->price = $this->sayiDuzenle($request->input('price'));
-            $businessService->save();
+            if ($serviceSubCategory){
+                $businessService = new BusinessService();
+                $businessService->business_id = $business->id;
+                $businessService->type = $serviceSubCategory->category->type_id;
+                $businessService->category = $serviceSubCategory->category_id;
+                $businessService->sub_category = $serviceSubCategory->id;
+                $businessService->time = $request->input('time');
+                $businessService->price = $this->sayiDuzenle($request->input('price'));
+                $businessService->save();
+            }
 
             $serviceSubCategorys2 = ServiceSubCategory::where('slug', $serviceSubCategory->slug."-m")->first();
-            $businessService = new BusinessService();
-            $businessService->business_id = $business->id;
-            $businessService->type = $serviceSubCategorys2->category->type_id;
-            $businessService->category = $serviceSubCategorys2->category_id;
-            $businessService->sub_category = $serviceSubCategorys2->id;
-            $businessService->time = $request->input('time');
-            $businessService->price = $this->sayiDuzenle($request->input('price'));
-            $businessService->save();
+            if ($serviceSubCategorys2){
+                $businessService = new BusinessService();
+                $businessService->business_id = $business->id;
+                $businessService->type = $serviceSubCategorys2->category->type_id;
+                $businessService->category = $serviceSubCategorys2->category_id;
+                $businessService->sub_category = $serviceSubCategorys2->id;
+                $businessService->time = $request->input('time');
+                $businessService->price = $this->sayiDuzenle($request->input('price'));
+                $businessService->save();
+            }
 
             $services = [
                 "id"=> $businessService->id,
