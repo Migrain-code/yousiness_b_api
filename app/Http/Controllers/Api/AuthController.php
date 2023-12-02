@@ -44,6 +44,7 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
+                'status' => "error",
                 'message' => 'Ihre Mobilnummer oder Ihr Passwort ist falsch. '
             ], 401);
         }
