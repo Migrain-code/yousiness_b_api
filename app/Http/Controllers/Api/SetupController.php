@@ -103,9 +103,13 @@ class SetupController extends Controller
     {
         $business = $request->user();
         $categories = BusinessCategory::all();
+        $categoryIds = [];
+        foreach ($business->categories as $category){
+            $categoryIds[] = $category->category_id;
+        }
         return response()->json([
             'categories' => CategoryResource::collection($categories),
-            'businessCategories' => $business->categories,
+            'businessCategories' => $categoryIds,
         ]);
     }
 
