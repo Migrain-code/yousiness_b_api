@@ -199,6 +199,21 @@ class AuthController extends Controller
 
     }
 
+    public function resetPassword(Request $request)
+    {
+        $user = Business::where('email', $request->phone)->first();
+        if ($user){
+            $generatePassword = rand(100000, 999999);
+            $user->password = Hash::make($generatePassword);
+            $user->save();
+            Sms::send(clearPhone($request->input('phone')), "Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." lautet ".$generatePassword);
+            return response()->json([
+                'status' => "success",
+                'message' => "Ihre Mobilnummer Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
+            ]);
+        }
+    }
+
     public function existPhone($phone)
     {
         $existPhone = Business::where('email', $phone)->first();

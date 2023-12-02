@@ -54,6 +54,7 @@ Route::prefix('business')->group(function () {
         Route::post('login', [AuthController::class, 'login']);
         Route::post('check-phone', [AuthController::class, 'register']);
         Route::post('verify', [AuthController::class, 'verify']);
+        Route::post('reset-password', [AuthController::class, 'resetPassword']);
     });
     Route::get('/categories', [SetupController::class, 'categories']);
     Route::get('/packages', [BusinessPackageController::class, 'index']);
