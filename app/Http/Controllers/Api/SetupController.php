@@ -105,7 +105,7 @@ class SetupController extends Controller
         $categories = BusinessCategory::all();
         return response()->json([
             'categories' => CategoryResource::collection($categories),
-            'businessCategories' => BusinessCategoryResource::collection($business->categories),
+            'businessCategories' => $business->categories,
         ]);
     }
 
