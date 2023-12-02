@@ -90,6 +90,7 @@ class SetupController extends Controller
             'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
         ]);
     }
+
     /**
      * GET api/business/categories
      *
@@ -98,11 +99,13 @@ class SetupController extends Controller
      *
      *
      */
-    public function categories()
+    public function categories(Request $request)
     {
+        $business = $request->user();
         $categories = BusinessCategory::all();
         return response()->json([
-           'categories' => CategoryResource::collection($categories)
+            'categories' => CategoryResource::collection($categories),
+            'businessCategories' => BusinessCategoryResource::collection($business->categories),
         ]);
     }
 
@@ -120,13 +123,13 @@ class SetupController extends Controller
     public function addCategories(Request $request)
     {
         $business = $request->user();
-        if ($business->categories->count() > 0){
-            foreach ( $business->categories as $category) {
+        if ($business->categories->count() > 0) {
+            foreach ($business->categories as $category) {
                 $category->delete();
             }
         }
-        if (count($request->input('categories')) > 0){
-            foreach ($request->input('categories') as $category){
+        if (count($request->input('categories')) > 0) {
+            foreach ($request->input('categories') as $category) {
                 $businessCategory = new BusinessTypeCategory();
                 $businessCategory->category_id = $category;
                 $businessCategory->business_id = $business->id;
@@ -136,7 +139,7 @@ class SetupController extends Controller
                 'status' => "success",
                 'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
             ]);
-        } else{
+        } else {
             return response()->json([
                 'status' => "warning",
                 'message' => "Auswahl einer Kategorie erforderlich.",
@@ -144,6 +147,7 @@ class SetupController extends Controller
         }
 
     }
+
     /**
      * POST api/business/setup/step/map
      *
