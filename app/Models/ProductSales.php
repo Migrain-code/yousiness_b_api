@@ -11,10 +11,10 @@ class ProductSales extends Model
     use HasFactory;
 
     const PAYMENT_TYPES = [
-        0 => 'Nakit Ödeme',
-        1 => 'Banka/Kredi Kartı',
-        2 => 'EFT/Havale',
-        3 => 'Diğer',
+        0 => 'Barzahlung',
+        1 => 'Lastschrift / Kreditkarte',
+        2 => 'Überweisung',
+        3 => 'Andere',
     ];
 
     public function customer()
