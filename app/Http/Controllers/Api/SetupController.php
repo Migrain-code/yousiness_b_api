@@ -139,7 +139,7 @@ class SetupController extends Controller
         } else{
             return response()->json([
                 'status' => "warning",
-                'message' => "Kategori Seçmeniz Gerekmektedir.",
+                'message' => "Auswahl einer Kategorie erforderlich.",
             ]);
         }
 
