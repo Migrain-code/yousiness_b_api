@@ -16,6 +16,7 @@ use App\Models\DayList;
 use App\Models\Personel;
 use App\Models\PersonelService;
 use App\Models\ServiceCategory;
+use App\Services\UploadFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
@@ -149,7 +150,8 @@ class DetailSetupController extends Controller
     public function uploadLogo(Request $request)
     {
         $user = $request->user();
-        $user->logo = image('storage/' . $request->file('logo')->store('business_logo'));
+        $response = UploadFile::uploadFile($request->file('logo'), 'business_logo');
+        $user->logo = $response["image"];
         $user->save();
 
         return response()->json([
@@ -166,10 +168,10 @@ class DetailSetupController extends Controller
         BusinessGallery::where('business_id', $user->id)->delete();
 
         foreach ($request->file('images') as $file) {
-            $path = image('storage/' . $file->store('businessGallery'));
             $gallery = new BusinessGallery();
             $gallery->business_id = $user->id;
-            $gallery->way = $path;
+            $response = UploadFile::uploadFile($file, 'businessGallery');
+            $gallery->way = $response["image"];
             $gallery->byte = 45;
             $gallery->name = "businessGallery";
             $gallery->save();
