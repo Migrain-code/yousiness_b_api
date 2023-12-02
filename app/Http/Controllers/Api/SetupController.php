@@ -125,16 +125,24 @@ class SetupController extends Controller
                 $category->delete();
             }
         }
-        foreach ($request->input('categories') as $category){
-            $businessCategory = new BusinessTypeCategory();
-            $businessCategory->category_id = $category;
-            $businessCategory->business_id = $business->id;
-            $businessCategory->save();
+        if (count($request->input('categories')) > 0){
+            foreach ($request->input('categories') as $category){
+                $businessCategory = new BusinessTypeCategory();
+                $businessCategory->category_id = $category;
+                $businessCategory->business_id = $business->id;
+                $businessCategory->save();
+            }
+            return response()->json([
+                'status' => "success",
+                'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
+            ]);
+        } else{
+            return response()->json([
+                'status' => "warning",
+                'message' => "Kategori Seçmeniz Gerekmektedir.",
+            ]);
         }
-        return response()->json([
-            'status' => "success",
-            'message' => "Ihre Benutzerinformationen wurden aktualisiert.",
-        ]);
+
     }
     /**
      * POST api/business/setup/step/map
