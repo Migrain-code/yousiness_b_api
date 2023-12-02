@@ -20,7 +20,7 @@ class PackageSalesResource extends JsonResource
           'customer_name' => $this->customer->name,
           'seller_date' => Carbon::parse($this->seller_date)->format('d.m.y'),
           'personal' => $this->personel->name,
-          'type' => $this->type == 0 ? "Seans" : "Dakika",
+          'type' => $this->type == 0 ? "Sitzung" : "Minute",
           'amount' => $this->amount,
           'total' => $this->total,
         ];
