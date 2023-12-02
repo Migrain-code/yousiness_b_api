@@ -22,7 +22,7 @@ class PackageSalesResource extends JsonResource
           'personal' => $this->personel->name,
           'type' => $this->type == 0 ? "Sitzung" : "Minute",
           'amount' => $this->amount,
-          'total' => $this->total,
+          'total' => $this->total - $this->usages->sum('amount'),
         ];
     }
 }
