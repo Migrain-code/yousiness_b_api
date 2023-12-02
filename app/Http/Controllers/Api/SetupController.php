@@ -104,7 +104,7 @@ class SetupController extends Controller
         $business = $request->user();
         $categories = BusinessCategory::all();
         $categoryIds = [];
-        if ($business->categories->count() > 0){
+        if (isset($business->categories)){
             foreach ($business->categories as $category){
                 $categoryIds[] = $category->category_id;
             }
