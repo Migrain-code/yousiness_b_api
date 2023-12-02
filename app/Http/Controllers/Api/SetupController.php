@@ -123,12 +123,13 @@ class SetupController extends Controller
     public function addCategories(Request $request)
     {
         $business = $request->user();
-        if ($business->categories->count() > 0) {
-            foreach ($business->categories as $category) {
-                $category->delete();
-            }
-        }
+
         if (count($request->input('categories')) > 0) {
+            if ($business->categories->count() > 0) {
+                foreach ($business->categories as $category) {
+                    $category->delete();
+                }
+            }
             foreach ($request->input('categories') as $category) {
                 $businessCategory = new BusinessTypeCategory();
                 $businessCategory->category_id = $category;
