@@ -164,7 +164,9 @@ class PersonalController extends Controller
         if ($personel){
             $personel->business_id=$business->id;
             $personel->name= $request->input('name');
-            $personel->image="business/team.png";
+            if ($request->hasFile('logo')){
+                $personel->image = image($request->file('logo')->store('personalImage'));
+            }
             $personel->email=$request->email;
             $personel->password=Hash::make($request->password);
             if ($personel->phone != $request->phone){
