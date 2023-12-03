@@ -22,6 +22,7 @@ class PersonelResource extends JsonResource
           'phone' => $this->phone,
           'approve_type' => $this->accepted_type == 0 ? "Manuel Bestätigung" : "Automatische Bestätigung",
           'rest_day' => $this->rest_day,
+          'close_day' => $this->restDay,
           'start_time' => $this->start_time,
           'end_time' => $this->end_time,
           'food_start' => $this->food_start,
