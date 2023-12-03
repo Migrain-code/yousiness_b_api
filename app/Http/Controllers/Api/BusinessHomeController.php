@@ -48,7 +48,7 @@ class BusinessHomeController extends Controller
                 'id' => 1,
                 'name' => 'Gesamtzahl der Termine',
                 'count' => $appointments->count(),
-                'iconName' => 'newspaper-outline',
+                'iconName' => 'calendar',
             ],
             [
                 'id' => 2,
@@ -60,13 +60,13 @@ class BusinessHomeController extends Controller
                 'id' => 3,
                 'name' => 'Anzahl der Produkte',
                 'count' => $business->products->count(),
-                'iconName' => 'cube-outline',
+                'iconName' => 'basket',
             ],
             [
                 'id' => 4,
                 'name' => 'Kommentare',
                 'count' => $business->comments->count(),
-                'iconName' => 'analytics',
+                'iconName' => 'chatbox',
             ],
             [
                 'id' => 5,
