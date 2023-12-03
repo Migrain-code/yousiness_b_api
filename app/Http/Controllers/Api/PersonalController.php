@@ -15,6 +15,7 @@ use App\Models\City;
 use App\Models\DayList;
 use App\Models\Personel;
 use App\Models\PersonelService;
+use App\Services\UploadFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 /**
@@ -81,7 +82,6 @@ class PersonalController extends Controller
         $personel= new Personel();
         $personel->business_id=$business->id;
         $personel->name= $request->input('name');
-        $personel->image="business/team.png";
         $personel->email=$request->email;
         $personel->password=Hash::make($request->password);
         $personel->phone=$request->phone;
@@ -96,7 +96,8 @@ class PersonalController extends Controller
         $personel->range=$request->appointmentRange;
         $personel->description=$request->description;
         if ($request->hasFile('logo')){
-            $personel->image = image($request->file('logo')->store('personalImage'));
+            $response = UploadFile::uploadFile($request->file('logo'), 'personalImage');
+            $personel->image = $response["image"];
         }
         $services = explode(',', $request->services);
         if ($personel->save()){
@@ -165,7 +166,8 @@ class PersonalController extends Controller
             $personel->business_id=$business->id;
             $personel->name= $request->input('name');
             if ($request->hasFile('logo')){
-                $personel->image = image($request->file('logo')->store('personalImage'));
+                $response = UploadFile::uploadFile($request->file('logo'), 'personalImage');
+                $personel->image = $response["image"];
             }
             $personel->email=$request->email;
             $personel->password=Hash::make($request->password);
