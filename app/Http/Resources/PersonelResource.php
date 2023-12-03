@@ -17,7 +17,7 @@ class PersonelResource extends JsonResource
         return [
           'id' => $this->id,
           'name' => $this->name,
-          'image' => storage($this->image),
+          'image' => image($this->image),
           'email' => $this->email,
           'phone' => $this->phone,
           'approve_type' => $this->accepted_type == 0 ? "Manuel Bestätigung" : "Automatische Bestätigung",
