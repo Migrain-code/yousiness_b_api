@@ -157,7 +157,7 @@ class DetailSetupController extends Controller
         return response()->json([
             'status' => "success",
             'message' => "Ihre Benutzerinformationen wurden aktualisiert",
-            'link' => $user->logo,
+            'link' => image($user->logo),
         ]);
     }
 
