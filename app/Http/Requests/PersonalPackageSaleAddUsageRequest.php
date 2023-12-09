@@ -35,9 +35,9 @@ class PersonalPackageSaleAddUsageRequest extends FormRequest
     public function attributes()
     {
         return [
-            'package_id'=> "Paket ID",
-            'amount' => "Adet",
-            'operation_date' => "İşlem Tarihi",
+            'package_id'=> "Packet",
+            'amount' => "Anzahl",
+            'operation_date' => "Datum",
         ];
     }
 

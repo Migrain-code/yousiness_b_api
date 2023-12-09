@@ -36,8 +36,8 @@ class PackageSaleAddPaymentRequest extends FormRequest
     {
         return [
             'package_id'=> "Paket ID",
-            'price' => "Fiyat",
-            'amount' => "Adet",
+            'price' => "Preis",
+            'amount' => "Anzahl",
         ];
     }
 

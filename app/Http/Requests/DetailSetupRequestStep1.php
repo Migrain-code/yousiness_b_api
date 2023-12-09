@@ -49,14 +49,14 @@ class DetailSetupRequestStep1 extends FormRequest
     {
 
         return [
-            'officialName' => "Salon Sahibinin adı",
-            'businessName' => "Salon Adı",
+            'officialName' => "Inhaber/in Name Nachname",
+            'businessName' => "Salonname",
             'appointmentRange' => "Randevu aralığı",
-            'phone' => "İşletme Telefon Numarası",
-            'email' => "İşletme E-posta Adresi",
-            'year' => "İşletme Kuruluş Tarihi",
-            'address' => "İşletme Address Metni",
-            'aboutText' => "İşletme Hakkında Yazısı",
+            'phone' => "Salon mobilnummer",
+            'email' => "Salon E-mail",
+            'year' => "Gründungsjahr",
+            'address' => "Adresse",
+            'aboutText' => "über uns",
             //'personalCount' => "Personel Sayısı",
             //'cityId' => "Şehir",
             //'districtId' => "İlçe",

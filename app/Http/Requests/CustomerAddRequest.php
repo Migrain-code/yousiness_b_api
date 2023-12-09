@@ -37,11 +37,11 @@ class CustomerAddRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name'=>"Müşteri Adı ve Soyadı",
-            'phone'=>"Müşteri Telefon",
-            'email'=>"Müşteri Email",
-            'password'=>"Şifre",
-            'gender'=>"Cinsiyet"
+            'name'=>"Name und Nachname ",
+            'phone'=>"Mobilenummer",
+            'email'=>"E-mail",
+            'password'=>"Password",
+            'gender'=>"Geschlecht"
         ];
     }
 

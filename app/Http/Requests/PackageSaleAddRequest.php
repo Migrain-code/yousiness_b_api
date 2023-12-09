@@ -41,11 +41,11 @@ class PackageSaleAddRequest extends FormRequest
         return [
             'customer_id'=> "Kunde",
             'service_id' => "Dienstleistung",
-            'amount' => "Fiyat",
+            'amount' => "Preis",
             'total' => "Betrag",
-            'personel_id' => "Personel",
-            'package_type' => "Paket Türü",
-            'seller_date' => "Satış Tarihi",
+            'personel_id' => "Mitarbeiter",
+            'package_type' => "Pakettyp",
+            'seller_date' => "Datum",
         ];
     }
 

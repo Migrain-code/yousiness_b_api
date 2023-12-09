@@ -34,8 +34,8 @@ class SupportAddRequest extends FormRequest
     public function attributes()
     {
         return [
-            'subject'=>"Konu",
-            'content'=>"İçerik",
+            'subject'=>"Thema",
+            'content'=>"Inhalt",
         ];
     }
 
