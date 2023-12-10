@@ -234,7 +234,7 @@ function clearPhone($phoneNumber){
         '+998',
     ];
     if (in_array(substr($phoneNumber,0,2), $countryCodes)){
-        $phoneNumber = "";
+        $phoneNumber = str_replace($countryCodes, '', $phoneNumber);
     }
     // Özel karakterleri temizle
     $phoneNumber = preg_replace('/[^0-9]/', '', $phoneNumber);
