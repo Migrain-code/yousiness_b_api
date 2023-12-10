@@ -34,7 +34,7 @@ function clearPhone($phoneNumber) {
             break;
         }
     }
-    /*$phoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
+    $phoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
 
     // Başındaki + işaretini ve ülke kodunu kontrol et
     if (substr($phoneNumber, 0, 1) == '+') {
@@ -47,7 +47,7 @@ function clearPhone($phoneNumber) {
     $phoneNumber = str_replace(' ', '', $phoneNumber);
 
     // Başındaki sıfırları kaldır
-    $phoneNumber = ltrim($phoneNumber, '0');*/
+    $phoneNumber = ltrim($phoneNumber, '0');
 
     return $phoneNumber;
 }
