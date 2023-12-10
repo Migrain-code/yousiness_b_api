@@ -40,6 +40,7 @@ class DetailSetupController extends Controller
         }
         if ($user->is_setup == 0){
             $user->is_setup = 1;
+            $user->save();
         }
         return response()->json([
             'business' => BusinessResource::make($user),
