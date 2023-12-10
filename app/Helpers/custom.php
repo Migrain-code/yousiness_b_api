@@ -27,7 +27,6 @@ function clearPhone($phoneNumber) {
         '+968', '+970', '+971', '+972', '+973', '+974', '+975', '+976', '+977', '+98', '+992', '+993', '+994', '+995', '+996', '+998'
     ];
 
-
     foreach ($countryCodes as $code) {
         if (strpos($phoneNumber, $code) === 0) {
             $phoneNumber = substr($phoneNumber, strlen($code));
