@@ -203,6 +203,14 @@ class PersonalController extends Controller
             $personel->range=$request->appointmentRange;
             $personel->description=$request->description;
             if ($personel->save()){
+                $personel->times()->delete();
+                foreach (DayList::all() as $day){
+                    $time = new PersonalTimes();
+                    $time->day_id = $day->id;
+                    $time->personel_id = $personel->id;
+                    $time->status = in_array($day->id, $request->off_day) ? 0 : 1;
+                    $time->save();
+                }
                 if (in_array('all', $request->services)){
                     foreach ($business->services as $service){
                         $personelService=new PersonelService();
