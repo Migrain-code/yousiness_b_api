@@ -76,7 +76,7 @@ class PersonalController extends Controller
         $personel = Personel::where('phone', clearPhone($request->input('phone')))->first();
         if ($personel){
             return response()->json([
-                'status'=>"warning",
+                'status'=>"error",
                 'message'=>"Es ist bereits ein Benutzer mit dieser Mobilnummer registriert.",
             ]);
         }
