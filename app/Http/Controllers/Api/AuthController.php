@@ -114,7 +114,7 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        dd(clearPhone($request->phone));
+        return clearPhone($request->phone);
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
