@@ -32,6 +32,7 @@ use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\SupportController;
 use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\StripeController;
+use \App\Http\Controllers\Api\PasswordChangeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -163,6 +164,10 @@ Route::prefix('business')->group(function () {
         Route::controller(CommentController::class)->prefix('comment')->group(function () {
             Route::get('/', 'index');
             Route::post('/detail', 'detail');
+        });
+
+        Route::controller(PasswordChangeController::class)->prefix('password')->group(function () {
+            Route::post('/update', 'update');
         });
 
     });
