@@ -114,6 +114,7 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
+        dd(clearPhone($request->phone));
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
@@ -146,7 +147,6 @@ class AuthController extends Controller
      */
     public function verify(Request $request)
     {
-
         $code = SmsConfirmation::where("code", $request->code)->where('action','BUSINESS-REGISTER')->first();
         if ($code) {
             if ($code->expire_at < now()) {
