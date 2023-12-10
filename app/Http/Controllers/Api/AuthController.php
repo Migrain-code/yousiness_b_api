@@ -121,7 +121,7 @@ class AuthController extends Controller
             ]);
         } else {
 
-            $this->createVerifyCode($request->phone);
+            $this->createVerifyCode(clearPhone($request->phone));
 
             return response()->json([
                 'status' => "success",
