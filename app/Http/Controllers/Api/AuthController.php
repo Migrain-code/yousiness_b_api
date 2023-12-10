@@ -171,6 +171,7 @@ class AuthController extends Controller
                     $business->owner = $request->name;
                     $business->password = Hash::make($generatePassword);
                     $business->package_id = 1;
+                    $business->verify_phone = 1;
                     $business->save();
 
                     $this->addPermission($business->id);

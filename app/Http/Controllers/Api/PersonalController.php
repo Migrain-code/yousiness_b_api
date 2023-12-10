@@ -184,7 +184,7 @@ class PersonalController extends Controller
                 $personelFind = Personel::where('phone', $request->phone)->first();
                 if ($personelFind){
                     return response()->json([
-                       'status' => "warning",
+                       'status' => "error",
                        'message' => "Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
                     ]);
                 }
@@ -235,7 +235,7 @@ class PersonalController extends Controller
         }
         else{
             return response()->json([
-                'status'=>"danger",
+                'status'=>"error",
                 'message'=>"Keine Mitarbeiter gefunden",
             ]);
         }
