@@ -26,9 +26,8 @@ function clearPhone($phoneNumber) {
         '+86', '+880', '+886', '+90', '+91', '+92', '+93', '+94', '+95', '+960', '+961', '+962', '+963', '+964', '+965', '+966', '+967',
         '+968', '+970', '+971', '+972', '+973', '+974', '+975', '+976', '+977', '+98', '+992', '+993', '+994', '+995', '+996', '+998'
     ];
-// Ülke kodunu kaldır
-    $inFormatPhone = substr($phoneNumber, 0, 4);
-    if (in_array($inFormatPhone, $countryCodes)) {
+
+    if (in_array($phoneNumber, $countryCodes)) {
         $phoneNumber = substr($phoneNumber, 4);
     }
     /*$phoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
@@ -39,8 +38,6 @@ function clearPhone($phoneNumber) {
     } elseif (substr($phoneNumber, 0, 2) == '00') {
         $phoneNumber = substr($phoneNumber, 2); // Başındaki 00'yi kaldır
     }
-
-
 
     // Boşlukları kaldır
     $phoneNumber = str_replace(' ', '', $phoneNumber);
