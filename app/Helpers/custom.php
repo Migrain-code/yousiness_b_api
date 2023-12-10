@@ -27,8 +27,12 @@ function clearPhone($phoneNumber) {
         '+968', '+970', '+971', '+972', '+973', '+974', '+975', '+976', '+977', '+98', '+992', '+993', '+994', '+995', '+996', '+998'
     ];
 
-    if (in_array($phoneNumber, $countryCodes)) {
-        $phoneNumber = substr($phoneNumber, 4);
+
+    foreach ($countryCodes as $code) {
+        if (strpos($phoneNumber, $code) === 0) {
+            $phoneNumber = substr($phoneNumber, strlen($code));
+            break;
+        }
     }
     /*$phoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
 
