@@ -11,9 +11,20 @@ function setting($key){
     return config('settings.'.$key);
 }
 function clearPhone($phoneNumber){
-    $newPhoneNumber = str_replace([' ', '(', ')', '-'], '', $phoneNumber);
+    // Özel karakterleri temizle
+    $phoneNumber = preg_replace('/[^0-9]/', '', $phoneNumber);
 
-    return $newPhoneNumber;
+    // Başındaki + işaretini ve ülke kodunu kontrol et
+    if (substr($phoneNumber, 0, 1) == '+') {
+        $phoneNumber = substr($phoneNumber, 1); // Başındaki + işaretini kaldır
+    } elseif (substr($phoneNumber, 0, 2) == '00') {
+        $phoneNumber = substr($phoneNumber, 2); // Başındaki 00'yi kaldır
+    }
+    $phoneNumber = str_replace(' ', '', $phoneNumber);
+    // Başındaki sıfırları kaldır
+    $phoneNumber = ltrim($phoneNumber, '0');
+
+    return $phoneNumber;
 }
 function calculateTotal($services)
 {
