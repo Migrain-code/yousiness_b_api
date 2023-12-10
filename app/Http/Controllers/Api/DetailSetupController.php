@@ -32,10 +32,14 @@ class DetailSetupController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
+
         $business_types = BusinnessType::select('id', 'name')->get();
         $appointmentRanges = [];
         for ($i = 5; $i <= 60; $i += 5) {
             $appointmentRanges[] = $i;
+        }
+        if ($user->is_setup == 0){
+            $user->is_setup = 1;
         }
         return response()->json([
             'business' => BusinessResource::make($user),
