@@ -13,6 +13,7 @@ use App\Models\BusinnessType;
 use App\Models\BussinessPackage;
 use App\Models\City;
 use App\Models\DayList;
+use App\Models\PersonalTimes;
 use App\Models\Personel;
 use App\Models\PersonelService;
 use App\Services\UploadFile;
@@ -86,7 +87,7 @@ class PersonalController extends Controller
         $personel->password=Hash::make($request->password);
         $personel->phone=$request->phone;
         $personel->accept=$request->accept;
-        $personel->rest_day=$request->restDay;
+        $personel->rest_day=1;
         $personel->start_time=$request->startTime;
         $personel->end_time=$request->endTime;
         $personel->food_start=$request->foodStart;
@@ -101,6 +102,14 @@ class PersonalController extends Controller
         }
         $services = explode(',', $request->services);
         if ($personel->save()){
+            $times = explode(',', $request->restDay);
+            foreach (DayList::all() as $day){
+                $time = new PersonalTimes();
+                $time->day_id = $day->id;
+                $time->personel_id = $personel->id;
+                $time->status = in_array($day->id, $times) ? 0 : 1;
+                $time->save();
+            }
             if (in_array('all', $services)){
                 foreach ($business->services as $service){
                     $personelService=new PersonelService();
