@@ -40,7 +40,7 @@ class AuthController extends Controller
             'password' => 'required|string'
         ]);
 
-        $user = Business::where('email', $request->phone)->first();
+        $user = Business::where('email', clearPhone($request->phone))->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
@@ -252,7 +252,7 @@ class AuthController extends Controller
     }
 
     function saveDevice($user, $deviceToken){
-        $device = Device::where('customer_id', $user->id)->first();
+        $device = Device::where('customer_id', $user->id)->where('user_type', 1)->first();
         if ($device){
             $device->token = $deviceToken;
             $device->save();

@@ -127,4 +127,9 @@ class Business extends Authenticatable
     {
         return $this->hasMany(BusinessNotification::class, 'business_id', 'id')->latest();
     }
+
+    public function device()
+    {
+        return $this->hasOne(Device::class, 'customer_id', 'id')->where('user_type', 1);
+    }
 }
