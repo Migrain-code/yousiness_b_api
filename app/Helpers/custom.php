@@ -46,7 +46,10 @@ function clearPhone($phoneNumber) {
     $phoneNumber = str_replace(' ', '', $phoneNumber);
 
     // Başındaki sıfırları kaldır
-    //$phoneNumber = ltrim($phoneNumber, '0');
+    if (strlen($phoneNumber) == 1){
+        $phoneNumber = ltrim($phoneNumber, '0');
+
+    }
 
     return $phoneNumber;
 }
