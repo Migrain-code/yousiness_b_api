@@ -114,6 +114,7 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
+
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
@@ -216,7 +217,7 @@ class AuthController extends Controller
 
     public function existPhone($phone)
     {
-        $existPhone = Business::where('email', $phone)->first();
+        $existPhone = Business::where('email', 'like', '%' . $phone . '%')->first();
         if ($existPhone != null) {
             $result = true;
         } else {
