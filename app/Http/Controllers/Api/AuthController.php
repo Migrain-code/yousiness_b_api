@@ -201,7 +201,7 @@ class AuthController extends Controller
 
     public function resetPassword(Request $request)
     {
-        $user = Business::where('email', $request->phone)->first();
+        $user = Business::where('email', clearPhone($request->phone))->first();
         if ($user){
             $generatePassword = rand(100000, 999999);
             $user->password = Hash::make($generatePassword);
