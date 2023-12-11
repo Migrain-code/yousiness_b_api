@@ -40,7 +40,7 @@ class AuthController extends Controller
             'password' => 'required|string'
         ]);
 
-        $user = Business::where('email', clearPhone($request->phone))->first();
+        $user = Business::where('email', $request->phone)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
