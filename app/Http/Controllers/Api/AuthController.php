@@ -52,8 +52,8 @@ class AuthController extends Controller
         $token = $user->createToken('Access Token')->accessToken;
         if ($request->has('device_token') and isset($request->device_token)){
             $deviceToken = $request->device_token;
-            /*$this->saveDevice($user, $deviceToken);
-            $deviceToken = $user->device->token;*/
+            $this->saveDevice($user, $deviceToken);
+            $deviceToken = $user->device->token;
             $title = $user->name;
             $body = 'Herzlich willkommen!';
             $notification = new \App\Services\Notification();
@@ -114,7 +114,6 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-
         if ($this->existPhone(clearPhone($request->phone))) {
             return response()->json([
                 'status' => "warning",
