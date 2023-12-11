@@ -29,7 +29,7 @@ class DetailSetupRequestStep1 extends FormRequest
             'officialName' => 'required|string|max:255',
             'businessName' => 'required|string|max:255',
             'appointmentRange' => 'required|numeric',
-            'phone' => 'required|string|min:11',
+            'phone' => 'required|string',
             'email' => 'required|string',
             'year' => 'required|date',
             'address' => 'required|string',
