@@ -8,6 +8,7 @@ use App\Models\Business;
 use App\Models\BusinessNotificationPermission;
 use App\Models\Device;
 use App\Models\SmsConfirmation;
+use App\Services\SendMail;
 use App\Services\Sms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -16,7 +17,6 @@ use Illuminate\Support\Str;
 /**
  * @group Authentication
  */
-
 class AuthController extends Controller
 {
 
@@ -35,22 +35,17 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $request->validate([
-            'phone' => 'required|string',
-            'password' => 'required|string'
-        ]);
-
         $user = Business::where('email', $request->phone)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
                 'status' => "error",
-                'message' => 'Ihre Mobilnummer oder Ihr Passwort ist falsch. '
+                'message' => 'Ihre E-mail oder Ihr Passwort ist falsch. '
             ], 401);
         }
 
         $token = $user->createToken('Access Token')->accessToken;
-        if ($request->has('device_token') and isset($request->device_token)){
+        if ($request->has('device_token') and isset($request->device_token)) {
             $deviceToken = $request->device_token;
             $this->saveDevice($user, $deviceToken);
             $deviceToken = $user->device->token;
@@ -85,6 +80,7 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'Vom System abgemeldet']);
     }
+
     /**
      * GET api/auth/user
      *
@@ -101,6 +97,7 @@ class AuthController extends Controller
     {
         return response()->json(BusinessResource::make($request->user()));
     }
+
     /**
      * POST api/auth/check-phone
      *
@@ -114,14 +111,14 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        if ($this->existPhone(clearPhone($request->phone))) {
+        if ($this->existPhone($request->phone)) {
             return response()->json([
                 'status' => "warning",
                 'message' => "Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
             ]);
         } else {
 
-            $this->createVerifyCode(clearPhone($request->phone));
+            $this->createVerifyCode($request->phone);
 
             return response()->json([
                 'status' => "success",
@@ -129,6 +126,7 @@ class AuthController extends Controller
             ]);
         }
     }
+
     /**
      * POST api/auth/verify
      *
@@ -146,7 +144,7 @@ class AuthController extends Controller
      */
     public function verify(Request $request)
     {
-        $code = SmsConfirmation::where("code", $request->code)->where('action','BUSINESS-REGISTER')->first();
+        $code = SmsConfirmation::where("code", $request->code)->where('action', 'BUSINESS-REGISTER')->first();
         if ($code) {
             if ($code->expire_at < now()) {
 
@@ -157,10 +155,9 @@ class AuthController extends Controller
                     'message' => "Verifizierungscode ist nicht mehr gültig. "
                 ]);
 
-            }
-            else{
+            } else {
 
-                if ($code->phone == $request->phone){
+                if ($code->phone == $request->phone) {
                     $generatePassword = rand(100000, 999999);
 
                     $business = new Business();
@@ -174,14 +171,13 @@ class AuthController extends Controller
                     $business->save();
 
                     $this->addPermission($business->id);
+                    SendMail::send('Ihre E-mail Überprüfung war erfolgreich', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " lautet :", $business->email, $generatePassword);
 
-                    Sms::send(clearPhone($request->input('phone')), "Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." lautet ".$generatePassword);
                     return response()->json([
                         'status' => "success",
                         'message' => "Ihre Mobilnummer Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
                     ]);
-                }
-                else{
+                } else {
                     return response()->json([
                         'status' => "danger",
                         'message' => "Verifizierungscode ist fehlerhaft."
@@ -201,22 +197,23 @@ class AuthController extends Controller
 
     public function resetPassword(Request $request)
     {
-        $user = Business::where('email', clearPhone($request->phone))->first();
-        if ($user){
+        $user = Business::where('email', $request->phone)->first();
+        if ($user) {
             $generatePassword = rand(100000, 999999);
             $user->password = Hash::make($generatePassword);
             $user->save();
-            Sms::send(clearPhone($request->input('phone')), "Ihr Passwort für die Anmeldung bei ".config('settings.appy_site_title')." lautet ".$generatePassword);
+
+            SendMail::send('Ihr Passwort für die Anmeldung bei', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " lautet ", $user->email, $generatePassword);
             return response()->json([
                 'status' => "success",
-                'message' => "Ihre Mobilnummer Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
+                'message' => "Ihre E-mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
             ]);
         }
     }
 
     public function existPhone($phone)
     {
-        $existPhone = Business::where('email', 'like', '%' . $phone . '%')->first();
+        $existPhone = Business::where('email', $phone)->first();
         if ($existPhone != null) {
             $result = true;
         } else {
@@ -225,7 +222,8 @@ class AuthController extends Controller
         return $result;
     }
 
-    function addPermission($id){
+    function addPermission($id)
+    {
         $businessPermission = new BusinessNotificationPermission();
         $businessPermission->business_id = $id;
         $businessPermission->save();
@@ -237,7 +235,8 @@ class AuthController extends Controller
         $business->save();
     }*/
 
-    function createVerifyCode($phone){
+    function createVerifyCode($phone)
+    {
         $generateCode = rand(100000, 999999);
         $smsConfirmation = new SmsConfirmation();
         $smsConfirmation->phone = $phone;
@@ -246,18 +245,18 @@ class AuthController extends Controller
         $smsConfirmation->expire_at = now()->addMinute(3);
         $smsConfirmation->save();
 
-        Sms::send(clearPhone($phone), "Für die Registrierung bei ".setting('appy_site_title')." ist der Verifizierungscode anzugeben " . $generateCode);
+        SendMail::send('SALON REGISTRIERUNG', "Für die Registrierung bei " . setting('appy_site_title') . " ist der Verifizierungscode anzugeben ", $phone, $generateCode);
 
         return $generateCode;
     }
 
-    function saveDevice($user, $deviceToken){
+    function saveDevice($user, $deviceToken)
+    {
         $device = Device::where('customer_id', $user->id)->where('user_type', 1)->first();
-        if ($device){
+        if ($device) {
             $device->token = $deviceToken;
             $device->save();
-        }
-        else{
+        } else {
             $device = new Device();
             $device->customer_id = $user->id;
             $device->token = $deviceToken;

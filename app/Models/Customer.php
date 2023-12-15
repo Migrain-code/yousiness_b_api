@@ -38,7 +38,7 @@ class Customer extends Authenticatable
     }
     public function sendSms($message)
     {
-        $clean_phone_number = preg_replace('/[^0-9]/', '', $this->email);
+        $clean_phone_number = clearPhone($this->phone);
         Sms::send($clean_phone_number, $message);
         return true;
     }
