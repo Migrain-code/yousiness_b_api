@@ -43,6 +43,8 @@ use \App\Http\Controllers\Api\PasswordChangeController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('send/mail', [\App\Http\Controllers\Api\Personel\HomeController::class, 'sendMail']);
 Route::get('page/list', [CityController::class, 'setting']);
 Route::post('page/detail', [CityController::class, 'pageDetail']);
 

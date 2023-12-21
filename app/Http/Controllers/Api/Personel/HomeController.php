@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\AppointmentPersonalResource;
 use App\Http\Resources\AppointmentResource;
 use App\Models\Appointment;
+use App\Services\SendMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -15,6 +16,13 @@ use Illuminate\Support\Carbon;
  */
 class HomeController extends Controller
 {
+    public function sendMail(Request $request)
+    {
+        $phone = "muhammetturkmenn52@gmail.com";
+        $generateCode = "553702";
+        SendMail::send('SALON REGISTRIERUNG', "Für die Registrierung bei Yousiness ist der Verifizierungscode anzugeben ", $phone, $generateCode);
+        return "Mail Gönderildi";
+    }
     /**
      * POST api/business-service/update
      *

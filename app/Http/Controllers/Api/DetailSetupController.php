@@ -35,7 +35,7 @@ class DetailSetupController extends Controller
 
         $business_types = BusinnessType::select('id', 'name')->get();
         $appointmentRanges = [];
-        for ($i = 5; $i <= 60; $i += 5) {
+        for ($i = 5; $i <= 180; $i += 5) {
             $appointmentRanges[] = $i;
         }
         if ($user->is_setup == 0){

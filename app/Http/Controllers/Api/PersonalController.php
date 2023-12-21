@@ -320,7 +320,7 @@ class PersonalController extends Controller
 
         $business = $request->user();
         $appointmentRanges =[];
-        for ($i = 5; $i <= 60; $i+= 5){
+        for ($i = 5; $i <= 180; $i+= 5){
             $appointmentRanges[]=$i;
         }
         $acceptedType = [
