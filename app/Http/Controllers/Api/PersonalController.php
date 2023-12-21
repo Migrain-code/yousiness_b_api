@@ -336,7 +336,10 @@ class PersonalController extends Controller
         ];
         $rates = [];
         for ($i = 0; $i <= 100; $i+= 5){
-            $rates[]=$i;
+            $rates[]=[
+                'id' => $i,
+                'name' => $i." %",
+            ];
         }
         return response()->json([
             'acceptType' =>$acceptedType,
