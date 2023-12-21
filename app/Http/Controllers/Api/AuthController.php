@@ -114,7 +114,7 @@ class AuthController extends Controller
         if ($this->existPhone($request->phone)) {
             return response()->json([
                 'status' => "warning",
-                'message' => "Es ist bereits ein Benutzer mit dieser Mobilnummer registriert."
+                'message' => "Es ist bereits ein Benutzer mit dieser E-mail registriert."
             ]);
         } else {
 
@@ -122,7 +122,7 @@ class AuthController extends Controller
 
             return response()->json([
                 'status' => "success",
-                'message' => "Wir haben einen Code an Ihre Mobilnummer gesendet. Bitte überprüfen Sie Ihre Mobilnummer."
+                'message' => "Wir haben einen Code an Ihre E-mail gesendet. Bitte überprüfen Sie Ihre E-mail."
             ]);
         }
     }
@@ -175,7 +175,7 @@ class AuthController extends Controller
 
                     return response()->json([
                         'status' => "success",
-                        'message' => "Ihre Mobilnummer Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
+                        'message' => "Ihre E-mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
                     ]);
                 } else {
                     return response()->json([
