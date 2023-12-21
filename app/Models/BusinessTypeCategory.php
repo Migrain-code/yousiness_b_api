@@ -11,6 +11,8 @@ class BusinessTypeCategory extends Model
 
     public function category()
     {
-        return $this->hasOne(BusinessCategory::class, 'id', 'category_id');
+        return $this->hasOne(BusinessCategory::class, 'id', 'category_id')->withDefault([
+            'name' => "Not Found",
+        ]);
     }
 }
