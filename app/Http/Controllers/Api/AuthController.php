@@ -169,7 +169,6 @@ class AuthController extends Controller
                     $business->package_id = 1;
                     $business->verify_phone = 1;
                     $business->save();
-
                     $this->addPermission($business->id);
                     SendMail::send('Ihre E-mail Überprüfung war erfolgreich', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " lautet :", $business->email, $generatePassword);
 
