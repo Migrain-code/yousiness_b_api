@@ -21,7 +21,7 @@
         <tr>
             <td align="center" valign="center" style="text-align:center; padding: 40px">
                 <a href="" rel="noopener" target="_blank">
-                    <img alt="Logo" style="width: 250px;" src="{{storage(setting('bussiness_mail_logo'))}}" />
+                    <img alt="Logo" style="width: 250px;" src="{{image(setting('bussiness_mail_logo'))}}" />
                 </a>
             </td>
         </tr>
