@@ -40,15 +40,15 @@
                     <div style="padding-bottom: 10px">
                         <br>
                         <br>
-                        {{setting('speed_site_title')}}
+                        {{config('settings.speed_site_title')}}
                     </div>
                 </div>
             </td>
         <tr>
             <td align="center" valign="center"
                 style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
-                <p>{{setting('speed_address')}}</p>
-                <p>Copyright © <a href="{{asset('/')}}" rel="noopener" target="_blank">{{setting('speed_site_title')}}</a>.</p>
+                <p>{{config('settings.speed_address')}}</p>
+                <p>Copyright © <a href="{{asset('/')}}" rel="noopener" target="_blank">{{config('settings.speed_site_title')}}</a>.</p>
             </td>
         </tr>
         </tbody>
