@@ -40,7 +40,7 @@ class AuthController extends Controller
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
                 'status' => "error",
-                'message' => 'Ihre E-mail oder Ihr Passwort ist falsch. '
+                'message' => 'Ihre E-Mail oder Ihr Passwort ist falsch. '
             ], 401);
         }
 
@@ -114,7 +114,7 @@ class AuthController extends Controller
         if ($this->existPhone($request->phone)) {
             return response()->json([
                 'status' => "warning",
-                'message' => "Es ist bereits ein Benutzer mit dieser E-mail registriert."
+                'message' => "Es ist bereits ein Benutzer mit dieser E-Mail registriert."
             ]);
         } else {
 
@@ -122,7 +122,7 @@ class AuthController extends Controller
 
             return response()->json([
                 'status' => "success",
-                'message' => "Wir haben einen Code an Ihre E-mail gesendet. Bitte überprüfen Sie Ihre E-mail."
+                'message' => "Wir haben einen Code an Ihre E-Mail gesendet. Bitte überprüfen Sie Ihre E-Mail."
             ]);
         }
     }
@@ -170,11 +170,11 @@ class AuthController extends Controller
                     $business->verify_phone = 1;
                     $business->save();
                     $this->addPermission($business->id);
-                    SendMail::send('Ihre E-mail Überprüfung war erfolgreich', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " lautet :", $business->email, $generatePassword);
+                    SendMail::send('Ihre E-Mail Überprüfung war erfolgreich', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " :", $business->email, $generatePassword);
 
                     return response()->json([
                         'status' => "success",
-                        'message' => "Ihre E-mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
+                        'message' => "Ihre E-Mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
                     ]);
                 } else {
                     return response()->json([
@@ -202,10 +202,10 @@ class AuthController extends Controller
             $user->password = Hash::make($generatePassword);
             $user->save();
 
-            SendMail::send('Ihr Passwort für die Anmeldung bei Yousiness', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " ", $user->email, $generatePassword);
+            SendMail::send('Ihr Passwort für die Anmeldung bei '. config('settings.appy_site_title'), "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " ", $user->email, $generatePassword);
             return response()->json([
                 'status' => "success",
-                'message' => "Ihre E-mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
+                'message' => "Ihre E-Mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
             ]);
         }
     }

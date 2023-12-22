@@ -39,7 +39,7 @@ class CustomerAddRequest extends FormRequest
         return [
             'name'=>"Name und Nachname ",
             'phone'=>"Mobilnummer",
-            'email'=>"E-mail",
+            'email'=>"E-Mail",
             'password'=>"Password",
             'gender'=>"Geschlecht"
         ];

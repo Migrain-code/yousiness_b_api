@@ -53,7 +53,7 @@ class DetailSetupRequestStep1 extends FormRequest
             'businessName' => "Salonname",
             'appointmentRange' => "Randevu aralığı",
             'phone' => "Salon mobilnummer",
-            'email' => "Salon E-mail",
+            'email' => "Salon E-Mail",
             'year' => "Gründungsjahr",
             'address' => "Adresse",
             'aboutText' => "über uns",
