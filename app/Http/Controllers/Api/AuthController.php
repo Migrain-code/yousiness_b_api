@@ -202,7 +202,7 @@ class AuthController extends Controller
             $user->password = Hash::make($generatePassword);
             $user->save();
 
-            SendMail::send('Ihr Passwort für die Anmeldung bei', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " lautet ", $user->email, $generatePassword);
+            SendMail::send('Ihr Passwort für die Anmeldung bei Yousiness', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " ", $user->email, $generatePassword);
             return response()->json([
                 'status' => "success",
                 'message' => "Ihre E-mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
