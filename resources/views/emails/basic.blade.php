@@ -37,10 +37,12 @@
                     @endif
 
                     <!--end:Email content-->
-                    <div style="padding-bottom: 10px">
+                    <div style="padding-bottom: 10px;text-align: center">
                         <br>
                         <br>
-                        {{config('settings.speed_site_title')}}
+                        <h3 style="background: -webkit-linear-gradient(184deg, #ddb06f 0%, #e8c490 21.897%, #e2c08e 77.24%, #ddb06f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;font-size: 1.9rem">{{config('settings.speed_site_title')}}</h3>
                     </div>
                 </div>
             </td>
