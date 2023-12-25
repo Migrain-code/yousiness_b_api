@@ -338,7 +338,7 @@ class PersonalController extends Controller
         for ($i = 0; $i <= 100; $i+= 5){
             $rates[]=[
                 'id' => $i,
-                'name' => $i." %",
+                'name' => $i." %".$i == 0 ? " (Angestellt)": "",
             ];
         }
         return response()->json([
