@@ -76,7 +76,7 @@ class SetupController extends Controller
     {
         $business = $request->user();
         $business->name = $request->input('name');
-        $business->type_id = $request->input('business_type');
+        $business->type_id = $request->input('category_id');
         $business->phone = $request->input('phone');
         $business->city = $request->input('city_id');
         $business->off_day = $request->input('off_day_id');
