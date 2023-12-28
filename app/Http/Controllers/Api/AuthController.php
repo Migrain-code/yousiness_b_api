@@ -170,8 +170,15 @@ class AuthController extends Controller
                     $business->verify_phone = 1;
                     $business->save();
                     $this->addPermission($business->id);
-                    SendMail::send('Ihre E-Mail Überprüfung war erfolgreich', "Ihr Passwort für die Anmeldung bei " . config('settings.appy_site_title') . " :", $business->email, $generatePassword);
-
+                    $message = "Hallo, <br>
+                    Bitte bestätige, dass ".$business->email." deine neue E-Mail-Adresse ist,<br>
+                    indem du deinen 6-stelligen Verifizierungscode in der Yousiness Plattform eingibst.<br>
+                    <br>
+                    Unter <a href='https://yousiness.com/faq'></a> findest du Antworten auf die meisten Fragen und kannst dich mit uns in Verbindung setzen. Wir sind für dich da und helfen dir bei jedem Schritt. Los, es ist Zeit für eine Spritztour mit Yousiness!<br>
+                    Viele Grüße,<br>
+                    <br>
+                    Ihr Yousiness Team";
+                    SendMail::send('Ihre E-Mail Überprüfung war erfolgreich', $message , $business->email, $generatePassword);
                     return response()->json([
                         'status' => "success",
                         'message' => "Ihre E-Mail Überprüfung war erfolgreich. Für die Anmeldung in das System wurde Ihnen Ihr Passwort zugesendet. "
@@ -252,8 +259,15 @@ class AuthController extends Controller
         $smsConfirmation->expire_at = now()->addMinute(3);
         $smsConfirmation->save();
 
-        SendMail::send('SALON REGISTRIERUNG', "Für die Registrierung bei " . setting('appy_site_title') . " ist der Verifizierungscode anzugeben ", $phone, $generateCode);
-
+        $message = "Hallo, <br>
+                Bitte bestätige, dass ".$phone." deine neue E-Mail-Adresse ist,<br>
+                indem du deinen 6-stelligen Verifizierungscode in der Yousiness Plattform eingibst.<br>
+                <br>
+                Unter <a href='https://yousiness.com/faq'></a> findest du Antworten auf die meisten Fragen und kannst dich mit uns in Verbindung setzen. Wir sind für dich da und helfen dir bei jedem Schritt. Los, es ist Zeit für eine Spritztour mit Yousiness!<br>
+                Viele Grüße,<br>
+                <br>
+                Ihr Yousiness Team";
+        SendMail::send('SALON REGISTRIERUNG', $message, $phone,  $generateCode);
         return $generateCode;
     }
 
