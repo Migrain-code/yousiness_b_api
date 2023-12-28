@@ -28,8 +28,8 @@ class CustomerAddRequest extends FormRequest
         return [
             'name'=>"required|string|min:3",
             'phone'=>"required|string|min:10|unique:customers",
-            'email'=>"required|string|min:8",
-            'password'=>"required|string|min:8",
+            'email'=>"required|string|min:5",
+            'password'=>"required|string|min:6",
             'gender'=>"required|string"
         ];
     }
