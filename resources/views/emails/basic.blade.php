@@ -45,7 +45,7 @@
                 <p style="padding: 20px;
                     background-color: white;
                     border-radius: 15px;
-                    width: 1110px;
+                    width: 100%;
                     line-height: 25px;
                     font-size: 15px;
                     font-weight: 600;">Die Nutzung der Yousiness Services und unserer Webseite ist Gegenstand unserer AGB und Datenschutzrichtlinien. <br>
