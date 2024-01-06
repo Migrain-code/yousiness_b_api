@@ -136,7 +136,8 @@ class CustomerController extends Controller
             ]);
         }
         $businessCustomer = BusinessCustomer::where('customer_id', $customer->id)->where('business_id', $request->user()->id)->delete();
-        if ($businessCustomer->delete()){
+        if ($businessCustomer){
+            $businessCustomer->delete();
             return \response()->json([
                 'status' => "success",
                 'messsage' => "Kunde gelöscht"
