@@ -135,8 +135,8 @@ class CustomerController extends Controller
                 'messsage' => "Keine Kunden gefunden"
             ]);
         }
-        BusinessCustomer::where('customer_id', $customer->id)->where('business_id', $request->user()->id)->delete();
-        if ($customer->delete()){
+        $businessCustomer = BusinessCustomer::where('customer_id', $customer->id)->where('business_id', $request->user()->id)->delete();
+        if ($businessCustomer->delete()){
             return \response()->json([
                 'status' => "success",
                 'messsage' => "Kunde gelöscht"

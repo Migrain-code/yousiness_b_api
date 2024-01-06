@@ -127,7 +127,7 @@ class PersonalController extends Controller
                 }
             }
             return response()->json([
-                'status'=>"success",
+                'status'=>"ERFOLGREICH",
                 'message'=>"Mitarbeiter hinzugefügt",
             ]);
         }
@@ -228,7 +228,7 @@ class PersonalController extends Controller
                     }
                 }
                 return response()->json([
-                    'status'=>"success",
+                    'status'=>"ERFOLGREICH",
                     'message'=>"Mitarbeiter aktualisiert",
                 ]);
             }
